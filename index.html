@@ -74,9 +74,9 @@
         }
 
         .logo-img {
-            width: 100%;             /* Tells the logo to stretch left-to-right */
-            max-width: 550px;        /* High impact size for desktop viewing */
-            height: auto;            /* Keeps the layout perfectly proportioned */
+            width: 100%;
+            max-width: 550px;
+            height: auto;
             display: block;
         }
 
@@ -101,6 +101,19 @@
             box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
         }
 
+        /* Veteran Tag Banner */
+        .vet-banner {
+            background-color: var(--lavender-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 0.6rem 1rem;
+            font-family: var(--font-cosmic);
+            font-weight: 600;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            box-shadow: inset 0 -2px 5px rgba(0,0,0,0.1);
+        }
+
         /* Hero Section */
         .hero {
             position: relative;
@@ -111,7 +124,6 @@
             overflow: hidden;
         }
 
-        /* Subtle Cosmic Star Elements */
         .hero::before {
             content: "";
             position: absolute;
@@ -212,7 +224,7 @@
         .plan-card {
             background: #FFFFFF;
             border-radius: 24px;
-            padding: 3rem 2rem;
+            padding: 3.5rem 2rem 2.5rem 2rem;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             border: 2px solid rgba(181, 126, 220, 0.1);
@@ -229,7 +241,6 @@
             border-color: var(--lavender);
         }
 
-        /* Featured Plan Highlights */
         .plan-card.featured {
             border-color: var(--lavender);
             background: linear-gradient(#FFFFFF, #FFFFFF) padding-box,
@@ -249,6 +260,7 @@
             font-weight: 700;
             border-radius: 50px;
             letter-spacing: 1px;
+            z-index: 5;
         }
 
         .plan-title {
@@ -269,8 +281,21 @@
         .plan-desc {
             font-size: 0.95rem;
             color: #666;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-style: italic;
+        }
+
+        /* Promo Badge Feature */
+        .promo-badge {
+            background-color: #E6FFFA;
+            border: 1px dashed #319795;
+            color: #234E52;
+            padding: 0.5rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.3px;
         }
 
         .plan-features {
@@ -463,7 +488,6 @@
             transform: translateY(-2px);
         }
 
-        /* Success Message Container */
         .submission-message {
             display: none;
             grid-column: span 2;
@@ -539,6 +563,10 @@
         </div>
     </header>
 
+    <div class="vet-banner">
+        ✦ PROUDLY VETERAN OWNED BUSINESS ✦
+    </div>
+
     <section class="hero">
         <div class="hero-content">
             <h1>Weekly Pet Waste Removal Made Simple</h1>
@@ -555,14 +583,14 @@
                 <div>
                     <h3 class="plan-title">Cosmic Clean</h3>
                     <div class="plan-price">$97<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
-                    <p class="plan-desc">Weekly scoop and haul away service</p>
+                    <p class="plan-desc">Weekly Scoop service</p>
+                    <div class="promo-badge">Initial first time clean FREE ($79.99 VALUE)</div>
                 </div>
                 <ul class="plan-features">
                     <li>No contracts required</li>
                     <li>Weekly recurring service</li>
                     <li>Up to 4 dogs</li>
                     <li>Standard residential yard</li>
-                    <li>Initial cleanup included</li>
                 </ul>
                 <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Cosmic Clean')">Request Quote</a>
             </div>
@@ -572,14 +600,13 @@
                     <h3 class="plan-title">Galaxy Guard</h3>
                     <div class="plan-price">$127<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
                     <p class="plan-desc">Weekly scoop service with yard deodorizing</p>
+                    <div class="promo-badge">Initial first time clean FREE ($79.99 VALUE)</div>
                 </div>
                 <ul class="plan-features">
                     <li>No contracts required</li>
                     <li>Weekly recurring service</li>
                     <li>Up to 4 dogs</li>
                     <li>Pet-safe deodorizer included</li>
-                    <li>Odor control treatment</li>
-                    <li>Initial cleanup included</li>
                 </ul>
                 <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Galaxy Guard')">Request Quote</a>
             </div>
@@ -589,15 +616,15 @@
                     <h3 class="plan-title">Supernova Shield</h3>
                     <div class="plan-price">$157<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
                     <p class="plan-desc">Premium weekly sanitation package</p>
+                    <div class="promo-badge">Initial first time clean FREE ($79.99 VALUE)</div>
                 </div>
                 <ul class="plan-features">
                     <li>No contracts required</li>
                     <li>Weekly recurring service</li>
                     <li>Up to 4 dogs</li>
                     <li>Pet-safe deodorizing</li>
-                    <li>Yard sanitizing treatment</li>
+                    <li>Front yard dog repellent</li>
                     <li>Priority support</li>
-                    <li>Initial cleanup included</li>
                 </ul>
                 <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Supernova Shield')">Request Quote</a>
             </div>
@@ -612,7 +639,7 @@
     <section id="service-areas" style="padding-top: 0; padding-bottom: 2rem;">
         <div class="service-areas">
             <h2 class="section-title">Areas We Service</h2>
-            <p class="area-text">Professional pet waste removal services for local homeowners throughout Santa Rosa County.</p>
+            <p class="area-text">Professional pooper scooper service in Santa Rosa County</p>
             <div class="badge-container">
                 <div class="area-badge">Milton, FL</div>
                 <div class="area-badge">Pace, FL</div>
@@ -625,7 +652,7 @@
         <div class="form-section">
             <h2 class="section-title" style="margin-bottom: 2rem;">Request Your Quote</h2>
             
-            <form class="quote-form" id="leadForm" onsubmit="handleFormSubmit(event)">
+            <form class="quote-form" id="leadForm" action="https://formspree.io/f/mqakpylg" method="POST" onsubmit="handleFormSubmit(event)">
                 
                 <div class="form-group">
                     <label for="fullName">Full Name *</label>
@@ -635,6 +662,11 @@
                 <div class="form-group">
                     <label for="phone">Phone Number *</label>
                     <input type="tel" id="phone" name="phone" placeholder="(850) 555-0199" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="emailAddress">Email Address *</label>
+                    <input type="email" id="emailAddress" name="_replyto" placeholder="johndoe@cosmic.com" required>
                 </div>
 
                 <div class="form-group full-width">
@@ -687,7 +719,6 @@
     </footer>
 
     <script>
-        // Smoothly auto-select a specific tier dropdown when clicking a card CTA
         function selectPlan(planName) {
             const planDropdown = document.getElementById('servicePlan');
             for (let i = 0; i < planDropdown.options.length; i++) {
@@ -698,20 +729,49 @@
             }
         }
 
-        // Handle Lead Capture Submission UX
+        // Handles background Formspree submission 
         function handleFormSubmit(event) {
-            event.preventDefault(); // Prevents default page reload
+            event.preventDefault();
             
+            const form = event.target;
             const submitBtn = document.getElementById('submitBtn');
             const successMessage = document.getElementById('successMessage');
             
-            // Hide button and show success text box seamlessly
+            // Instantly transition UI elements
             submitBtn.style.display = 'none';
             successMessage.style.display = 'block';
+            successMessage.textContent = "Sending your request securely...";
             
-            // Optional: Log form data structure for review in backend console integration
-            const formData = new FormData(event.target);
-            console.log("Lead captured successfully:", Object.fromEntries(formData));
+            // Asynchronously post data to Formspree backend routing
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    successMessage.style.backgroundColor = '#E6FFFA';
+                    successMessage.style.borderColor = '#319795';
+                    successMessage.style.color = '#234E52';
+                    successMessage.textContent = "Your quote request has been received. We will contact you shortly.";
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            successMessage.textContent = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            successMessage.textContent = "Oops! There was a problem submitting your form.";
+                        }
+                    })
+                }
+            }).catch(error => {
+                successMessage.style.backgroundColor = '#FFF5F5';
+                successMessage.style.borderColor = '#E53E3E';
+                successMessage.style.color = '#742A2A';
+                successMessage.textContent = "Oops! There was a network problem. Please try again.";
+                submitBtn.style.display = 'block';
+            });
         }
     </script>
 </body>
