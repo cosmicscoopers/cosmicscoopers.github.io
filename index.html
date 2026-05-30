@@ -216,15 +216,15 @@
         /* Service Plans Grid */
         .plans-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
             align-items: stretch;
         }
 
         .plan-card {
             background: #FFFFFF;
             border-radius: 24px;
-            padding: 3.5rem 2rem 2.5rem 2rem;
+            padding: 3.5rem 1.5rem 2.5rem 1.5rem;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             border: 2px solid rgba(181, 126, 220, 0.1);
@@ -263,9 +263,15 @@
             z-index: 5;
         }
 
+        /* Unique Style for Undecided Card */
+        .plan-card.undecided-card {
+            background-color: #F3F0F7;
+            border: 2px dashed var(--lavender);
+        }
+
         .plan-title {
             font-family: var(--font-cosmic);
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             color: var(--charcoal);
             margin-bottom: 0.5rem;
         }
@@ -344,6 +350,10 @@
         }
         .plan-card.featured:hover .plan-btn {
             background-color: var(--charcoal);
+        }
+
+        .plan-card.undecided-card .plan-btn {
+            background-color: var(--lavender-dark);
         }
 
         /* Full Width Service Image Wrapper */
@@ -626,6 +636,22 @@
                     <li>Front yard dog repellent</li>
                 </ul>
                 <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Supernova Shield')">Request Quote</a>
+            </div>
+
+            <div class="plan-card undecided-card">
+                <div>
+                    <h3 class="plan-title">Not Sure?</h3>
+                    <div class="plan-price" style="font-size: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">Help Me Choose</div>
+                    <p class="plan-desc">Unsure which tier is best for your backyard configuration?</p>
+                    <div class="promo-badge">Initial first time clean FREE ($79.99 VALUE)</div>
+                </div>
+                <ul class="plan-features">
+                    <li>Custom quotes available</li>
+                    <li>Tell us your specific needs</li>
+                    <li>Free consultation over phone</li>
+                    <li>Zero obligation process</li>
+                </ul>
+                <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Undecided')">Let's Talk</a>
             </div>
 
         </div>
