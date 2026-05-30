@@ -737,7 +737,7 @@
         <div class="form-section">
             <h2 class="section-title" style="margin-bottom: 2rem;">Request Your Quote</h2>
             
-            <form class="quote-form" id="leadForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" onsubmit="handleFormSubmit(event)">
+            <form class="quote-form" id="leadForm" action="https://formspree.io/f/cosmicscoopers@gmail.com" method="POST" onsubmit="handleFormSubmit(event)">
                 
                 <div class="form-group">
                     <label for="fullName">Full Name *</label>
@@ -805,6 +805,8 @@
     </footer>
 
     <script>
+        document.getElementById('leadForm').setAttribute('action', 'https://formspree.io/f/' + btoa('cosmicscoopers@gmail.com').replace(/=/g, ''));
+        
         function selectPlan(planName) {
             const planDropdown = document.getElementById('servicePlan');
             for (let i = 0; i < planDropdown.options.length; i++) {
