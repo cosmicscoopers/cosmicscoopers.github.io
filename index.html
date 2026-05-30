@@ -263,7 +263,6 @@
             z-index: 5;
         }
 
-        /* Unique Style for Undecided Card */
         .plan-card.undecided-card {
             background-color: #F3F0F7;
             border: 2px dashed var(--lavender);
@@ -372,51 +371,82 @@
             object-fit: cover;
         }
 
-        /* Service Area Section */
-        .service-areas {
+        /* Revamped Two-Column Service Area Container */
+        .service-areas-layout {
             background-color: var(--charcoal);
             color: var(--text-light);
             border-radius: 24px;
-            padding: 4rem 3rem;
-            margin-top: 3rem;
-            margin-bottom: 3rem;
-            text-align: center;
+            padding: 3.5rem;
+            margin: 2rem auto;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 3rem;
+            align-items: center;
         }
 
-        .service-areas .section-title {
+        .service-info-side {
+            text-align: left;
+        }
+
+        .service-info-side .section-title {
+            text-align: left;
             color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-info-side .section-title::after {
+            margin-left: 0;
         }
 
         .area-text {
             font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2.5rem auto;
+            margin-bottom: 2rem;
             opacity: 0.9;
         }
 
         .badge-container {
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 320px;
         }
 
         .area-badge {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             border: 1px solid var(--lavender);
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2rem;
             border-radius: 50px;
             font-family: var(--font-cosmic);
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 600;
+            text-align: center;
             transition: all 0.3s ease;
         }
 
         .area-badge:hover {
             background: var(--lavender);
-            transform: scale(1.05);
+            transform: scale(1.03);
             box-shadow: 0 0 20px var(--lavender-glow);
+        }
+
+        .map-side {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .map-img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .map-img:hover {
+            transform: scale(1.02);
         }
 
         /* Lead Funnel Form Section */
@@ -527,6 +557,27 @@
         }
 
         /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .service-areas-layout {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                padding: 2.5rem 2rem;
+            }
+            .service-info-side {
+                text-align: center;
+            }
+            .service-info-side .section-title {
+                text-align: center;
+            }
+            .service-info-side .section-title::after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .badge-container {
+                margin: 0 auto;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.4rem;
@@ -548,13 +599,6 @@
             }
             section {
                 padding: 4rem 1.5rem;
-            }
-            .badge-container {
-                gap: 0.8rem;
-            }
-            .area-badge {
-                padding: 0.8rem 1.5rem;
-                font-size: 1.1rem;
             }
             .logo-img {
                 max-width: 100%; 
@@ -661,15 +705,23 @@
         <img src="1000007602.png" alt="Yard cleanup service illustration banner">
     </div>
 
-    <section id="service-areas" style="padding-top: 0; padding-bottom: 2rem;">
-        <div class="service-areas">
-            <h2 class="section-title">Areas We Service</h2>
-            <p class="area-text">Professional pooper scooper service in Santa Rosa County</p>
-            <div class="badge-container">
-                <div class="area-badge">Milton, FL</div>
-                <div class="area-badge">Pace, FL</div>
-                <div class="area-badge">Navarre, FL</div>
+    <section id="service-areas" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="service-areas-layout">
+            
+            <div class="service-info-side">
+                <h2 class="section-title">Areas We Service</h2>
+                <p class="area-text">Professional pooper scooper service across Santa Rosa County.</p>
+                <div class="badge-container">
+                    <div class="area-badge">Milton, FL</div>
+                    <div class="area-badge">Pace, FL</div>
+                    <div class="area-badge">Navarre, FL</div>
+                </div>
             </div>
+
+            <div class="map-side">
+                <img src="1000007604.jpg" alt="Hand-Drawn Map of Navarre, Milton, and Pace Florida Service Areas" class="map-img">
+            </div>
+
         </div>
     </section>
 
