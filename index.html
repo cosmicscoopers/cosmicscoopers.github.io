@@ -371,7 +371,7 @@
             object-fit: cover;
         }
 
-        /* Service Area Layout (Fully Visible Image Design) */
+        /* Service Area Layout */
         .service-areas-layout {
             background-color: var(--charcoal);
             color: var(--text-light);
@@ -379,10 +379,10 @@
             margin: 2rem auto;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             display: grid;
-            grid-template-columns: 1fr 1.3fr; /* Balanced column weighting */
+            grid-template-columns: 1fr 1.3fr;
             align-items: center;
             overflow: hidden;
-            padding: 1.5rem 2rem 1.5rem 0; /* Clears top/bottom padding for the image side */
+            padding: 1.5rem 2rem 1.5rem 0;
         }
 
         .service-info-side {
@@ -440,8 +440,8 @@
 
         .map-img {
             width: 100%;
-            max-height: 480px; /* Locks an optimal maximum desktop visibility size */
-            object-fit: contain; /* Keeps the map full-scale and completely visible without crops */
+            max-height: 480px;
+            object-fit: contain;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
@@ -562,7 +562,7 @@
         @media (max-width: 900px) {
             .service-areas-layout {
                 grid-template-columns: 1fr;
-                padding: 0 0 2rem 0; /* Bottom spacing framework adjustment for stacked design */
+                padding: 0 0 2rem 0;
             }
             .service-info-side {
                 text-align: center;
@@ -737,7 +737,7 @@
         <div class="form-section">
             <h2 class="section-title" style="margin-bottom: 2rem;">Request Your Quote</h2>
             
-            <form class="quote-form" id="leadForm" action="https://formspree.io/f/mqakpylg" method="POST" onsubmit="handleFormSubmit(event)">
+            <form class="quote-form" id="leadForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" onsubmit="handleFormSubmit(event)">
                 
                 <div class="form-group">
                     <label for="fullName">Full Name *</label>
