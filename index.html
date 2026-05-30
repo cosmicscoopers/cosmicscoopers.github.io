@@ -371,7 +371,7 @@
             object-fit: cover;
         }
 
-        /* Two-Column Service Area Container (Flush Top-to-Bottom Design) */
+        /* Service Area Layout (Fully Visible Image Design) */
         .service-areas-layout {
             background-color: var(--charcoal);
             color: var(--text-light);
@@ -379,15 +379,15 @@
             margin: 2rem auto;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            align-items: stretch; /* Extends right column top-to-bottom */
-            overflow: hidden; /* Clips map corners to matching box rounded edges */
+            grid-template-columns: 1fr 1.3fr; /* Balanced column weighting */
+            align-items: center;
+            overflow: hidden;
+            padding: 1.5rem 2rem 1.5rem 0; /* Clears top/bottom padding for the image side */
         }
 
-        /* Text side gets explicit padding since container padding was cleared */
         .service-info-side {
             text-align: left;
-            padding: 3.5rem;
+            padding: 2.5rem 3.5rem;
         }
 
         .service-info-side .section-title {
@@ -433,20 +433,22 @@
 
         .map-side {
             width: 100%;
-            height: 100%;
             display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .map-img {
             width: 100%;
-            height: 100%;
-            object-fit: cover; /* Stretches edge to edge cleanly without warping */
-            object-position: center;
+            max-height: 480px; /* Locks an optimal maximum desktop visibility size */
+            object-fit: contain; /* Keeps the map full-scale and completely visible without crops */
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
         }
 
         .map-img:hover {
-            transform: scale(1.02);
+            transform: scale(1.015);
         }
 
         /* Lead Funnel Form Section */
@@ -560,11 +562,11 @@
         @media (max-width: 900px) {
             .service-areas-layout {
                 grid-template-columns: 1fr;
-                align-items: center;
+                padding: 0 0 2rem 0; /* Bottom spacing framework adjustment for stacked design */
             }
             .service-info-side {
                 text-align: center;
-                padding: 3.5rem 2rem 2.5rem 2rem;
+                padding: 3.5rem 2rem 2rem 2rem;
             }
             .service-info-side .section-title {
                 text-align: center;
@@ -577,7 +579,10 @@
                 margin: 0 auto;
             }
             .map-side {
-                height: 380px; /* Gives the map proper proportional scaling on tablet/mobile screens */
+                padding: 0 1.5rem;
+            }
+            .map-img {
+                max-height: 340px;
             }
         }
 
@@ -735,7 +740,7 @@
             <form class="quote-form" id="leadForm" action="https://formspree.io/f/mqakpylg" method="POST" onsubmit="handleFormSubmit(event)">
                 
                 <div class="form-group">
-                    <label filter="fullName">Full Name *</label>
+                    <label for="fullName">Full Name *</label>
                     <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
                 </div>
 
