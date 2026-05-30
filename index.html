@@ -624,7 +624,6 @@
                     <li>Up to 4 dogs</li>
                     <li>Pet-safe deodorizing</li>
                     <li>Front yard dog repellent</li>
-                    <li>Priority support</li>
                 </ul>
                 <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Supernova Shield')">Request Quote</a>
             </div>
@@ -691,6 +690,7 @@
                         <option value="Cosmic Clean">Cosmic Clean — $97/mo</option>
                         <option value="Galaxy Guard">Galaxy Guard — $127/mo</option>
                         <option value="Supernova Shield">Supernova Shield — $157/mo</option>
+                        <option value="Undecided">Undecided / Need Help Choosing</option>
                     </select>
                 </div>
 
@@ -729,7 +729,6 @@
             }
         }
 
-        // Handles background Formspree submission 
         function handleFormSubmit(event) {
             event.preventDefault();
             
@@ -737,12 +736,10 @@
             const submitBtn = document.getElementById('submitBtn');
             const successMessage = document.getElementById('successMessage');
             
-            // Instantly transition UI elements
             submitBtn.style.display = 'none';
             successMessage.style.display = 'block';
             successMessage.textContent = "Sending your request securely...";
             
-            // Asynchronously post data to Formspree backend routing
             fetch(form.action, {
                 method: form.method,
                 body: new FormData(form),
