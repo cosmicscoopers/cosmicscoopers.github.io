@@ -10,21 +10,27 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --lavender: #B57EDC;
-            --lavender-glow: rgba(181, 126, 220, 0.4);
+            --lavender-glow: rgba(181, 126, 220, 0.35);
             --lavender-dark: #8A4FBA;
+            --lavender-light: #D2A8F3;
             --charcoal: #2B2B2B;
-            --charcoal-dark: #1F1F1F;
-            --charcoal-light: #3D3D3D;
-            --soft-white: #FAFAFC;
-            --text-dark: #2B2B2B;
+            --charcoal-dark: #1A1A1A;
+            --charcoal-light: #4A4A4A;
+            --soft-white: #F8F9FD;
+            --pure-white: #FFFFFF;
+            --text-dark: #232323;
             --text-light: #FFFFFF;
             --font-cosmic: 'Fredoka', sans-serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 12px;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         /* Reset & Base Styles */
@@ -43,6 +49,7 @@
             background-color: var(--soft-white);
             color: var(--text-dark);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
         img {
@@ -52,76 +59,81 @@
 
         /* Header / Navigation */
         header {
-            background-color: var(--charcoal-dark);
-            padding: 1.5rem 1rem;
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 1rem;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-bottom: 1px solid rgba(181, 126, 220, 0.15);
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-direction: column; 
+            flex-direction: row; 
+            justify-content: space-between;
             align-items: center;
-            gap: 1.5rem; 
         }
 
         .logo-container {
             display: flex;
-            justify-content: center;
-            width: 100%;
+            align-items: center;
         }
 
         .logo-img {
-            width: 100%;
-            max-width: 550px;
+            max-width: 280px;
             height: auto;
             display: block;
+            transition: var(--transition);
+        }
+
+        .logo-img:hover {
+            transform: scale(1.02);
         }
 
         .nav-btn {
-            background-color: var(--lavender);
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
             color: var(--text-light);
             text-decoration: none;
-            padding: 1rem 2.5rem; 
+            padding: 0.9rem 2rem; 
             border-radius: 50px;
             font-family: var(--font-cosmic);
             font-weight: 600;
-            font-size: 1.15rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px var(--lavender-glow);
+            font-size: 1.05rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px var(--lavender-glow);
             text-align: center;
+            border: 2px solid transparent;
         }
 
         .nav-btn:hover {
-            background-color: var(--text-light);
-            color: var(--charcoal-dark);
             transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 25px rgba(181, 126, 220, 0.5);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
         /* Veteran Tag Banner */
         .vet-banner {
-            background-color: var(--lavender-dark);
+            background: linear-gradient(90deg, var(--lavender-dark) 0%, #683394 100%);
             color: var(--text-light);
             text-align: center;
-            padding: 0.6rem 1rem;
+            padding: 0.7rem 1rem;
             font-family: var(--font-cosmic);
             font-weight: 600;
             font-size: 1.05rem;
-            letter-spacing: 0.5px;
-            box-shadow: inset 0 -2px 5px rgba(0,0,0,0.1);
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         /* Hero Section */
         .hero {
             position: relative;
-            background: linear-gradient(135deg, var(--charcoal-dark) 0%, var(--charcoal) 50%, var(--lavender-dark) 100%);
+            background: radial-gradient(circle at 80% 20%, rgba(181, 126, 220, 0.25) 0%, transparent 50%), 
+                        linear-gradient(135deg, var(--charcoal-dark) 0%, var(--charcoal) 100%);
             color: var(--text-light);
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             text-align: center;
             overflow: hidden;
         }
@@ -134,66 +146,67 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
-            background-size: 550px 550px, 350px 350px, 250px 250px;
-            background-position: 0 0, 40px 60px, 130px 270px;
-            opacity: 0.4;
+                radial-gradient(white, rgba(255,255,255,.3) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px);
+            background-size: 400px 400px, 250px 250px;
+            background-position: 0 0, 120px 150px;
+            opacity: 0.3;
             pointer-events: none;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
         .hero h1 {
             font-family: var(--font-cosmic);
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 700;
-            line-height: 1.2;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
-            letter-spacing: -0.5px;
-            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #FFFFFF 0%, #E2D1F0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            max-width: 650px;
+            font-size: 1.35rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 400;
         }
 
         .cta-primary {
             display: inline-block;
-            background-color: var(--lavender);
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
             color: var(--text-light);
             text-decoration: none;
-            padding: 1.2rem 2.5rem;
+            padding: 1.2rem 3rem;
             border-radius: 50px;
             font-family: var(--font-cosmic);
             font-weight: 700;
-            font-size: 1.25rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 25px var(--lavender-glow);
+            font-size: 1.3rem;
+            transition: var(--transition);
+            box-shadow: 0 8px 30px var(--lavender-glow);
             border: 2px solid transparent;
         }
 
         .cta-primary:hover {
-            transform: scale(1.05);
-            background-color: transparent;
-            border-color: var(--lavender);
-            box-shadow: 0 0 35px var(--lavender);
+            transform: scale(1.03) translateY(-2px);
+            box-shadow: 0 12px 35px rgba(181, 126, 220, 0.6);
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         /* Section Global Settings */
         section {
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -201,213 +214,242 @@
         .section-title {
             text-align: center;
             font-family: var(--font-cosmic);
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--charcoal);
-            margin-bottom: 3rem;
-            position: relative;
+            margin-bottom: 4rem;
         }
 
         .section-title::after {
             content: "✦";
             display: block;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: var(--lavender);
             margin-top: 0.5rem;
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.3); opacity: 1; }
         }
 
         /* Service Plans Grid */
         .plans-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
             align-items: stretch;
         }
 
         .plan-card {
-            background: #FFFFFF;
-            border-radius: 24px;
-            padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+            background: var(--pure-white);
+            border-radius: var(--radius-lg);
+            padding: 4rem 2rem 3rem 2rem;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border: 2px solid rgba(181, 126, 220, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            border: 2px solid rgba(181, 126, 220, 0.08);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: var(--transition);
         }
 
         .plan-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px var(--lavender-glow);
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(181, 126, 220, 0.18);
             border-color: var(--lavender);
         }
 
         .plan-card.featured {
             border-color: var(--lavender);
-            background: linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+            background: linear-gradient(var(--pure-white), var(--pure-white)) padding-box,
                         linear-gradient(145deg, var(--lavender), var(--charcoal)) border-box;
+            box-shadow: 0 10px 40px rgba(181, 126, 220, 0.1);
         }
         
         .plan-card.featured::before {
-            content: "RECOMMENDED";
+            content: "🌌 MOST POPULAR CHOICE";
             position: absolute;
-            top: -15px;
+            top: -16px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--charcoal);
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-dark) 100%);
             color: var(--text-light);
-            padding: 0.3rem 1.2rem;
-            font-size: 0.75rem;
+            padding: 0.4rem 1.5rem;
+            font-size: 0.8rem;
             font-weight: 700;
             border-radius: 50px;
             letter-spacing: 1px;
             z-index: 5;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .plan-tier {
             font-family: var(--font-cosmic);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 0.25rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
         }
-        .plan-card.good-tier .plan-tier { color: #4A5568; }
+        .plan-card.good-tier .plan-tier { color: #718096; }
         .plan-card.better-tier .plan-tier { color: var(--lavender-dark); }
-        .plan-card.best-tier .plan-tier { color: #2B6CB0; }
+        .plan-card.best-tier .plan-tier { color: #3182ce; }
 
         .plan-title {
             font-family: var(--font-cosmic);
-            font-size: 1.7rem;
+            font-size: 2rem;
             color: var(--charcoal);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .plan-price {
             font-family: var(--font-cosmic);
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: var(--charcoal);
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+        }
+
+        .plan-price span {
+            font-size: 1.1rem;
+            font-weight: normal;
+            color: #718096;
+            margin-left: 4px;
         }
 
         .plan-desc {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #666;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-            min-height: 45px;
+            margin-bottom: 2rem;
+            min-height: 48px;
         }
 
         .plan-features {
             list-style: none;
             text-align: left;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
             flex-grow: 1;
         }
 
         .plan-features li {
-            padding: 0.6rem 0;
+            padding: 0.75rem 0;
             display: flex;
             align-items: flex-start;
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--charcoal-light);
-            line-height: 1.4;
+            line-height: 1.5;
+            border-bottom: 1px dashed rgba(0,0,0,0.05);
+        }
+
+        .plan-features li:last-child {
+            border-bottom: none;
         }
 
         .plan-features li::before {
             content: "✦";
             color: var(--lavender);
             font-weight: bold;
-            margin-right: 10px;
-            font-size: 1rem;
+            margin-right: 12px;
+            font-size: 1.1rem;
             flex-shrink: 0;
-            margin-top: 2px;
         }
 
         .plan-btn {
-            background-color: var(--charcoal);
-            color: var(--text-light);
+            background-color: #F1F3F9;
+            color: var(--charcoal);
             text-decoration: none;
-            padding: 1rem 2rem;
+            padding: 1.1rem 2rem;
             border-radius: 50px;
             font-family: var(--font-cosmic);
             font-weight: 600;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            transition: var(--transition);
             display: block;
+            border: 2px solid transparent;
         }
 
         .plan-card:hover .plan-btn {
-            background-color: var(--lavender);
-            box-shadow: 0 4px 15px var(--lavender-glow);
-            border-color: var(--lavender);
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
+            color: var(--text-light);
+            box-shadow: 0 6px 20px var(--lavender-glow);
         }
 
         .plan-card.featured .plan-btn {
-            background-color: var(--lavender);
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
+            color: var(--text-light);
+            box-shadow: 0 4px 15px var(--lavender-glow);
         }
+        
         .plan-card.featured:hover .plan-btn {
-            background-color: var(--charcoal);
+            background: var(--charcoal);
+            color: var(--text-light);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
         /* Add-Ons Section Styles */
         .addons-container {
-            background-color: #FFFFFF;
-            border-radius: 24px;
-            padding: 3rem;
-            margin-top: 4rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(0,0,0,0.05);
+            background-color: var(--pure-white);
+            border-radius: var(--radius-lg);
+            padding: 4rem 3rem;
+            margin-top: 5rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(181, 126, 220, 0.1);
         }
 
         .addons-subtitle {
             font-family: var(--font-cosmic);
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: var(--lavender-dark);
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .addons-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
 
         .addon-item {
             background-color: var(--soft-white);
-            border-radius: 16px;
-            padding: 1.5rem;
-            border-left: 4px solid var(--lavender);
-            transition: transform 0.2s ease;
+            border-radius: var(--radius-md);
+            padding: 2rem 1.5rem;
+            border-top: 4px solid var(--lavender);
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
         }
 
         .addon-item:hover {
-            transform: scale(1.02);
+            transform: scale(1.03) translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border-top-color: var(--lavender-dark);
         }
 
         .addon-name {
             font-family: var(--font-cosmic);
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--charcoal);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .addon-desc {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--charcoal-light);
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         /* Full Width Service Image Wrapper */
         .full-width-image-container {
             width: 100%;
-            max-width: 100vw;
             overflow: hidden;
-            padding: 2rem 0 0 0;
-            margin: 0;
+            background: var(--charcoal-dark);
         }
 
         .full-width-image-container img {
@@ -419,21 +461,20 @@
 
         /* Service Area Layout */
         .service-areas-layout {
-            background-color: var(--charcoal);
+            background: linear-gradient(135deg, var(--charcoal-dark) 0%, var(--charcoal) 100%);
             color: var(--text-light);
-            border-radius: 24px;
+            border-radius: var(--radius-lg);
             margin: 2rem auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
+            grid-template-columns: 1fr 1.2fr;
             align-items: center;
             overflow: hidden;
-            padding: 1.5rem 2rem 1.5rem 0;
         }
 
         .service-info-side {
             text-align: left;
-            padding: 2.5rem 3.5rem;
+            padding: 4rem;
         }
 
         .service-info-side .section-title {
@@ -447,95 +488,102 @@
         }
 
         .area-text {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.85;
         }
 
         .badge-container {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
-            max-width: 320px;
+            gap: 1.2rem;
+            max-width: 340px;
         }
 
         .area-badge {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid var(--lavender);
-            padding: 0.9rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(181, 126, 220, 0.4);
+            padding: 1rem 2rem;
             border-radius: 50px;
             font-family: var(--font-cosmic);
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             font-weight: 600;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: var(--transition);
+            letter-spacing: 0.5px;
         }
 
         .area-badge:hover {
-            background: var(--lavender);
-            transform: scale(1.03);
-            box-shadow: 0 0 20px var(--lavender-glow);
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
+            border-color: transparent;
+            transform: translateX(8px);
+            box-shadow: 0 5px 20px var(--lavender-glow);
         }
 
         .map-side {
             width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 2rem;
+            background: rgba(0,0,0,0.2);
         }
 
         .map-img {
             width: 100%;
-            max-height: 480px;
-            object-fit: contain;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+            height: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: var(--transition);
         }
 
         .map-img:hover {
-            transform: scale(1.015);
+            transform: scale(1.02);
         }
 
         /* Lead Funnel Form Section Overhaul */
         .form-section {
-            background: #FFFFFF;
-            border-radius: 24px;
-            padding: 4rem 3.5rem;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+            background: var(--pure-white);
+            border-radius: var(--radius-lg);
+            padding: 5rem 4rem;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.04);
             border: 1px solid rgba(0,0,0,0.05);
-            max-width: 800px;
+            max-width: 850px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .form-build-block {
-            border-bottom: 1px solid #E2E8F0;
-            padding-bottom: 2rem;
-            margin-bottom: 2rem;
+            border-bottom: 1px solid #EAF0F6;
+            padding-bottom: 2.5rem;
+            margin-bottom: 2.5rem;
         }
         .form-build-block:last-of-type {
             border-bottom: none;
             padding-bottom: 0;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .block-title {
             font-family: var(--font-cosmic);
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             color: var(--lavender-dark);
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            font-weight: 700;
         }
 
         .quote-form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.25rem;
+            gap: 1.5rem;
         }
 
         .form-group {
@@ -551,14 +599,14 @@
             grid-column: span 2;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
+            gap: 1.25rem;
         }
 
         .quote-form label {
             font-weight: 600;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
             color: var(--charcoal);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
         .quote-form input[type="text"], 
@@ -568,14 +616,14 @@
         .quote-form select, 
         .quote-form textarea {
             width: 100%;
-            padding: 0.85rem 1.1rem;
+            padding: 1rem 1.25rem;
             border: 2px solid #E2E8F0;
-            border-radius: 12px;
+            border-radius: var(--radius-sm);
             font-family: var(--font-body);
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--charcoal);
             background-color: #F8FAFC;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .quote-form input:focus, 
@@ -583,63 +631,64 @@
         .quote-form textarea:focus {
             outline: none;
             border-color: var(--lavender);
-            background-color: #FFFFFF;
-            box-shadow: 0 0 10px var(--lavender-glow);
+            background-color: var(--pure-white);
+            box-shadow: 0 0 0 4px var(--lavender-glow);
         }
 
         /* Checkbox list layout styles */
         .checkbox-stack {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 1rem;
             grid-column: span 2;
         }
 
         .checkbox-item {
             display: flex;
             align-items: flex-start;
-            gap: 10px;
+            gap: 12px;
             cursor: pointer;
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--charcoal-light);
             background-color: #F8FAFC;
-            padding: 0.75rem 1rem;
-            border-radius: 10px;
-            border: 1px solid #E2E8F0;
-            transition: all 0.2s ease;
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-sm);
+            border: 2px solid #E2E8F0;
+            transition: var(--transition);
         }
 
         .checkbox-item:hover {
             border-color: var(--lavender);
-            background-color: #F3F0F7;
+            background-color: #F6F2FC;
+            transform: translateX(4px);
         }
 
         .checkbox-item input[type="checkbox"] {
-            margin-top: 4px;
-            transform: scale(1.15);
+            margin-top: 5px;
+            transform: scale(1.25);
             accent-color: var(--lavender-dark);
             cursor: pointer;
         }
 
         .submit-btn {
             width: 100%;
-            background-color: var(--lavender);
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
             color: var(--text-light);
             border: none;
-            padding: 1.2rem;
+            padding: 1.3rem;
             font-family: var(--font-cosmic);
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 700;
             border-radius: 50px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px var(--lavender-glow);
-            margin-top: 0.5rem;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px var(--lavender-glow);
+            margin-top: 1rem;
         }
 
         .submit-btn:hover {
-            background-color: var(--charcoal);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-dark) 100%);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
             transform: translateY(-2px);
         }
 
@@ -649,36 +698,36 @@
             border: 2px solid #319795;
             color: #234E52;
             padding: 1.5rem;
-            border-radius: 12px;
+            border-radius: var(--radius-sm);
             text-align: center;
             font-weight: 600;
             font-size: 1.1rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         /* Footer & Links */
         footer {
             background-color: var(--charcoal-dark);
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.6);
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             margin-top: 6rem;
-            border-top: 3px solid var(--lavender);
-            font-size: 0.95rem;
+            border-top: 4px solid var(--lavender);
+            font-size: 1rem;
         }
 
         footer p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .footer-links {
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .footer-link {
-            color: var(--lavender);
+            color: var(--lavender-light);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
             transition: color 0.2s ease;
         }
@@ -698,19 +747,19 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(4px);
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(6px);
             padding: 2rem 1rem;
         }
 
         .privacy-content {
-            background-color: #FFFFFF;
-            margin: 2rem auto;
-            padding: 2.5rem;
-            border-radius: 24px;
-            max-width: 650px;
+            background-color: var(--pure-white);
+            margin: 3rem auto;
+            padding: 3.5rem;
+            border-radius: var(--radius-lg);
+            max-width: 700px;
             width: 100%;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            box-shadow: 0 30px 70px rgba(0,0,0,0.4);
             border: 2px solid var(--lavender);
             color: var(--text-dark);
             text-align: left;
@@ -719,10 +768,10 @@
 
         .close-modal {
             position: absolute;
-            top: 1.25rem;
-            right: 1.5rem;
+            top: 1.5rem;
+            right: 2rem;
             color: #AAA;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
             cursor: pointer;
             transition: color 0.2s ease;
@@ -736,39 +785,45 @@
         .privacy-content h3 {
             font-family: var(--font-cosmic);
             color: var(--charcoal);
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
             border-bottom: 2px solid #F0EAF8;
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.75rem;
         }
 
         .privacy-content h4 {
             font-family: var(--font-cosmic);
             color: var(--lavender-dark);
-            font-size: 1.15rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
         }
 
         .privacy-content p, .privacy-content ul {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--charcoal-light);
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
 
         .privacy-content ul {
-            padding-left: 1.5rem;
+            padding-left: 2rem;
         }
 
         /* Responsive Breakpoints */
         @media (max-width: 900px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+            .logo-img {
+                max-width: 320px;
+            }
             .service-areas-layout {
                 grid-template-columns: 1fr;
-                padding: 0 0 2rem 0;
             }
             .service-info-side {
                 text-align: center;
-                padding: 3.5rem 2rem 2rem 2rem;
+                padding: 4rem 2rem 2rem 2rem;
             }
             .service-info-side .section-title {
                 text-align: center;
@@ -781,19 +836,16 @@
                 margin: 0 auto;
             }
             .map-side {
-                padding: 0 1.5rem;
-            }
-            .map-img {
-                max-height: 340px;
+                padding: 2rem;
             }
         }
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.4rem;
+                font-size: 2.8rem;
             }
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
             }
             .quote-form-grid {
                 grid-template-columns: 1fr;
@@ -804,7 +856,7 @@
             .form-group.triple-split {
                 grid-column: span 1;
                 grid-template-columns: 1fr;
-                gap: 1.25rem;
+                gap: 1.5rem;
             }
             .checkbox-stack {
                 grid-column: span 1;
@@ -812,17 +864,10 @@
             section {
                 padding: 4rem 1.5rem;
             }
-            .logo-img {
-                max-width: 100%; 
-            }
-            .privacy-content {
-                padding: 1.5rem;
-                margin: 0 auto;
+            .form-section {
+                padding: 3rem 1.5rem;
             }
             .addons-container {
-                padding: 2rem 1.5rem;
-            }
-            .form-section {
                 padding: 3rem 1.5rem;
             }
         }
@@ -852,14 +897,14 @@
     </section>
 
     <section id="plans">
-        <h2 class="section-title">Website Service Options</h2>
+        <h2 class="section-title">Service Options</h2>
         <div class="plans-grid">
             
             <div class="plan-card good-tier">
                 <div>
                     <div class="plan-tier">GOOD</div>
                     <h3 class="plan-title">Cosmic Clean</h3>
-                    <div class="plan-price">$97<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
+                    <div class="plan-price">$97<span>/mo</span></div>
                     <p class="plan-desc">Basic maintenance plan for consistent yard cleanliness.</p>
                 </div>
                 <ul class="plan-features">
@@ -876,7 +921,7 @@
                 <div>
                     <div class="plan-tier">BETTER</div>
                     <h3 class="plan-title">Cosmic Clean Duo</h3>
-                    <div class="plan-price">$127<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
+                    <div class="plan-price">$127<span>/mo</span></div>
                     <p class="plan-desc">Higher frequency service for improved cleanliness and odor control.</p>
                 </div>
                 <ul class="plan-features">
@@ -893,7 +938,7 @@
                 <div>
                     <div class="plan-tier">BEST</div>
                     <h3 class="plan-title">Cosmic Clean Trio</h3>
-                    <div class="plan-price">$157<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
+                    <div class="plan-price">$157<span>/mo</span></div>
                     <p class="plan-desc">Maximum frequency service for premium cleanliness and control.</p>
                 </div>
                 <ul class="plan-features">
@@ -935,7 +980,7 @@
         <img src="1000007602.png" alt="Yard cleanup service illustration banner">
     </div>
 
-    <section id="service-areas" style="padding-top: 2rem; padding-bottom: 2rem;">
+    <section id="service-areas" style="padding-top: 4rem; padding-bottom: 4rem;">
         <div class="service-areas-layout">
             <div class="service-info-side">
                 <h2 class="section-title">Areas We Service</h2>
@@ -947,28 +992,28 @@
                 </div>
             </div>
             <div class="map-side">
-                <img src="1000007604.jpg" alt="Hand-Drawn Map of Navarre, Milton, and Pace Florida Service Areas" class="map-img">
+                <img src="1000007604.jpg" alt="Map of Navarre, Milton, and Pace Florida Service Areas" class="map-img">
             </div>
         </div>
     </section>
 
     <section id="quote-form-section">
         <div class="form-section">
-            <h2 class="section-title" style="margin-bottom: 2.5rem;">Request Your Quote</h2>
+            <h2 class="section-title" style="margin-bottom: 3rem;">Request Your Quote</h2>
             
             <div id="successMessage" class="submission-message">
                 Your quote request has been received. We will contact you shortly.
             </div>
 
-            <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)">
+            <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)" class="quote-form">
                 
                 <input type="hidden" name="access_key" value="233d3e26-eb53-4990-9774-de7b570a653d">
-                <input type="hidden" name="subject" value="New Cosmic Scoopers Form Classification Quote Request">
-                <input type="hidden" name="from_name" value="Cosmic Scoopers System Engine">
+                <input type="hidden" name="subject" value="New Cosmic Scoopers Quote Request">
+                <input type="hidden" name="from_name" value="Cosmic Scoopers Admin System">
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                 <div class="form-build-block">
-                    <div class="block-title">1) Customer Information</div>
+                    <div class="block-title">1) Contact Information</div>
                     <div class="quote-form-grid">
                         <div class="form-group">
                             <label for="fullName">Full Name *</label>
@@ -995,7 +1040,7 @@
                             <div class="block-title" style="margin-bottom:0.75rem;">2) Yard Size</div>
                             <label for="yardSize">Classification *</label>
                             <select id="yardSize" name="Yard Size Classification" required>
-                                <option value="" disabled selected>Select size layout</option>
+                                <option value="" disabled selected>Select yard dimensions</option>
                                 <option value="Small (1/8 acre)">Small (1/8 acre)</option>
                                 <option value="Medium (1/4 acre)">Medium (1/4 acre)</option>
                                 <option value="Large (1/2 acre+)">Large (1/2 acre+)</option>
@@ -1005,7 +1050,7 @@
                             <div class="block-title" style="margin-bottom:0.75rem;">3) Service Frequency</div>
                             <label for="servicePlan">Frequency Plan *</label>
                             <select id="servicePlan" name="Target Service Frequency" required>
-                                <option value="" disabled selected>Select execution tier</option>
+                                <option value="" disabled selected>Select frequency tier</option>
                                 <option value="Cosmic Clean">GOOD — Cosmic Clean (1x Weekly)</option>
                                 <option value="Cosmic Clean Duo">BETTER — Cosmic Clean Duo (2x Weekly)</option>
                                 <option value="Cosmic Clean Trio">BEST — Cosmic Clean Trio (3x Weekly)</option>
@@ -1015,11 +1060,11 @@
                 </div>
 
                 <div class="form-build-block">
-                    <div class="block-title">4) Pet Information</div>
+                    <div class="block-title">4) Pet Profile</div>
                     <div class="quote-form-grid">
                         <div class="form-group triple-split">
                             <div>
-                                <label for="dogsCount">Count *</label>
+                                <label for="dogsCount">Dog Count *</label>
                                 <select id="dogsCount" name="Total Dog Count" required>
                                     <option value="" disabled selected>Select</option>
                                     <option value="1">1</option>
@@ -1052,10 +1097,10 @@
                 </div>
 
                 <div class="form-build-block">
-                    <div class="block-title">5) Access & Property Conditions</div>
+                    <div class="block-title">5) Property Access Details</div>
                     <div class="quote-form-grid">
                         <div class="form-group">
-                            <label for="fenceType">Fence Type *</label>
+                            <label for="fenceType">Fence Setup *</label>
                             <select id="fenceType" name="Boundary Fence Style" required>
                                 <option value="" disabled selected>Select property setup</option>
                                 <option value="Fully fenced">Fully fenced</option>
@@ -1064,7 +1109,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="dogsIndoors">Dogs will be indoors during service? *</label>
+                            <label for="dogsIndoors">Dogs safely inside during service? *</label>
                             <select id="dogsIndoors" name="Dogs Confined Indoors" required>
                                 <option value="" disabled selected>Select confirmation</option>
                                 <option value="Yes">Yes</option>
@@ -1073,31 +1118,31 @@
                             </select>
                         </div>
                         <div class="form-group full-width">
-                            <label for="notes">Gate Access Notes (Lock combinations, gate security keys, setup layout)</label>
-                            <textarea id="notes" name="Gate Access Entry Mechanics" rows="3" placeholder="Enter secure lock codes or structural notes..."></textarea>
+                            <label for="notes">Gate Codes or Safety Instructions</label>
+                            <textarea id="notes" name="Gate Access Entry Mechanics" rows="3" placeholder="Enter secure lock codes, gate instructions, or unique property notes..."></textarea>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-build-block">
-                    <div class="block-title">6) Add-Ons</div>
+                    <div class="block-title">6) Select Upgrades & Add-Ons</div>
                     <div class="quote-form-grid">
                         <div class="checkbox-stack">
                             <label class="checkbox-item">
                                 <input type="checkbox" name="Addon: Initial Cleanup" value="Requested">
-                                <span>Initial Cleanup (first-time service or overgrown yard profile requirement)</span>
+                                <span>Initial Cleanup (Required for first-time service if yard is overgrown)</span>
                             </label>
                             <label class="checkbox-item">
                                 <input type="checkbox" name="Addon: Deodorizer Treatment" value="Requested">
-                                <span>Deodorizer Treatment (Odor mitigation booster layer)</span>
+                                <span>Deodorizer Treatment (Deep odor-mitigation blast layer)</span>
                             </label>
                             <label class="checkbox-item">
                                 <input type="checkbox" name="Addon: Dog Repellent" value="Requested">
-                                <span>Dog Repellent Treatment (Boundary perimeter application shield)</span>
+                                <span>Dog Repellent Treatment (Boundary perimeter training shield)</span>
                             </label>
-                            <label class="checkbox-item" style="border-color: #E2E8F0; background-color: #FFFDF5;">
+                            <label class="checkbox-item" style="border-color: rgba(181,126,220,0.3); background-color: #FAF5FF;">
                                 <input type="checkbox" name="Heavy Condition Acknowledgement" value="Acknowledged" required>
-                                <span style="font-weight:600; color:#744210;">Heavy Yard Condition Acknowledgement * (Required: I understand a surcharge applies if excessive buildup requires additional overhead)</span>
+                                <span style="font-weight:600; color:var(--lavender-dark);">Heavy Yard Condition Acknowledgement * (Required: I understand an extra surcharge applies if excessive initial buildup demands extended overhead)</span>
                             </label>
                         </div>
                     </div>
@@ -1106,32 +1151,32 @@
                 <div class="form-build-block">
                     <div class="quote-form-grid">
                         <div class="form-group full-width" style="margin-bottom:0.75rem;">
-                            <div class="block-title" style="margin-bottom:0.75rem;">7) Start Date</div>
+                            <div class="block-title" style="margin-bottom:0.75rem;">7) Timing Preferences</div>
                             <label for="startDate">Preferred Start Date</label>
                             <input type="date" id="startDate" name="Target Commencement Date">
                         </div>
                         
                         <div class="form-group full-width">
-                            <div class="block-title" style="margin-bottom:0.75rem;">8) Terms Acknowledgement</div>
+                            <div class="block-title" style="margin-bottom:0.75rem;">8) Terms & Final Agreement</div>
                             <div class="checkbox-stack">
-                                <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                <label class="checkbox-item">
                                     <input type="checkbox" name="Term Acknowledged: Pricing Variables" value="Yes" required>
-                                    <span>I understand pricing plans are calculated directly based on custom yard size metrics and operational service frequencies. *</span>
+                                    <span>I agree that custom plan options are fine-tuned according to yard parameters and selected recurring frequencies. *</span>
                                 </label>
-                                <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                <label class="checkbox-item">
                                     <input type="checkbox" name="Term Acknowledged: Addon Applications" value="Yes" required>
-                                    <span>I understand standard structural add-ons may apply to billing operations based on distinct field yard conditions. *</span>
+                                    <span>I agree that standard field upgrades may apply depending on custom terrain variations. *</span>
                                 </label>
-                                <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                <label class="checkbox-item">
                                     <input type="checkbox" name="Term Acknowledged: Route Optimization" value="Yes" required>
-                                    <span>I understand deployment scheduling is handled strictly via local route optimization routines, not user-selected timeframe blocks. *</span>
+                                    <span>I understand that routing paths are optimized purely by geographical service clusters to keep local pricing low. *</span>
                                 </label>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button type="submit" class="submit-btn" id="submitBtn">Submit Secure Classification Data</button>
+                <button type="submit" class="submit-btn" id="submitBtn">Launch Clean Yard Protocol</button>
             </form>
         </div>
     </section>
@@ -1147,7 +1192,7 @@
     <div id="privacyModal" class="privacy-modal">
         <div class="privacy-content">
             <span class="close-modal" onclick="closePrivacyModal()">&times;</span>
-            <h3>Privacy Policy:</h3>
+            <h3>Privacy Policy</h3>
             <p>Cosmic Scoopers respects your privacy and is committed to accepting and protecting your personal information.</p>
             
             <h4>Information We Collect</h4>
@@ -1200,18 +1245,16 @@
             }
         }
 
-        /* Privacy Policy Window Control Functions */
         function openPrivacyModal() {
             document.getElementById('privacyModal').style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Stop background scrolling
+            document.body.style.overflow = 'hidden';
         }
 
         function closePrivacyModal() {
             document.getElementById('privacyModal').style.display = 'none';
-            document.body.style.overflow = 'auto'; // Enable background scrolling
+            document.body.style.overflow = 'auto';
         }
 
-        // Close pop-up window if clicking outside the white box content panel
         window.onclick = function(event) {
             const modal = document.getElementById('privacyModal');
             if (event.target === modal) {
@@ -1228,10 +1271,10 @@
             
             submitBtn.style.display = 'none';
             successMessage.style.display = 'block';
-            successMessage.style.backgroundColor = '#E2E8F0';
+            successMessage.style.backgroundColor = '#F1F5F9';
             successMessage.style.borderColor = '#CBD5E1';
             successMessage.style.color = '#334155';
-            successMessage.textContent = "Sending classification metrics securely...";
+            successMessage.textContent = "Connecting to system engine securely...";
             
             fetch(form.action, {
                 method: form.method,
@@ -1244,7 +1287,7 @@
                     successMessage.style.backgroundColor = '#E6FFFA';
                     successMessage.style.borderColor = '#319795';
                     successMessage.style.color = '#234E52';
-                    successMessage.textContent = "Your classification configuration metrics have been logged securely. A customized quote evaluation will follow shortly.";
+                    successMessage.textContent = "Blast off! Your yard configuration metrics have been logged securely. A customized quote evaluation will follow shortly.";
                     form.reset();
                 } else {
                     response.json().then(data => {
@@ -1259,7 +1302,7 @@
                 successMessage.style.backgroundColor = '#FFF5F5';
                 successMessage.style.borderColor = '#E53E3E';
                 successMessage.style.color = '#742A2A';
-                successMessage.textContent = "Operational link offline. Check connection matrix profiles and try again.";
+                successMessage.textContent = "Operational link offline. Check connection parameters and try again.";
                 submitBtn.style.display = 'block';
             });
         }
