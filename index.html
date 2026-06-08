@@ -218,7 +218,7 @@
         /* Service Plans Grid */
         .plans-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             align-items: stretch;
         }
@@ -250,7 +250,7 @@
         }
         
         .plan-card.featured::before {
-            content: "POPULAR CHOICE";
+            content: "RECOMMENDED";
             position: absolute;
             top: -15px;
             left: 50%;
@@ -265,10 +265,16 @@
             z-index: 5;
         }
 
-        .plan-card.undecided-card {
-            background-color: #F3F0F7;
-            border: 2px dashed var(--lavender);
+        .plan-tier {
+            font-family: var(--font-cosmic);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
         }
+        .plan-card.good-tier .plan-tier { color: #4A5568; }
+        .plan-card.better-tier .plan-tier { color: var(--lavender-dark); }
+        .plan-card.best-tier .plan-tier { color: #2B6CB0; }
 
         .plan-title {
             font-family: var(--font-cosmic);
@@ -280,7 +286,7 @@
         .plan-price {
             font-family: var(--font-cosmic);
             font-size: 2.5rem;
-            color: var(--lavender-dark);
+            color: var(--charcoal);
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
@@ -290,19 +296,7 @@
             color: #666;
             margin-bottom: 1.5rem;
             font-style: italic;
-        }
-
-        /* Promo Badge Feature */
-        .promo-badge {
-            background-color: #E6FFFA;
-            border: 1px dashed #319795;
-            color: #234E52;
-            padding: 0.5rem;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.3px;
+            min-height: 45px;
         }
 
         .plan-features {
@@ -315,17 +309,20 @@
         .plan-features li {
             padding: 0.6rem 0;
             display: flex;
-            align-items: center;
-            font-size: 1rem;
+            align-items: flex-start;
+            font-size: 0.95rem;
             color: var(--charcoal-light);
+            line-height: 1.4;
         }
 
         .plan-features li::before {
-            content: "✓";
+            content: "✦";
             color: var(--lavender);
             font-weight: bold;
             margin-right: 10px;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 2px;
         }
 
         .plan-btn {
@@ -353,8 +350,55 @@
             background-color: var(--charcoal);
         }
 
-        .plan-card.undecided-card .plan-btn {
-            background-color: var(--lavender-dark);
+        /* Add-Ons Section Styles */
+        .addons-container {
+            background-color: #FFFFFF;
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 4rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .addons-subtitle {
+            font-family: var(--font-cosmic);
+            font-size: 1.1rem;
+            color: var(--lavender-dark);
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .addon-item {
+            background-color: var(--soft-white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--lavender);
+            transition: transform 0.2s ease;
+        }
+
+        .addon-item:hover {
+            transform: scale(1.02);
+        }
+
+        .addon-name {
+            font-family: var(--font-cosmic);
+            font-size: 1.2rem;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .addon-desc {
+            font-size: 0.9rem;
+            color: var(--charcoal-light);
+            line-height: 1.5;
         }
 
         /* Full Width Service Image Wrapper */
@@ -706,6 +750,9 @@
                 padding: 1.5rem;
                 margin: 0 auto;
             }
+            .addons-container {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
@@ -733,74 +780,82 @@
     </section>
 
     <section id="plans">
-        <h2 class="section-title">Weekly Service Plans</h2>
+        <h2 class="section-title">Website Service Options</h2>
         <div class="plans-grid">
             
-            <div class="plan-card">
+            <div class="plan-card good-tier">
                 <div>
+                    <div class="plan-tier">GOOD</div>
                     <h3 class="plan-title">Cosmic Clean</h3>
                     <div class="plan-price">$97<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
-                    <p class="plan-desc">Weekly Scoop service</p>
-                    <div class="promo-badge">Initial first time clean FREE ($79.99 VALUE)</div>
+                    <p class="plan-desc">Basic maintenance plan for consistent yard cleanliness.</p>
                 </div>
                 <ul class="plan-features">
-                    <li>No contracts required</li>
-                    <li>Weekly recurring service</li>
-                    <li>Up to 4 dogs</li>
-                    <li>Standard residential yard</li>
+                    <li>1x weekly pet waste removal</li>
+                    <li>Small, Medium, and Large yard pricing available</li>
+                    <li>Designed for light to moderate dog waste buildup</li>
+                    <li>Keeps your yard consistently clean and manageable with routine service</li>
+                    <li><strong>Best for:</strong> single dog homes or light yard usage</li>
                 </ul>
                 <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Cosmic Clean')">Request Quote</a>
             </div>
 
-            <div class="plan-card featured">
+            <div class="plan-card featured better-tier">
                 <div>
-                    <h3 class="plan-title">Galaxy Guard</h3>
+                    <div class="plan-tier">BETTER</div>
+                    <h3 class="plan-title">Cosmic Clean Duo</h3>
                     <div class="plan-price">$127<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
-                    <p class="plan-desc">Weekly scoop service with yard deodorizing</p>
-                    <div class="promo-badge">Initial first time clean FREE ($79.99 VALUE)</div>
+                    <p class="plan-desc">Higher frequency service for improved cleanliness and odor control.</p>
                 </div>
                 <ul class="plan-features">
-                    <li>No contracts required</li>
-                    <li>Weekly recurring service</li>
-                    <li>Up to 4 dogs</li>
-                    <li>Pet-safe deodorizer included</li>
+                    <li>2x weekly pet waste removal</li>
+                    <li>Small, Medium, and Large yard pricing available</li>
+                    <li>Better consistency throughout the week</li>
+                    <li>Reduces buildup and improves overall yard freshness</li>
+                    <li><strong>Best for:</strong> multiple dogs or customers wanting stronger control of odor and mess</li>
                 </ul>
-                <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Galaxy Guard')">Request Quote</a>
+                <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Cosmic Clean Duo')">Request Quote</a>
             </div>
 
-            <div class="plan-card">
+            <div class="plan-card best-tier">
                 <div>
-                    <h3 class="plan-title">Supernova Shield</h3>
+                    <div class="plan-tier">BEST</div>
+                    <h3 class="plan-title">Cosmic Clean Trio</h3>
                     <div class="plan-price">$157<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
-                    <p class="plan-desc">Premium weekly sanitation package</p>
-                    <div class="promo-badge">Initial first time clean FREE ($79.99 VALUE)</div>
+                    <p class="plan-desc">Maximum frequency service for premium cleanliness and control.</p>
                 </div>
                 <ul class="plan-features">
-                    <li>No contracts required</li>
-                    <li>Weekly recurring service</li>
-                    <li>Up to 4 dogs</li>
-                    <li>Pet-safe deodorizing</li>
-                    <li>Front yard dog repellent</li>
+                    <li>3x weekly pet waste removal</li>
+                    <li>Small, Medium, and Large yard pricing available</li>
+                    <li>Highest level of yard cleanliness consistency</li>
+                    <li>Ideal for preventing any visible buildup between visits</li>
+                    <li><strong>Best for:</strong> high-traffic yards, multiple dogs, or customers wanting the cleanest possible outdoor space</li>
                 </ul>
-                <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Supernova Shield')">Request Quote</a>
+                <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Cosmic Clean Trio')">Request Quote</a>
             </div>
 
-            <div class="plan-card undecided-card">
-                <div>
-                    <h3 class="plan-title">Not Sure?</h3>
-                    <div class="plan-price" style="font-size: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">Help Me Choose</div>
-                    <p class="plan-desc">Unsure which tier is best for your backyard configuration?</p>
-                    <div class="promo-badge">Initial first time clean FREE ($79.99 VALUE)</div>
+        </div>
+
+        <div class="addons-container">
+            <h3 class="addons-subtitle">Add-On Services (Not Included In Plans)</h3>
+            <div class="addons-grid">
+                <div class="addon-item">
+                    <h4 class="addon-name">Initial Cleanup</h4>
+                    <p class="addon-desc">First-time or overgrown yards requiring a complete environmental reset.</p>
                 </div>
-                <ul class="plan-features">
-                    <li>Custom quotes available</li>
-                    <li>Tell us your specific needs</li>
-                    <li>Free consultation over phone</li>
-                    <li>Zero obligation process</li>
-                </ul>
-                <a href="#quote-form-section" class="plan-btn" onclick="selectPlan('Undecided')">Let's Talk</a>
+                <div class="addon-item">
+                    <h4 class="addon-name">Deodorizer Treatment</h4>
+                    <p class="addon-desc">Odor control enhancement applied monthly or strictly as needed for yard freshness.</p>
+                </div>
+                <div class="addon-item">
+                    <h4 class="addon-name">Dog Repellent Treatment</h4>
+                    <p class="addon-desc">Targeted perimeter application for marking designated yard boundaries.</p>
+                </div>
+                <div class="addon-item">
+                    <h4 class="addon-name">Heavy Yard Condition Surcharge</h4>
+                    <p class="addon-desc">Applies only when excessive buildup requires intensive additional work; fully approved before service.</p>
+                </div>
             </div>
-
         </div>
     </section>
 
@@ -871,21 +926,20 @@
                     <label for="servicePlan">Service Plan *</label>
                     <select id="servicePlan" name="Selected Plan" required>
                         <option value="" disabled selected>Select a plan</option>
-                        <option value="Cosmic Clean">Cosmic Clean — $97/mo</option>
-                        <option value="Galaxy Guard">Galaxy Guard — $127/mo</option>
-                        <option value="Supernova Shield">Supernova Shield — $157/mo</option>
-                        <option value="Undecided">Undecided / Need Help Choosing</option>
+                        <option value="Cosmic Clean">Cosmic Clean — 1x Weekly (From $97/mo)</option>
+                        <option value="Cosmic Clean Duo">Cosmic Clean Duo — 2x Weekly (From $127/mo)</option>
+                        <option value="Cosmic Clean Trio">Cosmic Clean Trio — 3x Weekly ($157/mo)</option>
                     </select>
                 </div>
 
                 <div class="form-group full-width">
                     <label for="dogsCount">Number of Dogs *</label>
-                    <input type="number" id="dogsCount" name="Number of Dogs" min="1" max="4" placeholder="1" required>
+                    <input type="number" id="dogsCount" name="Number of Dogs" min="1" max="10" placeholder="1" required>
                 </div>
 
                 <div class="form-group full-width">
-                    <label for="notes">Optional Notes (Gate codes, aggressive dogs, etc.)</label>
-                    <textarea id="notes" name="Notes/Gate Codes" rows="4" placeholder="Tell us anything else we should know about your yard..."></textarea>
+                    <label for="notes">Optional Notes (Gate codes, requested Add-on options, etc.)</label>
+                    <textarea id="notes" name="Notes/Gate Codes" rows="4" placeholder="Tell us anything else we should know about your yard layout or required add-ons..."></textarea>
                 </div>
 
                 <div id="successMessage" class="submission-message">
