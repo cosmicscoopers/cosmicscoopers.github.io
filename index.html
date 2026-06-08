@@ -497,22 +497,45 @@
             transform: scale(1.015);
         }
 
-        /* Lead Funnel Form Section */
+        /* Lead Funnel Form Section Overhaul */
         .form-section {
             background: #FFFFFF;
             border-radius: 24px;
-            padding: 4rem 3rem;
+            padding: 4rem 3.5rem;
             box-shadow: 0 15px 40px rgba(0,0,0,0.05);
             border: 1px solid rgba(0,0,0,0.05);
-            max-width: 750px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .quote-form {
+        .form-build-block {
+            border-bottom: 1px solid #E2E8F0;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+        .form-build-block:last-of-type {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .block-title {
+            font-family: var(--font-cosmic);
+            font-size: 1.15rem;
+            color: var(--lavender-dark);
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quote-form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
 
         .form-group {
@@ -524,22 +547,32 @@
             grid-column: span 2;
         }
 
-        .quote-form label {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--charcoal);
-            font-size: 0.95rem;
+        .form-group.triple-split {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
         }
 
-        .quote-form input, 
+        .quote-form label {
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--charcoal);
+            font-size: 0.9rem;
+        }
+
+        .quote-form input[type="text"], 
+        .quote-form input[type="tel"], 
+        .quote-form input[type="email"], 
+        .quote-form input[type="date"], 
         .quote-form select, 
         .quote-form textarea {
             width: 100%;
-            padding: 0.9rem 1.2rem;
+            padding: 0.85rem 1.1rem;
             border: 2px solid #E2E8F0;
             border-radius: 12px;
             font-family: var(--font-body);
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--charcoal);
             background-color: #F8FAFC;
             transition: all 0.3s ease;
@@ -554,8 +587,42 @@
             box-shadow: 0 0 10px var(--lavender-glow);
         }
 
-        .submit-btn {
+        /* Checkbox list layout styles */
+        .checkbox-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
             grid-column: span 2;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: var(--charcoal-light);
+            background-color: #F8FAFC;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            border: 1px solid #E2E8F0;
+            transition: all 0.2s ease;
+        }
+
+        .checkbox-item:hover {
+            border-color: var(--lavender);
+            background-color: #F3F0F7;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-top: 4px;
+            transform: scale(1.15);
+            accent-color: var(--lavender-dark);
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            width: 100%;
             background-color: var(--lavender);
             color: var(--text-light);
             border: none;
@@ -567,7 +634,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px var(--lavender-glow);
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
 
         .submit-btn:hover {
@@ -578,7 +645,6 @@
 
         .submission-message {
             display: none;
-            grid-column: span 2;
             background-color: #E6FFFA;
             border: 2px solid #319795;
             color: #234E52;
@@ -587,6 +653,7 @@
             text-align: center;
             font-weight: 600;
             font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
 
         /* Footer & Links */
@@ -728,16 +795,18 @@
             .hero p {
                 font-size: 1.1rem;
             }
-            .quote-form {
+            .quote-form-grid {
                 grid-template-columns: 1fr;
             }
             .form-group.full-width {
                 grid-column: span 1;
             }
-            .submit-btn {
+            .form-group.triple-split {
                 grid-column: span 1;
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
             }
-            .submission-message {
+            .checkbox-stack {
                 grid-column: span 1;
             }
             section {
@@ -752,6 +821,9 @@
             }
             .addons-container {
                 padding: 2rem 1.5rem;
+            }
+            .form-section {
+                padding: 3rem 1.5rem;
             }
         }
     </style>
@@ -882,71 +954,184 @@
 
     <section id="quote-form-section">
         <div class="form-section">
-            <h2 class="section-title" style="margin-bottom: 2rem;">Request Your Quote</h2>
+            <h2 class="section-title" style="margin-bottom: 2.5rem;">Request Your Quote</h2>
             
-            <form class="quote-form" id="leadForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)">
+            <div id="successMessage" class="submission-message">
+                Your quote request has been received. We will contact you shortly.
+            </div>
+
+            <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)">
                 
                 <input type="hidden" name="access_key" value="233d3e26-eb53-4990-9774-de7b570a653d">
-                
-                <input type="hidden" name="subject" value="New Cosmic Scoopers Quote Request!">
-                <input type="hidden" name="from_name" value="Cosmic Scoopers Website">
+                <input type="hidden" name="subject" value="New Cosmic Scoopers Form Classification Quote Request">
+                <input type="hidden" name="from_name" value="Cosmic Scoopers System Engine">
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-                <div class="form-group">
-                    <label for="fullName">Full Name *</label>
-                    <input type="text" id="fullName" name="Name" placeholder="John Doe" required>
+                <div class="form-build-block">
+                    <div class="block-title">1) Customer Information</div>
+                    <div class="quote-form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="Customer Full Name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="Phone Number" placeholder="(850) 555-0199" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="emailAddress">Email Address *</label>
+                            <input type="email" id="emailAddress" name="Email Address" placeholder="johndoe@gmail.com" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="address">Service Address *</label>
+                            <input type="text" id="address" name="Physical Service Address" placeholder="123 Yard Street, Milton, FL" required>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="Phone Number" placeholder="(850) 555-0199" required>
+                <div class="form-build-block">
+                    <div class="quote-form-grid">
+                        <div class="form-group">
+                            <div class="block-title" style="margin-bottom:0.75rem;">2) Yard Size</div>
+                            <label for="yardSize">Classification *</label>
+                            <select id="yardSize" name="Yard Size Classification" required>
+                                <option value="" disabled selected>Select size layout</option>
+                                <option value="Small (1/8 acre)">Small (1/8 acre)</option>
+                                <option value="Medium (1/4 acre)">Medium (1/4 acre)</option>
+                                <option value="Large (1/2 acre+)">Large (1/2 acre+)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="block-title" style="margin-bottom:0.75rem;">3) Service Frequency</div>
+                            <label for="servicePlan">Frequency Plan *</label>
+                            <select id="servicePlan" name="Target Service Frequency" required>
+                                <option value="" disabled selected>Select execution tier</option>
+                                <option value="Cosmic Clean">GOOD — Cosmic Clean (1x Weekly)</option>
+                                <option value="Cosmic Clean Duo">BETTER — Cosmic Clean Duo (2x Weekly)</option>
+                                <option value="Cosmic Clean Trio">BEST — Cosmic Clean Trio (3x Weekly)</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group full-width">
-                    <label for="emailAddress">Email Address *</label>
-                    <input type="email" id="emailAddress" name="Email" placeholder="johndoe@cosmic.com" required>
+                <div class="form-build-block">
+                    <div class="block-title">4) Pet Information</div>
+                    <div class="quote-form-grid">
+                        <div class="form-group triple-split">
+                            <div>
+                                <label for="dogsCount">Count *</label>
+                                <select id="dogsCount" name="Total Dog Count" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4+">4+</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="dogSize">Dog Size *</label>
+                                <select id="dogSize" name="Dog Structural Size" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                    <option value="Mixed">Mixed</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="wasteLevel">Waste Level *</label>
+                                <select id="wasteLevel" name="Estimated Waste Accumulation" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="Light">Light</option>
+                                    <option value="Moderate">Moderate</option>
+                                    <option value="Heavy">Heavy</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group full-width">
-                    <label for="address">Service Address *</label>
-                    <input type="text" id="address" name="Service Address" placeholder="123 Galaxy Way" required>
+                <div class="form-build-block">
+                    <div class="block-title">5) Access & Property Conditions</div>
+                    <div class="quote-form-grid">
+                        <div class="form-group">
+                            <label for="fenceType">Fence Type *</label>
+                            <select id="fenceType" name="Boundary Fence Style" required>
+                                <option value="" disabled selected>Select property setup</option>
+                                <option value="Fully fenced">Fully fenced</option>
+                                <option value="Partially fenced">Partially fenced</option>
+                                <option value="Not fenced">Not fenced</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dogsIndoors">Dogs will be indoors during service? *</label>
+                            <select id="dogsIndoors" name="Dogs Confined Indoors" required>
+                                <option value="" disabled selected>Select confirmation</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Unsure">Unsure</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="notes">Gate Access Notes (Lock combinations, gate security keys, setup layout)</label>
+                            <textarea id="notes" name="Gate Access Entry Mechanics" rows="3" placeholder="Enter secure lock codes or structural notes..."></textarea>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="city">City *</label>
-                    <select id="city" name="City" required>
-                        <option value="" disabled selected>Select your city</option>
-                        <option value="Milton">Milton</option>
-                        <option value="Pace">Pace</option>
-                        <option value="Navarre">Navarre</option>
-                    </select>
+                <div class="form-build-block">
+                    <div class="block-title">6) Add-Ons</div>
+                    <div class="quote-form-grid">
+                        <div class="checkbox-stack">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="Addon: Initial Cleanup" value="Requested">
+                                <span>Initial Cleanup (first-time service or overgrown yard profile requirement)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="Addon: Deodorizer Treatment" value="Requested">
+                                <span>Deodorizer Treatment (Odor mitigation booster layer)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="Addon: Dog Repellent" value="Requested">
+                                <span>Dog Repellent Treatment (Boundary perimeter application shield)</span>
+                            </label>
+                            <label class="checkbox-item" style="border-color: #E2E8F0; background-color: #FFFDF5;">
+                                <input type="checkbox" name="Heavy Condition Acknowledgement" value="Acknowledged" required>
+                                <span style="font-weight:600; color:#744210;">Heavy Yard Condition Acknowledgement * (Required: I understand a surcharge applies if excessive buildup requires additional overhead)</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="servicePlan">Service Plan *</label>
-                    <select id="servicePlan" name="Selected Plan" required>
-                        <option value="" disabled selected>Select a plan</option>
-                        <option value="Cosmic Clean">Cosmic Clean — 1x Weekly (From $97/mo)</option>
-                        <option value="Cosmic Clean Duo">Cosmic Clean Duo — 2x Weekly (From $127/mo)</option>
-                        <option value="Cosmic Clean Trio">Cosmic Clean Trio — 3x Weekly ($157/mo)</option>
-                    </select>
+                <div class="form-build-block">
+                    <div class="quote-form-grid">
+                        <div class="form-group full-width" style="margin-bottom:0.75rem;">
+                            <div class="block-title" style="margin-bottom:0.75rem;">7) Start Date</div>
+                            <label for="startDate">Preferred Start Date</label>
+                            <input type="date" id="startDate" name="Target Commencement Date">
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <div class="block-title" style="margin-bottom:0.75rem;">8) Terms Acknowledgement</div>
+                            <div class="checkbox-stack">
+                                <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                    <input type="checkbox" name="Term Acknowledged: Pricing Variables" value="Yes" required>
+                                    <span>I understand pricing plans are calculated directly based on custom yard size metrics and operational service frequencies. *</span>
+                                </label>
+                                <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                    <input type="checkbox" name="Term Acknowledged: Addon Applications" value="Yes" required>
+                                    <span>I understand standard structural add-ons may apply to billing operations based on distinct field yard conditions. *</span>
+                                </label>
+                                <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                    <input type="checkbox" name="Term Acknowledged: Route Optimization" value="Yes" required>
+                                    <span>I understand deployment scheduling is handled strictly via local route optimization routines, not user-selected timeframe blocks. *</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group full-width">
-                    <label for="dogsCount">Number of Dogs *</label>
-                    <input type="number" id="dogsCount" name="Number of Dogs" min="1" max="10" placeholder="1" required>
-                </div>
-
-                <div class="form-group full-width">
-                    <label for="notes">Optional Notes (Gate codes, requested Add-on options, etc.)</label>
-                    <textarea id="notes" name="Notes/Gate Codes" rows="4" placeholder="Tell us anything else we should know about your yard layout or required add-ons..."></textarea>
-                </div>
-
-                <div id="successMessage" class="submission-message">
-                    Your quote request has been received. We will contact you shortly.
-                </div>
-
-                <button type="submit" class="submit-btn" id="submitBtn">Request My Quote</button>
+                <button type="submit" class="submit-btn" id="submitBtn">Submit Secure Classification Data</button>
             </form>
         </div>
     </section>
@@ -1046,7 +1231,7 @@
             successMessage.style.backgroundColor = '#E2E8F0';
             successMessage.style.borderColor = '#CBD5E1';
             successMessage.style.color = '#334155';
-            successMessage.textContent = "Sending your request securely...";
+            successMessage.textContent = "Sending classification metrics securely...";
             
             fetch(form.action, {
                 method: form.method,
@@ -1059,14 +1244,14 @@
                     successMessage.style.backgroundColor = '#E6FFFA';
                     successMessage.style.borderColor = '#319795';
                     successMessage.style.color = '#234E52';
-                    successMessage.textContent = "Your quote request has been received. We will contact you shortly.";
+                    successMessage.textContent = "Your classification configuration metrics have been logged securely. A customized quote evaluation will follow shortly.";
                     form.reset();
                 } else {
                     response.json().then(data => {
                         successMessage.style.backgroundColor = '#FFF5F5';
                         successMessage.style.borderColor = '#E53E3E';
                         successMessage.style.color = '#742A2A';
-                        successMessage.textContent = "Oops! Something went wrong. Please check your Access Key.";
+                        successMessage.textContent = "Processing layout error. Please verify endpoints configuration.";
                         submitBtn.style.display = 'block';
                     })
                 }
@@ -1074,7 +1259,7 @@
                 successMessage.style.backgroundColor = '#FFF5F5';
                 successMessage.style.borderColor = '#E53E3E';
                 successMessage.style.color = '#742A2A';
-                successMessage.textContent = "Oops! There was a network problem. Please try again.";
+                successMessage.textContent = "Operational link offline. Check connection matrix profiles and try again.";
                 submitBtn.style.display = 'block';
             });
         }
