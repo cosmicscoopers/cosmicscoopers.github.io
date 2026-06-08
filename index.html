@@ -17,7 +17,6 @@
             --lavender: #B57EDC;
             --lavender-glow: rgba(181, 126, 220, 0.4);
             --lavender-dark: #8A4FBA;
-            --lavender-light: #D2A8F3;
             --charcoal: #2B2B2B;
             --charcoal-dark: #1F1F1F;
             --charcoal-light: #3D3D3D;
@@ -35,11 +34,8 @@
             padding: 0;
         }
 
-        html, body {
+        html {
             scroll-behavior: smooth;
-            overflow-x: hidden;
-            position: relative;
-            width: 100%;
         }
 
         body {
@@ -52,7 +48,6 @@
         img {
             max-width: 100%;
             height: auto;
-            box-sizing: border-box;
         }
 
         /* Header / Navigation */
@@ -151,37 +146,27 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 850px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .hero h1 {
             font-family: var(--font-cosmic);
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            line-height: 1.15;
+            line-height: 1.2;
             margin-bottom: 1.5rem;
             letter-spacing: -0.5px;
             text-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .hero p {
-            font-size: 1.35rem;
+            font-size: 1.3rem;
             margin-bottom: 2.5rem;
             opacity: 0.95;
-            max-width: 700px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .hero-trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2.5rem;
-            flex-wrap: wrap;
-            font-size: 1rem;
-            font-weight: 600;
         }
 
         .cta-primary {
@@ -197,7 +182,6 @@
             transition: all 0.3s ease;
             box-shadow: 0 0 25px var(--lavender-glow);
             border: 2px solid transparent;
-            animation: subtle-pulse 2s infinite ease-in-out;
         }
 
         .cta-primary:hover {
@@ -205,11 +189,6 @@
             background-color: transparent;
             border-color: var(--lavender);
             box-shadow: 0 0 35px var(--lavender);
-        }
-
-        @keyframes subtle-pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
         }
 
         /* Section Global Settings */
@@ -271,20 +250,19 @@
         }
         
         .plan-card.featured::before {
-            content: "🌌 MOST POPULAR CHOICE";
+            content: "RECOMMENDED";
             position: absolute;
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-dark) 100%);
+            background: var(--charcoal);
             color: var(--text-light);
-            padding: 0.4rem 1.5rem;
-            font-size: 0.8rem;
+            padding: 0.3rem 1.2rem;
+            font-size: 0.75rem;
             font-weight: 700;
             border-radius: 50px;
             letter-spacing: 1px;
             z-index: 5;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .plan-tier {
@@ -317,6 +295,7 @@
             font-size: 0.95rem;
             color: #666;
             margin-bottom: 1.5rem;
+            font-style: italic;
             min-height: 45px;
         }
 
@@ -811,10 +790,10 @@
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.6rem;
+                font-size: 2.4rem;
             }
             .hero p {
-                font-size: 1.15rem;
+                font-size: 1.1rem;
             }
             .quote-form-grid {
                 grid-template-columns: 1fr;
@@ -866,16 +845,9 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Take Your Weekend Back.<br><span style="color: var(--lavender-light);">We’ll Handle The Dirty Work.</span></h1>
+            <h1>Weekly Pet Waste Removal Made Simple</h1>
             <p>Professional weekly dog poop cleanup and yard deodorizing services in Milton, Pace, and Navarre, Florida.</p>
-            
-            <div class="hero-trust-badges">
-                <span>🛡️ 100% Satisfaction Guaranteed</span>
-                <span>🔒 Secure Stripe Billing</span>
-                <span>🐕 Fully Insured & Pet Safe</span>
-            </div>
-
-            <a href="#quote-form-section" class="cta-primary">Secure Your Service Slot</a>
+            <a href="#quote-form-section" class="cta-primary">Request a Quote</a>
         </div>
     </section>
 
@@ -902,10 +874,10 @@
 
             <div class="plan-card featured better-tier">
                 <div>
-                    <div class="plan-tier" style="color: var(--lavender-dark); font-weight: 700; letter-spacing: 1px;">🌌 MOST POPULAR CHOICE</div>
+                    <div class="plan-tier">BETTER</div>
                     <h3 class="plan-title">Cosmic Clean Duo</h3>
                     <div class="plan-price">$127<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
-                    <p class="plan-desc" style="font-weight: 600; color: var(--lavender-dark);">Our most recommended plan for multi-dog homes.</p>
+                    <p class="plan-desc">Higher frequency service for improved cleanliness and odor control.</p>
                 </div>
                 <ul class="plan-features">
                     <li>2x weekly pet waste removal</li>
@@ -1159,7 +1131,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="submit-btn" id="submitBtn">Secure Your Service Slot</button>
+                <button type="submit" class="submit-btn" id="submitBtn">Submit Secure Classification Data</button>
             </form>
         </div>
     </section>
