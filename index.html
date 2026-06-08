@@ -545,7 +545,7 @@
             font-size: 1.1rem;
         }
 
-        /* Footer */
+        /* Footer & Links */
         footer {
             background-color: var(--charcoal-dark);
             color: rgba(255, 255, 255, 0.7);
@@ -558,6 +558,95 @@
 
         footer p {
             margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-link {
+            color: var(--lavender);
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+
+        /* Privacy Policy Modal (Pop-up Window) */
+        .privacy-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            padding: 2rem 1rem;
+        }
+
+        .privacy-content {
+            background-color: #FFFFFF;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            border-radius: 24px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 2px solid var(--lavender);
+            color: var(--text-dark);
+            text-align: left;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.5rem;
+            color: #AAA;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            line-height: 1;
+        }
+
+        .close-modal:hover {
+            color: var(--charcoal);
+        }
+
+        .privacy-content h3 {
+            font-family: var(--font-cosmic);
+            color: var(--charcoal);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #F0EAF8;
+            padding-bottom: 0.5rem;
+        }
+
+        .privacy-content h4 {
+            font-family: var(--font-cosmic);
+            color: var(--lavender-dark);
+            font-size: 1.15rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-content p, .privacy-content ul {
+            font-size: 0.95rem;
+            color: var(--charcoal-light);
+            margin-bottom: 1rem;
+        }
+
+        .privacy-content ul {
+            padding-left: 1.5rem;
         }
 
         /* Responsive Breakpoints */
@@ -612,6 +701,10 @@
             }
             .logo-img {
                 max-width: 100%; 
+            }
+            .privacy-content {
+                padding: 1.5rem;
+                margin: 0 auto;
             }
         }
     </style>
@@ -807,7 +900,59 @@
     <footer>
         <p>&copy; 2026 Cosmic Scoopers. All rights reserved.</p>
         <p>Providing premium weekly dog poop cleanup services in Milton, Pace, and Navarre, Florida.</p>
+        <div class="footer-links">
+            <span class="footer-link" onclick="openPrivacyModal()">Privacy Policy</span>
+        </div>
     </footer>
+
+    <div id="privacyModal" class="privacy-modal">
+        <div class="privacy-content">
+            <span class="close-modal" onclick="closePrivacyModal()">&times;</span>
+            <h3>Privacy Policy</h3>
+            <p>Cosmic Scoopers respects your privacy and is committed to protecting your personal information.</p>
+            
+            <h4>Information We Collect</h4>
+            <p>We may collect:</p>
+            <ul>
+                <li>Name</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+                <li>Service address</li>
+                <li>Information submitted through contact or quote forms</li>
+                <li>Website usage information through cookies and analytics tools</li>
+            </ul>
+            
+            <h4>How We Use Your Information</h4>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Provide quotes and services</li>
+                <li>Communicate about appointments and billing</li>
+                <li>Respond to inquiries</li>
+                <li>Improve our website and services</li>
+            </ul>
+            
+            <h4>Information Sharing</h4>
+            <p>We do not sell, rent, or trade your personal information. Information may be shared with trusted third-party providers necessary to operate our business, such as payment processors and website service providers.</p>
+            
+            <h4>Data Security</h4>
+            <p>We take reasonable measures to protect your information but cannot guarantee absolute security.</p>
+            
+            <h4>Cookies</h4>
+            <p>Our website may use cookies and analytics tools to improve user experience and understand website traffic.</p>
+            
+            <h4>Third-Party Services</h4>
+            <p>We may use third-party services such as Stripe, Google Analytics, Google Business Profile, and social media platforms that may collect information according to their own privacy policies.</p>
+            
+            <h4>Your Rights</h4>
+            <p>You may request access to, correction of, or deletion of your personal information by contacting us.</p>
+            
+            <h4>Contact Information</h4>
+            <p>Cosmic Scoopers<br>
+            Email: cosmicscoopers@gmail.com</p>
+            
+            <p style="font-size: 0.85rem; color: #888; margin-top: 1.5rem; font-style: italic;">This policy may be updated periodically. Any changes will be posted on this page.</p>
+        </div>
+    </div>
 
     <script>
         function selectPlan(planName) {
@@ -817,6 +962,25 @@
                     planDropdown.selectedIndex = i;
                     break;
                 }
+            }
+        }
+
+        /* Privacy Policy Window Control Functions */
+        function openPrivacyModal() {
+            document.getElementById('privacyModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Stop background scrolling
+        }
+
+        function closePrivacyModal() {
+            document.getElementById('privacyModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Enable background scrolling
+        }
+
+        // Close pop-up window if clicking outside the white box content panel
+        window.onclick = function(event) {
+            const modal = document.getElementById('privacyModal');
+            if (event.target === modal) {
+                closePrivacyModal();
             }
         }
 
