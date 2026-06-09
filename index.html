@@ -6,7 +6,7 @@
     <title>Pet Waste Removal Milton FL | Cosmic Scoopers</title>
     <meta name="description" content="Weekly pet waste removal and dog poop cleanup services in Milton, Pace, and Navarre Florida. Request a quote for recurring weekly service.">
     
-    <link rel="icon" type="image/png" href="1000007589.png">
+    <link class="page-favicon" rel="icon" type="image/png" href="1000007589.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -829,9 +829,7 @@
             animation: fadeInUp 0.5s ease;
         }
 
-        document.cookie = "SameSite=Lax; Secure";
-
-        /* --- CENTERED & HIGH VISIBILITY FOOTER --- */
+        /* --- CENTERED & HIGH VISIBILITY FOOTER STYLING --- */
         footer {
             background-color: #120824;
             color: #E3D9F5;
@@ -853,40 +851,45 @@
             text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
 
-        .footer-links {
-            margin-top: 2rem;
+        .footer-links-stack {
+            margin-top: 2.5rem;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            gap: 1.25rem;
+            align-items: center;
             width: 100%;
+            max-width: 320px;
         }
 
         .footer-link {
             color: #FFFFFF;
-            text-decoration: underline;
+            text-decoration: none;
             font-family: var(--font-cosmic);
             font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 0.5px;
+            font-size: 1.15rem;
+            letter-spacing: 0.75px;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: inline-block;
-            padding: 0.5rem 1.75rem;
-            background: rgba(255, 255, 255, 0.07);
-            border: 2px solid rgba(181, 126, 220, 0.4);
+            display: block;
+            width: 100%;
+            padding: 0.75rem 2rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 2px solid rgba(181, 126, 220, 0.45);
             border-radius: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+            text-align: center;
         }
 
         .footer-link:hover {
             color: #FFFFFF;
-            background: var(--lavender-dark);
+            background: linear-gradient(135deg, var(--lavender-dark) 0%, var(--cosmic-purple) 100%);
             border-color: #FFFFFF;
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 0 20px rgba(181, 126, 220, 0.8);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 0 25px rgba(181, 126, 220, 0.75);
         }
 
-        .privacy-modal {
+        /* --- TABBED LEGAL POPUP MODAL STYLING --- */
+        .legal-modal {
             display: none;
             position: fixed;
             z-index: 2000;
@@ -895,19 +898,19 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(9, 4, 15, 0.85);
-            backdrop-filter: blur(8px);
+            background-color: rgba(9, 4, 15, 0.88);
+            backdrop-filter: blur(10px);
             padding: 2rem 1rem;
         }
 
-        .privacy-content {
+        .legal-content {
             background-color: #FFFFFF;
-            margin: 2rem auto;
+            margin: 1.5rem auto;
             padding: 3.5rem;
             border-radius: 32px;
-            max-width: 700px;
+            max-width: 800px;
             width: 100%;
-            box-shadow: 0 35px 80px rgba(0,0,0,0.6);
+            box-shadow: 0 35px 90px rgba(0,0,0,0.7);
             border: 2px solid var(--lavender);
             color: var(--text-dark);
             text-align: left;
@@ -917,7 +920,7 @@
 
         .close-modal {
             position: absolute;
-            top: 1.5rem;
+            top: 1.25rem;
             right: 2rem;
             color: #AAA;
             font-size: 2.75rem;
@@ -925,19 +928,123 @@
             cursor: pointer;
             transition: color 0.2s ease;
             line-height: 1;
+            z-index: 10;
         }
 
         .close-modal:hover {
             color: var(--charcoal);
         }
 
-        .privacy-content h3 {
+        /* Legal Modal Tabs */
+        .modal-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid #F0EAF8;
+            padding-bottom: 1px;
+        }
+
+        .modal-tab-btn {
+            background: #F3EEFA;
+            border: 2px solid #E8DFF5;
+            border-bottom: none;
+            padding: 0.9rem 1.75rem;
+            font-family: var(--font-cosmic);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--charcoal-light);
+            cursor: pointer;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            transition: all 0.25s ease;
+            position: relative;
+            top: 2px;
+        }
+
+        .modal-tab-btn:hover {
+            background: #EBE1F7;
+            color: var(--cosmic-purple);
+        }
+
+        .modal-tab-btn.active {
+            background: #FFFFFF;
+            border-color: var(--lavender);
+            color: var(--cosmic-purple);
+            padding-bottom: 1.1rem;
+            top: 0;
+            z-index: 2;
+        }
+
+        .legal-pane {
+            display: none;
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+
+        .legal-pane.active {
+            display: block;
+        }
+
+        /* Scrollbar customization for the panes */
+        .legal-pane::-webkit-scrollbar {
+            width: 8px;
+        }
+        .legal-pane::-webkit-scrollbar-track {
+            background: #F1F1F1;
+            border-radius: 10px;
+        }
+        .legal-pane::-webkit-scrollbar-thumb {
+            background: var(--lavender);
+            border-radius: 10px;
+        }
+        .legal-pane::-webkit-scrollbar-thumb:hover {
+            background: var(--lavender-dark);
+        }
+
+        .legal-pane h3 {
             font-family: var(--font-cosmic);
             color: var(--charcoal);
             font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            border-bottom: 2px solid #F0EAF8;
-            padding-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .legal-pane h4 {
+            font-family: var(--font-cosmic);
+            margin-top: 1.75rem;
+            margin-bottom: 0.6rem;
+            color: var(--charcoal);
+            font-size: 1.25rem;
+        }
+
+        .legal-pane p {
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .legal-pane ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .legal-pane ol li {
+            margin-bottom: 1rem;
+            padding-left: 0.25rem;
+            line-height: 1.6;
+        }
+
+        .legal-pane ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            list-style-type: disc;
+        }
+
+        .legal-pane ul li {
+            margin-bottom: 0.4rem;
         }
 
         @media (max-width: 900px) {
@@ -960,8 +1067,11 @@
             .checkbox-stack { grid-column: span 1; }
             section { padding: 4.5rem 1.5rem; }
             .form-section { padding: 4rem 1.5rem; }
-            .privacy-content { padding: 2.5rem 1.5rem; }
+            .legal-content { padding: 2.5rem 1.5rem; margin: 1rem auto; }
             .addons-container { padding: 3rem 1.5rem; }
+            .modal-tabs { flex-direction: column; gap: 0; border-bottom: none; }
+            .modal-tab-btn { border-radius: 12px; border: 2px solid #E8DFF5; margin-bottom: 0.5rem; top: 0; }
+            .modal-tab-btn.active { padding-bottom: 0.9rem; background: var(--lavender); color: #FFF; border-color: var(--lavender); }
         }
     </style>
 </head>
@@ -1109,7 +1219,7 @@
                 Your quote request has been received. We will contact you shortly.
             </div>
 
-            <form id="leadForm" class="quote-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)">
+            <form id="leadForm" class="quote-form" action="https://api.web3forms.com/submit" method="POST">
                 
                 <input type="hidden" name="access_key" value="233d3e26-eb53-4990-9774-de7b570a653d">
                 <input type="hidden" name="subject" value="New Cosmic Scoopers Form Classification Quote Request">
@@ -1216,8 +1326,7 @@
                                 <span><strong>Add Dog Repellent Application</strong> (Targeted application to establish clean boundaries)</span>
                             </label>
                         </div>
-                        <div class="form-group full-width" style="margin-top:0.75rem;">
-                            <label for="specialNotes">Special Instructions / Comments</label>
+                        <div class="form-group full-width" style="margin-top:0.75rem;">Special Instructions / Comments</label>
                             <textarea id="specialNotes" name="Customer Remarks & Custom Instructions" rows="4" placeholder="Tell us about aggressive dogs, broken gates, text-before-arrival requests, or yard details..."></textarea>
                         </div>
                     </div>
@@ -1231,22 +1340,116 @@
     <footer>
         <p>&copy; 2026 Cosmic Scoopers. All rights reserved.</p>
         <p>Providing professional pet waste removal and cleanup services in Milton, Pace, and Navarre, Florida.</p>
-        <div class="footer-links">
-            <span class="footer-link" onclick="openPrivacyModal()">Privacy Policy</span>
+        
+        <div class="footer-links-stack">
+            <span class="footer-link" onclick="openLegalModal('terms')">Terms & Conditions</span>
+            <span class="footer-link" onclick="openLegalModal('privacy')">Privacy Policy</span>
         </div>
     </footer>
 
-    <div id="privacyModal" class="privacy-modal">
-        <div class="privacy-content">
-            <span class="close-modal" onclick="closePrivacyModal()">&times;</span>
-            <h3>Privacy Policy</h3>
-            <p style="margin-bottom: 1.25rem; font-size: 1.05rem; color: #333;">At Cosmic Scoopers, we values your privacy. This policy outlines how we handle the information collected through our quote request form.</p>
-            <h4 style="font-family: var(--font-cosmic); margin-bottom: 0.5rem; color: var(--charcoal);">Information Collection</h4>
-            <p style="margin-bottom: 1.25rem; font-size: 1rem; color: #555;">We collect personal details such as your name, phone number, email address, and service location strictly to generate accurate service quotes and coordinate scheduling.</p>
-            <h4 style="font-family: var(--font-cosmic); margin-bottom: 0.5rem; color: var(--charcoal);">Data Usage & Protection</h4>
-            <p style="margin-bottom: 1.25rem; font-size: 1rem; color: #555;">Your details are transmitted securely via Web3Forms directly to our internal operational systems. We do not sell, trade, rent, or distribute your private contact information to any third-party marketing networks or external entities.</p>
-            <h4 style="font-family: var(--font-cosmic); margin-bottom: 0.5rem; color: var(--charcoal);">Consent</h4>
-            <p style="font-size: 1rem; color: #555;">By submitting our quote request form, you give consent to Cosmic Scoopers to contact you via email, phone call, or text message regarding your service request setup options.</p>
+    <div id="legalModal" class="legal-modal">
+        <div class="legal-content">
+            <span class="close-modal" onclick="closeLegalModal()">&times;</span>
+            
+            <div class="modal-tabs">
+                <button id="tab-terms" class="modal-tab-btn" onclick="switchTab('terms')">Terms & Conditions</button>
+                <button id="tab-privacy" class="modal-tab-btn" onclick="switchTab('privacy')">Privacy Policy</button>
+            </div>
+
+            <div id="pane-terms" class="legal-pane">
+                <h3>Terms & Conditions</h3>
+                <p style="font-size: 1.05rem; font-style: italic; color: #555; margin-bottom: 1.5rem;">COSMIC SCOOPERS – TERMS & CONDITIONS</p>
+                <p>These Terms & Conditions apply to all services provided by Cosmic Scoopers. By approving a quote, scheduling service, or making payment, the customer agrees to be bound by the following terms.</p>
+                
+                <ol>
+                    <li>
+                        <strong>Service Agreement</strong><br>
+                        Cosmic Scoopers provides pet waste removal services as outlined in the approved quote, including frequency, pricing, and designated service areas. Services are limited strictly to the areas agreed upon at the time of booking or quote approval.
+                    </li>
+                    <li>
+                        <strong>Acceptance of Terms</strong><br>
+                        Approval of a quote, payment of an invoice, or allowing service to be performed constitutes full acceptance of these Terms & Conditions. No physical or digital signature is required unless specifically requested.
+                    </li>
+                    <li>
+                        <strong>Billing & Payment Terms</strong>
+                        <ul>
+                            <li>All services are billed monthly in advance before services are rendered.</li>
+                            <li>Payment is due upon receipt of invoice unless otherwise agreed in writing.</li>
+                            <li>Failure to pay on time may result in suspension or termination of service without notice.</li>
+                            <li>Returned payments, chargebacks, or failed transactions may incur additional processing or service fees.</li>
+                            <li>Services will not continue if payment is not received for the upcoming billing period.</li>
+                            <li>Monthly fees are non-refundable once billed, as service capacity and routing are reserved in advance.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Scheduling, Routing & Service Days</strong>
+                        <ul>
+                            <li>Service days are assigned solely by Cosmic Scoopers based on route efficiency and operational scheduling.</li>
+                            <li>Customers may request a preferred day; however, specific service days and times are not guaranteed.</li>
+                            <li>Routes and schedules may change at any time due to operational needs, efficiency improvements, or business adjustments.</li>
+                            <li>Customers will be notified when permanent schedule changes occur when possible.</li>
+                            <li>Customers do not select or guarantee their service day.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Property Access Requirements</strong><br>
+                        Customers are responsible for ensuring safe, unobstructed access to all service areas. Gates must be unlocked or accessible at the time of service. Locked gates, blocked access, or unsafe conditions may result in a missed visit. Missed visits due to lack of access may still be billed.
+                    </li>
+                    <li>
+                        <strong>Pet Safety & Containment</strong><br>
+                        All dogs must be secured inside the home or otherwise fully contained prior to service arrival. Dogs may not be present in the yard or service area during service. If dogs are loose in the service area, service may be skipped for safety reasons. Visits missed due to unsecured pets will still be billed.
+                    </li>
+                    <li>
+                        <strong>Waste Collection & Disposal</strong><br>
+                        All pet waste collected will be double-bagged. Waste will be disposed of in the customer’s designated trash receptacle or dumpster on the property. Customers are responsible for providing an accessible disposal container. Cosmic Scoopers does not transport or remove waste off-site unless specifically agreed to in writing and subject to additional fees. If no receptacle is available or accessible, waste may be left in a designated safe area on the property and the customer will be notified.
+                    </li>
+                    <li>
+                        <strong>Weather, Safety & Service Interruptions</strong><br>
+                        Services may be delayed, rescheduled, or skipped due to weather, flooding, natural disasters, unsafe terrain, or conditions deemed unsafe by the technician. Every effort will be made to maintain scheduled service consistency. Unsafe conditions include but are not limited to aggressive animals, hazardous debris, or environmental dangers.
+                    </li>
+                    <li>
+                        <strong>Holiday Closures</strong><br>
+                        Cosmic Scoopers does not provide service on the following holidays: New Year’s Day, Memorial Day, Independence Day, Labor Day, Thanksgiving Day, and Christmas Day. If a scheduled service falls on a holiday, service will be rescheduled to the nearest available business day. Monthly pricing remains unchanged.
+                    </li>
+                    <li>
+                        <strong>Cancellation & Termination</strong><br>
+                        Customers may cancel service at any time with a minimum of seven (7) days’ written notice. Services scheduled within the 7-day notice period may still be billed. Cosmic Scoopers reserves the right to terminate service at any time for non-payment, unsafe conditions, or policy violations. No long-term contracts are required unless otherwise stated in writing.
+                    </li>
+                    <li>
+                        <strong>Commercial Properties</strong><br>
+                        Property owners, managers, or authorized representatives must approve all service areas prior to service. Service is limited to areas outlined in the approved quote. Additional areas or expanded service requests may result in additional charges. Commercial clients are responsible for communicating property-specific rules, restrictions, or hazards.
+                    </li>
+                    <li>
+                        <strong>Liability Limitation</strong>
+                        <ul>
+                            <li>Cosmic Scoopers is not liable for pre-existing property damage or deterioration.</li>
+                            <li>Cosmic Scoopers is not liable for hidden or unmarked hazards on the property.</li>
+                            <li>Cosmic Scoopers is not liable for damage resulting from unsecured gates, fencing, landscaping, irrigation systems, or property features.</li>
+                            <li>Cosmic Scoopers is not liable for delays or missed services due to weather or events outside company control.</li>
+                            <li>Cosmic Scoopers is not liable for issues arising from customer failure to secure pets or provide access.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Agreement Confirmation</strong><br>
+                        By approving a quote, submitting payment, or allowing services to begin, the customer acknowledges they have read, understood, and agreed to these Terms & Conditions in full.
+                    </li>
+                </ol>
+            </div>
+
+            <div id="pane-privacy" class="legal-pane">
+                <h3>Privacy Policy</h3>
+                <p style="font-size: 1.05rem; color: #333; margin-bottom: 1.5rem;">At Cosmic Scoopers, we value your privacy. This policy outlines how we handle the information collected through our quote request form.</p>
+                
+                <h4>Information Collection</h4>
+                <p>We collect personal details such as your name, phone number, email address, and service location strictly to generate accurate service quotes and coordinate scheduling.</p>
+                
+                <h4>Data Usage & Protection</h4>
+                <p>Your details are transmitted securely via Web3Forms directly to our internal operational systems. We do not sell, trade, rent, or distribute your private contact information to any third-party marketing networks or external entities.</p>
+                
+                <h4>Consent</h4>
+                <p>By submitting our quote request form, you give consent to Cosmic Scoopers to contact you via email, phone call, or text message regarding your service request setup options.</p>
+            </div>
+
         </div>
     </div>
 
@@ -1263,20 +1466,35 @@
             }
         }
 
-        function handleFormSubmit(event) {
-            // Form submission logic goes here
+        // --- DUAL TAB POPUP MODAL LOGIC ---
+        function openLegalModal(initialTab) {
+            document.getElementById('legalModal').style.display = 'block';
+            switchTab(initialTab);
         }
 
-        function openPrivacyModal() {
-            document.getElementById('privacyModal').style.display = 'block';
+        function closeLegalModal() {
+            document.getElementById('legalModal').style.display = 'none';
         }
 
-        function closePrivacyModal() {
-            document.getElementById('privacyModal').style.display = 'none';
+        function switchTab(tabName) {
+            // Remove active classes from buttons
+            document.getElementById('tab-terms').classList.remove('active');
+            document.getElementById('tab-privacy').classList.remove('active');
+            
+            // Remove active classes from panes
+            document.getElementById('pane-terms').classList.remove('active');
+            document.getElementById('pane-privacy').classList.remove('active');
+            
+            // Activate current targets
+            document.getElementById('tab-' + tabName).classList.add('active');
+            document.getElementById('pane-' + tabName).classList.add('active');
+            
+            // Reset scrolling position inside the window container view panel back to top
+            document.getElementById('pane-' + tabName).scrollTop = 0;
         }
 
         window.onclick = function(event) {
-            const modal = document.getElementById('privacyModal');
+            const modal = document.getElementById('legalModal');
             if (event.target == modal) {
                 modal.style.display = 'none';
             }
