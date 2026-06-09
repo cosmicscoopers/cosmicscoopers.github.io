@@ -54,7 +54,7 @@
         @keyframes shootingStarAction {
             0% { transform: translateX(0) translateY(0) rotate(-45deg) scale(0); opacity: 0; }
             1% { transform: translateX(-100px) translateY(100px) rotate(-45deg) scale(1); opacity: 1; }
-            6% { transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(1); opacity: 0; }
+            6% { transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(0); opacity: 0; }
             100% { transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(0); opacity: 0; }
         }
 
@@ -829,6 +829,8 @@
             animation: fadeInUp 0.5s ease;
         }
 
+        document.cookie = "SameSite=Lax; Secure";
+
         footer {
             background-color: #08030f;
             color: rgba(255, 255, 255, 0.7);
@@ -1053,10 +1055,6 @@
                 <div class="addon-item">
                     <h4 class="addon-name">Dog Repellent Treatment</h4>
                     <p class="addon-desc">Targeted perimeter application for marking designated yard boundaries.</p>
-                </div>
-                <div class="addon-item">
-                    <h4 class="addon-name">Heavy Yard Condition Surcharge</h4>
-                    <p class="addon-desc">Applies only when excessive buildup requires intensive additional work; fully approved before service.</p>
                 </div>
             </div>
         </div>
