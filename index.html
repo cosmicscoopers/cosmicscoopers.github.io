@@ -138,12 +138,12 @@
             height: auto;
         }
 
-        /* Header Navigation Menu */
+        /* Streamlined Header Navigation Menu */
         header {
             background-color: rgba(11, 4, 20, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            padding: 1.5rem 1rem;
+            padding: 0.6rem 1.5rem;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -155,15 +155,16 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-direction: column; 
+            flex-direction: row; 
             align-items: center;
-            gap: 1.5rem; 
+            justify-content: space-between;
+            gap: 1rem; 
         }
 
         .logo-container {
             display: flex;
-            justify-content: center;
-            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
             transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
@@ -173,7 +174,7 @@
 
         .logo-img {
             width: 100%;
-            max-width: 550px;
+            max-width: 280px; /* Streamlined profile size */
             height: auto;
             display: block;
             filter: drop-shadow(0 4px 12px rgba(181, 126, 220, 0.3));
@@ -183,22 +184,23 @@
             background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
             color: var(--text-light);
             text-decoration: none;
-            padding: 1rem 2.75rem; 
+            padding: 0.65rem 1.75rem; /* Lower vertical footprint */
             border-radius: 50px;
             font-family: var(--font-cosmic);
             font-weight: 600;
-            font-size: 1.15rem;
+            font-size: 1rem;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             animation: pulseGlow 3s infinite;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.3);
+            white-space: nowrap;
         }
 
         .nav-btn:hover {
             background: var(--text-light);
             color: var(--cosmic-purple);
-            transform: translateY(-4px) scale(1.04);
-            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 22px rgba(255, 255, 255, 0.4);
         }
 
         /* Veteran Brand Accent Ribbon */
@@ -307,7 +309,7 @@
             filter: drop-shadow(0 0 8px var(--lavender));
         }
 
-        /* Service Cards - Semi-Transparent Overlays for Background Flow Visibility */
+        /* Service Cards */
         .plans-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -927,6 +929,10 @@
         }
 
         @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column; /* Stack naturally on mobile viewports */
+                padding: 0.4rem 0;
+            }
             .hero h1 { font-size: 3rem; }
             .hero p { font-size: 1.25rem; }
             .quote-form-grid { grid-template-columns: 1fr; }
