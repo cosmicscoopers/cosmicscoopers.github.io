@@ -29,8 +29,6 @@
         }
 
         /* --- REALISTIC COSMIC ANIMATIONS --- */
-        
-        /* Realistic star twinkle variations */
         @keyframes twinkleLayer1 {
             0%, 100% { opacity: 0.3; }
             30% { opacity: 0.9; }
@@ -53,24 +51,11 @@
             100% { transform: scale(1) translate(0px, 0px); opacity: 0.3; }
         }
 
-        /* High-speed atmospheric entrance shooting star physics */
         @keyframes shootingStarAction {
-            0% {
-                transform: translateX(0) translateY(0) rotate(-45deg) scale(0);
-                opacity: 0;
-            }
-            1% {
-                transform: translateX(-100px) translateY(100px) rotate(-45deg) scale(1);
-                opacity: 1;
-            }
-            6% {
-                transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(1);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(0);
-                opacity: 0;
-            }
+            0% { transform: translateX(0) translateY(0) rotate(-45deg) scale(0); opacity: 0; }
+            1% { transform: translateX(-100px) translateY(100px) rotate(-45deg) scale(1); opacity: 1; }
+            6% { transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(1); opacity: 0; }
+            100% { transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(0); opacity: 0; }
         }
 
         @keyframes pulseGlow {
@@ -90,7 +75,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Reset & Base Styles */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -101,7 +85,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Deep Infinite Space Backdrop */
         body {
             font-family: var(--font-body);
             color: var(--text-dark);
@@ -111,7 +94,6 @@
             position: relative;
         }
 
-        /* --- REALISTIC FLICKERING STARFIELD LAYERS --- */
         .starfield-layer {
             position: fixed;
             top: 0;
@@ -122,7 +104,6 @@
             z-index: -3;
         }
 
-        /* Layer 1: Crisp, tiny background pinpricks */
         .stars-micro {
             background-image: 
                 radial-gradient(circle at 10% 15%, #fff 1px, transparent 1px),
@@ -139,7 +120,6 @@
             animation: twinkleLayer1 7s ease-in-out infinite;
         }
 
-        /* Layer 2: Mid-range stellar bodies with lavender shifts */
         .stars-mid {
             background-image: 
                 radial-gradient(circle at 20% 30%, #fff 2px, transparent 2px),
@@ -155,7 +135,6 @@
             animation-delay: -3s;
         }
 
-        /* Ambient Fluid Nebula Clouds */
         .nebula-cloud {
             position: fixed;
             width: 700px;
@@ -171,7 +150,6 @@
         .nebula-2 { bottom: -10%; right: -15%; animation-delay: -7s; background: radial-gradient(circle, rgba(74, 29, 117, 0.25) 0%, transparent 70%); }
         .nebula-3 { top: 40%; left: 50%; transform: translateX(-50%); background: radial-gradient(circle, rgba(181, 126, 220, 0.12) 0%, transparent 65%); }
 
-        /* --- REALISTIC METEOR FLUID OVERLAY --- */
         .shooting-star-container {
             position: fixed;
             top: 0;
@@ -192,7 +170,6 @@
             filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
         }
         
-        /* Randomized real-time physics vectors across screen areas */
         .streak-1 { top: -20px; right: 10%; animation-delay: 2.2s; animation-duration: 12s; }
         .streak-2 { top: 15%; right: 40%; animation-delay: 7.8s; animation-duration: 16s; width: 1.5px; height: 85px; }
         .streak-3 { top: -40px; right: 65%; animation-delay: 13.1s; animation-duration: 19s; width: 2.5px; height: 130px; }
@@ -202,7 +179,6 @@
             height: auto;
         }
 
-        /* Streamlined Header Navigation Menu */
         header {
             background-color: rgba(11, 4, 20, 0.85);
             backdrop-filter: blur(16px);
@@ -267,7 +243,6 @@
             box-shadow: 0 8px 22px rgba(255, 255, 255, 0.4);
         }
 
-        /* Veteran Brand Accent Ribbon */
         .vet-banner {
             background: linear-gradient(90deg, var(--cosmic-purple) 0%, var(--lavender-dark) 50%, var(--cosmic-purple) 100%);
             color: var(--text-light);
@@ -282,7 +257,6 @@
             border-bottom: 1px solid rgba(255,255,255,0.15);
         }
 
-        /* Hero Splash Showcase Layout */
         .hero {
             position: relative;
             color: var(--text-light);
@@ -346,7 +320,6 @@
             border-color: #FFFFFF;
         }
 
-        /* Section Settings Layout */
         section {
             padding: 7rem 2rem;
             max-width: 1200px;
@@ -373,7 +346,6 @@
             filter: drop-shadow(0 0 8px var(--lavender));
         }
 
-        /* Service Cards */
         .plans-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -414,22 +386,10 @@
                         linear-gradient(145deg, var(--lavender), var(--cosmic-purple)) border-box;
         }
         
-        .plan-card.featured::before {
-            content: "🌌 RECOMMENDED";
-            position: absolute;
-            top: -16px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--cosmic-purple) 0%, #1A0B2E 100%);
-            color: var(--text-light);
-            padding: 0.5rem 1.75rem;
-            font-size: 0.8rem;
-            font-weight: 700;
-            border-radius: 50px;
-            letter-spacing: 1.25px;
-            z-index: 5;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            border: 1px solid rgba(181, 126, 220, 0.4);
+        .recommended-logo {
+            max-height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
         }
 
         .plan-tier {
@@ -526,7 +486,6 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.4);
         }
 
-        /* Add-Ons System Layout Box */
         .addons-container {
             background-color: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(6px);
@@ -596,7 +555,6 @@
             line-height: 1.6;
         }
 
-        /* Image Containers */
         .full-width-image-container {
             width: 100%;
             overflow: hidden;
@@ -616,7 +574,6 @@
             transform: scale(1.02);
         }
 
-        /* Service Boundaries Section Map Layout */
         .service-areas-layout {
             background: linear-gradient(135deg, rgba(21, 11, 36, 0.85) 0%, rgba(10, 5, 18, 0.9) 100%);
             backdrop-filter: blur(10px);
@@ -707,7 +664,6 @@
             box-shadow: 0 20px 50px rgba(181, 126, 220, 0.4);
         }
 
-        /* Lead Intake Request Form Block */
         .form-section {
             background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(8px);
@@ -873,7 +829,6 @@
             animation: fadeInUp 0.5s ease;
         }
 
-        /* Footer System Panels */
         footer {
             background-color: #08030f;
             color: rgba(255, 255, 255, 0.7);
@@ -909,7 +864,6 @@
             text-shadow: 0 0 8px var(--lavender);
         }
 
-        /* Privacy Policy Modal Window overlay */
         .privacy-modal {
             display: none;
             position: fixed;
@@ -964,39 +918,18 @@
             padding-bottom: 0.75rem;
         }
 
-        /* Fluid Layout Breakpoints */
         @media (max-width: 900px) {
-            .service-areas-layout {
-                grid-template-columns: 1fr;
-                padding: 0 0 2.5rem 0;
-            }
-            .service-info-side {
-                text-align: center;
-                padding: 4rem 2rem 2.5rem 2rem;
-            }
-            .service-info-side .section-title {
-                text-align: center;
-            }
-            .service-info-side .section-title::after {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .badge-container {
-                margin: 0 auto;
-            }
-            .map-side {
-                padding: 0 2rem;
-            }
-            .map-img {
-                max-height: 400px;
-            }
+            .service-areas-layout { grid-template-columns: 1fr; padding: 0 0 2.5rem 0; }
+            .service-info-side { text-align: center; padding: 4rem 2rem 2.5rem 2rem; }
+            .service-info-side .section-title { text-align: center; }
+            .service-info-side .section-title::after { margin-left: auto; margin-right: auto; }
+            .badge-container { margin: 0 auto; }
+            .map-side { padding: 0 2rem; }
+            .map-img { max-height: 400px; }
         }
 
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                padding: 0.4rem 0;
-            }
+            .nav-container { flex-direction: column; padding: 0.4rem 0; }
             .hero h1 { font-size: 3rem; }
             .hero p { font-size: 1.25rem; }
             .quote-form-grid { grid-template-columns: 1fr; }
@@ -1068,6 +1001,9 @@
             </div>
 
             <div class="plan-card featured better-tier">
+                <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--cosmic-purple) 0%, #1A0B2E 100%); color: var(--text-light); padding: 0.5rem 1.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 50px; letter-spacing: 1.25px; z-index: 5; box-shadow: 0 4px 15px rgba(0,0,0,0.4); border: 1px solid rgba(181, 126, 220, 0.4); display: flex; align-items: center; white-space: nowrap;">
+                    <img src="cosmic-recommended-logo.png" alt="Logo" class="recommended-logo"> RECOMMENDED
+                </div>
                 <div>
                     <div class="plan-tier">BETTER</div>
                     <h3 class="plan-title">Cosmic Clean Duo</h3>
@@ -1225,21 +1161,20 @@
                             </div>
                             <div>
                                 <label for="dogSize">Dog Size *</label>
-                                <select id="dogSize" name="Dog Structural Size" required>
+                                <select id="dogSize" name="Dog Structural Size Tier" required>
                                     <option value="" disabled selected>Select</option>
-                                    <option value="Small">Small</option>
-                                    <option value="Medium">Medium</option>
-                                    <option value="Large">Large</option>
-                                    <option value="Mixed">Mixed</option>
+                                    <option value="Small (under 20 lbs)">Small (under 20 lbs)</option>
+                                    <option value="Medium (20-50 lbs)">Medium (20-50 lbs)</option>
+                                    <option value="Large (50+ lbs)">Large (50+ lbs)</option>
                                 </select>
                             </div>
                             <div>
-                                <label for="wasteLevel">Waste Level *</label>
-                                <select id="wasteLevel" name="Estimated Waste Accumulation" required>
+                                <label for="gateAccess">Gate Lock *</label>
+                                <select id="gateAccess" name="Property Gate Condition" required>
                                     <option value="" disabled selected>Select</option>
-                                    <option value="Light">Light</option>
-                                    <option value="Moderate">Moderate</option>
-                                    <option value="Heavy">Heavy</option>
+                                    <option value="Unlocked">Unlocked</option>
+                                    <option value="Key / Code Provided">Key / Code Provided</option>
+                                    <option value="Will ensure open">Will ensure open</option>
                                 </select>
                             </div>
                         </div>
@@ -1247,93 +1182,37 @@
                 </div>
 
                 <div class="form-build-block">
-                    <div class="block-title">5) Access & Property Conditions</div>
-                    <div class="quote-form-grid">
-                        <div class="form-group">
-                            <label for="fenceType">Fence Type *</label>
-                            <select id="fenceType" name="Boundary Fence Style" required>
-                                <option value="" disabled selected>Select property setup</option>
-                                <option value="Fully fenced">Fully fenced</option>
-                                <option value="Partially fenced">Partially fenced</option>
-                                <option value="Not fenced">Not fenced</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="dogsIndoors">Dogs will be indoors during service? *</label>
-                            <select id="dogsIndoors" name="Dogs Confined Indoors" required>
-                                <option value="" disabled selected>Select confirmation</option>
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                                <option value="Unsure">Unsure</option>
-                            </select>
-                        </div>
-                        <div class="form-group full-width">
-                            <label for="notes">Gate Access Notes (Lock combinations, gate security keys, setup layout)</label>
-                            <textarea id="notes" name="Gate Access Entry Mechanics" rows="3" placeholder="Enter secure lock codes or structural notes..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-build-block">
-                    <div class="block-title">6) Add-Ons</div>
+                    <div class="block-title">5) Additional Notes & Environmental Upgrades</div>
                     <div class="quote-form-grid">
                         <div class="checkbox-stack">
                             <label class="checkbox-item">
-                                <input type="checkbox" name="Addon: Initial Cleanup" value="Requested">
-                                <span>Initial Cleanup (first-time service or overgrown yard profile requirement)</span>
+                                <input type="checkbox" name="Addon Requested: Initial Cleanup" value="Yes">
+                                <span><strong>Request Initial Cleanup</strong> (Required if yard currently has significant or overgrown buildup)</span>
                             </label>
                             <label class="checkbox-item">
-                                <input type="checkbox" name="Addon: Deodorizer Treatment" value="Requested">
-                                <span>Deodorizer Treatment (Odor mitigation booster layer)</span>
+                                <input type="checkbox" name="Addon Requested: Deodorizer" value="Yes">
+                                <span><strong>Add Deodorizer Treatment</strong> (Applied monthly or as needed to eliminate deep yard odors)</span>
                             </label>
                             <label class="checkbox-item">
-                                <input type="checkbox" name="Addon: Dog Repellent" value="Requested">
-                                <span>Dog Repellent Treatment (Boundary perimeter application shield)</span>
+                                <input type="checkbox" name="Addon Requested: Dog Repellent" value="Yes">
+                                <span><strong>Add Dog Repellent Application</strong> (Targeted application to establish clean boundaries)</span>
                             </label>
-                            <label class="checkbox-item" style="border-color: rgba(138,79,186,0.3); background-color: #FAF6FF;">
-                                <input type="checkbox" name="Heavy Condition Acknowledgement" value="Acknowledged" required>
-                                <span style="font-weight:600; color:var(--cosmic-purple);">Heavy Yard Condition Acknowledgement * (Required: I understand a surcharge applies if excessive buildup requires additional overhead)</span>
-                            </label>
+                        </div>
+                        <div class="form-group full-width" style="margin-top:0.75rem;">
+                            <label for="specialNotes">Special Environmental Instructions / Comments</label>
+                            <textarea id="specialNotes" name="Customer Remarks & Custom Instructions" rows="4" placeholder="Tell us about aggressive dogs, broken gates, text-before-arrival requests, or structural details..."></textarea>
                         </div>
                     </div>
                 </div>
 
-                <div class="form-build-block">
-                    <div class="quote-form-grid">
-                        <div class="form-group full-width" style="margin-bottom:0.75rem;">
-                            <div class="block-title" style="margin-bottom:0.75rem;">7) Start Date</div>
-                            <label for="startDate">Preferred Start Date</label>
-                            <input type="date" id="startDate" name="Target Commencement Date">
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <div class="block-title" style="margin-bottom:0.75rem;">8) Terms Acknowledgement</div>
-                            <div class="checkbox-stack">
-                                <label class="checkbox-item" style="border-color: #CBD5E1;">
-                                    <input type="checkbox" name="Term Acknowledged: Pricing Variables" value="Yes" required>
-                                    <span>I understand pricing plans are calculated directly based on custom yard size metrics and operational service frequencies. *</span>
-                                </label>
-                                <label class="checkbox-item" style="border-color: #CBD5E1;">
-                                    <input type="checkbox" name="Term Acknowledged: Addon Applications" value="Yes" required>
-                                    <span>I understand standard structural add-ons may apply to billing operations based on distinct field yard conditions. *</span>
-                                </label>
-                                <label class="checkbox-item" style="border-color: #CBD5E1;">
-                                    <input type="checkbox" name="Term Acknowledged: Route Optimization" value="Yes" required>
-                                    <span>I understand deployment scheduling is handled strictly via local route optimization routines, not user-selected timeframe blocks. *</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button type="submit" class="submit-btn" id="submitBtn">Submit Quote Request</button>
+                <button type="submit" class="submit-btn">Submit Quote Request</button>
             </form>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2026 Cosmic Scoopers. All rights reserved.</p>
-        <p>Providing premium weekly dog poop cleanup services in Milton, Pace, and Navarre, Florida.</p>
+        <p>Providing professional pet waste removal and cleanup services in Milton, Pace, and Navarre, Florida.</p>
         <div class="footer-links">
             <span class="footer-link" onclick="openPrivacyModal()">Privacy Policy</span>
         </div>
@@ -1342,82 +1221,47 @@
     <div id="privacyModal" class="privacy-modal">
         <div class="privacy-content">
             <span class="close-modal" onclick="closePrivacyModal()">&times;</span>
-            <h3>Privacy Policy:</h3>
-            <p>Cosmic Scoopers respects your privacy and is committed to accepting and protecting your personal information.</p>
-            
-            <h4 style="font-family: var(--font-cosmic); color: var(--lavender-dark); margin-top: 1rem;">Information We Collect</h4>
-            <p>We may collect name, contact information, service addresses, and metrics provided via form requests.</p>
-            
-            <h4 style="font-family: var(--font-cosmic); color: var(--lavender-dark); margin-top: 1rem;">How We Use Your Information</h4>
-            <p>To provision design estimates, organize field routing setups, and optimize delivery services safely.</p>
-            
-            <h4 style="font-family: var(--font-cosmic); color: var(--lavender-dark); margin-top: 1rem;">Contact Information</h4>
-            <p>Cosmic Scoopers<br>Email: cosmicscoopers@gmail.com</p>
+            <h3>Privacy Policy</h3>
+            <p style="margin-bottom: 1.25rem; font-size: 1.05rem; color: #333;">At Cosmic Scoopers, we values your privacy. This policy outlines how we handle the information collected through our quote request form.</p>
+            <h4 style="font-family: var(--font-cosmic); margin-bottom: 0.5rem; color: var(--charcoal);">Information Collection</h4>
+            <p style="margin-bottom: 1.25rem; font-size: 1rem; color: #555;">We collect personal details such as your name, phone number, email address, and service location strictly to generate accurate service quotes and coordinate scheduling.</p>
+            <h4 style="font-family: var(--font-cosmic); margin-bottom: 0.5rem; color: var(--charcoal);">Data Usage & Protection</h4>
+            <p style="margin-bottom: 1.25rem; font-size: 1rem; color: #555;">Your details are transmitted securely via Web3Forms directly to our internal operational systems. We do not sell, trade, rent, or distribute your private contact information to any third-party marketing networks or external entities.</p>
+            <h4 style="font-family: var(--font-cosmic); margin-bottom: 0.5rem; color: var(--charcoal);">Consent</h4>
+            <p style="font-size: 1rem; color: #555;">By submitting our quote request form, you give consent to Cosmic Scoopers to contact you via email, phone call, or text message regarding your service request setup options.</p>
         </div>
     </div>
 
     <script>
         function selectPlan(planName) {
-            const planDropdown = document.getElementById('servicePlan');
-            for (let i = 0; i < planDropdown.options.length; i++) {
-                if (planDropdown.options[i].value === planName) {
-                    planDropdown.selectedIndex = i;
-                    break;
+            const planSelect = document.getElementById('servicePlan');
+            if (planSelect) {
+                for (let i = 0; i < planSelect.options.length; i++) {
+                    if (planSelect.options[i].value === planName) {
+                        planSelect.selectedIndex = i;
+                        break;
+                    }
                 }
-            }
-        }
-
-        function openPrivacyModal() {
-            document.getElementById('privacyModal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closePrivacyModal() {
-            document.getElementById('privacyModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById('privacyModal');
-            if (event.target === modal) {
-                closePrivacyModal();
             }
         }
 
         function handleFormSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            const submitBtn = document.getElementById('submitBtn');
-            const successMessage = document.getElementById('successMessage');
-            
-            submitBtn.style.display = 'none';
-            successMessage.style.display = 'block';
-            successMessage.style.backgroundColor = '#E2E8F0';
-            successMessage.style.borderColor = '#CBD5E1';
-            successMessage.style.color = '#334155';
-            successMessage.textContent = "Sending quote details securely...";
-            
-            fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    successMessage.style.backgroundColor = '#E6FFFA';
-                    successMessage.style.borderColor = '#319795';
-                    successMessage.style.color = '#234E52';
-                    successMessage.textContent = "Your request has been logged successfully. A customized quote evaluation will follow shortly.";
-                    form.reset();
-                } else {
-                    throw new Error();
-                }
-            }).catch(() => {
-                successMessage.style.backgroundColor = '#FFF5F5';
-                successMessage.style.borderColor = '#E53E3E';
-                successMessage.style.color = '#742A2A';
-                successMessage.textContent = "Operational line error. Please verify endpoints configuration.";
-                submitBtn.style.display = 'block';
-            });
+            // Form submission logic goes here
+        }
+
+        function openPrivacyModal() {
+            document.getElementById('privacyModal').style.display = 'block';
+        }
+
+        function closePrivacyModal() {
+            document.getElementById('privacyModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('privacyModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
         }
     </script>
 </body>
