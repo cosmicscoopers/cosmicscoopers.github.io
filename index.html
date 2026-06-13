@@ -6,7 +6,7 @@
     <title>Pet Waste Removal Milton FL | Cosmic Scoopers</title>
     <meta name="description" content="Weekly pet waste removal and dog poop cleanup services in Milton, Pace, and Navarre Florida. Request a quote for recurring weekly service.">
     
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="1000007589.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,8 @@
             --lavender: #B57EDC;
             --lavender-glow: rgba(181, 126, 220, 0.4);
             --lavender-dark: #8A4FBA;
-            --cosmic-purple: #4A1D75;
             --charcoal: #2B2B2B;
-            --charcoal-dark: #0B0414;
+            --charcoal-dark: #1F1F1F;
             --charcoal-light: #3D3D3D;
             --soft-white: #FAFAFC;
             --text-dark: #2B2B2B;
@@ -28,53 +27,7 @@
             --font-body: 'Plus Jakarta Sans', sans-serif;
         }
 
-        /* --- REALISTIC COSMIC ANIMATIONS --- */
-        @keyframes twinkleLayer1 {
-            0%, 100% { opacity: 0.3; }
-            30% { opacity: 0.9; }
-            45% { opacity: 0.4; }
-            70% { opacity: 1; }
-            85% { opacity: 0.2; }
-        }
-
-        @keyframes twinkleLayer2 {
-            0%, 100% { opacity: 0.8; }
-            20% { opacity: 0.2; }
-            40% { opacity: 0.7; }
-            65% { opacity: 0.3; }
-            80% { opacity: 0.9; }
-        }
-
-        @keyframes nebulaPulse {
-            0% { transform: scale(1) translate(0px, 0px); opacity: 0.3; }
-            50% { transform: scale(1.15) translate(30px, 20px); opacity: 0.5; }
-            100% { transform: scale(1) translate(0px, 0px); opacity: 0.3; }
-        }
-
-        @keyframes shootingStarAction {
-            0% { transform: translateX(0) translateY(0) rotate(-45deg) scale(0); opacity: 0; }
-            1% { transform: translateX(-100px) translateY(100px) rotate(-45deg) scale(1); opacity: 1; }
-            6% { transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(0); opacity: 0; }
-            100% { transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(0); opacity: 0; }
-        }
-
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 15px rgba(181, 126, 220, 0.4); }
-            50% { box-shadow: 0 0 35px rgba(181, 126, 220, 0.85); }
-            100% { box-shadow: 0 0 15px rgba(181, 126, 220, 0.4); }
-        }
-
-        @keyframes floatElement {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-8px) rotate(8deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
+        /* Reset & Base Styles */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -87,243 +40,164 @@
 
         body {
             font-family: var(--font-body);
+            background-color: var(--soft-white);
             color: var(--text-dark);
             line-height: 1.6;
-            overflow-x: hidden;
-            background-color: #040108;
-            position: relative;
+            /* Added padding-top to prevent content from hiding underneath the fixed header */
+            padding-top: 155px;
         }
-
-        .starfield-layer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -3;
-        }
-
-        .stars-micro {
-            background-image: 
-                radial-gradient(circle at 10% 15%, #fff 1px, transparent 1px),
-                radial-gradient(circle at 35% 45%, rgba(255,255,255,0.8) 1px, transparent 1px),
-                radial-gradient(circle at 75% 20%, #fff 1px, transparent 1px),
-                radial-gradient(circle at 85% 65%, rgba(255,255,255,0.9) 1px, transparent 1px),
-                radial-gradient(circle at 45% 85%, #fff 1px, transparent 1px),
-                radial-gradient(circle at 15% 75%, rgba(255,255,255,0.7) 1px, transparent 1px),
-                radial-gradient(circle at 60% 40%, #fff 1.5px, transparent 1.5px),
-                radial-gradient(circle at 90% 10%, rgba(255,255,255,0.6) 1px, transparent 1px),
-                radial-gradient(circle at 50% 15%, #fff 1px, transparent 1px),
-                radial-gradient(circle at 25% 55%, #fff 1px, transparent 1px);
-            background-size: 400px 400px;
-            animation: twinkleLayer1 7s ease-in-out infinite;
-        }
-
-        .stars-mid {
-            background-image: 
-                radial-gradient(circle at 20% 30%, #fff 2px, transparent 2px),
-                radial-gradient(circle at 80% 50%, var(--lavender) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 55% 70%, #fff 1.5px, transparent 1.5px),
-                radial-gradient(circle at 70% 85%, rgba(255,255,255,0.95) 2px, transparent 2px),
-                radial-gradient(circle at 40% 25%, var(--lavender) 2px, transparent 2px),
-                radial-gradient(circle at 95% 35%, #fff 1.5px, transparent 1.5px),
-                radial-gradient(circle at 5% 90%, #fff 2px, transparent 2px),
-                radial-gradient(circle at 65% 12%, rgba(255,255,255,0.85) 1.5px, transparent 1.5px);
-            background-size: 550px 550px;
-            animation: twinkleLayer2 11s ease-in-out infinite;
-            animation-delay: -3s;
-        }
-
-        .nebula-cloud {
-            position: fixed;
-            width: 700px;
-            height: 700px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(138, 79, 186, 0.2) 0%, transparent 70%);
-            filter: blur(90px);
-            z-index: -2;
-            pointer-events: none;
-            animation: nebulaPulse 25s ease-in-out infinite;
-        }
-        .nebula-1 { top: -10%; left: -15%; }
-        .nebula-2 { bottom: -10%; right: -15%; animation-delay: -7s; background: radial-gradient(circle, rgba(74, 29, 117, 0.25) 0%, transparent 70%); }
-        .nebula-3 { top: 40%; left: 50%; transform: translateX(-50%); background: radial-gradient(circle, rgba(181, 126, 220, 0.12) 0%, transparent 65%); }
-
-        .shooting-star-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-            pointer-events: none;
-        }
-        
-        .star-streak {
-            position: absolute;
-            width: 2px;
-            height: 110px;
-            background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(181, 126, 220, 0.4) 35%, transparent 100%);
-            animation: shootingStarAction 14s cubic-bezier(0.25, 1, 0.2, 1) infinite;
-            opacity: 0;
-            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
-        }
-        
-        .streak-1 { top: -20px; right: 10%; animation-delay: 2.2s; animation-duration: 12s; }
-        .streak-2 { top: 15%; right: 40%; animation-delay: 7.8s; animation-duration: 16s; width: 1.5px; height: 85px; }
-        .streak-3 { top: -40px; right: 65%; animation-delay: 13.1s; animation-duration: 19s; width: 2.5px; height: 130px; }
 
         img {
             max-width: 100%;
             height: auto;
         }
 
+        /* Fixed Header / Navigation Overhaul */
         header {
-            background-color: rgba(11, 4, 20, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            padding: 0.6rem 1.5rem;
-            position: absolute; /* Adjusted to scroll */
+            background-color: var(--charcoal-dark);
+            padding: 1.5rem 1rem;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-            border-bottom: 2px solid rgba(181, 126, 220, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            flex-direction: row; 
+            flex-direction: column; 
             align-items: center;
-            justify-content: space-between;
-            gap: 1rem; 
+            gap: 1.5rem; 
         }
 
         .logo-container {
             display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .logo-container:hover {
-            transform: scale(1.02) rotate(-0.5deg);
+            justify-content: center;
+            width: 100%;
         }
 
         .logo-img {
             width: 100%;
-            max-width: 280px;
+            max-width: 550px;
             height: auto;
             display: block;
-            filter: drop-shadow(0 4px 12px rgba(181, 126, 220, 0.3));
         }
 
         .nav-btn {
-            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
+            background-color: var(--lavender);
             color: var(--text-light);
             text-decoration: none;
-            padding: 0.65rem 1.75rem;
+            padding: 1rem 2.5rem; 
             border-radius: 50px;
             font-family: var(--font-cosmic);
             font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: pulseGlow 3s infinite;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px var(--lavender-glow);
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            white-space: nowrap;
         }
 
         .nav-btn:hover {
-            background: var(--text-light);
-            color: var(--cosmic-purple);
-            transform: translateY(-2px) scale(1.03);
-            box-shadow: 0 8px 22px rgba(255, 255, 255, 0.4);
+            background-color: var(--text-light);
+            color: var(--charcoal-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
         }
 
+        /* Veteran Tag Banner */
         .vet-banner {
-            background: linear-gradient(90deg, var(--cosmic-purple) 0%, var(--lavender-dark) 50%, var(--cosmic-purple) 100%);
+            background-color: var(--lavender-dark);
             color: var(--text-light);
             text-align: center;
-            padding: 0.85rem 1rem;
+            padding: 0.6rem 1rem;
             font-family: var(--font-cosmic);
             font-weight: 600;
-            font-size: 1.1rem;
-            letter-spacing: 1.5px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            text-shadow: 0 2px 5px rgba(0,0,0,0.4);
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            box-shadow: inset 0 -2px 5px rgba(0,0,0,0.1);
         }
 
+        /* Hero Section */
         .hero {
             position: relative;
+            background: linear-gradient(135deg, var(--charcoal-dark) 0%, var(--charcoal) 50%, var(--lavender-dark) 100%);
             color: var(--text-light);
-            padding: 9rem 2rem;
+            padding: 6rem 2rem;
             text-align: center;
             overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+            opacity: 0.4;
+            pointer-events: none;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 850px;
+            max-width: 800px;
             margin: 0 auto;
-            animation: fadeInUp 1s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .hero h1 {
             font-family: var(--font-cosmic);
-            font-size: 4.2rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            line-height: 1.15;
+            line-height: 1.2;
             margin-bottom: 1.5rem;
             letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #FFFFFF 40%, #E8D5FF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 4px 15px rgba(0,0,0,0.7));
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .hero p {
-            font-size: 1.45rem;
-            margin-bottom: 3.5rem;
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
             opacity: 0.95;
-            max-width: 700px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
-            color: #F3EDFA;
-            text-shadow: 0 3px 6px rgba(0,0,0,0.5);
         }
 
         .cta-primary {
             display: inline-block;
-            background: linear-gradient(135deg, var(--lavender) 0%, #A464D1 100%);
+            background-color: var(--lavender);
             color: var(--text-light);
             text-decoration: none;
-            padding: 1.4rem 3.75rem;
+            padding: 1.2rem 2.5rem;
             border-radius: 50px;
             font-family: var(--font-cosmic);
             font-weight: 700;
-            font-size: 1.4rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 0 35px rgba(181, 126, 220, 0.5);
-            border: 2px solid rgba(255,255,255,0.25);
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 25px var(--lavender-glow);
+            border: 2px solid transparent;
         }
 
         .cta-primary:hover {
-            transform: translateY(-6px) scale(1.04);
-            background: #FFFFFF;
-            color: var(--cosmic-purple);
-            box-shadow: 0 18px 45px rgba(181, 126, 220, 0.7);
-            border-color: #FFFFFF;
+            transform: scale(1.05);
+            background-color: transparent;
+            border-color: var(--lavender);
+            box-shadow: 0 0 35px var(--lavender);
         }
 
+        /* Section Global Settings */
         section {
-            padding: 7rem 2rem;
+            padding: 5rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -331,105 +205,100 @@
         .section-title {
             text-align: center;
             font-family: var(--font-cosmic);
-            font-size: 3rem;
-            color: var(--text-light);
-            margin-bottom: 4rem;
+            font-size: 2.5rem;
+            color: var(--charcoal);
+            margin-bottom: 3rem;
             position: relative;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
         .section-title::after {
             content: "✦";
-            display: inline-block;
-            font-size: 1.7rem;
+            display: block;
+            font-size: 1.2rem;
             color: var(--lavender);
-            margin-top: 0.6rem;
-            animation: floatElement 3.5s ease-in-out infinite;
-            filter: drop-shadow(0 0 8px var(--lavender));
+            margin-top: 0.5rem;
         }
 
+        /* Service Plans Grid */
         .plans-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
             align-items: stretch;
         }
 
         .plan-card {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            border-radius: 32px;
-            padding: 4rem 2.25rem 2.75rem 2.25rem;
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 3.5rem 1.5rem 2.5rem 1.5rem;
             text-align: center;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            border: 2px solid rgba(181, 126, 220, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 2px solid rgba(181, 126, 220, 0.1);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             position: relative;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .plan-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 30px 60px rgba(181, 126, 220, 0.35);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px var(--lavender-glow);
             border-color: var(--lavender);
-            background: rgba(255, 255, 255, 0.98);
         }
 
         .plan-card.featured {
             border-color: var(--lavender);
-            background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)) padding-box,
-                        linear-gradient(145deg, var(--lavender), var(--cosmic-purple)) border-box;
-        }
-        .plan-card.featured:hover {
-            background: linear-gradient(#ffffff, #ffffff) padding-box,
-                        linear-gradient(145deg, var(--lavender), var(--cosmic-purple)) border-box;
+            background: linear-gradient(#FFFFFF, #FFFFFF) padding-box,
+                        linear-gradient(145deg, var(--lavender), var(--charcoal)) border-box;
         }
         
-        .recommended-logo {
-            max-height: 20px;
-            vertical-align: middle;
-            margin-right: 5px;
+        .plan-card.featured::before {
+            content: "RECOMMENDED";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--charcoal);
+            color: var(--text-light);
+            padding: 0.3rem 1.2rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            z-index: 5;
         }
 
         .plan-tier {
             font-family: var(--font-cosmic);
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 700;
-            letter-spacing: 1.5px;
-            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
         }
-        .plan-card.good-tier .plan-tier { color: #5A6A85; }
+        .plan-card.good-tier .plan-tier { color: #4A5568; }
         .plan-card.better-tier .plan-tier { color: var(--lavender-dark); }
-        .plan-card.best-tier .plan-tier { color: #1A75D2; }
+        .plan-card.best-tier .plan-tier { color: #2B6CB0; }
 
         .plan-title {
             font-family: var(--font-cosmic);
-            font-size: 2rem;
+            font-size: 1.7rem;
             color: var(--charcoal);
             margin-bottom: 0.5rem;
         }
 
         .plan-price {
             font-family: var(--font-cosmic);
-            font-size: 3.2rem;
+            font-size: 2.5rem;
             color: var(--charcoal);
             font-weight: 700;
-            margin-bottom: 0.75rem;
-            transition: transform 0.3s ease;
-        }
-
-        .plan-card:hover .plan-price {
-            transform: scale(1.04);
-            color: var(--cosmic-purple);
+            margin-bottom: 0.5rem;
         }
 
         .plan-desc {
-            font-size: 1.05rem;
-            color: #444;
-            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1.5rem;
             font-style: italic;
             min-height: 45px;
         }
@@ -437,89 +306,72 @@
         .plan-features {
             list-style: none;
             text-align: left;
-            margin-bottom: 2.75rem;
+            margin-bottom: 2.5rem;
             flex-grow: 1;
         }
 
         .plan-features li {
-            padding: 0.7rem 0;
+            padding: 0.6rem 0;
             display: flex;
             align-items: flex-start;
-            font-size: 1rem;
-            color: var(--charcoal);
-            line-height: 1.5;
+            font-size: 0.95rem;
+            color: var(--charcoal-light);
+            line-height: 1.4;
         }
 
         .plan-features li::before {
             content: "✦";
             color: var(--lavender);
             font-weight: bold;
-            margin-right: 12px;
-            font-size: 1.15rem;
+            margin-right: 10px;
+            font-size: 1rem;
             flex-shrink: 0;
-            margin-top: 1px;
+            margin-top: 2px;
         }
 
         .plan-btn {
             background-color: var(--charcoal);
             color: var(--text-light);
             text-decoration: none;
-            padding: 1.15rem 2rem;
+            padding: 1rem 2rem;
             border-radius: 50px;
             font-family: var(--font-cosmic);
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.3s ease;
             display: block;
-            border: 2px solid transparent;
         }
 
         .plan-card:hover .plan-btn {
-            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
-            box-shadow: 0 8px 22px var(--lavender-glow);
-            transform: translateY(-2px);
+            background-color: var(--lavender);
+            box-shadow: 0 4px 15px var(--lavender-glow);
+            border-color: var(--lavender);
         }
 
         .plan-card.featured .plan-btn {
-            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
+            background-color: var(--lavender);
         }
         .plan-card.featured:hover .plan-btn {
-            background: var(--charcoal-dark);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            background-color: var(--charcoal);
         }
 
+        /* Add-Ons Section Styles */
         .addons-container {
-            background-color: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            border-radius: 32px;
-            padding: 4.5rem 3.5rem;
-            margin-top: 6rem;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-            border: 2px solid rgba(181, 126, 220, 0.25);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .addons-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 8px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--lavender), var(--cosmic-purple));
+            background-color: #FFFFFF;
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 4rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .addons-subtitle {
             font-family: var(--font-cosmic);
-            font-size: 1.35rem;
-            color: var(--cosmic-purple);
+            font-size: 1.1rem;
+            color: var(--lavender-dark);
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
+            letter-spacing: 1px;
         }
 
         .addons-grid {
@@ -530,35 +382,33 @@
 
         .addon-item {
             background-color: var(--soft-white);
-            border-radius: 22px;
-            padding: 1.85rem;
-            border-top: 4px solid transparent;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--lavender);
+            transition: transform 0.2s ease;
         }
 
         .addon-item:hover {
-            transform: translateY(-6px);
-            background-color: #FFFFFF;
-            box-shadow: 0 12px 30px rgba(181, 126, 220, 0.15);
-            border-top-color: var(--lavender);
+            transform: scale(1.02);
         }
 
         .addon-name {
             font-family: var(--font-cosmic);
-            font-size: 1.35rem;
+            font-size: 1.2rem;
             color: var(--charcoal);
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem;
         }
 
         .addon-desc {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--charcoal-light);
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
+        /* Full Width Service Image Wrapper */
         .full-width-image-container {
             width: 100%;
+            max-width: 100vw;
             overflow: hidden;
             padding: 2rem 0 0 0;
             margin: 0;
@@ -569,32 +419,25 @@
             height: auto;
             display: block;
             object-fit: cover;
-            transition: transform 0.8s ease;
-        }
-        
-        .full-width-image-container:hover img {
-            transform: scale(1.02);
         }
 
+        /* Service Area Layout */
         .service-areas-layout {
-            background: linear-gradient(135deg, rgba(21, 11, 36, 0.85) 0%, rgba(10, 5, 18, 0.9) 100%);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background-color: var(--charcoal);
             color: var(--text-light);
-            border-radius: 36px;
+            border-radius: 24px;
             margin: 2rem auto;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
+            grid-template-columns: 1fr 1.3fr;
             align-items: center;
             overflow: hidden;
-            padding: 2.5rem 2.5rem 2.5rem 0;
-            border: 2px solid rgba(181, 126, 220, 0.2);
+            padding: 1.5rem 2rem 1.5rem 0;
         }
 
         .service-info-side {
             text-align: left;
-            padding: 3.5rem 4.5rem;
+            padding: 2.5rem 3.5rem;
         }
 
         .service-info-side .section-title {
@@ -608,38 +451,34 @@
         }
 
         .area-text {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            color: #E2D9F3;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
 
         .badge-container {
             display: flex;
             flex-direction: column;
-            gap: 1.35rem;
-            max-width: 340px;
+            gap: 1rem;
+            max-width: 320px;
         }
 
         .area-badge {
-            background: rgba(255, 255, 255, 0.04);
-            border: 2px solid rgba(181, 126, 220, 0.5);
-            padding: 1.1rem 2rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--lavender);
+            padding: 0.9rem 2rem;
             border-radius: 50px;
             font-family: var(--font-cosmic);
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             font-weight: 600;
             text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            letter-spacing: 0.5px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
         }
 
         .area-badge:hover {
-            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
-            border-color: transparent;
-            transform: translateX(12px) scale(1.02);
-            box-shadow: 0 10px 28px var(--lavender-glow);
+            background: var(--lavender);
+            transform: scale(1.03);
+            box-shadow: 0 0 20px var(--lavender-glow);
         }
 
         .map-side {
@@ -647,66 +486,60 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-right: 1rem;
         }
 
         .map-img {
             width: 100%;
-            max-height: 520px;
+            max-height: 480px;
             object-fit: contain;
-            border-radius: 24px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            border: 2px solid rgba(181, 126, 220, 0.25);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
         }
 
         .map-img:hover {
-            transform: scale(1.03) rotate(0.5deg);
-            border-color: var(--lavender);
-            box-shadow: 0 20px 50px rgba(181, 126, 220, 0.4);
+            transform: scale(1.015);
         }
 
+        /* Lead Funnel Form Section */
         .form-section {
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border-radius: 36px;
-            padding: 5.5rem 5rem;
-            box-shadow: 0 25px 70px rgba(0,0,0,0.45);
-            border: 2px solid rgba(181,126,220,0.25);
-            max-width: 850px;
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 4rem 3.5rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .form-build-block {
-            border-bottom: 2px solid #F0EEF5;
-            padding-bottom: 2.5rem;
-            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #E2E8F0;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
         }
         .form-build-block:last-of-type {
             border-bottom: none;
             padding-bottom: 0;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .block-title {
             font-family: var(--font-cosmic);
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             color: var(--lavender-dark);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             text-transform: uppercase;
-            letter-spacing: 0.75px;
+            letter-spacing: 0.5px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 700;
+            gap: 8px;
         }
 
         .quote-form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.75rem;
+            gap: 1.25rem;
         }
 
         .form-group {
@@ -722,14 +555,14 @@
             grid-column: span 2;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
         .quote-form label {
-            font-weight: 700;
-            margin-bottom: 0.6rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
             color: var(--charcoal);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .quote-form input[type="text"], 
@@ -739,11 +572,11 @@
         .quote-form select, 
         .quote-form textarea {
             width: 100%;
-            padding: 1.1rem 1.35rem;
+            padding: 0.85rem 1.1rem;
             border: 2px solid #E2E8F0;
-            border-radius: 16px;
+            border-radius: 12px;
             font-family: var(--font-body);
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--charcoal);
             background-color: #F8FAFC;
             transition: all 0.3s ease;
@@ -755,66 +588,63 @@
             outline: none;
             border-color: var(--lavender);
             background-color: #FFFFFF;
-            box-shadow: 0 0 15px var(--lavender-glow);
-            transform: translateY(-2px);
+            box-shadow: 0 0 10px var(--lavender-glow);
         }
 
+        /* Checkbox list layout styles */
         .checkbox-stack {
             display: flex;
             flex-direction: column;
-            gap: 1.1rem;
+            gap: 0.75rem;
             grid-column: span 2;
         }
 
         .checkbox-item {
             display: flex;
             align-items: flex-start;
-            gap: 14px;
+            gap: 10px;
             cursor: pointer;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             color: var(--charcoal-light);
             background-color: #F8FAFC;
-            padding: 1.1rem 1.35rem;
-            border-radius: 16px;
-            border: 2px solid #E2E8F0;
-            transition: all 0.25s ease;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            border: 1px solid #E2E8F0;
+            transition: all 0.2s ease;
         }
 
         .checkbox-item:hover {
             border-color: var(--lavender);
-            background-color: #F5EEFC;
-            transform: translateX(5px);
+            background-color: #F3F0F7;
         }
 
         .checkbox-item input[type="checkbox"] {
-            margin-top: 6px;
-            transform: scale(1.3);
+            margin-top: 4px;
+            transform: scale(1.15);
             accent-color: var(--lavender-dark);
             cursor: pointer;
         }
 
         .submit-btn {
             width: 100%;
-            background: linear-gradient(135deg, var(--lavender) 0%, var(--cosmic-purple) 100%);
+            background-color: var(--lavender);
             color: var(--text-light);
             border: none;
-            padding: 1.4rem;
+            padding: 1.2rem;
             font-family: var(--font-cosmic);
-            font-size: 1.45rem;
+            font-size: 1.3rem;
             font-weight: 700;
             border-radius: 50px;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 30px rgba(138, 79, 186, 0.4);
-            margin-top: 1.5rem;
-            border: 1px solid rgba(255,255,255,0.2);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px var(--lavender-glow);
+            margin-top: 0.5rem;
         }
 
         .submit-btn:hover {
-            background: var(--charcoal-dark);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.6);
-            transform: translateY(-4px);
+            background-color: var(--charcoal);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
         }
 
         .submission-message {
@@ -823,73 +653,47 @@
             border: 2px solid #319795;
             color: #234E52;
             padding: 1.5rem;
-            border-radius: 16px;
+            border-radius: 12px;
             text-align: center;
             font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            animation: fadeInUp 0.5s ease;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
 
+        /* Footer & Links */
         footer {
-            background-color: #120824;
-            color: #E3D9F5;
+            background-color: var(--charcoal-dark);
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
-            padding: 5rem 2rem;
-            margin-top: 10rem;
-            border-top: 4px solid var(--lavender);
-            font-size: 1.1rem;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            padding: 3rem 2rem;
+            margin-top: 6rem;
+            border-top: 3px solid var(--lavender);
+            font-size: 0.95rem;
         }
 
         footer p {
-            margin-bottom: 1rem;
-            max-width: 800px;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            margin-bottom: 0.5rem;
         }
 
-        .footer-links-stack {
-            margin-top: 2.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-            align-items: center;
-            width: 100%;
-            max-width: 320px;
+        .footer-links {
+            margin-top: 1rem;
         }
 
         .footer-link {
-            color: #FFFFFF;
+            color: var(--lavender);
             text-decoration: none;
-            font-family: var(--font-cosmic);
-            font-weight: 700;
-            font-size: 1.15rem;
-            letter-spacing: 0.75px;
+            font-weight: 500;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: block;
-            width: 100%;
-            padding: 0.75rem 2rem;
-            background: rgba(255, 255, 255, 0.06);
-            border: 2px solid rgba(181, 126, 220, 0.45);
-            border-radius: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-            text-align: center;
+            transition: color 0.2s ease;
         }
 
         .footer-link:hover {
-            color: #FFFFFF;
-            background: linear-gradient(135deg, var(--lavender-dark) 0%, var(--cosmic-purple) 100%);
-            border-color: #FFFFFF;
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 0 25px rgba(181, 126, 220, 0.75);
+            color: var(--text-light);
+            text-decoration: underline;
         }
 
-        .legal-modal {
+        /* Privacy Policy Modal (Pop-up Window) */
+        .privacy-modal {
             display: none;
             position: fixed;
             z-index: 2000;
@@ -898,195 +702,141 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(9, 4, 15, 0.88);
-            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
             padding: 2rem 1rem;
         }
 
-        .legal-content {
+        .privacy-content {
             background-color: #FFFFFF;
-            margin: 1.5rem auto;
-            padding: 3.5rem;
-            border-radius: 32px;
-            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            border-radius: 24px;
+            max-width: 650px;
             width: 100%;
-            box-shadow: 0 35px 90px rgba(0,0,0,0.7);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
             border: 2px solid var(--lavender);
             color: var(--text-dark);
             text-align: left;
             position: relative;
-            animation: fadeInUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .close-modal {
             position: absolute;
             top: 1.25rem;
-            right: 2rem;
+            right: 1.5rem;
             color: #AAA;
-            font-size: 2.75rem;
+            font-size: 2rem;
             font-weight: bold;
             cursor: pointer;
             transition: color 0.2s ease;
             line-height: 1;
-            z-index: 10;
         }
 
         .close-modal:hover {
             color: var(--charcoal);
         }
 
-        .modal-tabs {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 2.5rem;
+        .privacy-content h3 {
+            font-family: var(--font-cosmic);
+            color: var(--charcoal);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
             border-bottom: 2px solid #F0EAF8;
-            padding-bottom: 1px;
+            padding-bottom: 0.5rem;
         }
 
-        .modal-tab-btn {
-            background: #F3EEFA;
-            border: 2px solid #E8DFF5;
-            border-bottom: none;
-            padding: 0.9rem 1.75rem;
+        .privacy-content h4 {
             font-family: var(--font-cosmic);
-            font-size: 1.1rem;
-            font-weight: 700;
+            color: var(--lavender-dark);
+            font-size: 1.15rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-content p, .privacy-content ul {
+            font-size: 0.95rem;
             color: var(--charcoal-light);
-            cursor: pointer;
-            border-top-left-radius: 16px;
-            border-top-right-radius: 16px;
-            transition: all 0.25s ease;
-            position: relative;
-            top: 2px;
-        }
-
-        .modal-tab-btn:hover {
-            background: #EBE1F7;
-            color: var(--cosmic-purple);
-        }
-
-        .modal-tab-btn.active {
-            background: #FFFFFF;
-            border-color: var(--lavender);
-            color: var(--cosmic-purple);
-            padding-bottom: 1.1rem;
-            top: 0;
-            z-index: 2;
-        }
-
-        .legal-pane {
-            display: none;
-            max-height: 60vh;
-            overflow-y: auto;
-            padding-right: 1rem;
-        }
-
-        .legal-pane.active {
-            display: block;
-        }
-
-        .legal-pane::-webkit-scrollbar {
-            width: 8px;
-        }
-        .legal-pane::-webkit-scrollbar-track {
-            background: #F1F1F1;
-            border-radius: 10px;
-        }
-        .legal-pane::-webkit-scrollbar-thumb {
-            background: var(--lavender);
-            border-radius: 10px;
-        }
-        .legal-pane::-webkit-scrollbar-thumb:hover {
-            background: var(--lavender-dark);
-        }
-
-        .legal-pane h3 {
-            font-family: var(--font-cosmic);
-            color: var(--charcoal);
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .legal-pane h4 {
-            font-family: var(--font-cosmic);
-            margin-top: 1.75rem;
-            margin-bottom: 0.6rem;
-            color: var(--charcoal);
-            font-size: 1.25rem;
-        }
-
-        .legal-pane p {
-            margin-bottom: 1.25rem;
-            font-size: 1rem;
-            color: #444;
-            line-height: 1.6;
-        }
-
-        .legal-pane ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: #444;
-        }
-
-        .legal-pane ol li {
             margin-bottom: 1rem;
-            padding-left: 0.25rem;
-            line-height: 1.6;
         }
 
-        .legal-pane ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-            list-style-type: disc;
+        .privacy-content ul {
+            padding-left: 1.5rem;
         }
 
-        .legal-pane ul li {
-            margin-bottom: 0.4rem;
-        }
-
+        /* Responsive Breakpoints */
         @media (max-width: 900px) {
-            .service-areas-layout { grid-template-columns: 1fr; padding: 0 0 2.5rem 0; }
-            .service-info-side { text-align: center; padding: 4rem 2rem 2.5rem 2rem; }
-            .service-info-side .section-title { text-align: center; }
-            .service-info-side .section-title::after { margin-left: auto; margin-right: auto; }
-            .badge-container { margin: 0 auto; }
-            .map-side { padding: 0 2rem; }
-            .map-img { max-height: 400px; }
+            .service-areas-layout {
+                grid-template-columns: 1fr;
+                padding: 0 0 2rem 0;
+            }
+            .service-info-side {
+                text-align: center;
+                padding: 3.5rem 2rem 2rem 2rem;
+            }
+            .service-info-side .section-title {
+                text-align: center;
+            }
+            .service-info-side .section-title::after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .badge-container {
+                margin: 0 auto;
+            }
+            .map-side {
+                padding: 0 1.5rem;
+            }
+            .map-img {
+                max-height: 340px;
+            }
         }
 
         @media (max-width: 768px) {
-            .nav-container { flex-direction: column; padding: 0.4rem 0; }
-            .hero h1 { font-size: 3rem; }
-            .hero p { font-size: 1.25rem; }
-            .quote-form-grid { grid-template-columns: 1fr; }
-            .form-group.full-width { grid-column: span 1; }
-            .form-group.triple-split { grid-column: span 1; grid-template-columns: 1fr; gap: 1.5rem; }
-            .checkbox-stack { grid-column: span 1; }
-            section { padding: 4.5rem 1.5rem; }
-            .form-section { padding: 4rem 1.5rem; }
-            .legal-content { padding: 2.5rem 1.5rem; margin: 1rem auto; }
-            .addons-container { padding: 3rem 1.5rem; }
-            .modal-tabs { flex-direction: column; gap: 0; border-bottom: none; }
-            .modal-tab-btn { border-radius: 12px; border: 2px solid #E8DFF5; margin-bottom: 0.5rem; top: 0; }
-            .modal-tab-btn.active { padding-bottom: 0.9rem; background: var(--lavender); color: #FFF; border-color: var(--lavender); }
+            body {
+                /* Adjust padding-top on small screens since navigation configuration height stacks vertically */
+                padding-top: 220px;
+            }
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .quote-form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            .form-group.triple-split {
+                grid-column: span 1;
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .checkbox-stack {
+                grid-column: span 1;
+            }
+            section {
+                padding: 4rem 1.5rem;
+            }
+            .logo-img {
+                max-width: 100%; 
+            }
+            .privacy-content {
+                padding: 1.5rem;
+                margin: 0 auto;
+            }
+            .addons-container {
+                padding: 2rem 1.5rem;
+            }
+            .form-section {
+                padding: 3rem 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-
-    <div class="starfield-layer stars-micro"></div>
-    <div class="starfield-layer stars-mid"></div>
-
-    <div class="nebula-cloud nebula-1"></div>
-    <div class="nebula-cloud nebula-2"></div>
-    <div class="nebula-cloud nebula-3"></div>
-    
-    <div class="shooting-star-container">
-        <div class="star-streak streak-1"></div>
-        <div class="star-streak streak-2"></div>
-        <div class="star-streak streak-3"></div>
-    </div>
 
     <header>
         <div class="nav-container">
@@ -1117,7 +867,7 @@
                 <div>
                     <div class="plan-tier">GOOD</div>
                     <h3 class="plan-title">Cosmic Clean</h3>
-                    <div class="plan-price">$97<span style="font-size: 1rem; font-weight: normal; color: #555;">/mo</span></div>
+                    <div class="plan-price">$97<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
                     <p class="plan-desc">Basic maintenance plan for consistent yard cleanliness.</p>
                 </div>
                 <ul class="plan-features">
@@ -1131,13 +881,10 @@
             </div>
 
             <div class="plan-card featured better-tier">
-                <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--cosmic-purple) 0%, #1A0B2E 100%); color: var(--text-light); padding: 0.5rem 1.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 50px; letter-spacing: 1.25px; z-index: 5; box-shadow: 0 4px 15px rgba(0,0,0,0.4); border: 1px solid rgba(181, 126, 220, 0.4); display: flex; align-items: center; white-space: nowrap;">
-                    RECOMMENDED
-                </div>
                 <div>
                     <div class="plan-tier">BETTER</div>
                     <h3 class="plan-title">Cosmic Clean Duo</h3>
-                    <div class="plan-price">$127<span style="font-size: 1rem; font-weight: normal; color: #555;">/mo</span></div>
+                    <div class="plan-price">$127<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
                     <p class="plan-desc">Higher frequency service for improved cleanliness and odor control.</p>
                 </div>
                 <ul class="plan-features">
@@ -1154,7 +901,7 @@
                 <div>
                     <div class="plan-tier">BEST</div>
                     <h3 class="plan-title">Cosmic Clean Trio</h3>
-                    <div class="plan-price">$157<span style="font-size: 1rem; font-weight: normal; color: #555;">/mo</span></div>
+                    <div class="plan-price">$157<span style="font-size: 1rem; font-weight: normal; color: #666;">/mo</span></div>
                     <p class="plan-desc">Maximum frequency service for premium cleanliness and control.</p>
                 </div>
                 <ul class="plan-features">
@@ -1184,6 +931,10 @@
                     <h4 class="addon-name">Dog Repellent Treatment</h4>
                     <p class="addon-desc">Targeted perimeter application for marking designated yard boundaries.</p>
                 </div>
+                <div class="addon-item">
+                    <h4 class="addon-name">Heavy Yard Condition Surcharge</h4>
+                    <p class="addon-desc">Applies only when excessive buildup requires intensive additional work; fully approved before service.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1192,7 +943,7 @@
         <img src="1000007602.png" alt="Yard cleanup service illustration banner">
     </div>
 
-    <section id="service-areas" style="padding-top: 4rem; padding-bottom: 4rem;">
+    <section id="service-areas" style="padding-top: 2rem; padding-bottom: 2rem;">
         <div class="service-areas-layout">
             <div class="service-info-side">
                 <h2 class="section-title">Areas We Service</h2>
@@ -1211,13 +962,13 @@
 
     <section id="quote-form-section">
         <div class="form-section">
-            <h2 class="section-title" style="margin-bottom: 3rem; color: var(--charcoal);">Request Your Quote</h2>
+            <h2 class="section-title" style="margin-bottom: 2.5rem;">Request Your Quote</h2>
             
             <div id="successMessage" class="submission-message">
                 Your quote request has been received. We will contact you shortly.
             </div>
 
-            <form id="leadForm" class="quote-form" action="https://api.web3forms.com/submit" method="POST">
+            <form id="leadForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)">
                 
                 <input type="hidden" name="access_key" value="233d3e26-eb53-4990-9774-de7b570a653d">
                 <input type="hidden" name="subject" value="New Cosmic Scoopers Form Classification Quote Request">
@@ -1287,21 +1038,21 @@
                             </div>
                             <div>
                                 <label for="dogSize">Dog Size *</label>
-                                <select id="dogSize" name="Dog Structural Size Tier" required>
+                                <select id="dogSize" name="Dog Structural Size" required>
                                     <option value="" disabled selected>Select</option>
-                                    <option value="Small (under 20 lbs)">Small (under 20 lbs)</option>
-                                    <option value="Medium (20-50 lbs)">Medium (20-50 lbs)</option>
-                                    <option value="Large (50+ lbs)">Large (50+ lbs)</option>
-                                    <option value="Mixed (Multiple sizes)">Mixed (Multiple sizes)</option>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                    <option value="Mixed">Mixed</option>
                                 </select>
                             </div>
                             <div>
-                                <label for="gateAccess">Gate Lock *</label>
-                                <select id="gateAccess" name="Property Gate Condition" required>
+                                <label for="wasteLevel">Waste Level *</label>
+                                <select id="wasteLevel" name="Estimated Waste Accumulation" required>
                                     <option value="" disabled selected>Select</option>
-                                    <option value="Unlocked">Unlocked</option>
-                                    <option value="Key / Code Provided">Key / Code Provided</option>
-                                    <option value="Will ensure open">Will ensure open</option>
+                                    <option value="Light">Light</option>
+                                    <option value="Moderate">Moderate</option>
+                                    <option value="Heavy">Heavy</option>
                                 </select>
                             </div>
                         </div>
@@ -1309,189 +1060,216 @@
                 </div>
 
                 <div class="form-build-block">
-                    <div class="block-title">5) Additional Notes & Upgrades</div>
+                    <div class="block-title">5) Access & Property Conditions</div>
                     <div class="quote-form-grid">
-                        <div class="checkbox-stack">
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="Addon Requested: Initial Cleanup" value="Yes">
-                                <span><strong>Request Initial Cleanup</strong> (Required if yard currently has significant or overgrown buildup)</span>
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="Addon Requested: Deodorizer" value="Yes">
-                                <span><strong>Add Deodorizer Treatment</strong> (Applied monthly or as needed to eliminate deep yard odors)</span>
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="Addon Requested: Dog Repellent" value="Yes">
-                                <span><strong>Add Dog Repellent Application</strong> (Targeted application to establish clean boundaries)</span>
-                            </label>
+                        <div class="form-group">
+                            <label for="fenceType">Fence Type *</label>
+                            <select id="fenceType" name="Boundary Fence Style" required>
+                                <option value="" disabled selected>Select property setup</option>
+                                <option value="Fully fenced">Fully fenced</option>
+                                <option value="Partially fenced">Partially fenced</option>
+                                <option value="Not fenced">Not fenced</option>
+                            </select>
                         </div>
-                        <div class="form-group full-width" style="margin-top:0.75rem;">Special Instructions / Comments</label>
-                            <textarea id="specialNotes" name="Customer Remarks & Custom Instructions" rows="4" placeholder="Tell us about aggressive dogs, broken gates, text-before-arrival requests, or yard details..."></textarea>
+                        <div class="form-group">
+                            <label for="dogsIndoors">Dogs will be indoors during service? *</label>
+                            <select id="dogsIndoors" name="Dogs Confined Indoors" required>
+                                <option value="" disabled selected>Select confirmation</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Unsure">Unsure</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="notes">Gate Access Notes (Lock combinations, gate security keys, setup layout)</label>
+                            <textarea id="notes" name="Gate Access Entry Mechanics" rows="3" placeholder="Enter secure lock codes or structural notes..."></textarea>
                         </div>
                     </div>
                 </div>
 
-                <button type="submit" class="submit-btn">Submit Quote Request</button>
+                <div class="form-build-block">
+                    <div class="block-title">6) Add-Ons</div>
+                    <div class="quote-form-grid">
+                        <div class="checkbox-stack">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="Addon: Initial Cleanup" value="Requested">
+                                <span>Initial Cleanup (first-time service or overgrown yard profile requirement)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="Addon: Deodorizer Treatment" value="Requested">
+                                <span>Deodorizer Treatment (Odor mitigation booster layer)</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="Addon: Dog Repellent" value="Requested">
+                                <span>Dog Repellent Treatment (Boundary perimeter application shield)</span>
+                            </label>
+                            <label class="checkbox-item" style="border-color: #E2E8F0; background-color: #FFFDF5;">
+                                <input type="checkbox" name="Heavy Condition Acknowledgement" value="Acknowledged" required>
+                                <span style="font-weight:600; color:#744210;">Heavy Yard Condition Acknowledgement * (Required: I understand a surcharge applies if excessive buildup requires additional overhead)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-build-block">
+                    <div class="quote-form-grid">
+                        <div class="form-group full-width" style="margin-bottom:0.75rem;">
+                            <div class="block-title" style="margin-bottom:0.75rem;">7) Start Date</div>
+                            <label for="startDate">Preferred Start Date</label>
+                            <input type="date" id="startDate" name="Target Commencement Date">
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <div class="block-title" style="margin-bottom:0.75rem;">8) Terms Acknowledgement</div>
+                            <div class="checkbox-stack">
+                                <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                    <input type="checkbox" name="Term Acknowledged: Pricing Variables" value="Yes" required>
+                                    <span>I understand pricing plans are calculated directly based on custom yard size metrics and operational service frequencies. *</span>
+                                </label>
+                                <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                    <input type="checkbox" name="Term Acknowledged: Addon Applications" value="Yes" required>
+                                    <span>I understand standard structural add-ons may apply to billing operations based on distinct field yard conditions. *</span>
+                                </label>
+                                <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                    <input type="checkbox" name="Term Acknowledged: Route Optimization" value="Yes" required>
+                                    <span>I understand deployment scheduling is handled strictly via local route optimization routines, not user-selected timeframe blocks. *</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Submit Secure Classification Data</button>
             </form>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2026 Cosmic Scoopers. All rights reserved.</p>
-        <p>Providing professional pet waste removal and cleanup services in Milton, Pace, and Navarre, Florida.</p>
-        
-        <div class="footer-links-stack">
-            <span class="footer-link" onclick="openLegalModal('terms')">Terms & Conditions</span>
-            <span class="footer-link" onclick="openLegalModal('privacy')">Privacy Policy</span>
+        <p>Providing premium weekly dog poop cleanup services in Milton, Pace, and Navarre, Florida.</p>
+        <div class="footer-links">
+            <span class="footer-link" onclick="openPrivacyModal()">Privacy Policy</span>
         </div>
     </footer>
 
-    <div id="legalModal" class="legal-modal">
-        <div class="legal-content">
-            <span class="close-modal" onclick="closeLegalModal()">&times;</span>
+    <div id="privacyModal" class="privacy-modal">
+        <div class="privacy-content">
+            <span class="close-modal" onclick="closePrivacyModal()">&times;</span>
+            <h3>Privacy Policy:</h3>
+            <p>Cosmic Scoopers respects your privacy and is committed to accepting and protecting your personal information.</p>
             
-            <div class="modal-tabs">
-                <button id="tab-terms" class="modal-tab-btn" onclick="switchTab('terms')">Terms & Conditions</button>
-                <button id="tab-privacy" class="modal-tab-btn" onclick="switchTab('privacy')">Privacy Policy</button>
-            </div>
-
-            <div id="pane-terms" class="legal-pane">
-                <h3>Terms & Conditions</h3>
-                <p style="font-size: 1.05rem; font-style: italic; color: #555; margin-bottom: 1.5rem;">COSMIC SCOOPERS – TERMS & CONDITIONS</p>
-                <p>These Terms & Conditions apply to all services provided by Cosmic Scoopers. By approving a quote, scheduling service, or making payment, the customer agrees to be bound by the following terms.</p>
-                
-                <ol>
-                    <li>
-                        <strong>Service Agreement</strong><br>
-                        Cosmic Scoopers provides pet waste removal services as outlined in the approved quote, including frequency, pricing, and designated service areas. Services are limited strictly to the areas agreed upon at the time of booking or quote approval.
-                    </li>
-                    <li>
-                        <strong>Acceptance of Terms</strong><br>
-                        Approval of a quote, payment of an invoice, or allowing service to be performed constitutes full acceptance of these Terms & Conditions. No physical or digital signature is required unless specifically requested.
-                    </li>
-                    <li>
-                        <strong>Billing & Payment Terms</strong>
-                        <ul>
-                            <li>All services are billed monthly in advance before services are rendered.</li>
-                            <li>Payment is due upon receipt of invoice unless otherwise agreed in writing.</li>
-                            <li>Failure to pay on time may result in suspension or termination of service without notice.</li>
-                            <li>Returned payments, chargebacks, or failed transactions may incur additional processing or service fees.</li>
-                            <li>Services will not continue if payment is not received for the upcoming billing period.</li>
-                            <li>Monthly fees are non-refundable once billed, as service capacity and routing are reserved in advance.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Scheduling, Routing & Service Days</strong>
-                        <ul>
-                            <li>Service days are assigned solely by Cosmic Scoopers based on route efficiency and operational scheduling.</li>
-                            <li>Customers may request a preferred day; however, specific service days and times are not guaranteed.</li>
-                            <li>Routes and schedules may change at any time due to operational needs, efficiency improvements, or business adjustments.</li>
-                            <li>Customers will be notified when permanent schedule changes occur when possible.</li>
-                            <li>Customers do not select or guarantee their service day.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Property Access Requirements</strong><br>
-                        Customers are responsible for ensuring safe, unobstructed access to all service areas. Gates must be unlocked or accessible at the time of service. Locked gates, blocked access, or unsafe conditions may result in a missed visit. Missed visits due to lack of access may still be billed.
-                    </li>
-                    <li>
-                        <strong>Pet Safety & Containment</strong><br>
-                        All dogs must be secured inside the home or otherwise fully contained prior to service arrival. Dogs may not be present in the yard or service area during service. If dogs are loose in the service area, service may be skipped for safety reasons. Visits missed due to unsecured pets will still be billed.
-                    </li>
-                    <li>
-                        <strong>Waste Collection & Disposal</strong><br>
-                        All pet waste collected will be double-bagged. Waste will be disposed of in the customer’s designated trash receptacle or dumpster on the property. Customers are responsible for providing an accessible disposal container. Cosmic Scoopers does not transport or remove waste off-site unless specifically agreed to in writing and subject to additional fees. If no receptacle is available or accessible, waste may be left in a designated safe area on the property and the customer will be notified.
-                    </li>
-                    <li>
-                        <strong>Weather, Safety & Service Interruptions</strong><br>
-                        Services may be delayed, rescheduled, or skipped due to weather, flooding, natural disasters, unsafe terrain, or conditions deemed unsafe by the technician. Every effort will be made to maintain scheduled service consistency. Unsafe conditions include but are not limited to aggressive animals, hazardous debris, or environmental dangers.
-                    </li>
-                    <li>
-                        <strong>Holiday Closures</strong><br>
-                        Cosmic Scoopers does not provide service on the following holidays: New Year’s Day, Memorial Day, Independence Day, Labor Day, Thanksgiving Day, and Christmas Day. If a scheduled service falls on a holiday, service will be rescheduled to the nearest available business day. Monthly pricing remains unchanged.
-                    </li>
-                    <li>
-                        <strong>Cancellation & Termination</strong><br>
-                        Customers may cancel service at any time with a minimum of seven (7) days’ written notice. Services scheduled within the 7-day notice period may still be billed. Cosmic Scoopers reserves the right to terminate service at any time for non-payment, unsafe conditions, or policy violations. No long-term contracts are required unless otherwise stated in writing.
-                    </li>
-                    <li>
-                        <strong>Commercial Properties</strong><br>
-                        Property owners, managers, or authorized representatives must approve all service areas prior to service. Service is limited to areas outlined in the approved quote. Additional areas or expanded service requests may result in additional charges. Commercial clients are responsible for communicating property-specific rules, restrictions, or hazards.
-                    </li>
-                    <li>
-                        <strong>Liability Limitation</strong>
-                        <ul>
-                            <li>Cosmic Scoopers is not liable for pre-existing property damage or deterioration.</li>
-                            <li>Cosmic Scoopers is not liable for hidden or unmarked hazards on the property.</li>
-                            <li>Cosmic Scoopers is not liable for damage resulting from unsecured gates, fencing, landscaping, irrigation systems, or property features.</li>
-                            <li>Cosmic Scoopers is not liable for delays or missed services due to weather or events outside company control.</li>
-                            <li>Cosmic Scoopers is not liable for issues arising from customer failure to secure pets or provide access.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Agreement Confirmation</strong><br>
-                        By approving a quote, submitting payment, or allowing services to begin, the customer acknowledges they have read, understood, and agreed to these Terms & Conditions in full.
-                    </li>
-                </ol>
-            </div>
-
-            <div id="pane-privacy" class="legal-pane">
-                <h3>Privacy Policy</h3>
-                <p style="font-size: 1.05rem; color: #333; margin-bottom: 1.5rem;">At Cosmic Scoopers, we value your privacy. This policy outlines how we handle the information collected through our quote request form.</p>
-                
-                <h4>Information Collection</h4>
-                <p>We collect personal details such as your name, phone number, email address, and service location strictly to generate accurate service quotes and coordinate scheduling.</p>
-                
-                <h4>Data Usage & Protection</h4>
-                <p>Your details are transmitted securely via Web3Forms directly to our internal operational systems. We do not sell, trade, rent, or distribute your private contact information to any third-party marketing networks or external entities.</p>
-                
-                <h4>Consent</h4>
-                <p>By submitting our quote request form, you give consent to Cosmic Scoopers to contact you via email, phone call, or text message regarding your service request setup options.</p>
-            </div>
-
+            <h4>Information We Collect</h4>
+            <p>We may collect:<br>
+            Name<br>
+            Email address<br>
+            Phone number<br>
+            Service address<br>
+            Information submitted through contact or quote forms<br>
+            Website usage information through cookies and analytics tools</p>
+            
+            <h4>How We Use Your Information</h4>
+            <p>We use your information to:<br>
+            Provide quotes and services<br>
+            Communicate about appointments and billing<br>
+            Respond to inquiries<br>
+            Improve our website and services</p>
+            
+            <h4>Information Sharing</h4>
+            <p>We do not sell, rent, or trade your personal information. Information may be shared with trusted third-party providers necessary to operate our business, such as payment processors and website service providers.</p>
+            
+            <h4>Data Security</h4>
+            <p>We take reasonable measures to protect your information but cannot guarantee absolute security.</p>
+            
+            <h4>Cookies</h4>
+            <p>Our website may use cookies and analytics tools to improve user experience and understand website traffic.</p>
+            
+            <h4>Third-Party Services</h4>
+            <p>We may use third-party services such as Stripe, Google Analytics, Google Business Profile, and social media platforms that may collect information according to their own privacy policies.</p>
+            
+            <h4>Your Rights</h4>
+            <p>You may request access to, correction of, or deletion of your personal information by contacting us.</p>
+            
+            <h4>Contact Information</h4>
+            <p>Cosmic Scoopers<br>
+            Email: cosmicscoopers@gmail.com</p>
+            
+            <p style="font-size: 0.85rem; color: #888; margin-top: 1.5rem; font-style: italic;">This policy may be updated periodically. Any changes will be posted on this page.</p>
         </div>
     </div>
 
     <script>
         function selectPlan(planName) {
-            const planSelect = document.getElementById('servicePlan');
-            if (planSelect) {
-                for (let i = 0; i < planSelect.options.length; i++) {
-                    if (planSelect.options[i].value === planName) {
-                        planSelect.selectedIndex = i;
-                        break;
-                    }
+            const planDropdown = document.getElementById('servicePlan');
+            for (let i = 0; i < planDropdown.options.length; i++) {
+                if (planDropdown.options[i].value === planName) {
+                    planDropdown.selectedIndex = i;
+                    break;
                 }
             }
         }
 
-        function openLegalModal(initialTab) {
-            document.getElementById('legalModal').style.display = 'block';
-            switchTab(initialTab);
+        /* Privacy Policy Window Control Functions */
+        function openPrivacyModal() {
+            document.getElementById('privacyModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Stop background scrolling
         }
 
-        function closeLegalModal() {
-            document.getElementById('legalModal').style.display = 'none';
+        function closePrivacyModal() {
+            document.getElementById('privacyModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Enable background scrolling
         }
 
-        function switchTab(tabName) {
-            document.getElementById('tab-terms').classList.remove('active');
-            document.getElementById('tab-privacy').classList.remove('active');
-            
-            document.getElementById('pane-terms').classList.remove('active');
-            document.getElementById('pane-privacy').classList.remove('active');
-            
-            document.getElementById('tab-' + tabName).classList.add('active');
-            document.getElementById('pane-' + tabName).classList.add('active');
-            
-            document.getElementById('pane-' + tabName).scrollTop = 0;
-        }
-
+        // Close pop-up window if clicking outside the white box content panel
         window.onclick = function(event) {
-            const modal = document.getElementById('legalModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
+            const modal = document.getElementById('privacyModal');
+            if (event.target === modal) {
+                closePrivacyModal();
             }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+            
+            submitBtn.style.display = 'none';
+            successMessage.style.display = 'block';
+            successMessage.style.backgroundColor = '#E2E8F0';
+            successMessage.style.borderColor = '#CBD5E1';
+            successMessage.style.color = '#334155';
+            successMessage.textContent = "Sending classification metrics securely...";
+            
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    successMessage.style.backgroundColor = '#E6FFFA';
+                    successMessage.style.borderColor = '#319795';
+                    successMessage.style.color = '#234E52';
+                    successMessage.textContent = "Your classification configuration metrics have been logged securely. A customized quote evaluation will follow shortly.";
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        successMessage.style.backgroundColor = '#FFF5F5';
+                        successMessage.style.borderColor = '#E53E3E';
+                        successMessage.style.color = '#742A2A';
+                        successMessage.textContent = "Processing layout error. Please verify endpoints configuration.";
+                        submitBtn.style.display = 'block';
+                    })
+                }
+            }).catch(error => {
+                successMessage.style.backgroundColor = '#FFF5F5';
+                successMessage.style.borderColor = '#E53E3E';
+                successMessage.style.color = '#742A2A';
+                successMessage.textContent = "Operational link offline. Check connection matrix profiles and try again.";
+                submitBtn.style.display = 'block';
+            });
         }
     </script>
 </body>
