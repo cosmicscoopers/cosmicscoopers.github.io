@@ -184,8 +184,10 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             padding: 0.6rem 1.5rem;
-            position: sticky;
+            position: absolute; /* Adjusted to scroll */
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
             border-bottom: 2px solid rgba(181, 126, 220, 0.3);
@@ -829,7 +831,6 @@
             animation: fadeInUp 0.5s ease;
         }
 
-        /* --- CENTERED & HIGH VISIBILITY FOOTER STYLING --- */
         footer {
             background-color: #120824;
             color: #E3D9F5;
@@ -888,7 +889,6 @@
             box-shadow: 0 0 25px rgba(181, 126, 220, 0.75);
         }
 
-        /* --- TABBED LEGAL POPUP MODAL STYLING --- */
         .legal-modal {
             display: none;
             position: fixed;
@@ -935,7 +935,6 @@
             color: var(--charcoal);
         }
 
-        /* Legal Modal Tabs */
         .modal-tabs {
             display: flex;
             gap: 0.5rem;
@@ -986,7 +985,6 @@
             display: block;
         }
 
-        /* Scrollbar customization for the panes */
         .legal-pane::-webkit-scrollbar {
             width: 8px;
         }
@@ -1467,7 +1465,6 @@
             }
         }
 
-        // --- DUAL TAB POPUP MODAL LOGIC ---
         function openLegalModal(initialTab) {
             document.getElementById('legalModal').style.display = 'block';
             switchTab(initialTab);
@@ -1478,19 +1475,15 @@
         }
 
         function switchTab(tabName) {
-            // Remove active classes from buttons
             document.getElementById('tab-terms').classList.remove('active');
             document.getElementById('tab-privacy').classList.remove('active');
             
-            // Remove active classes from panes
             document.getElementById('pane-terms').classList.remove('active');
             document.getElementById('pane-privacy').classList.remove('active');
             
-            // Activate current targets
             document.getElementById('tab-' + tabName).classList.add('active');
             document.getElementById('pane-' + tabName).classList.add('active');
             
-            // Reset scrolling position inside the window container view panel back to top
             document.getElementById('pane-' + tabName).scrollTop = 0;
         }
 
