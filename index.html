@@ -55,7 +55,7 @@
         header {
             background-color: var(--charcoal-dark);
             padding: 1.5rem 1rem;
-            position: relative; /* Fixed layout element cleanly back into regular page flow */
+            position: relative; /* Restores layout to regular page flow */
             width: 100%;
             z-index: 1000;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -994,9 +994,9 @@
                 </div>
 
                 <div class="form-build-block">
+                    <div class="block-title">2) Yard Size</div>
                     <div class="quote-form-grid">
-                        <div class="form-group">
-                            <div class="block-title" style="margin-bottom:0.75rem;">2) Yard Size</div>
+                        <div class="form-group full-width">
                             <label for="yardSize">Classification *</label>
                             <select id="yardSize" name="Yard Size Classification" required>
                                 <option value="" disabled selected>Select size layout</option>
@@ -1005,8 +1005,13 @@
                                 <option value="Large (1/2 acre+)">Large (1/2 acre+)</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <div class="block-title" style="margin-bottom:0.75rem;">3) Service Frequency</div>
+                    </div>
+                </div>
+
+                <div class="form-build-block">
+                    <div class="block-title">3) Service Frequency</div>
+                    <div class="quote-form-grid">
+                        <div class="form-group full-width">
                             <label for="servicePlan">Frequency Plan *</label>
                             <select id="servicePlan" name="Target Service Frequency" required>
                                 <option value="" disabled selected>Select execution tier</option>
@@ -1108,29 +1113,31 @@
                 </div>
 
                 <div class="form-build-block">
+                    <div class="block-title">7) Start Date</div>
                     <div class="quote-form-grid">
-                        <div class="form-group full-width" style="margin-bottom:0.75rem;">
-                            <div class="block-title" style="margin-bottom:0.75rem;">7) Start Date</div>
+                        <div class="form-group full-width">
                             <label for="startDate">Preferred Start Date</label>
                             <input type="date" id="startDate" name="Target Commencement Date">
                         </div>
-                        
-                        <div class="form-group full-width">
-                            <div class="block-title" style="margin-bottom:0.75rem;">8) Terms Acknowledgement</div>
-                            <div class="checkbox-stack">
-                                <label class="checkbox-item" style="border-color: #CBD5E1;">
-                                    <input type="checkbox" name="Term Acknowledged: Pricing Variables" value="Yes" required>
-                                    <span>I understand pricing plans are calculated directly based on custom yard size metrics and operational service frequencies. *</span>
-                                </label>
-                                <label class="checkbox-item" style="border-color: #CBD5E1;">
-                                    <input type="checkbox" name="Term Acknowledged: Addon Applications" value="Yes" required>
-                                    <span>I understand standard structural add-ons may apply to billing operations based on distinct field yard conditions. *</span>
-                                </label>
-                                <label class="checkbox-item" style="border-color: #CBD5E1;">
-                                    <input type="checkbox" name="Term Acknowledged: Route Optimization" value="Yes" required>
-                                    <span>I understand deployment scheduling is handled strictly via local route optimization routines, not user-selected timeframe blocks. *</span>
-                                </label>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="form-build-block">
+                    <div class="block-title">8) Terms Acknowledgement</div>
+                    <div class="quote-form-grid">
+                        <div class="checkbox-stack">
+                            <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                <input type="checkbox" name="Term Acknowledged: Pricing Variables" value="Yes" required>
+                                <span>I understand pricing plans are calculated directly based on custom yard size metrics and operational service frequencies. *</span>
+                            </label>
+                            <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                <input type="checkbox" name="Term Acknowledged: Addon Applications" value="Yes" required>
+                                <span>I understand standard structural add-ons may apply to billing operations based on distinct field yard conditions. *</span>
+                            </label>
+                            <label class="checkbox-item" style="border-color: #CBD5E1;">
+                                <input type="checkbox" name="Term Acknowledged: Route Optimization" value="Yes" required>
+                                <span>I understand deployment scheduling is handled strictly via local route optimization routines, not user-selected timeframe blocks. *</span>
+                            </label>
                         </div>
                     </div>
                 </div>
