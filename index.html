@@ -179,6 +179,32 @@
             height: auto;
         }
 
+        .promo-banner {
+            background: linear-gradient(90deg, #FF4500 0%, #E60067 50%, #FF4500 100%);
+            color: var(--text-light);
+            text-align: center;
+            padding: 0.6rem 1rem;
+            font-family: var(--font-cosmic);
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-shadow: 0 1.5px 3px rgba(0,0,0,0.4);
+            border-bottom: 2px solid rgba(255,255,255,0.25);
+            position: relative;
+            z-index: 1001;
+        }
+
+        .promo-code {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.15rem 0.65rem;
+            border-radius: 4px;
+            border: 1px dashed #FFFFFF;
+            font-family: monospace;
+            font-size: 1.15rem;
+            margin: 0 4px;
+        }
+
         header {
             background-color: rgba(11, 4, 20, 0.85);
             backdrop-filter: blur(16px);
@@ -978,6 +1004,10 @@
         <div class="star-streak streak-1"></div>
         <div class="star-streak streak-2"></div>
         <div class="star-streak streak-3"></div>
+    </div>
+
+    <div class="promo-banner">
+        ✦ NEW CUSTOMERS: Get a FREE Initial Cleanup using code <span class="promo-code">CLEANSTART</span> at checkout! ✦
     </div>
 
     <header>
