@@ -24,6 +24,7 @@
             --soft-white: #FAFAFC;
             --text-dark: #2B2B2B;
             --text-light: #FFFFFF;
+            --teal-promo: #00A896;
             --font-cosmic: 'Fredoka', sans-serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
         }
@@ -73,6 +74,12 @@
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- BULLETIN TICKER MARQUEE ANIMATION --- */
+        @keyframes tickerScroll {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-33.3333%, 0, 0); }
         }
 
         * {
@@ -179,30 +186,49 @@
             height: auto;
         }
 
-        .promo-banner {
-            background: linear-gradient(90deg, #FF4500 0%, #E60067 50%, #FF4500 100%);
-            color: var(--text-light);
-            text-align: center;
-            padding: 0.6rem 1rem;
-            font-family: var(--font-cosmic);
-            font-weight: 700;
-            font-size: 1.05rem;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            text-shadow: 0 1.5px 3px rgba(0,0,0,0.4);
-            border-bottom: 2px solid rgba(255,255,255,0.25);
+        /* --- TEAL MARQUEE BULLETIN BANNER --- */
+        .promo-banner-wrapper {
+            background-color: var(--teal-promo);
+            overflow: hidden;
+            width: 100%;
             position: relative;
             z-index: 1001;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            padding: 0.75rem 0;
+        }
+
+        .promo-banner-track {
+            display: flex;
+            width: max-content;
+            animation: tickerScroll 25s linear infinite;
+        }
+
+        .promo-banner-track:hover {
+            animation-play-state: paused;
+        }
+
+        .promo-text-item {
+            color: var(--text-light);
+            font-family: var(--font-cosmic);
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            white-space: nowrap;
+            padding-right: 4rem; /* Spacing between loop items */
+            display: flex;
+            align-items: center;
         }
 
         .promo-code {
             background-color: rgba(255, 255, 255, 0.2);
             padding: 0.15rem 0.65rem;
-            border-radius: 4px;
+            border-radius: 6px;
             border: 1px dashed #FFFFFF;
             font-family: monospace;
-            font-size: 1.15rem;
-            margin: 0 4px;
+            font-size: 1.2rem;
+            margin-left: 8px;
         }
 
         header {
@@ -1006,8 +1032,20 @@
         <div class="star-streak streak-3"></div>
     </div>
 
-    <div class="promo-banner">
-        ✦ NEW CUSTOMERS: Get a FREE Initial Cleanup using code <span class="promo-code">CLEANSTART</span> at checkout! ✦
+    <!-- --- ROLLING BULLETIN TICKER BANNER --- -->
+    <div class="promo-banner-wrapper">
+        <div class="promo-banner-track">
+            <!-- Repeated three times to ensure completely continuous, unclipped infinity looping -->
+            <div class="promo-text-item">
+                Limited Time Offer: Book your weekly reoccuring service today and your First Clean is 100% FREE! 🐾 use code <span class="promo-code">CLEANSTART</span>
+            </div>
+            <div class="promo-text-item">
+                Limited Time Offer: Book your weekly reoccuring service today and your First Clean is 100% FREE! 🐾 use code <span class="promo-code">CLEANSTART</span>
+            </div>
+            <div class="promo-text-item">
+                Limited Time Offer: Book your weekly reoccuring service today and your First Clean is 100% FREE! 🐾 use code <span class="promo-code">CLEANSTART</span>
+            </div>
+        </div>
     </div>
 
     <header>
@@ -1270,19 +1308,15 @@
         }
 
         function switchTab(tabName) {
-            // Remove active classes from buttons
             document.getElementById('tab-terms').classList.remove('active');
             document.getElementById('tab-privacy').classList.remove('active');
             
-            // Remove active classes from panes
             document.getElementById('pane-terms').classList.remove('active');
             document.getElementById('pane-privacy').classList.remove('active');
             
-            // Activate current targets
             document.getElementById('tab-' + tabName).classList.add('active');
             document.getElementById('pane-' + tabName).classList.add('active');
             
-            // Reset scrolling position inside the window container view panel back to top
             document.getElementById('pane-' + tabName).scrollTop = 0;
         }
 
