@@ -185,15 +185,16 @@
             height: auto;
         }
 
-        /* --- HARMONIZED COSMIC BANNER --- */
+        /* --- UPDATED COSMIC BANNER (BUTTON GRADIENT MATCH + WHITE BORDERS) --- */
         .promo-banner-wrapper {
-            background: linear-gradient(90deg, #5c2491 0%, #3a155d 100%);
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
             overflow: hidden;
             width: 100%;
             position: relative;
             z-index: 1001;
-            border-bottom: 2px solid rgba(181, 126, 220, 0.4);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-top: 3px solid #FFFFFF;
+            border-bottom: 3px solid #FFFFFF;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             padding: 0.75rem 0;
         }
 
@@ -213,7 +214,7 @@
             font-weight: 700;
             font-size: 1.1rem;
             letter-spacing: 0.5px;
-            text-shadow: 0 0 8px rgba(181, 126, 220, 0.6);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             white-space: nowrap;
             padding-right: 4rem;
             display: flex;
@@ -221,14 +222,15 @@
         }
 
         .promo-code {
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.25);
             padding: 0.15rem 0.65rem;
             border-radius: 6px;
-            border: 1px dashed #B57EDC;
+            border: 1px dashed #FFFFFF;
             font-family: monospace;
             font-size: 1.2rem;
             margin-left: 8px;
-            color: #E8D5FF;
+            color: #FFFFFF;
+            text-shadow: none;
         }
 
         header {
@@ -442,12 +444,6 @@
         .plan-card.featured:hover {
             background: linear-gradient(#ffffff, #ffffff) padding-box,
                         linear-gradient(145deg, var(--lavender), var(--cosmic-purple)) border-box;
-        }
-        
-        .recommended-logo {
-            max-height: 20px;
-            vertical-align: middle;
-            margin-right: 5px;
         }
 
         .plan-tier {
@@ -758,7 +754,6 @@
             color: #FFFFFF;
         }
 
-        /* --- CENTERED & HIGH VISIBILITY FOOTER STYLING --- */
         footer {
             background-color: #120824;
             color: #E3D9F5;
@@ -817,7 +812,6 @@
             box-shadow: 0 0 25px rgba(181, 126, 220, 0.75);
         }
 
-        /* --- TABBED LEGAL POPUP MODAL STYLING --- */
         .legal-modal {
             display: none;
             position: fixed;
@@ -864,7 +858,6 @@
             color: var(--charcoal);
         }
 
-        /* Legal Modal Tabs */
         .modal-tabs {
             display: flex;
             gap: 0.5rem;
@@ -915,7 +908,6 @@
             display: block;
         }
 
-        /* Scrollbar customization for the panes */
         .legal-pane::-webkit-scrollbar {
             width: 8px;
         }
@@ -1018,7 +1010,7 @@
         <div class="star-streak streak-3"></div>
     </div>
 
-    <!-- --- ROLLING BULLETIN TICKER BANNER (UPDATED BACKGROUND) --- -->
+    <!-- --- ROLLING BULLETIN TICKER BANNER (GRADIENT MATCH + WHITE BORDERS) --- -->
     <div class="promo-banner-wrapper">
         <div class="promo-banner-track">
             <div class="promo-text-item">
