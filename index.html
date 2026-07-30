@@ -1183,15 +1183,15 @@
             <div class="plan-card best-tier">
                 <div>
                     <div class="plan-tier">BEST</div>
-                    <h3 class="plan-title">Cosmic Weekly</h3>
-                    <p class="plan-desc">Our premier plan for consistent, maximum yard hygiene.</p>
+                    <h3 class="plan-title">Cosmic Twice-Weekly (2x/Week)</h3>
+                    <p class="plan-desc">Maximum yard upkeep for active pets and multi-dog homes.</p>
                 </div>
                 <ul class="plan-features">
-                    <li>1x weekly pet waste removal</li>
+                    <li>2x weekly pet waste removal</li>
                     <li>Small, Medium, and Large yard pricing available</li>
-                    <li>Designed for light to moderate dog waste buildup</li>
-                    <li>Keeps your yard consistently clean and manageable</li>
-                    <li><strong>Best for:</strong> Maintaining the highest level of cleanliness and convenience</li>
+                    <li>Prevents waste buildup between visits for ultra-clean lawns</li>
+                    <li>Includes multi-visit density savings applied automatically</li>
+                    <li><strong>Best for:</strong> Multi-dog families, high-traffic yards, or active dogs</li>
                 </ul>
                 <a href="https://app.scoopilot.com/signup/cosmic-scoopers" target="_blank" class="plan-btn">Request Quote</a>
             </div>
@@ -1474,8 +1474,8 @@
         }
 
         window.onclick = function(event) {
-            const modal.getElementById('legalModal');
-            if (event.target == modal) {
+            const modal = document.getElementById('legalModal');
+            if (event.target === modal) {
                 modal.style.display = 'none';
             }
         }
