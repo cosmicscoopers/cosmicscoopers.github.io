@@ -28,27 +28,11 @@
             --font-body: 'Plus Jakarta Sans', sans-serif;
         }
 
-        /* --- REALISTIC COSMIC ANIMATIONS --- */
-        @keyframes twinkleLayer1 {
-            0%, 100% { opacity: 0.3; }
-            30% { opacity: 0.9; }
-            45% { opacity: 0.4; }
-            70% { opacity: 1; }
-            85% { opacity: 0.2; }
-        }
-
-        @keyframes twinkleLayer2 {
-            0%, 100% { opacity: 0.8; }
-            20% { opacity: 0.2; }
-            40% { opacity: 0.7; }
-            65% { opacity: 0.3; }
-            80% { opacity: 0.9; }
-        }
-
+        /* --- COSMIC ANIMATIONS --- */
         @keyframes nebulaPulse {
-            0% { transform: scale(1) translate(0px, 0px); opacity: 0.3; }
-            50% { transform: scale(1.15) translate(30px, 20px); opacity: 0.5; }
-            100% { transform: scale(1) translate(0px, 0px); opacity: 0.3; }
+            0% { transform: scale(1) translate(0px, 0px); opacity: 0.35; }
+            50% { transform: scale(1.18) translate(25px, 18px); opacity: 0.55; }
+            100% { transform: scale(1) translate(0px, 0px); opacity: 0.35; }
         }
 
         @keyframes shootingStarAction {
@@ -99,61 +83,32 @@
             position: relative;
         }
 
-        .starfield-layer {
+        /* --- COSMIC CANVAS BACKGROUND --- */
+        #cosmic-stars-canvas {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             pointer-events: none;
             z-index: -3;
-        }
-
-        .stars-micro {
-            background-image: 
-                radial-gradient(circle at 10% 15%, #fff 1px, transparent 1px),
-                radial-gradient(circle at 35% 45%, rgba(255,255,255,0.8) 1px, transparent 1px),
-                radial-gradient(circle at 75% 20%, #fff 1px, transparent 1px),
-                radial-gradient(circle at 85% 65%, rgba(255,255,255,0.9) 1px, transparent 1px),
-                radial-gradient(circle at 45% 85%, #fff 1px, transparent 1px),
-                radial-gradient(circle at 15% 75%, rgba(255,255,255,0.7) 1px, transparent 1px),
-                radial-gradient(circle at 60% 40%, #fff 1.5px, transparent 1.5px),
-                radial-gradient(circle at 90% 10%, rgba(255,255,255,0.6) 1px, transparent 1px),
-                radial-gradient(circle at 50% 15%, #fff 1px, transparent 1px),
-                radial-gradient(circle at 25% 55%, #fff 1px, transparent 1px);
-            background-size: 400px 400px;
-            animation: twinkleLayer1 7s ease-in-out infinite;
-        }
-
-        .stars-mid {
-            background-image: 
-                radial-gradient(circle at 20% 30%, #fff 2px, transparent 2px),
-                radial-gradient(circle at 80% 50%, var(--lavender) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 55% 70%, #fff 1.5px, transparent 1.5px),
-                radial-gradient(circle at 70% 85%, rgba(255,255,255,0.95) 2px, transparent 2px),
-                radial-gradient(circle at 40% 25%, var(--lavender) 2px, transparent 2px),
-                radial-gradient(circle at 95% 35%, #fff 1.5px, transparent 1.5px),
-                radial-gradient(circle at 5% 90%, #fff 2px, transparent 2px),
-                radial-gradient(circle at 65% 12%, rgba(255,255,255,0.85) 1.5px, transparent 1.5px);
-            background-size: 550px 550px;
-            animation: twinkleLayer2 11s ease-in-out infinite;
-            animation-delay: -3s;
+            background: radial-gradient(circle at 50% 30%, #0e051e 0%, #040108 85%);
         }
 
         .nebula-cloud {
             position: fixed;
-            width: 700px;
-            height: 700px;
+            width: 750px;
+            height: 750px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(138, 79, 186, 0.2) 0%, transparent 70%);
-            filter: blur(90px);
+            background: radial-gradient(circle, rgba(138, 79, 186, 0.22) 0%, transparent 70%);
+            filter: blur(95px);
             z-index: -2;
             pointer-events: none;
-            animation: nebulaPulse 25s ease-in-out infinite;
+            animation: nebulaPulse 22s ease-in-out infinite;
         }
         .nebula-1 { top: -10%; left: -15%; }
-        .nebula-2 { bottom: -10%; right: -15%; animation-delay: -7s; background: radial-gradient(circle, rgba(74, 29, 117, 0.25) 0%, transparent 70%); }
-        .nebula-3 { top: 40%; left: 50%; transform: translateX(-50%); background: radial-gradient(circle, rgba(181, 126, 220, 0.12) 0%, transparent 65%); }
+        .nebula-2 { bottom: -10%; right: -15%; animation-delay: -7s; background: radial-gradient(circle, rgba(74, 29, 117, 0.28) 0%, transparent 70%); }
+        .nebula-3 { top: 40%; left: 50%; transform: translateX(-50%); background: radial-gradient(circle, rgba(181, 126, 220, 0.15) 0%, transparent 65%); }
 
         .shooting-star-container {
             position: fixed;
@@ -168,16 +123,16 @@
         .star-streak {
             position: absolute;
             width: 2px;
-            height: 110px;
-            background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(181, 126, 220, 0.4) 35%, transparent 100%);
+            height: 120px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(181, 126, 220, 0.5) 40%, transparent 100%);
             animation: shootingStarAction 14s cubic-bezier(0.25, 1, 0.2, 1) infinite;
             opacity: 0;
-            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.95));
         }
         
         .streak-1 { top: -20px; right: 10%; animation-delay: 2.2s; animation-duration: 12s; }
-        .streak-2 { top: 15%; right: 40%; animation-delay: 7.8s; animation-duration: 16s; width: 1.5px; height: 85px; }
-        .streak-3 { top: -40px; right: 65%; animation-delay: 13.1s; animation-duration: 19s; width: 2.5px; height: 130px; }
+        .streak-2 { top: 15%; right: 40%; animation-delay: 7.8s; animation-duration: 16s; width: 1.5px; height: 95px; }
+        .streak-3 { top: -40px; right: 65%; animation-delay: 13.1s; animation-duration: 19s; width: 2.5px; height: 140px; }
 
         img {
             max-width: 100%;
@@ -1374,8 +1329,8 @@
 </head>
 <body>
 
-    <div class="starfield-layer stars-micro"></div>
-    <div class="starfield-layer stars-mid"></div>
+    <!-- ANIMATED COSMIC STARFIELD CANVAS -->
+    <canvas id="cosmic-stars-canvas"></canvas>
 
     <div class="nebula-cloud nebula-1"></div>
     <div class="nebula-cloud nebula-2"></div>
@@ -1828,7 +1783,94 @@
         </div>
     </div>
 
+    <!-- SCRIPT FOR COSMIC STARFIELD ANIMATION & MODALS -->
     <script>
+        /* --- COSMIC STARFIELD CANVAS ENGINE --- */
+        const canvas = document.getElementById('cosmic-stars-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let stars = [];
+        const numStars = 180;
+        let scrollY = 0;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('scroll', () => {
+            scrollY = window.scrollY;
+        });
+
+        resizeCanvas();
+
+        class CosmicStar {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.8 + 0.2;
+                this.alpha = Math.random();
+                this.twinkleSpeed = Math.random() * 0.015 + 0.005;
+                this.speedY = Math.random() * 0.18 + 0.05;
+                
+                // Cosmic theme colors: crisp white, lavender violet, soft nebula blue
+                const palette = ['#FFFFFF', '#B57EDC', '#E2B5FF', '#8AB4F8'];
+                this.color = palette[Math.floor(Math.random() * palette.length)];
+            }
+
+            update() {
+                // Twinkle modulation
+                this.alpha += this.twinkleSpeed;
+                if (this.alpha > 1 || this.alpha < 0.15) {
+                    this.twinkleSpeed = -this.twinkleSpeed;
+                }
+
+                // Downward space drift, responds slightly to scroll momentum
+                this.y += this.speedY + (scrollY * 0.0003);
+                if (this.y > canvas.height) {
+                    this.y = 0;
+                    this.x = Math.random() * canvas.width;
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = Math.abs(this.alpha);
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Dynamic cosmic glow for larger stars
+                if (this.size > 1.2) {
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = this.color;
+                }
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < numStars; i++) {
+            stars.push(new CosmicStar());
+        }
+
+        function animateStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            stars.forEach(star => {
+                star.update();
+                star.draw();
+            });
+            requestAnimationFrame(animateStars);
+        }
+
+        animateStars();
+
+        /* --- MODAL LOGIC --- */
         function openCommercialModal() {
             document.getElementById('commercialModal').style.display = 'block';
         }
