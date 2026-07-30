@@ -245,6 +245,7 @@
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.3);
             white-space: nowrap;
+            cursor: pointer;
         }
 
         .nav-btn:hover {
@@ -1075,7 +1076,8 @@
             box-shadow: 0 0 25px rgba(181, 126, 220, 0.75);
         }
 
-        .legal-modal {
+        /* --- MODAL STYLING (COMMERCIAL & LEGAL) --- */
+        .custom-modal {
             display: none;
             position: fixed;
             z-index: 2000;
@@ -1089,12 +1091,12 @@
             padding: 2rem 1rem;
         }
 
-        .legal-content {
+        .modal-body-container {
             background-color: #FFFFFF;
             margin: 1.5rem auto;
             padding: 3.5rem;
             border-radius: 32px;
-            max-width: 800px;
+            max-width: 850px;
             width: 100%;
             box-shadow: 0 35px 90px rgba(0,0,0,0.7);
             border: 2px solid var(--lavender);
@@ -1104,7 +1106,7 @@
             animation: fadeInUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        .close-modal {
+        .close-modal-btn {
             position: absolute;
             top: 1.25rem;
             right: 2rem;
@@ -1117,10 +1119,110 @@
             z-index: 10;
         }
 
-        .close-modal:hover {
+        .close-modal-btn:hover {
             color: var(--charcoal);
         }
 
+        /* Commercial Modal Specifics */
+        .commercial-heading {
+            font-family: var(--font-cosmic);
+            color: var(--cosmic-purple);
+            font-size: 2.3rem;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .commercial-subheading {
+            font-size: 1.15rem;
+            color: var(--charcoal-light);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .comm-section-title {
+            font-family: var(--font-cosmic);
+            font-size: 1.3rem;
+            color: var(--lavender-dark);
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comm-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .comm-list li {
+            font-size: 1rem;
+            color: #333;
+            padding: 0.5rem 0;
+            line-height: 1.5;
+        }
+
+        .comm-list li strong {
+            color: var(--charcoal);
+        }
+
+        .comm-properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .comm-property-item {
+            background: #F4EFFF;
+            border: 1px solid rgba(181, 126, 220, 0.3);
+            border-radius: 16px;
+            padding: 0.9rem 1.2rem;
+            font-family: var(--font-cosmic);
+            color: var(--cosmic-purple);
+            font-size: 0.98rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comm-action-footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 2px dashed #E8DFF5;
+        }
+
+        .comm-cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--cosmic-purple) 100%);
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 1.2rem 2.8rem;
+            border-radius: 50px;
+            font-family: var(--font-cosmic);
+            font-size: 1.25rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(74, 29, 117, 0.3);
+            margin-bottom: 0.8rem;
+        }
+
+        .comm-cta-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(74, 29, 117, 0.5);
+            background: var(--charcoal-dark);
+            color: #FFFFFF;
+        }
+
+        .comm-footer-note {
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Legal Modal Tabs */
         .modal-tabs {
             display: flex;
             gap: 0.5rem;
@@ -1253,7 +1355,7 @@
             .hero-subheading { font-size: 1.2rem; }
             section { padding: 4.5rem 1.5rem; }
             .form-section { padding: 4rem 1.5rem; }
-            .legal-content { padding: 2.5rem 1.5rem; margin: 1rem auto; }
+            .modal-body-container { padding: 2.5rem 1.5rem; margin: 1rem auto; }
             .addons-container { padding: 3rem 1.5rem; }
             .modal-tabs { flex-direction: column; gap: 0; border-bottom: none; }
             .modal-tab-btn { border-radius: 12px; border: 2px solid #E8DFF5; margin-bottom: 0.5rem; top: 0; }
@@ -1265,6 +1367,7 @@
             .reasons-grid { grid-template-columns: 1fr; }
             .how-works-grid { grid-template-columns: 1fr; }
             .best-for-list { grid-template-columns: 1fr; }
+            .comm-properties-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -1289,7 +1392,7 @@
                 <img src="1000007589.png" alt="Cosmic Scoopers Logo" class="logo-img">
             </div>
             <div class="nav-btn-container">
-                <a href="https://app.scoopilot.com/commercial-quote/cosmic-scoopers" target="_blank" rel="noopener" class="nav-btn">Commercial Proposal</a>
+                <button onclick="openCommercialModal()" class="nav-btn">Commercial Services</button>
             </div>
         </div>
     </header>
@@ -1579,9 +1682,48 @@
         </div>
     </footer>
 
-    <div id="legalModal" class="legal-modal">
-        <div class="legal-content">
-            <span class="close-modal" onclick="closeLegalModal()">&times;</span>
+    <!-- COMMERCIAL MODAL -->
+    <div id="commercialModal" class="custom-modal">
+        <div class="modal-body-container">
+            <span class="close-modal-btn" onclick="closeCommercialModal()">&times;</span>
+            
+            <h2 class="commercial-heading">Commercial Pet Waste Management</h2>
+            <p class="commercial-subheading">Clean, safe, and welcoming common areas for your residents and guests.</p>
+
+            <h3 class="comm-section-title">✦ Services We Offer</h3>
+            <ul class="comm-list">
+                <li><strong>Routine Common Area Sweeps:</strong> Scheduled grounds cleanup for walking paths, green spaces, courtyards, and dog parks.</li>
+                <li><strong>Pet Waste Station Services:</strong> Routine bag restocking, receptacle emptying, and hardware maintenance.</li>
+                <li><strong>Flexible Service Schedules:</strong> Custom visit frequencies (1x/week, 2x/week, or daily) tailored to your property’s pet density.</li>
+                <li><strong>On-Site Disposal Integration:</strong> Efficient cleanup utilizing property dumpsters or custom off-site hauling options.</li>
+            </ul>
+
+            <h3 class="comm-section-title">✦ Why Partner With Cosmic Scoopers?</h3>
+            <ul class="comm-list">
+                <li><strong>Fully Insured &amp; Vendor Compliant:</strong> Meeting all commercial liability requirements for property management groups.</li>
+                <li><strong>Elevates Property Curb Appeal:</strong> Eliminates foul odors and keeps grounds pristine to boost resident retention and attraction.</li>
+                <li><strong>Reliable &amp; Uniformed Technicians:</strong> Professional, dependable service with clear property walkthrough reports.</li>
+            </ul>
+
+            <h3 class="comm-section-title">✦ Properties We Serve</h3>
+            <div class="comm-properties-grid">
+                <div class="comm-property-item">🏢 Apartment Communities &amp; Condos</div>
+                <div class="comm-property-item">🏡 HOAs &amp; Gated Neighborhoods</div>
+                <div class="comm-property-item">🚐 RV Parks &amp; Campgrounds</div>
+                <div class="comm-property-item">🐕 Dog Parks &amp; Commercial Grounds</div>
+            </div>
+
+            <div class="comm-action-footer">
+                <a href="https://app.scoopilot.com/commercial-quote/cosmic-scoopers" target="_blank" rel="noopener" class="comm-cta-btn">Request a Commercial Quote</a>
+                <p class="comm-footer-note">Contact us today to schedule an on-site property walkthrough for a custom proposal!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LEGAL MODAL -->
+    <div id="legalModal" class="custom-modal">
+        <div class="modal-body-container">
+            <span class="close-modal-btn" onclick="closeLegalModal()">&times;</span>
             
             <div class="modal-tabs">
                 <button id="tab-terms" class="modal-tab-btn" onclick="switchTab('terms')">Terms &amp; Conditions</button>
@@ -1686,6 +1828,14 @@
     </div>
 
     <script>
+        function openCommercialModal() {
+            document.getElementById('commercialModal').style.display = 'block';
+        }
+
+        function closeCommercialModal() {
+            document.getElementById('commercialModal').style.display = 'none';
+        }
+
         function openLegalModal(initialTab) {
             document.getElementById('legalModal').style.display = 'block';
             switchTab(initialTab);
@@ -1709,9 +1859,13 @@
         }
 
         window.onclick = function(event) {
-            const modal = document.getElementById('legalModal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
+            const commercialModal = document.getElementById('commercialModal');
+            const legalModal = document.getElementById('legalModal');
+            if (event.target === commercialModal) {
+                commercialModal.style.display = 'none';
+            }
+            if (event.target === legalModal) {
+                legalModal.style.display = 'none';
             }
         }
     </script>
