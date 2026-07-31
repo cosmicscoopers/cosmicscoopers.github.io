@@ -1818,19 +1818,16 @@
                 this.twinkleSpeed = Math.random() * 0.015 + 0.005;
                 this.speedY = Math.random() * 0.18 + 0.05;
                 
-                // Cosmic theme colors: crisp white, lavender violet, soft nebula blue
                 const palette = ['#FFFFFF', '#B57EDC', '#E2B5FF', '#8AB4F8'];
                 this.color = palette[Math.floor(Math.random() * palette.length)];
             }
 
             update() {
-                // Twinkle modulation
                 this.alpha += this.twinkleSpeed;
                 if (this.alpha > 1 || this.alpha < 0.15) {
                     this.twinkleSpeed = -this.twinkleSpeed;
                 }
 
-                // Downward space drift, responds slightly to scroll momentum
                 this.y += this.speedY + (scrollY * 0.0003);
                 if (this.y > canvas.height) {
                     this.y = 0;
@@ -1846,7 +1843,6 @@
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
 
-                // Dynamic cosmic glow for larger stars
                 if (this.size > 1.2) {
                     ctx.shadowBlur = 10;
                     ctx.shadowColor = this.color;
