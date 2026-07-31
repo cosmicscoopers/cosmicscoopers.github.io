@@ -974,62 +974,141 @@
             color: #FFFFFF;
         }
 
+        /* --- REDESIGNED FOOTER --- */
         footer {
             background-color: #120824;
             color: #E3D9F5;
-            text-align: center;
-            padding: 5rem 2rem;
+            padding: 5rem 2rem 4rem 2rem;
             margin-top: 10rem;
             border-top: 4px solid var(--lavender);
             font-size: 1.1rem;
             position: relative;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
+            gap: 3rem;
+        }
+
+        .footer-top-row {
+            display: flex;
+            flex-direction: column;
+            md-flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(181, 126, 220, 0.2);
+        }
+
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo-img {
+            max-width: 220px;
+            height: auto;
+            display: block;
+            mix-blend-mode: lighten;
+            filter: drop-shadow(0 0 10px rgba(181, 126, 220, 0.4));
+        }
+
+        .footer-nav-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
             align-items: center;
             justify-content: center;
         }
 
+        .footer-contact-toggle-btn {
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-dark) 100%);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.65rem 1.75rem;
+            border-radius: 50px;
+            font-family: var(--font-cosmic);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px var(--lavender-glow);
+        }
+
+        .footer-contact-toggle-btn:hover {
+            background: #FFFFFF;
+            color: var(--cosmic-purple);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Expandable Contact Panel */
+        .footer-contact-dropdown {
+            display: none;
+            background: rgba(21, 11, 36, 0.95);
+            border: 2px solid var(--lavender);
+            border-radius: 24px;
+            padding: 2.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            text-align: center;
+            animation: fadeInUp 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .footer-contact-dropdown.active {
+            display: block;
+        }
+
+        .footer-bottom-row {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
         footer p {
-            margin-bottom: 1rem;
             max-width: 800px;
             text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            margin: 0;
         }
 
         .footer-links-stack {
-            margin-top: 2.5rem;
+            margin-top: 1rem;
             display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
+            flex-direction: row;
+            gap: 1.5rem;
             align-items: center;
-            width: 100%;
-            max-width: 320px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .footer-link {
             color: #FFFFFF;
             text-decoration: none;
             font-family: var(--font-cosmic);
-            font-weight: 700;
-            font-size: 1.15rem;
-            letter-spacing: 0.75px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: block;
-            width: 100%;
-            padding: 0.75rem 2rem;
-            background: rgba(255, 255, 255, 0.06);
-            border: 2px solid rgba(181, 126, 220, 0.45);
-            border-radius: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-            text-align: center;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1.25rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(181, 126, 220, 0.3);
+            border-radius: 20px;
         }
 
         .footer-link:hover {
             color: #FFFFFF;
-            background: linear-gradient(135deg, var(--lavender-dark) 0%, var(--cosmic-purple) 100%);
-            border-color: #FFFFFF;
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 0 25px rgba(181, 126, 220, 0.75);
+            background: var(--cosmic-purple);
+            border-color: var(--lavender);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(181, 126, 220, 0.5);
         }
 
         /* --- MODAL STYLING (COMMERCIAL & LEGAL) --- */
@@ -1300,6 +1379,8 @@
             
             .signup-steps-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem 1rem; }
             .step-arrow { display: none; }
+            
+            .footer-top-row { flex-direction: column; text-align: center; }
         }
 
         @media (max-width: 768px) {
@@ -1324,6 +1405,9 @@
             .how-works-grid { grid-template-columns: 1fr; }
             .best-for-list { grid-template-columns: 1fr; }
             .comm-properties-grid { grid-template-columns: 1fr; }
+            
+            .footer-links-stack { flex-direction: column; width: 100%; }
+            .footer-link { width: 100%; max-width: 280px; text-align: center; }
         }
     </style>
 </head>
@@ -1652,13 +1736,37 @@
         </div>
     </section>
 
+    <!-- UPDATED FOOTER WITH LOGO & TOGGLEABLE CONTACT BUTTON -->
     <footer>
-        <p>&copy; 2026 Cosmic Scoopers. All rights reserved.</p>
-        <p>Providing professional pet waste removal and cleanup services in Milton, Pace, and Navarre, Florida.</p>
-        
-        <div class="footer-links-stack">
-            <span class="footer-link" onclick="openLegalModal('terms')">Terms &amp; Conditions</span>
-            <span class="footer-link" onclick="openLegalModal('privacy')">Privacy Policy</span>
+        <div class="footer-container">
+            <div class="footer-top-row">
+                <div class="footer-logo-container">
+                    <img src="IMG_20260730_183924.png" alt="Cosmic Scoopers Logo" class="footer-logo-img">
+                </div>
+                <div class="footer-nav-actions">
+                    <button class="footer-contact-toggle-btn" onclick="toggleFooterContact()">Contact Us</button>
+                </div>
+            </div>
+
+            <!-- Hidden/Expandable Contact Drawer -->
+            <div id="footerContactDropdown" class="footer-contact-dropdown">
+                <h3 style="font-family: var(--font-cosmic); font-size: 1.5rem; color: #FFFFFF; margin-bottom: 1rem;">Get in Touch</h3>
+                <p style="color: #E2D9F3; font-size: 1rem; margin-bottom: 1.5rem;">Have questions or need support? Reach out to us directly:</p>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: center;">
+                    <a href="mailto:cosmicscoopers@gmail.com" style="color: var(--lavender); font-size: 1.1rem; font-weight: 600; text-decoration: none;">📧 cosmicscoopers@gmail.com</a>
+                    <a href="tel:8508609205" style="color: var(--lavender); font-size: 1.1rem; font-weight: 600; text-decoration: none;">📞 (850) 860-9205</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom-row">
+                <p>&copy; 2026 Cosmic Scoopers. All rights reserved.</p>
+                <p style="font-size: 0.95rem; color: #BDB2D6;">Providing professional pet waste removal and cleanup services in Milton, Pace, and Navarre, Florida.</p>
+                
+                <div class="footer-links-stack">
+                    <span class="footer-link" onclick="openLegalModal('terms')">Terms &amp; Conditions</span>
+                    <span class="footer-link" onclick="openLegalModal('privacy')">Privacy Policy</span>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -1807,7 +1915,7 @@
         </div>
     </div>
 
-    <!-- SCRIPT FOR COSMIC STARFIELD ANIMATION & MODALS -->
+    <!-- SCRIPT FOR COSMIC STARFIELD ANIMATION, MODALS & FOOTER TOGGLE -->
     <script>
         /* --- COSMIC STARFIELD CANVAS ENGINE --- */
         const canvas = document.getElementById('cosmic-stars-canvas');
@@ -1842,19 +1950,16 @@
                 this.twinkleSpeed = Math.random() * 0.015 + 0.005;
                 this.speedY = Math.random() * 0.18 + 0.05;
                 
-                // Cosmic theme colors: crisp white, lavender violet, soft nebula blue
                 const palette = ['#FFFFFF', '#B57EDC', '#E2B5FF', '#8AB4F8'];
                 this.color = palette[Math.floor(Math.random() * palette.length)];
             }
 
             update() {
-                // Twinkle modulation
                 this.alpha += this.twinkleSpeed;
                 if (this.alpha > 1 || this.alpha < 0.15) {
                     this.twinkleSpeed = -this.twinkleSpeed;
                 }
 
-                // Downward space drift, responds slightly to scroll momentum
                 this.y += this.speedY + (scrollY * 0.0003);
                 if (this.y > canvas.height) {
                     this.y = 0;
@@ -1870,7 +1975,6 @@
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
 
-                // Dynamic cosmic glow for larger stars
                 if (this.size > 1.2) {
                     ctx.shadowBlur = 10;
                     ctx.shadowColor = this.color;
@@ -1893,6 +1997,12 @@
         }
 
         animateStars();
+
+        /* --- FOOTER CONTACT TOGGLE --- */
+        function toggleFooterContact() {
+            const dropdown = document.getElementById('footerContactDropdown');
+            dropdown.classList.toggle('active');
+        }
 
         /* --- MODAL LOGIC --- */
         function openCommercialModal() {
