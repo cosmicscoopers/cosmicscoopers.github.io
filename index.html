@@ -162,6 +162,12 @@
             width: 100%;
         }
 
+        .nav-left-container {
+            grid-column: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+
         .logo-container {
             grid-column: 2;
             display: flex;
@@ -1387,6 +1393,7 @@
 
         @media (max-width: 768px) {
             .nav-container { display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
+            .nav-left-container { justify-content: center; width: 100%; }
             .logo-container { grid-column: auto; }
             .nav-btn-container { grid-column: auto; justify-content: center; width: 100%; }
             .nav-btn { width: 100%; max-width: 280px; }
@@ -1430,6 +1437,9 @@
 
     <header>
         <div class="nav-container">
+            <div class="nav-left-container">
+                <a href="https://app.scoopilot.com/signup/cosmic-scoopers" target="_blank" rel="noopener" class="nav-btn">Get your yard scheduled</a>
+            </div>
             <div class="logo-container">
                 <img src="IMG_20260730_183924.png" alt="Cosmic Scoopers Logo" class="logo-img">
             </div>
