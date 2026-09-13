@@ -36,6 +36,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
@@ -83,6 +84,7 @@
     </script>
 
     <style>
+
         /* =========================================================
            COSMIC SCOOPERS
            Complete Production Styles
@@ -115,6 +117,7 @@
             --max-width: 1200px;
         }
 
+
         /* =========================================================
            RESET
         ========================================================= */
@@ -138,7 +141,12 @@
             line-height: 1.6;
             overflow-x: hidden;
             background:
-                radial-gradient(circle at 50% 15%, #150728 0%, #06010B 55%, #030106 100%);
+                radial-gradient(
+                    circle at 50% 15%,
+                    #150728 0%,
+                    #06010B 55%,
+                    #030106 100%
+                );
             min-height: 100vh;
         }
 
@@ -170,6 +178,7 @@
             outline-offset: 4px;
         }
 
+
         /* =========================================================
            COSMIC BACKGROUND
         ========================================================= */
@@ -181,6 +190,7 @@
             height: 100vh;
             pointer-events: none;
             z-index: -5;
+
             background:
                 radial-gradient(
                     circle at 50% 25%,
@@ -204,6 +214,7 @@
         .nebula-1 {
             top: -250px;
             left: -250px;
+
             background:
                 radial-gradient(
                     circle,
@@ -215,25 +226,30 @@
         .nebula-2 {
             right: -250px;
             bottom: -250px;
+
             background:
                 radial-gradient(
                     circle,
                     rgba(74, 29, 117, 0.35) 0%,
                     transparent 70%
                 );
+
             animation-delay: -8s;
         }
 
         .nebula-3 {
             top: 40%;
             left: 50%;
+
             transform: translateX(-50%);
+
             background:
                 radial-gradient(
                     circle,
                     rgba(181, 126, 220, 0.13) 0%,
                     transparent 65%
                 );
+
             animation-delay: -14s;
         }
 
@@ -250,6 +266,7 @@
             width: 2px;
             height: 120px;
             opacity: 0;
+
             background:
                 linear-gradient(
                     to top,
@@ -257,9 +274,16 @@
                     rgba(181,126,220,0.55),
                     transparent
                 );
-            filter: drop-shadow(0 0 8px rgba(255,255,255,0.9));
+
+            filter:
+                drop-shadow(
+                    0 0 8px rgba(255,255,255,0.9)
+                );
+
             animation:
-                shootingStarAction 14s cubic-bezier(0.25,1,0.2,1) infinite;
+                shootingStarAction
+                14s cubic-bezier(0.25,1,0.2,1)
+                infinite;
         }
 
         .streak-1 {
@@ -288,6 +312,7 @@
         }
 
         @keyframes nebulaPulse {
+
             0%,
             100% {
                 transform: scale(1) translate(0, 0);
@@ -295,18 +320,23 @@
             }
 
             50% {
-                transform: scale(1.16) translate(20px, 18px);
+                transform:
+                    scale(1.16)
+                    translate(20px, 18px);
+
                 opacity: 0.55;
             }
         }
 
         @keyframes shootingStarAction {
+
             0% {
                 transform:
                     translateX(0)
                     translateY(0)
                     rotate(-45deg)
                     scale(0);
+
                 opacity: 0;
             }
 
@@ -316,6 +346,7 @@
                     translateY(80px)
                     rotate(-45deg)
                     scale(1);
+
                 opacity: 1;
             }
 
@@ -325,6 +356,7 @@
                     translateY(800px)
                     rotate(-45deg)
                     scale(0);
+
                 opacity: 0;
             }
 
@@ -334,22 +366,29 @@
                     translateY(800px)
                     rotate(-45deg)
                     scale(0);
+
                 opacity: 0;
             }
         }
 
         @keyframes pulseGlow {
+
             0%,
             100% {
-                box-shadow: 0 0 18px rgba(181,126,220,0.35);
+                box-shadow:
+                    0 0 18px
+                    rgba(181,126,220,0.35);
             }
 
             50% {
-                box-shadow: 0 0 34px rgba(181,126,220,0.7);
+                box-shadow:
+                    0 0 34px
+                    rgba(181,126,220,0.7);
             }
         }
 
         @keyframes fadeInUp {
+
             from {
                 opacity: 0;
                 transform: translateY(25px);
@@ -362,6 +401,7 @@
         }
 
         @keyframes bounceArrow {
+
             0%,
             100% {
                 transform: translateY(0);
@@ -371,6 +411,7 @@
                 transform: translateY(8px);
             }
         }
+
 
         /* =========================================================
            HEADER
@@ -382,19 +423,29 @@
             z-index: 1000;
             width: 100%;
             padding: 0.7rem 1.25rem;
-            background: rgba(8, 3, 14, 0.86);
-            border-bottom: 1px solid rgba(181,126,220,0.25);
+
+            background:
+                rgba(8, 3, 14, 0.86);
+
+            border-bottom:
+                1px solid rgba(181,126,220,0.25);
+
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
-            box-shadow: 0 8px 35px rgba(0,0,0,0.32);
+
+            box-shadow:
+                0 8px 35px rgba(0,0,0,0.32);
         }
 
         .nav-container {
             width: 100%;
             max-width: var(--max-width);
             margin: 0 auto;
+
             display: grid;
-            grid-template-columns: 1fr auto 1fr;
+            grid-template-columns:
+                1fr auto 1fr;
+
             align-items: center;
             gap: 1rem;
         }
@@ -415,8 +466,15 @@
             max-height: 75px;
             object-fit: contain;
             mix-blend-mode: lighten;
-            filter: drop-shadow(0 0 15px rgba(181,126,220,0.42));
-            transition: transform 0.3s ease;
+
+            filter:
+                drop-shadow(
+                    0 0 15px
+                    rgba(181,126,220,0.42)
+                );
+
+            transition:
+                transform 0.3s ease;
         }
 
         .logo-img:hover {
@@ -433,37 +491,59 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+
             min-height: 46px;
             padding: 0.7rem 1.25rem;
+
             border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.24);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.24);
+
             background:
                 linear-gradient(
                     135deg,
                     var(--lavender),
                     var(--lavender-dark)
                 );
+
             color: #fff;
+
             text-decoration: none;
+
             font-family: var(--font-cosmic);
             font-weight: 600;
             font-size: 0.96rem;
+
             cursor: pointer;
             white-space: nowrap;
-            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
         }
 
         .nav-btn:hover,
         .header-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 28px rgba(181,126,220,0.42);
+
+            box-shadow:
+                0 10px 28px
+                rgba(181,126,220,0.42);
+
             background: #fff;
             color: var(--cosmic-purple);
         }
 
         .nav-btn.primary-header {
-            animation: pulseGlow 3.5s infinite;
+            animation:
+                pulseGlow
+                3.5s
+                infinite;
         }
+
 
         /* =========================================================
            VETERAN BANNER
@@ -472,9 +552,13 @@
         .vet-banner {
             position: relative;
             z-index: 2;
+
             text-align: center;
+
             padding: 0.7rem 1rem;
+
             color: #fff;
+
             background:
                 linear-gradient(
                     90deg,
@@ -482,13 +566,21 @@
                     var(--lavender-dark),
                     var(--cosmic-purple)
                 );
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.15);
+
             font-family: var(--font-cosmic);
             font-size: 0.95rem;
             font-weight: 700;
             letter-spacing: 1.25px;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+
+            text-shadow:
+                0 2px 5px
+                rgba(0,0,0,0.4);
         }
+
 
         /* =========================================================
            HERO
@@ -497,7 +589,12 @@
         .hero {
             position: relative;
             max-width: none;
-            padding: 6.5rem 1.5rem 5rem;
+
+            padding:
+                6.5rem
+                1.5rem
+                5rem;
+
             color: #fff;
             text-align: center;
             overflow: hidden;
@@ -506,21 +603,39 @@
         .hero-content {
             max-width: 1080px;
             margin: 0 auto;
+
             position: relative;
             z-index: 2;
-            animation: fadeInUp 0.9s ease both;
+
+            animation:
+                fadeInUp
+                0.9s
+                ease
+                both;
         }
 
         .hero-eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+
             margin-bottom: 1.3rem;
-            padding: 0.45rem 1rem;
-            border: 1px solid rgba(181,126,220,0.4);
+
+            padding:
+                0.45rem
+                1rem;
+
+            border:
+                1px solid
+                rgba(181,126,220,0.4);
+
             border-radius: 999px;
-            background: rgba(181,126,220,0.08);
+
+            background:
+                rgba(181,126,220,0.08);
+
             color: #EBD8FF;
+
             font-family: var(--font-cosmic);
             font-size: 0.9rem;
             font-weight: 600;
@@ -530,10 +645,19 @@
         .hero h1 {
             max-width: 950px;
             margin: 0 auto 1rem;
+
             font-family: var(--font-cosmic);
-            font-size: clamp(3.1rem, 7vw, 5.5rem);
+
+            font-size:
+                clamp(
+                    3.1rem,
+                    7vw,
+                    5.5rem
+                );
+
             line-height: 1;
             letter-spacing: -1.5px;
+
             background:
                 linear-gradient(
                     135deg,
@@ -541,17 +665,31 @@
                     #EBD9FF 58%,
                     #B57EDC 100%
                 );
+
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 5px 18px rgba(0,0,0,0.65));
+
+            filter:
+                drop-shadow(
+                    0 5px 18px
+                    rgba(0,0,0,0.65)
+                );
         }
 
         .hero-subheading {
             max-width: 800px;
             margin: 0 auto;
+
             color: #E8DDF4;
-            font-size: clamp(1.05rem, 2vw, 1.35rem);
+
+            font-size:
+                clamp(
+                    1.05rem,
+                    2vw,
+                    1.35rem
+                );
+
             font-weight: 500;
         }
 
@@ -563,7 +701,9 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+
             gap: 0.85rem;
+
             margin-top: 2rem;
         }
 
@@ -572,14 +712,24 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+
             min-height: 58px;
-            padding: 0.95rem 1.7rem;
+
+            padding:
+                0.95rem
+                1.7rem;
+
             border-radius: 999px;
+
             font-family: var(--font-cosmic);
             font-weight: 700;
             font-size: 1.12rem;
+
             text-decoration: none;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .cta-primary {
@@ -589,15 +739,27 @@
                     var(--lavender),
                     var(--lavender-dark)
                 );
+
             color: #fff;
-            border: 1px solid rgba(255,255,255,0.28);
-            box-shadow: 0 15px 40px rgba(181,126,220,0.34);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.28);
+
+            box-shadow:
+                0 15px 40px
+                rgba(181,126,220,0.34);
         }
 
         .cta-secondary {
-            background: rgba(255,255,255,0.06);
+            background:
+                rgba(255,255,255,0.06);
+
             color: #fff;
-            border: 1px solid rgba(255,255,255,0.22);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.22);
         }
 
         .cta-primary:hover,
@@ -606,16 +768,21 @@
         }
 
         .cta-primary:hover {
-            box-shadow: 0 20px 48px rgba(181,126,220,0.55);
+            box-shadow:
+                0 20px 48px
+                rgba(181,126,220,0.55);
         }
 
         .cta-secondary:hover {
-            background: rgba(255,255,255,0.12);
+            background:
+                rgba(255,255,255,0.12);
         }
 
         .hero-price-note {
             margin-top: 1rem;
+
             color: #CDA9EA;
+
             font-family: var(--font-cosmic);
             font-size: 1rem;
             font-weight: 600;
@@ -624,17 +791,30 @@
         .hero-trust-strip {
             max-width: 900px;
             margin: 2.5rem auto 0;
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 0.75rem;
         }
 
         .trust-item {
-            padding: 0.85rem 0.65rem;
-            border: 1px solid rgba(181,126,220,0.2);
+            padding:
+                0.85rem
+                0.65rem;
+
+            border:
+                1px solid
+                rgba(181,126,220,0.2);
+
             border-radius: 16px;
-            background: rgba(255,255,255,0.035);
+
+            background:
+                rgba(255,255,255,0.035);
+
             color: #EDE3F7;
+
             font-size: 0.78rem;
             font-weight: 600;
         }
@@ -645,6 +825,7 @@
             margin-bottom: 0.15rem;
         }
 
+
         /* =========================================================
            MAIN DARK SECTIONS
         ========================================================= */
@@ -652,7 +833,11 @@
         .dark-section {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 5.5rem 1.5rem;
+
+            padding:
+                5.5rem
+                1.5rem;
+
             color: #fff;
         }
 
@@ -664,29 +849,50 @@
 
         .section-kicker {
             color: var(--lavender-bright);
+
             font-family: var(--font-cosmic);
+
             font-size: 0.9rem;
             font-weight: 700;
+
             letter-spacing: 1.6px;
+
             text-transform: uppercase;
+
             margin-bottom: 0.5rem;
         }
 
         .section-title {
             color: #fff;
+
             font-family: var(--font-cosmic);
-            font-size: clamp(2.25rem, 5vw, 3.25rem);
+
+            font-size:
+                clamp(
+                    2.25rem,
+                    5vw,
+                    3.25rem
+                );
+
             line-height: 1.08;
+
             margin-bottom: 0.75rem;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+
+            text-shadow:
+                0 4px 15px
+                rgba(0,0,0,0.5);
         }
 
         .section-description {
             color: var(--text-muted);
+
             font-size: 1rem;
+
             max-width: 700px;
+
             margin: 0 auto;
         }
+
 
         /* =========================================================
            WHY COSMIC
@@ -694,24 +900,38 @@
 
         .reasons-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 1.2rem;
         }
 
         .reason-card {
             min-height: 190px;
+
             padding: 1.65rem;
-            border: 1px solid var(--glass-border);
+
+            border:
+                1px solid
+                var(--glass-border);
+
             border-radius: 22px;
+
             background:
                 linear-gradient(
                     145deg,
                     rgba(35,18,60,0.78),
                     rgba(11,4,20,0.78)
                 );
-            box-shadow: 0 15px 35px rgba(0,0,0,0.24);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.24);
+
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
+
             transition:
                 transform 0.25s ease,
                 border-color 0.25s ease,
@@ -720,36 +940,56 @@
 
         .reason-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(181,126,220,0.7);
-            box-shadow: var(--shadow-purple);
+
+            border-color:
+                rgba(181,126,220,0.7);
+
+            box-shadow:
+                var(--shadow-purple);
         }
 
         .reason-icon {
             width: 44px;
             height: 44px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             border-radius: 14px;
+
             margin-bottom: 1rem;
-            background: rgba(181,126,220,0.13);
-            border: 1px solid rgba(181,126,220,0.3);
+
+            background:
+                rgba(181,126,220,0.13);
+
+            border:
+                1px solid
+                rgba(181,126,220,0.3);
+
             font-size: 1.25rem;
         }
 
         .reason-title {
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-size: 1.2rem;
+
             line-height: 1.2;
+
             margin-bottom: 0.55rem;
         }
 
         .reason-desc {
             color: #D9CCE8;
+
             font-size: 0.91rem;
+
             line-height: 1.62;
         }
+
 
         /* =========================================================
            HOW IT WORKS
@@ -757,59 +997,99 @@
 
         .how-works-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 1rem;
         }
 
         .work-step-card {
             position: relative;
-            padding: 2rem 1.35rem;
+
+            padding:
+                2rem
+                1.35rem;
+
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.1);
+
             border-radius: 22px;
-            background: rgba(255,255,255,0.035);
-            transition: transform 0.25s ease, border-color 0.25s ease;
+
+            background:
+                rgba(255,255,255,0.035);
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease;
         }
 
         .work-step-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(181,126,220,0.55);
+
+            border-color:
+                rgba(181,126,220,0.55);
         }
 
         .work-step-num {
             width: 52px;
             height: 52px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.1rem;
+
+            margin:
+                0
+                auto
+                1.1rem;
+
             border-radius: 50%;
+
             background:
                 linear-gradient(
                     135deg,
                     var(--lavender),
                     var(--cosmic-purple)
                 );
+
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-size: 1.3rem;
             font-weight: 700;
-            border: 2px solid rgba(255,255,255,0.25);
-            box-shadow: 0 8px 22px rgba(181,126,220,0.3);
+
+            border:
+                2px solid
+                rgba(255,255,255,0.25);
+
+            box-shadow:
+                0 8px 22px
+                rgba(181,126,220,0.3);
         }
 
         .work-step-title {
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-size: 1.12rem;
+
             margin-bottom: 0.5rem;
         }
 
         .work-step-desc {
             color: #CFC1DE;
+
             font-size: 0.88rem;
+
             line-height: 1.55;
         }
+
 
         /* =========================================================
            WHO IT'S FOR
@@ -817,33 +1097,52 @@
 
         .best-for-box {
             max-width: 900px;
+
             margin: 0 auto;
+
             padding: 2rem;
+
             border-radius: 25px;
-            border: 1px dashed rgba(181,126,220,0.42);
-            background: rgba(11,4,20,0.52);
+
+            border:
+                1px dashed
+                rgba(181,126,220,0.42);
+
+            background:
+                rgba(11,4,20,0.52);
         }
 
         .best-for-list {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 1rem 2rem;
+
             list-style: none;
         }
 
         .best-for-list li {
             display: flex;
+
             gap: 0.7rem;
+
             color: #EDE4F7;
+
             font-size: 0.95rem;
         }
 
         .best-for-list li::before {
             content: "✦";
+
             color: var(--lavender);
+
             font-weight: 700;
+
             flex-shrink: 0;
         }
+
 
         /* =========================================================
            PRICING
@@ -856,12 +1155,17 @@
 
         .pricing-shell {
             max-width: var(--max-width);
+
             margin: 0 auto;
-            padding: 0 1.5rem;
+
+            padding:
+                0
+                1.5rem;
         }
 
         .pricing-header {
             text-align: center;
+
             margin-bottom: 3rem;
         }
 
@@ -871,99 +1175,169 @@
 
         .pricing-header p {
             max-width: 720px;
+
             margin: 0 auto;
+
             color: #D8CCE5;
         }
 
         .plans-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 1.25rem;
+
             align-items: stretch;
         }
 
         .plan-card {
             position: relative;
+
             display: flex;
             flex-direction: column;
-            padding: 2.4rem 1.65rem 1.65rem;
+
+            padding:
+                2.4rem
+                1.65rem
+                1.65rem;
+
             border-radius: 28px;
-            background: rgba(255,255,255,0.96);
+
+            background:
+                rgba(255,255,255,0.96);
+
             color: var(--charcoal);
-            border: 2px solid rgba(181,126,220,0.16);
-            box-shadow: 0 18px 50px rgba(0,0,0,0.35);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            border:
+                2px solid
+                rgba(181,126,220,0.16);
+
+            box-shadow:
+                0 18px 50px
+                rgba(0,0,0,0.35);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
         }
 
         .plan-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 28px 65px rgba(181,126,220,0.28);
+
+            box-shadow:
+                0 28px 65px
+                rgba(181,126,220,0.28);
         }
 
         .plan-card.featured {
             border-color: var(--lavender);
+
             box-shadow:
-                0 0 0 1px rgba(181,126,220,0.15),
-                0 25px 65px rgba(181,126,220,0.24);
+                0 0 0 1px
+                rgba(181,126,220,0.15),
+
+                0 25px 65px
+                rgba(181,126,220,0.24);
         }
 
         .recommended-badge {
             position: absolute;
+
             top: -14px;
             left: 50%;
-            transform: translateX(-50%);
-            padding: 0.42rem 1.2rem;
+
+            transform:
+                translateX(-50%);
+
+            padding:
+                0.42rem
+                1.2rem;
+
             border-radius: 999px;
+
             background:
                 linear-gradient(
                     135deg,
                     var(--cosmic-purple),
                     #160822
                 );
-            border: 1px solid rgba(181,126,220,0.6);
+
+            border:
+                1px solid
+                rgba(181,126,220,0.6);
+
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-size: 0.75rem;
             font-weight: 700;
+
             letter-spacing: 1.1px;
+
             white-space: nowrap;
         }
 
         .plan-tier {
             font-family: var(--font-cosmic);
+
             font-size: 0.78rem;
             font-weight: 700;
+
             letter-spacing: 1.5px;
+
             color: var(--lavender-dark);
+
             margin-bottom: 0.3rem;
         }
 
         .plan-title {
             font-family: var(--font-cosmic);
+
             font-size: 1.65rem;
+
             line-height: 1.15;
+
             margin-bottom: 0.55rem;
         }
 
         .plan-desc {
             min-height: 52px;
+
             color: #555;
+
             font-size: 0.88rem;
+
             margin-bottom: 1.35rem;
         }
 
         .plan-features {
             list-style: none;
+
             flex: 1;
+
             margin-bottom: 1.4rem;
         }
 
         .plan-features li {
             position: relative;
-            padding: 0.58rem 0 0.58rem 1.45rem;
-            border-bottom: 1px solid #eee9f3;
+
+            padding:
+                0.58rem
+                0
+                0.58rem
+                1.45rem;
+
+            border-bottom:
+                1px solid
+                #eee9f3;
+
             color: #3C3C3C;
+
             font-size: 0.89rem;
+
             line-height: 1.5;
         }
 
@@ -973,38 +1347,61 @@
 
         .plan-features li::before {
             content: "✓";
+
             position: absolute;
+
             left: 0;
             top: 0.58rem;
+
             color: var(--lavender-dark);
+
             font-weight: 800;
         }
 
         .plan-btn {
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             min-height: 50px;
-            padding: 0.8rem 1rem;
+
+            padding:
+                0.8rem
+                1rem;
+
             border-radius: 999px;
+
             background: var(--charcoal);
+
             color: #fff;
+
             text-decoration: none;
+
             font-family: var(--font-cosmic);
+
             font-weight: 700;
             font-size: 0.96rem;
-            transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .plan-btn:hover {
             transform: translateY(-2px);
+
             background:
                 linear-gradient(
                     135deg,
                     var(--lavender),
                     var(--lavender-dark)
                 );
-            box-shadow: 0 10px 25px rgba(181,126,220,0.3);
+
+            box-shadow:
+                0 10px 25px
+                rgba(181,126,220,0.3);
         }
 
         .plan-card.featured .plan-btn {
@@ -1017,12 +1414,20 @@
         }
 
         .pricing-note {
-            margin: 1.5rem auto 0;
+            margin:
+                1.5rem
+                auto
+                0;
+
             max-width: 800px;
+
             text-align: center;
+
             color: #CFC1DE;
+
             font-size: 0.85rem;
         }
+
 
         /* =========================================================
            ADD-ONS
@@ -1030,70 +1435,126 @@
 
         .addons-container {
             max-width: 950px;
-            margin: 2rem auto 0;
+
+            margin:
+                2rem
+                auto
+                0;
+
             padding: 2rem;
+
             border-radius: 25px;
-            background: rgba(255,255,255,0.94);
-            box-shadow: 0 18px 50px rgba(0,0,0,0.3);
-            border: 2px solid rgba(181,126,220,0.18);
+
+            background:
+                rgba(255,255,255,0.94);
+
+            box-shadow:
+                0 18px 50px
+                rgba(0,0,0,0.3);
+
+            border:
+                2px solid
+                rgba(181,126,220,0.18);
         }
 
         .addons-subtitle {
             text-align: center;
+
             color: var(--cosmic-purple);
+
             font-family: var(--font-cosmic);
+
             font-size: 1.3rem;
+
             margin-bottom: 1.4rem;
         }
 
         .addons-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 1rem;
         }
 
         .addon-item {
             padding: 1.25rem;
+
             border-radius: 18px;
+
             background: #F9F7FC;
-            border: 1px solid #E9E1F1;
+
+            border:
+                1px solid
+                #E9E1F1;
         }
 
         .addon-name {
             color: var(--charcoal);
+
             font-family: var(--font-cosmic);
+
             font-size: 1.15rem;
+
             margin-bottom: 0.35rem;
         }
 
         .addon-desc {
             color: #555;
+
             font-size: 0.88rem;
+
             line-height: 1.55;
         }
 
+
         /* =========================================================
            BANNER IMAGE
+           
+           IMPORTANT:
+           The image now keeps its natural aspect ratio.
+           Nothing is cropped on desktop or mobile.
         ========================================================= */
 
         .full-width-image-container {
             width: 100%;
-            margin: 1rem 0 0;
+
+            margin:
+                1rem
+                0
+                0;
+
             overflow: hidden;
-            border-top: 1px solid rgba(181,126,220,0.18);
-            border-bottom: 1px solid rgba(181,126,220,0.18);
+
+            border-top:
+                1px solid
+                rgba(181,126,220,0.18);
+
+            border-bottom:
+                1px solid
+                rgba(181,126,220,0.18);
+
+            background:
+                rgba(8,3,14,0.35);
         }
 
         .full-width-image-container img {
             width: 100%;
-            max-height: 560px;
-            object-fit: cover;
-            transition: transform 0.7s ease;
+
+            height: auto;
+
+            max-height: none;
+
+            object-fit: contain;
+
+            transition: none;
         }
 
         .full-width-image-container:hover img {
-            transform: scale(1.015);
+            transform: none;
         }
+
 
         /* =========================================================
            SERVICE AREAS
@@ -1101,24 +1562,40 @@
 
         #service-areas {
             max-width: var(--max-width);
+
             margin: 0 auto;
-            padding: 5rem 1.5rem;
+
+            padding:
+                5rem
+                1.5rem;
         }
 
         .service-areas-layout {
             display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
+
+            grid-template-columns:
+                0.85fr
+                1.15fr;
+
             align-items: center;
+
             overflow: hidden;
+
             border-radius: 30px;
-            border: 1px solid rgba(181,126,220,0.28);
+
+            border:
+                1px solid
+                rgba(181,126,220,0.28);
+
             background:
                 linear-gradient(
                     135deg,
                     rgba(28,12,47,0.92),
                     rgba(8,3,14,0.94)
                 );
-            box-shadow: var(--shadow-lg);
+
+            box-shadow:
+                var(--shadow-lg);
         }
 
         .service-info-side {
@@ -1127,35 +1604,55 @@
 
         .service-info-side .section-title {
             text-align: left;
+
             margin-bottom: 0.75rem;
         }
 
         .area-text {
             color: #D8CCE5;
+
             margin-bottom: 1.8rem;
+
             font-size: 0.98rem;
         }
 
         .badge-container {
             display: grid;
+
             gap: 0.75rem;
         }
 
         .area-badge {
-            padding: 0.9rem 1.1rem;
+            padding:
+                0.9rem
+                1.1rem;
+
             border-radius: 16px;
-            border: 1px solid rgba(181,126,220,0.34);
-            background: rgba(255,255,255,0.045);
+
+            border:
+                1px solid
+                rgba(181,126,220,0.34);
+
+            background:
+                rgba(255,255,255,0.045);
+
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-size: 1.08rem;
             font-weight: 600;
-            transition: transform 0.25s ease, background 0.25s ease;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
         }
 
         .area-badge:hover {
             transform: translateX(5px);
-            background: rgba(181,126,220,0.16);
+
+            background:
+                rgba(181,126,220,0.16);
         }
 
         .map-side {
@@ -1164,12 +1661,22 @@
 
         .map-img {
             width: 100%;
+
             max-height: 520px;
+
             object-fit: contain;
+
             border-radius: 22px;
-            border: 1px solid rgba(181,126,220,0.28);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+
+            border:
+                1px solid
+                rgba(181,126,220,0.28);
+
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,0.45);
         }
+
 
         /* =========================================================
            QUOTE SECTION
@@ -1177,162 +1684,267 @@
 
         #quote-form-section {
             max-width: var(--max-width);
+
             margin: 0 auto;
-            padding: 2rem 1.5rem 6rem;
+
+            padding:
+                2rem
+                1.5rem
+                6rem;
         }
 
         .form-section {
             max-width: 900px;
+
             margin: 0 auto;
+
             padding: 3.4rem;
+
             text-align: center;
+
             border-radius: 32px;
-            background: rgba(255,255,255,0.96);
-            border: 2px solid rgba(181,126,220,0.22);
-            box-shadow: var(--shadow-lg);
+
+            background:
+                rgba(255,255,255,0.96);
+
+            border:
+                2px solid
+                rgba(181,126,220,0.22);
+
+            box-shadow:
+                var(--shadow-lg);
         }
 
         .form-section .section-title {
             color: var(--charcoal);
+
             text-shadow: none;
+
             margin-bottom: 0.75rem;
         }
 
         .quote-portal-desc {
             max-width: 700px;
-            margin: 0 auto 2rem;
+
+            margin:
+                0
+                auto
+                2rem;
+
             color: #555;
+
             font-size: 0.98rem;
         }
 
         .signup-header-box {
             display: inline-flex;
-            padding: 0.5rem 1rem;
+
+            padding:
+                0.5rem
+                1rem;
+
             border-radius: 999px;
-            background: var(--cosmic-purple);
+
+            background:
+                var(--cosmic-purple);
+
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-size: 0.88rem;
             font-weight: 700;
+
             letter-spacing: 0.8px;
+
             margin-bottom: 1.5rem;
         }
 
         .how-it-works-title {
             color: var(--charcoal);
+
             font-family: var(--font-cosmic);
+
             font-size: 1.4rem;
+
             margin-bottom: 1.8rem;
         }
 
         .signup-steps-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
             gap: 0.8rem;
         }
 
         .step-item {
             position: relative;
+
             text-align: center;
         }
 
         .step-circle {
             width: 66px;
             height: 66px;
+
             margin: 0 auto;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             position: relative;
+
             border-radius: 50%;
+
             background:
                 linear-gradient(
                     135deg,
                     var(--cosmic-purple),
                     var(--lavender-dark)
                 );
+
             color: #fff;
-            box-shadow: 0 8px 22px rgba(74,29,117,0.32);
-            border: 2px solid rgba(255,255,255,0.4);
+
+            box-shadow:
+                0 8px 22px
+                rgba(74,29,117,0.32);
+
+            border:
+                2px solid
+                rgba(255,255,255,0.4);
         }
 
         .step-circle svg {
             width: 30px;
             height: 30px;
+
             fill: none;
+
             stroke: currentColor;
+
             stroke-width: 2;
+
             stroke-linecap: round;
             stroke-linejoin: round;
         }
 
         .step-badge {
             position: absolute;
+
             right: -2px;
             bottom: -2px;
+
             width: 23px;
             height: 23px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             border-radius: 50%;
-            background: var(--lavender);
-            border: 2px solid #fff;
+
+            background:
+                var(--lavender);
+
+            border:
+                2px solid #fff;
+
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-size: 0.72rem;
             font-weight: 700;
         }
 
         .step-text {
             display: block;
+
             max-width: 125px;
-            margin: 0.9rem auto 0;
+
+            margin:
+                0.9rem
+                auto
+                0;
+
             color: var(--charcoal);
+
             font-family: var(--font-cosmic);
+
             font-size: 0.78rem;
             font-weight: 700;
+
             line-height: 1.3;
         }
 
         .step-arrow {
             position: absolute;
+
             top: 24px;
             right: -15px;
-            color: var(--lavender-dark);
+
+            color:
+                var(--lavender-dark);
+
             font-weight: 800;
         }
 
         .signup-arrow-pointer {
             display: flex;
+
             justify-content: center;
-            margin: 1.5rem 0;
+
+            margin:
+                1.5rem
+                0;
         }
 
         .arrow-icon-btn {
             width: 55px;
             height: 55px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             border-radius: 16px;
+
             background:
                 linear-gradient(
                     135deg,
                     var(--lavender-dark),
                     var(--cosmic-purple)
                 );
+
             color: #fff;
-            animation: bounceArrow 2s infinite ease-in-out;
-            box-shadow: 0 8px 24px rgba(74,29,117,0.32);
+
+            animation:
+                bounceArrow
+                2s
+                infinite
+                ease-in-out;
+
+            box-shadow:
+                0 8px 24px
+                rgba(74,29,117,0.32);
         }
 
         .arrow-icon-btn svg {
             width: 30px;
             height: 30px;
+
             fill: none;
+
             stroke: currentColor;
+
             stroke-width: 2.5;
+
             stroke-linecap: round;
             stroke-linejoin: round;
         }
@@ -1340,32 +1952,57 @@
         .submit-btn {
             width: 100%;
             max-width: 520px;
+
             min-height: 60px;
+
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
-            padding: 1rem 1.5rem;
+
+            padding:
+                1rem
+                1.5rem;
+
             border-radius: 999px;
+
             background:
                 linear-gradient(
                     135deg,
                     var(--lavender),
                     var(--cosmic-purple)
                 );
+
             color: #fff;
+
             text-decoration: none;
+
             font-family: var(--font-cosmic);
+
             font-size: 1.18rem;
             font-weight: 700;
-            border: 1px solid rgba(255,255,255,0.2);
-            box-shadow: 0 12px 32px rgba(138,79,186,0.3);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.2);
+
+            box-shadow:
+                0 12px 32px
+                rgba(138,79,186,0.3);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 18px 42px rgba(138,79,186,0.45);
+
+            box-shadow:
+                0 18px 42px
+                rgba(138,79,186,0.45);
         }
+
 
         /* =========================================================
            FAQ
@@ -1373,57 +2010,96 @@
 
         #faq {
             max-width: var(--max-width);
+
             margin: 0 auto;
-            padding: 5rem 1.5rem;
+
+            padding:
+                5rem
+                1.5rem;
+
             color: #fff;
         }
 
         .faq-list {
             max-width: 850px;
+
             margin: 0 auto;
+
             display: grid;
+
             gap: 0.8rem;
         }
 
         .faq-item {
-            border: 1px solid rgba(181,126,220,0.25);
+            border:
+                1px solid
+                rgba(181,126,220,0.25);
+
             border-radius: 18px;
-            background: rgba(21,11,36,0.7);
+
+            background:
+                rgba(21,11,36,0.7);
+
             overflow: hidden;
         }
 
         .faq-question {
             width: 100%;
+
             display: flex;
+
             align-items: center;
             justify-content: space-between;
+
             gap: 1rem;
-            padding: 1.15rem 1.3rem;
+
+            padding:
+                1.15rem
+                1.3rem;
+
             border: 0;
+
             background: transparent;
+
             color: #fff;
+
             text-align: left;
+
             font-family: var(--font-cosmic);
+
             font-size: 1rem;
             font-weight: 600;
+
             cursor: pointer;
         }
 
         .faq-question span:last-child {
             color: var(--lavender);
+
             font-size: 1.4rem;
-            transition: transform 0.2s ease;
+
+            transition:
+                transform 0.2s ease;
         }
 
-        .faq-item.open .faq-question span:last-child {
+        .faq-item.open
+        .faq-question
+        span:last-child {
             transform: rotate(45deg);
         }
 
         .faq-answer {
             display: none;
-            padding: 0 1.3rem 1.25rem;
+
+            padding:
+                0
+                1.3rem
+                1.25rem;
+
             color: #D8CCE5;
+
             font-size: 0.9rem;
+
             line-height: 1.65;
         }
 
@@ -1431,57 +2107,95 @@
             display: block;
         }
 
+
         /* =========================================================
            FINAL CTA
         ========================================================= */
 
         .final-cta {
             max-width: 1050px;
+
             margin: 0 auto;
-            padding: 1rem 1.5rem 6rem;
+
+            padding:
+                1rem
+                1.5rem
+                6rem;
         }
 
         .final-cta-card {
             position: relative;
+
             overflow: hidden;
-            padding: 4rem 2rem;
+
+            padding:
+                4rem
+                2rem;
+
             text-align: center;
+
             border-radius: 32px;
-            border: 1px solid rgba(181,126,220,0.4);
+
+            border:
+                1px solid
+                rgba(181,126,220,0.4);
+
             background:
                 radial-gradient(
                     circle at 50% 0%,
                     rgba(181,126,220,0.24),
                     transparent 55%
                 ),
+
                 linear-gradient(
                     135deg,
                     rgba(52,20,83,0.92),
                     rgba(11,4,20,0.96)
                 );
-            box-shadow: var(--shadow-lg);
+
+            box-shadow:
+                var(--shadow-lg);
         }
 
         .final-cta-card h2 {
             color: #fff;
+
             font-family: var(--font-cosmic);
-            font-size: clamp(2.2rem, 5vw, 3.4rem);
+
+            font-size:
+                clamp(
+                    2.2rem,
+                    5vw,
+                    3.4rem
+                );
+
             line-height: 1.05;
+
             margin-bottom: 0.8rem;
         }
 
         .final-cta-card p {
             max-width: 650px;
-            margin: 0 auto 1.6rem;
+
+            margin:
+                0
+                auto
+                1.6rem;
+
             color: #DCCFEA;
         }
 
         .phone-link {
             display: block;
+
             margin-top: 1rem;
+
             color: #E8D5FA;
+
             font-family: var(--font-cosmic);
+
             font-size: 1.05rem;
+
             text-decoration: none;
         }
 
@@ -1489,101 +2203,165 @@
             color: #fff;
         }
 
+
         /* =========================================================
            FOOTER
         ========================================================= */
 
         footer {
             margin-top: 0;
-            padding: 4rem 1.5rem 5rem;
+
+            padding:
+                4rem
+                1.5rem
+                5rem;
+
             color: #E3D9F5;
+
             background: #10061D;
-            border-top: 2px solid var(--lavender);
+
+            border-top:
+                2px solid
+                var(--lavender);
         }
 
         .footer-container {
             max-width: var(--max-width);
+
             margin: 0 auto;
         }
 
         .footer-top-row {
             display: flex;
+
             align-items: center;
             justify-content: space-between;
+
             gap: 2rem;
+
             padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(181,126,220,0.18);
+
+            border-bottom:
+                1px solid
+                rgba(181,126,220,0.18);
         }
 
         .footer-logo-img {
             width: 210px;
             max-width: 100%;
+
             mix-blend-mode: lighten;
-            filter: drop-shadow(0 0 12px rgba(181,126,220,0.35));
+
+            filter:
+                drop-shadow(
+                    0 0 12px
+                    rgba(181,126,220,0.35)
+                );
         }
 
         .footer-nav-actions {
             display: flex;
+
             flex-wrap: wrap;
+
             justify-content: flex-end;
+
             gap: 0.7rem;
         }
 
         .footer-contact-toggle-btn {
             min-height: 44px;
-            padding: 0.65rem 1.25rem;
+
+            padding:
+                0.65rem
+                1.25rem;
+
             border-radius: 999px;
-            border: 1px solid rgba(255,255,255,0.22);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.22);
+
             background:
                 linear-gradient(
                     135deg,
                     var(--lavender),
                     var(--lavender-dark)
                 );
+
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-weight: 600;
+
             cursor: pointer;
         }
 
         .footer-contact-dropdown {
             display: none;
+
             max-width: 650px;
-            margin: 2rem auto;
+
+            margin:
+                2rem
+                auto;
+
             padding: 2rem;
+
             text-align: center;
-            border: 1px solid rgba(181,126,220,0.35);
+
+            border:
+                1px solid
+                rgba(181,126,220,0.35);
+
             border-radius: 22px;
-            background: rgba(21,11,36,0.88);
+
+            background:
+                rgba(21,11,36,0.88);
         }
 
         .footer-contact-dropdown.active {
             display: block;
-            animation: fadeInUp 0.25s ease both;
+
+            animation:
+                fadeInUp
+                0.25s
+                ease
+                both;
         }
 
         .footer-contact-dropdown h3 {
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-size: 1.45rem;
+
             margin-bottom: 0.5rem;
         }
 
         .footer-contact-dropdown p {
             color: #CFC1DE;
+
             font-size: 0.9rem;
+
             margin-bottom: 1.1rem;
         }
 
         .footer-contact-details {
             display: grid;
+
             gap: 0.5rem;
+
             margin-bottom: 1.2rem;
         }
 
         .footer-contact-details a {
             color: var(--lavender-bright);
+
             font-weight: 600;
+
             text-decoration: none;
         }
 
@@ -1593,37 +2371,52 @@
 
         .owner-box {
             display: inline-block;
+
             width: 100%;
             max-width: 380px;
+
             padding: 0.9rem;
-            border: 1px dashed rgba(181,126,220,0.35);
+
+            border:
+                1px dashed
+                rgba(181,126,220,0.35);
+
             border-radius: 15px;
         }
 
         .owner-label {
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-size: 0.8rem;
             font-weight: 600;
         }
 
         .owner-name {
             color: var(--lavender-bright);
+
             font-size: 1rem;
             font-weight: 700;
         }
 
         .footer-bottom-row {
             display: flex;
+
             flex-direction: column;
+
             align-items: center;
+
             text-align: center;
+
             gap: 0.7rem;
+
             padding-top: 2rem;
         }
 
         .footer-bottom-row p {
             max-width: 800px;
+
             font-size: 0.88rem;
         }
 
@@ -1633,29 +2426,52 @@
 
         .footer-links-stack {
             display: flex;
+
             flex-wrap: wrap;
+
             justify-content: center;
+
             gap: 0.65rem;
+
             margin-top: 0.8rem;
         }
 
         .footer-link {
-            padding: 0.5rem 0.9rem;
+            padding:
+                0.5rem
+                0.9rem;
+
             border-radius: 999px;
-            border: 1px solid rgba(181,126,220,0.24);
-            background: rgba(255,255,255,0.035);
+
+            border:
+                1px solid
+                rgba(181,126,220,0.24);
+
+            background:
+                rgba(255,255,255,0.035);
+
             color: #fff;
+
             font-family: var(--font-cosmic);
+
             font-size: 0.83rem;
             font-weight: 600;
+
             cursor: pointer;
-            transition: background 0.2s ease, border-color 0.2s ease;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease;
         }
 
         .footer-link:hover {
-            background: var(--cosmic-purple);
-            border-color: var(--lavender);
+            background:
+                var(--cosmic-purple);
+
+            border-color:
+                var(--lavender);
         }
+
 
         /* =========================================================
            MOBILE STICKY CTA
@@ -1665,19 +2481,29 @@
             display: none;
         }
 
+
         /* =========================================================
            MODALS
         ========================================================= */
 
         .custom-modal {
             display: none;
+
             position: fixed;
+
             inset: 0;
+
             z-index: 3000;
+
             overflow-y: auto;
+
             padding: 1rem;
-            background: rgba(5,2,9,0.88);
+
+            background:
+                rgba(5,2,9,0.88);
+
             backdrop-filter: blur(12px);
+
             -webkit-backdrop-filter: blur(12px);
         }
 
@@ -1687,117 +2513,219 @@
 
         .modal-body-container {
             position: relative;
-            width: min(850px, 100%);
-            margin: 2rem auto;
+
+            width:
+                min(
+                    850px,
+                    100%
+                );
+
+            margin:
+                2rem
+                auto;
+
             padding: 3rem;
+
             border-radius: 28px;
+
             background: #fff;
+
             color: var(--charcoal);
-            border: 2px solid var(--lavender);
-            box-shadow: 0 35px 90px rgba(0,0,0,0.72);
-            animation: fadeInUp 0.3s ease both;
+
+            border:
+                2px solid
+                var(--lavender);
+
+            box-shadow:
+                0 35px 90px
+                rgba(0,0,0,0.72);
+
+            animation:
+                fadeInUp
+                0.3s
+                ease
+                both;
         }
 
         .close-modal-btn {
             position: absolute;
+
             top: 1rem;
             right: 1.25rem;
+
             width: 42px;
             height: 42px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             border: 0;
+
             border-radius: 50%;
+
             background: #F1EDF5;
+
             color: #555;
+
             font-size: 1.8rem;
+
             line-height: 1;
+
             cursor: pointer;
-            transition: background 0.2s ease, color 0.2s ease;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease;
         }
 
         .close-modal-btn:hover {
-            background: var(--lavender);
+            background:
+                var(--lavender);
+
             color: #fff;
         }
 
         .commercial-heading {
             padding-right: 2.5rem;
-            color: var(--cosmic-purple);
-            font-family: var(--font-cosmic);
-            font-size: clamp(2rem, 5vw, 2.7rem);
+
+            color:
+                var(--cosmic-purple);
+
+            font-family:
+                var(--font-cosmic);
+
+            font-size:
+                clamp(
+                    2rem,
+                    5vw,
+                    2.7rem
+                );
+
             line-height: 1.1;
+
             margin-bottom: 0.5rem;
         }
 
         .commercial-subheading {
             color: #555;
+
             font-size: 1rem;
+
             margin-bottom: 1.8rem;
         }
 
         .comm-section-title {
-            margin: 1.6rem 0 0.7rem;
-            color: var(--lavender-dark);
-            font-family: var(--font-cosmic);
+            margin:
+                1.6rem
+                0
+                0.7rem;
+
+            color:
+                var(--lavender-dark);
+
+            font-family:
+                var(--font-cosmic);
+
             font-size: 1.25rem;
         }
 
         .comm-list {
             list-style: none;
+
             margin-bottom: 1rem;
         }
 
         .comm-list li {
-            padding: 0.45rem 0;
+            padding:
+                0.45rem
+                0;
+
             color: #3F3F3F;
+
             font-size: 0.92rem;
+
             line-height: 1.55;
         }
 
         .comm-properties-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 0.8rem;
         }
 
         .comm-property-item {
-            padding: 0.85rem 1rem;
+            padding:
+                0.85rem
+                1rem;
+
             border-radius: 14px;
+
             background: #F5EFFA;
-            border: 1px solid #E5D8EF;
-            color: var(--cosmic-purple);
-            font-family: var(--font-cosmic);
+
+            border:
+                1px solid
+                #E5D8EF;
+
+            color:
+                var(--cosmic-purple);
+
+            font-family:
+                var(--font-cosmic);
+
             font-size: 0.9rem;
+
             font-weight: 600;
         }
 
         .comm-action-footer {
             margin-top: 2rem;
+
             padding-top: 1.6rem;
+
             text-align: center;
-            border-top: 1px dashed #DED1E9;
+
+            border-top:
+                1px dashed
+                #DED1E9;
         }
 
         .comm-cta-btn {
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
+
             min-height: 52px;
-            padding: 0.8rem 1.5rem;
+
+            padding:
+                0.8rem
+                1.5rem;
+
             border-radius: 999px;
+
             background:
                 linear-gradient(
                     135deg,
                     var(--lavender),
                     var(--cosmic-purple)
                 );
+
             color: #fff;
+
             text-decoration: none;
-            font-family: var(--font-cosmic);
+
+            font-family:
+                var(--font-cosmic);
+
             font-weight: 700;
-            transition: transform 0.2s ease;
+
+            transition:
+                transform 0.2s ease;
         }
 
         .comm-cta-btn:hover {
@@ -1806,9 +2734,12 @@
 
         .comm-footer-note {
             margin-top: 0.7rem;
+
             color: #666;
+
             font-size: 0.82rem;
         }
+
 
         /* =========================================================
            LEGAL
@@ -1816,34 +2747,65 @@
 
         .modal-tabs {
             display: flex;
+
             gap: 0.5rem;
+
             margin-bottom: 1.7rem;
+
             padding-right: 2.5rem;
-            border-bottom: 2px solid #F0EAF8;
+
+            border-bottom:
+                2px solid
+                #F0EAF8;
         }
 
         .modal-tab-btn {
-            padding: 0.75rem 1rem;
-            border: 2px solid #E5DAEE;
+            padding:
+                0.75rem
+                1rem;
+
+            border:
+                2px solid
+                #E5DAEE;
+
             border-bottom: none;
-            border-radius: 12px 12px 0 0;
-            background: #F5F0F9;
+
+            border-radius:
+                12px
+                12px
+                0
+                0;
+
+            background:
+                #F5F0F9;
+
             color: #555;
-            font-family: var(--font-cosmic);
+
+            font-family:
+                var(--font-cosmic);
+
             font-weight: 700;
+
             cursor: pointer;
         }
 
         .modal-tab-btn.active {
             background: #fff;
-            color: var(--cosmic-purple);
-            border-color: var(--lavender);
+
+            color:
+                var(--cosmic-purple);
+
+            border-color:
+                var(--lavender);
         }
 
         .legal-pane {
             display: none;
+
             max-height: 62vh;
+
             overflow-y: auto;
+
             padding-right: 0.7rem;
         }
 
@@ -1852,24 +2814,40 @@
         }
 
         .legal-pane h3 {
-            color: var(--charcoal);
-            font-family: var(--font-cosmic);
+            color:
+                var(--charcoal);
+
+            font-family:
+                var(--font-cosmic);
+
             font-size: 2rem;
+
             line-height: 1.15;
+
             margin-bottom: 1rem;
         }
 
         .legal-pane h4 {
-            margin: 1.5rem 0 0.5rem;
-            color: var(--charcoal);
-            font-family: var(--font-cosmic);
+            margin:
+                1.5rem
+                0
+                0.5rem;
+
+            color:
+                var(--charcoal);
+
+            font-family:
+                var(--font-cosmic);
+
             font-size: 1.15rem;
         }
 
         .legal-pane p,
         .legal-pane li {
             color: #444;
+
             font-size: 0.9rem;
+
             line-height: 1.65;
         }
 
@@ -1883,29 +2861,39 @@
 
         .legal-pane ol > li {
             margin-bottom: 1rem;
+
             padding-left: 0.25rem;
         }
 
         .legal-pane ul {
-            margin: 0.6rem 0 0.7rem 1.2rem;
+            margin:
+                0.6rem
+                0
+                0.7rem
+                1.2rem;
         }
 
         .legal-pane ul li {
             margin-bottom: 0.3rem;
         }
 
+
         /* =========================================================
            RESPONSIVE
         ========================================================= */
 
         @media (max-width: 1000px) {
+
             .reasons-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .plans-grid {
                 grid-template-columns: 1fr;
+
                 max-width: 620px;
+
                 margin: 0 auto;
             }
 
@@ -1921,23 +2909,31 @@
                 text-align: center;
             }
 
-            .service-info-side .section-title {
+            .service-info-side
+            .section-title {
                 text-align: center;
             }
 
             .badge-container {
                 max-width: 500px;
+
                 margin: 0 auto;
             }
 
             .map-side {
-                padding: 0 1.5rem 1.5rem;
+                padding:
+                    0
+                    1.5rem
+                    1.5rem;
             }
         }
 
+
         @media (max-width: 800px) {
+
             .nav-container {
                 grid-template-columns: 1fr;
+
                 gap: 0.55rem;
             }
 
@@ -1959,12 +2955,21 @@
             }
 
             .logo-img {
-                width: min(250px, 70vw);
+                width:
+                    min(
+                        250px,
+                        70vw
+                    );
+
                 max-height: 65px;
             }
 
             .nav-btn {
-                width: min(330px, 100%);
+                width:
+                    min(
+                        330px,
+                        100%
+                    );
             }
 
             .hero {
@@ -1972,16 +2977,22 @@
             }
 
             .hero-trust-strip {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .how-works-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .signup-steps-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1.6rem 0.6rem;
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+                gap:
+                    1.6rem
+                    0.6rem;
             }
 
             .step-arrow {
@@ -1990,6 +3001,7 @@
 
             .footer-top-row {
                 flex-direction: column;
+
                 text-align: center;
             }
 
@@ -1998,7 +3010,9 @@
             }
         }
 
+
         @media (max-width: 600px) {
+
             html {
                 scroll-padding-top: 170px;
             }
@@ -2010,20 +3024,31 @@
             .nebula-cloud {
                 width: 480px;
                 height: 480px;
+
                 filter: blur(80px);
             }
 
             .vet-banner {
                 font-size: 0.76rem;
+
                 letter-spacing: 0.7px;
             }
 
             .hero {
-                padding: 3.8rem 1rem 4rem;
+                padding:
+                    3.8rem
+                    1rem
+                    4rem;
             }
 
             .hero h1 {
-                font-size: clamp(2.75rem, 14vw, 4rem);
+                font-size:
+                    clamp(
+                        2.75rem,
+                        14vw,
+                        4rem
+                    );
+
                 letter-spacing: -0.8px;
             }
 
@@ -2033,8 +3058,11 @@
 
             .hero-cta-row {
                 flex-direction: column;
+
                 align-items: stretch;
+
                 max-width: 420px;
+
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -2076,27 +3104,42 @@
             }
 
             .service-info-side {
-                padding: 2.2rem 1.3rem;
+                padding:
+                    2.2rem
+                    1.3rem;
             }
 
             .form-section {
-                padding: 2.4rem 1rem;
+                padding:
+                    2.4rem
+                    1rem;
+
                 border-radius: 25px;
             }
 
             .signup-steps-grid {
                 grid-template-columns: 1fr;
+
                 gap: 1.35rem;
             }
 
             .step-item {
                 display: grid;
-                grid-template-columns: 66px 1fr;
+
+                grid-template-columns:
+                    66px
+                    1fr;
+
                 align-items: center;
+
                 text-align: left;
+
                 gap: 1rem;
+
                 max-width: 300px;
+
                 margin: 0 auto;
+
                 width: 100%;
             }
 
@@ -2106,7 +3149,9 @@
 
             .step-text {
                 max-width: none;
+
                 margin: 0;
+
                 font-size: 0.82rem;
             }
 
@@ -2115,26 +3160,42 @@
             }
 
             .modal-body-container {
-                padding: 2.5rem 1rem 1.5rem;
-                margin: 0.5rem auto;
+                padding:
+                    2.5rem
+                    1rem
+                    1.5rem;
+
+                margin:
+                    0.5rem
+                    auto;
+
                 border-radius: 22px;
             }
 
             .modal-tabs {
                 flex-direction: column;
+
                 border-bottom: none;
+
                 padding-right: 0;
             }
 
             .modal-tab-btn {
-                border: 2px solid #E5DAEE;
+                border:
+                    2px solid
+                    #E5DAEE;
+
                 border-radius: 12px;
             }
 
             .modal-tab-btn.active {
-                background: var(--lavender);
+                background:
+                    var(--lavender);
+
                 color: #fff;
-                border-color: var(--lavender);
+
+                border-color:
+                    var(--lavender);
             }
 
             .legal-pane {
@@ -2143,29 +3204,50 @@
 
             .mobile-cta {
                 position: fixed;
+
                 left: 0;
                 right: 0;
                 bottom: 0;
+
                 z-index: 2500;
+
                 display: flex;
+
                 gap: 0.55rem;
+
                 padding: 0.55rem;
-                background: rgba(8,3,14,0.94);
-                border-top: 1px solid rgba(181,126,220,0.35);
+
+                background:
+                    rgba(8,3,14,0.94);
+
+                border-top:
+                    1px solid
+                    rgba(181,126,220,0.35);
+
                 backdrop-filter: blur(15px);
+
                 -webkit-backdrop-filter: blur(15px);
             }
 
             .mobile-cta a {
                 flex: 1;
+
                 min-height: 52px;
+
                 display: flex;
+
                 align-items: center;
                 justify-content: center;
+
                 border-radius: 999px;
+
                 text-decoration: none;
-                font-family: var(--font-cosmic);
+
+                font-family:
+                    var(--font-cosmic);
+
                 font-size: 0.9rem;
+
                 font-weight: 700;
             }
 
@@ -2176,21 +3258,45 @@
                         var(--lavender),
                         var(--lavender-dark)
                     );
+
                 color: #fff;
             }
 
             .mobile-call {
-                background: rgba(255,255,255,0.08);
+                background:
+                    rgba(255,255,255,0.08);
+
                 color: #fff;
-                border: 1px solid rgba(255,255,255,0.2);
+
+                border:
+                    1px solid
+                    rgba(255,255,255,0.2);
+            }
+
+            /*
+             * The banner image intentionally remains
+             * width: 100% and height: auto here.
+             * This guarantees the full image remains visible.
+             */
+            .full-width-image-container {
+                margin-top: 0.5rem;
+            }
+
+            .full-width-image-container img {
+                width: 100%;
+                height: auto;
+                max-height: none;
+                object-fit: contain;
             }
         }
+
 
         /* =========================================================
            REDUCED MOTION
         ========================================================= */
 
         @media (prefers-reduced-motion: reduce) {
+
             html {
                 scroll-behavior: auto;
             }
@@ -2199,8 +3305,12 @@
             *::before,
             *::after {
                 animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
             }
 
             #cosmic-stars-canvas,
@@ -2209,8 +3319,10 @@
                 display: none;
             }
         }
+
     </style>
 </head>
+
 
 <body>
 
@@ -2218,13 +3330,30 @@
          COSMIC BACKGROUND
     ========================================================== -->
 
-    <canvas id="cosmic-stars-canvas" aria-hidden="true"></canvas>
+    <canvas
+        id="cosmic-stars-canvas"
+        aria-hidden="true"
+    ></canvas>
 
-    <div class="nebula-cloud nebula-1" aria-hidden="true"></div>
-    <div class="nebula-cloud nebula-2" aria-hidden="true"></div>
-    <div class="nebula-cloud nebula-3" aria-hidden="true"></div>
+    <div
+        class="nebula-cloud nebula-1"
+        aria-hidden="true"
+    ></div>
 
-    <div class="shooting-star-container" aria-hidden="true">
+    <div
+        class="nebula-cloud nebula-2"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="nebula-cloud nebula-3"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="shooting-star-container"
+        aria-hidden="true"
+    >
         <div class="star-streak streak-1"></div>
         <div class="star-streak streak-2"></div>
         <div class="star-streak streak-3"></div>
@@ -2236,9 +3365,14 @@
     ========================================================== -->
 
     <header>
-        <nav class="nav-container" aria-label="Main navigation">
+
+        <nav
+            class="nav-container"
+            aria-label="Main navigation"
+        >
 
             <div class="nav-left-container">
+
                 <a
                     href="https://app.scoopilot.com/signup/cosmic-scoopers"
                     target="_blank"
@@ -2247,21 +3381,27 @@
                 >
                     Get Your Instant Quote
                 </a>
+
             </div>
+
 
             <a
                 href="#top"
                 class="logo-container"
                 aria-label="Cosmic Scoopers home"
             >
+
                 <img
                     src="IMG_20260730_183924.png"
                     alt="Cosmic Scoopers"
                     class="logo-img"
                 >
+
             </a>
 
+
             <div class="nav-btn-container">
+
                 <button
                     type="button"
                     class="nav-btn"
@@ -2269,13 +3409,16 @@
                 >
                     Commercial Services
                 </button>
+
             </div>
 
         </nav>
+
     </header>
 
 
     <main id="top">
+
 
         <!-- =====================================================
              VETERAN BANNER
@@ -2290,7 +3433,10 @@
              HERO
         ====================================================== -->
 
-        <section class="hero" aria-labelledby="hero-title">
+        <section
+            class="hero"
+            aria-labelledby="hero-title"
+        >
 
             <div class="hero-content">
 
@@ -2304,9 +3450,12 @@
 
                 <p class="hero-subheading">
                     Professional recurring pet waste removal for
-                    <strong>Milton, Pace &amp; Navarre, Florida.</strong>
+                    <strong>
+                        Milton, Pace &amp; Navarre, Florida.
+                    </strong>
                     We handle the dirty work so you can enjoy your yard.
                 </p>
+
 
                 <div class="hero-cta-row">
 
@@ -2328,29 +3477,46 @@
 
                 </div>
 
+
                 <div class="hero-price-note">
                     Starting at just $25/visit · No long-term contracts
                 </div>
 
+
                 <div class="hero-trust-strip">
 
                     <div class="trust-item">
-                        <strong>🔒 Gate Confirmation</strong>
+                        <strong>
+                            🔒 Gate Confirmation
+                        </strong>
+
                         Peace of mind after every visit
                     </div>
 
+
                     <div class="trust-item">
-                        <strong>✦ Veteran Owned</strong>
+                        <strong>
+                            ✦ Veteran Owned
+                        </strong>
+
                         Locally operated
                     </div>
 
+
                     <div class="trust-item">
-                        <strong>🧼 Sanitized Equipment</strong>
+                        <strong>
+                            🧼 Sanitized Equipment
+                        </strong>
+
                         Clean between yards
                     </div>
 
+
                     <div class="trust-item">
-                        <strong>📅 Recurring Service</strong>
+                        <strong>
+                            📅 Recurring Service
+                        </strong>
+
                         Keep your yard maintained
                     </div>
 
@@ -2365,10 +3531,16 @@
              WHY COSMIC SCOOPERS
         ====================================================== -->
 
-        <section class="dark-section" id="why-cosmic">
+        <section
+            class="dark-section"
+            id="why-cosmic"
+        >
 
             <div class="section-heading">
-                <div class="section-kicker">Why Cosmic Scoopers</div>
+
+                <div class="section-kicker">
+                    Why Cosmic Scoopers
+                </div>
 
                 <h2 class="section-title">
                     Your Yard Deserves Better Than a Random Scoop.
@@ -2379,12 +3551,18 @@
                     cleaner outdoor space without adding another chore to
                     your week.
                 </p>
+
             </div>
+
 
             <div class="reasons-grid">
 
+
                 <article class="reason-card">
-                    <div class="reason-icon">🔒</div>
+
+                    <div class="reason-icon">
+                        🔒
+                    </div>
 
                     <h3 class="reason-title">
                         Gate Security Guarantee
@@ -2395,11 +3573,15 @@
                         gate after every visit, giving you added peace of
                         mind that your pets stay safe.
                     </p>
+
                 </article>
 
 
                 <article class="reason-card">
-                    <div class="reason-icon">📅</div>
+
+                    <div class="reason-icon">
+                        📅
+                    </div>
 
                     <h3 class="reason-title">
                         Consistent, Reliable Service
@@ -2410,11 +3592,15 @@
                         schedule so your yard stays cleaner without you
                         having to remember another chore.
                     </p>
+
                 </article>
 
 
                 <article class="reason-card">
-                    <div class="reason-icon">✨</div>
+
+                    <div class="reason-icon">
+                        ✨
+                    </div>
 
                     <h3 class="reason-title">
                         100% Satisfaction Guaranteed
@@ -2425,11 +3611,15 @@
                         areas to make your scheduled cleanup as thorough as
                         possible.
                     </p>
+
                 </article>
 
 
                 <article class="reason-card">
-                    <div class="reason-icon">📝</div>
+
+                    <div class="reason-icon">
+                        📝
+                    </div>
 
                     <h3 class="reason-title">
                         No Long-Term Contracts
@@ -2440,11 +3630,15 @@
                         according to our service terms without being locked
                         into a long-term contract.
                     </p>
+
                 </article>
 
 
                 <article class="reason-card">
-                    <div class="reason-icon">🧼</div>
+
+                    <div class="reason-icon">
+                        🧼
+                    </div>
 
                     <h3 class="reason-title">
                         Sanitized Equipment
@@ -2454,11 +3648,15 @@
                         Tools and footwear are thoroughly disinfected between
                         yards to help maintain a cleaner service process.
                     </p>
+
                 </article>
 
 
                 <article class="reason-card">
-                    <div class="reason-icon">💳</div>
+
+                    <div class="reason-icon">
+                        💳
+                    </div>
 
                     <h3 class="reason-title">
                         Easy Automated Billing
@@ -2468,6 +3666,7 @@
                         Straightforward recurring billing and online payment
                         processing help keep your service simple.
                     </p>
+
                 </article>
 
             </div>
@@ -2479,10 +3678,16 @@
              HOW SERVICE WORKS
         ====================================================== -->
 
-        <section class="dark-section" id="how-it-works">
+        <section
+            class="dark-section"
+            id="how-it-works"
+        >
 
             <div class="section-heading">
-                <div class="section-kicker">Simple From Start to Finish</div>
+
+                <div class="section-kicker">
+                    Simple From Start to Finish
+                </div>
 
                 <h2 class="section-title">
                     We Scoop. You Enjoy Your Yard.
@@ -2491,12 +3696,18 @@
                 <p class="section-description">
                     Getting started takes only a few simple steps.
                 </p>
+
             </div>
+
 
             <div class="how-works-grid">
 
+
                 <article class="work-step-card">
-                    <div class="work-step-num">1</div>
+
+                    <div class="work-step-num">
+                        1
+                    </div>
 
                     <h3 class="work-step-title">
                         Choose Your Schedule
@@ -2506,11 +3717,15 @@
                         Select weekly, twice-weekly, or bi-weekly service
                         based on your household and yard needs.
                     </p>
+
                 </article>
 
 
                 <article class="work-step-card">
-                    <div class="work-step-num">2</div>
+
+                    <div class="work-step-num">
+                        2
+                    </div>
 
                     <h3 class="work-step-title">
                         We Handle the Dirty Work
@@ -2520,11 +3735,15 @@
                         Our team arrives, scoops the service area, collects
                         the waste, and secures your gates.
                     </p>
+
                 </article>
 
 
                 <article class="work-step-card">
-                    <div class="work-step-num">3</div>
+
+                    <div class="work-step-num">
+                        3
+                    </div>
 
                     <h3 class="work-step-title">
                         Get Gate Confirmation
@@ -2534,11 +3753,15 @@
                         You'll receive your closed-gate confirmation after
                         service for added peace of mind.
                     </p>
+
                 </article>
 
 
                 <article class="work-step-card">
-                    <div class="work-step-num">4</div>
+
+                    <div class="work-step-num">
+                        4
+                    </div>
 
                     <h3 class="work-step-title">
                         Reclaim Your Lawn
@@ -2548,6 +3771,7 @@
                         Step outside into a cleaner yard without worrying
                         about where you walk.
                     </p>
+
                 </article>
 
             </div>
@@ -2559,15 +3783,23 @@
              WHO IT'S FOR
         ====================================================== -->
 
-        <section class="dark-section" id="who-its-for">
+        <section
+            class="dark-section"
+            id="who-its-for"
+        >
 
             <div class="section-heading">
-                <div class="section-kicker">Built Around Real Life</div>
+
+                <div class="section-kicker">
+                    Built Around Real Life
+                </div>
 
                 <h2 class="section-title">
                     Who Is Cosmic Scoopers For?
                 </h2>
+
             </div>
+
 
             <div class="best-for-box">
 
@@ -2628,12 +3860,16 @@
 
                 <div class="plans-grid">
 
+
                     <!-- BI-WEEKLY -->
 
                     <article class="plan-card">
 
                         <div>
-                            <div class="plan-tier">GOOD</div>
+
+                            <div class="plan-tier">
+                                GOOD
+                            </div>
 
                             <h3 class="plan-title">
                                 Cosmic Bi-Weekly
@@ -2643,7 +3879,9 @@
                                 Recurring maintenance for households that
                                 need scheduled cleanup without weekly visits.
                             </p>
+
                         </div>
+
 
                         <ul class="plan-features">
 
@@ -2664,11 +3902,13 @@
                             </li>
 
                             <li>
-                                <strong>Best for:</strong> Single-dog homes
+                                <strong>Best for:</strong>
+                                Single-dog homes
                                 or lower-traffic outdoor spaces
                             </li>
 
                         </ul>
+
 
                         <a
                             href="https://app.scoopilot.com/signup/cosmic-scoopers"
@@ -2690,8 +3930,12 @@
                             RECOMMENDED
                         </div>
 
+
                         <div>
-                            <div class="plan-tier">BETTER</div>
+
+                            <div class="plan-tier">
+                                BETTER
+                            </div>
 
                             <h3 class="plan-title">
                                 Cosmic Weekly
@@ -2701,7 +3945,9 @@
                                 Our most popular rhythm for keeping your
                                 yard consistently clean and manageable.
                             </p>
+
                         </div>
+
 
                         <ul class="plan-features">
 
@@ -2722,11 +3968,13 @@
                             </li>
 
                             <li>
-                                <strong>Best for:</strong> Homeowners who
+                                <strong>Best for:</strong>
+                                Homeowners who
                                 want maximum convenience
                             </li>
 
                         </ul>
+
 
                         <a
                             href="https://app.scoopilot.com/signup/cosmic-scoopers"
@@ -2745,7 +3993,10 @@
                     <article class="plan-card">
 
                         <div>
-                            <div class="plan-tier">BEST</div>
+
+                            <div class="plan-tier">
+                                BEST
+                            </div>
 
                             <h3 class="plan-title">
                                 Cosmic Twice-Weekly
@@ -2755,7 +4006,9 @@
                                 Maximum upkeep for active dogs and
                                 multi-dog households.
                             </p>
+
                         </div>
+
 
                         <ul class="plan-features">
 
@@ -2776,11 +4029,13 @@
                             </li>
 
                             <li>
-                                <strong>Best for:</strong> Multi-dog families,
+                                <strong>Best for:</strong>
+                                Multi-dog families,
                                 active dogs, and high-traffic yards
                             </li>
 
                         </ul>
+
 
                         <a
                             href="https://app.scoopilot.com/signup/cosmic-scoopers"
@@ -2811,7 +4066,9 @@
                         Optional Add-On Services
                     </h3>
 
+
                     <div class="addons-grid">
+
 
                         <article class="addon-item">
 
@@ -2851,14 +4108,18 @@
 
         <!-- =====================================================
              BANNER IMAGE
+             
+             FULL IMAGE — NO CROPPING
         ====================================================== -->
 
         <div class="full-width-image-container">
+
             <img
                 src="1000007602.png"
                 alt="Cosmic Scoopers pet waste removal service banner"
                 loading="lazy"
             >
+
         </div>
 
 
@@ -2869,6 +4130,7 @@
         <section id="service-areas">
 
             <div class="service-areas-layout">
+
 
                 <div class="service-info-side">
 
@@ -2884,6 +4146,7 @@
                         Professional pet waste removal serving communities
                         throughout the Milton, Pace, and Navarre area.
                     </p>
+
 
                     <div class="badge-container">
 
@@ -2956,18 +4219,29 @@
 
                     <div class="signup-steps-grid">
 
+
                         <!-- STEP 1 -->
 
                         <div class="step-item">
 
                             <div class="step-circle">
 
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M15 15l-2 5L9 9l11 4-5 2z"/>
-                                    <path d="M13 13l6 6"/>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M15 15l-2 5L9 9l11 4-5 2z"
+                                    />
+
+                                    <path
+                                        d="M13 13l6 6"
+                                    />
                                 </svg>
 
-                                <span class="step-badge">1</span>
+                                <span class="step-badge">
+                                    1
+                                </span>
 
                             </div>
 
@@ -2975,7 +4249,10 @@
                                 Click the Sign Up Link
                             </div>
 
-                            <span class="step-arrow" aria-hidden="true">
+                            <span
+                                class="step-arrow"
+                                aria-hidden="true"
+                            >
                                 ➔
                             </span>
 
@@ -2988,14 +4265,28 @@
 
                             <div class="step-circle">
 
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <rect x="5" y="4" width="14" height="17" rx="2"/>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <rect
+                                        x="5"
+                                        y="4"
+                                        width="14"
+                                        height="17"
+                                        rx="2"
+                                    />
+
                                     <path d="M9 9h6"/>
                                     <path d="M9 13h6"/>
                                     <path d="M9 17h4"/>
+
                                 </svg>
 
-                                <span class="step-badge">2</span>
+                                <span class="step-badge">
+                                    2
+                                </span>
 
                             </div>
 
@@ -3003,7 +4294,10 @@
                                 Answer a Few Questions
                             </div>
 
-                            <span class="step-arrow" aria-hidden="true">
+                            <span
+                                class="step-arrow"
+                                aria-hidden="true"
+                            >
                                 ➔
                             </span>
 
@@ -3016,8 +4310,17 @@
 
                             <div class="step-circle">
 
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <circle cx="12" cy="12" r="3"/>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <circle
+                                        cx="12"
+                                        cy="12"
+                                        r="3"
+                                    />
+
                                     <ellipse
                                         cx="12"
                                         cy="12"
@@ -3025,9 +4328,12 @@
                                         ry="4"
                                         transform="rotate(-30 12 12)"
                                     />
+
                                 </svg>
 
-                                <span class="step-badge">3</span>
+                                <span class="step-badge">
+                                    3
+                                </span>
 
                             </div>
 
@@ -3035,7 +4341,10 @@
                                 Pick a Plan
                             </div>
 
-                            <span class="step-arrow" aria-hidden="true">
+                            <span
+                                class="step-arrow"
+                                aria-hidden="true"
+                            >
                                 ➔
                             </span>
 
@@ -3048,14 +4357,38 @@
 
                             <div class="step-circle">
 
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                    <polyline points="14 2 14 8 20 8"/>
-                                    <line x1="16" y1="13" x2="8" y2="13"/>
-                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                                    />
+
+                                    <polyline
+                                        points="14 2 14 8 20 8"
+                                    />
+
+                                    <line
+                                        x1="16"
+                                        y1="13"
+                                        x2="8"
+                                        y2="13"
+                                    />
+
+                                    <line
+                                        x1="16"
+                                        y1="17"
+                                        x2="8"
+                                        y2="17"
+                                    />
+
                                 </svg>
 
-                                <span class="step-badge">4</span>
+                                <span class="step-badge">
+                                    4
+                                </span>
 
                             </div>
 
@@ -3063,7 +4396,10 @@
                                 No Long-Term Contract
                             </div>
 
-                            <span class="step-arrow" aria-hidden="true">
+                            <span
+                                class="step-arrow"
+                                aria-hidden="true"
+                            >
                                 ➔
                             </span>
 
@@ -3076,15 +4412,49 @@
 
                             <div class="step-circle">
 
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <rect x="3" y="4" width="18" height="16" rx="2"/>
-                                    <line x1="16" y1="2" x2="16" y2="6"/>
-                                    <line x1="8" y1="2" x2="8" y2="6"/>
-                                    <line x1="3" y1="10" x2="21" y2="10"/>
-                                    <path d="M9 15l2 2 4-4"/>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <rect
+                                        x="3"
+                                        y="4"
+                                        width="18"
+                                        height="16"
+                                        rx="2"
+                                    />
+
+                                    <line
+                                        x1="16"
+                                        y1="2"
+                                        x2="16"
+                                        y2="6"
+                                    />
+
+                                    <line
+                                        x1="8"
+                                        y1="2"
+                                        x2="8"
+                                        y2="6"
+                                    />
+
+                                    <line
+                                        x1="3"
+                                        y1="10"
+                                        x2="21"
+                                        y2="10"
+                                    />
+
+                                    <path
+                                        d="M9 15l2 2 4-4"
+                                    />
+
                                 </svg>
 
-                                <span class="step-badge">5</span>
+                                <span class="step-badge">
+                                    5
+                                </span>
 
                             </div>
 
@@ -3139,6 +4509,7 @@
 
             <div class="faq-list">
 
+
                 <div class="faq-item">
 
                     <button
@@ -3146,12 +4517,17 @@
                         class="faq-question"
                         aria-expanded="false"
                     >
+
                         <span>
                             How often can my yard be serviced?
                         </span>
 
-                        <span aria-hidden="true">+</span>
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
                     </button>
+
 
                     <div class="faq-answer">
                         Cosmic Scoopers offers recurring weekly,
@@ -3170,12 +4546,17 @@
                         class="faq-question"
                         aria-expanded="false"
                     >
+
                         <span>
                             Do I need to be home?
                         </span>
 
-                        <span aria-hidden="true">+</span>
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
                     </button>
+
 
                     <div class="faq-answer">
                         You generally do not need to be home as long as
@@ -3193,12 +4574,17 @@
                         class="faq-question"
                         aria-expanded="false"
                     >
+
                         <span>
                             What happens to the pet waste?
                         </span>
 
-                        <span aria-hidden="true">+</span>
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
                     </button>
+
 
                     <div class="faq-answer">
                         Collected pet waste is double-bagged and disposed
@@ -3217,12 +4603,17 @@
                         class="faq-question"
                         aria-expanded="false"
                     >
+
                         <span>
                             Do you require a long-term contract?
                         </span>
 
-                        <span aria-hidden="true">+</span>
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
                     </button>
+
 
                     <div class="faq-answer">
                         No long-term contract is required unless otherwise
@@ -3241,12 +4632,17 @@
                         class="faq-question"
                         aria-expanded="false"
                     >
+
                         <span>
                             How much does service cost?
                         </span>
 
-                        <span aria-hidden="true">+</span>
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
                     </button>
+
 
                     <div class="faq-answer">
                         Service starts at $25 per visit. Your final pricing
@@ -3266,12 +4662,17 @@
                         class="faq-question"
                         aria-expanded="false"
                     >
+
                         <span>
                             What areas do you serve?
                         </span>
 
-                        <span aria-hidden="true">+</span>
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
                     </button>
+
 
                     <div class="faq-answer">
                         Cosmic Scoopers currently serves Milton, Pace,
@@ -3308,6 +4709,7 @@
                     removal from Cosmic Scoopers.
                 </p>
 
+
                 <a
                     href="https://app.scoopilot.com/signup/cosmic-scoopers"
                     target="_blank"
@@ -3316,6 +4718,7 @@
                 >
                     GET MY INSTANT QUOTE
                 </a>
+
 
                 <a
                     href="tel:8508609205"
@@ -3346,6 +4749,7 @@
             Get My Quote
         </a>
 
+
         <a
             href="tel:8508609205"
             class="mobile-call"
@@ -3364,16 +4768,20 @@
 
         <div class="footer-container">
 
+
             <div class="footer-top-row">
 
                 <div>
+
                     <img
                         src="IMG_20260730_183924.png"
                         alt="Cosmic Scoopers"
                         class="footer-logo-img"
                         loading="lazy"
                     >
+
                 </div>
+
 
                 <div class="footer-nav-actions">
 
@@ -3386,6 +4794,7 @@
                     >
                         Contact Us
                     </button>
+
 
                     <button
                         type="button"
@@ -3413,6 +4822,7 @@
                     Have questions or need support? Reach out directly.
                 </p>
 
+
                 <div class="footer-contact-details">
 
                     <a href="mailto:cosmicscoopers@gmail.com">
@@ -3424,6 +4834,7 @@
                     </a>
 
                 </div>
+
 
                 <div class="owner-box">
 
@@ -3451,6 +4862,7 @@
                     services in Milton, Pace, and Navarre, Florida.
                 </p>
 
+
                 <div class="footer-links-stack">
 
                     <button
@@ -3460,6 +4872,7 @@
                     >
                         Terms &amp; Conditions
                     </button>
+
 
                     <button
                         type="button"
@@ -3502,12 +4915,14 @@
                 &times;
             </button>
 
+
             <h2
                 id="commercialHeading"
                 class="commercial-heading"
             >
                 Commercial Pet Waste Management
             </h2>
+
 
             <p class="commercial-subheading">
                 Clean, safe, and welcoming common areas for your residents
@@ -3519,28 +4934,44 @@
                 ✦ Services We Offer
             </h3>
 
+
             <ul class="comm-list">
 
                 <li>
-                    <strong>Routine Common Area Sweeps:</strong>
+                    <strong>
+                        Routine Common Area Sweeps:
+                    </strong>
+
                     Scheduled grounds cleanup for walking paths, green
                     spaces, courtyards, and dog parks.
                 </li>
 
+
                 <li>
-                    <strong>Pet Waste Station Services:</strong>
+                    <strong>
+                        Pet Waste Station Services:
+                    </strong>
+
                     Routine bag restocking, receptacle emptying, and
                     hardware maintenance.
                 </li>
 
+
                 <li>
-                    <strong>Flexible Service Schedules:</strong>
+                    <strong>
+                        Flexible Service Schedules:
+                    </strong>
+
                     Custom visit frequencies such as 1x/week, 2x/week,
                     or daily service tailored to property needs.
                 </li>
 
+
                 <li>
-                    <strong>On-Site Disposal Integration:</strong>
+                    <strong>
+                        On-Site Disposal Integration:
+                    </strong>
+
                     Efficient cleanup utilizing property dumpsters or
                     custom off-site hauling options.
                 </li>
@@ -3552,22 +4983,34 @@
                 ✦ Why Partner With Cosmic Scoopers?
             </h3>
 
+
             <ul class="comm-list">
 
                 <li>
-                    <strong>Fully Insured &amp; Vendor Compliant:</strong>
+                    <strong>
+                        Fully Insured &amp; Vendor Compliant:
+                    </strong>
+
                     Meeting commercial liability requirements for property
                     management groups.
                 </li>
 
+
                 <li>
-                    <strong>Elevates Property Curb Appeal:</strong>
+                    <strong>
+                        Elevates Property Curb Appeal:
+                    </strong>
+
                     Helps eliminate foul odors and keeps grounds cleaner
                     for residents and guests.
                 </li>
 
+
                 <li>
-                    <strong>Reliable &amp; Uniformed Technicians:</strong>
+                    <strong>
+                        Reliable &amp; Uniformed Technicians:
+                    </strong>
+
                     Professional service with clear property walkthrough
                     reports.
                 </li>
@@ -3578,6 +5021,7 @@
             <h3 class="comm-section-title">
                 ✦ Properties We Serve
             </h3>
+
 
             <div class="comm-properties-grid">
 
@@ -3610,6 +5054,7 @@
                 >
                     Request a Commercial Quote
                 </a>
+
 
                 <p class="comm-footer-note">
                     Contact us today to schedule an on-site property
@@ -3648,7 +5093,10 @@
             </button>
 
 
-            <div class="modal-tabs" role="tablist">
+            <div
+                class="modal-tabs"
+                role="tablist"
+            >
 
                 <button
                     type="button"
@@ -3661,6 +5109,7 @@
                 >
                     Terms &amp; Conditions
                 </button>
+
 
                 <button
                     type="button"
@@ -3690,11 +5139,13 @@
                     Terms &amp; Conditions
                 </h3>
 
+
                 <p>
                     <em>
                         COSMIC SCOOPERS – TERMS &amp; CONDITIONS
                     </em>
                 </p>
+
 
                 <p>
                     These Terms &amp; Conditions apply to all services
@@ -3706,28 +5157,47 @@
 
                 <ol>
 
+
                     <li>
-                        <strong>Service Agreement</strong><br>
+
+                        <strong>
+                            Service Agreement
+                        </strong>
+
+                        <br>
+
                         Cosmic Scoopers provides pet waste removal services
                         as outlined in the approved quote, including
                         frequency, pricing, and designated service areas.
                         Services are limited strictly to the areas agreed
                         upon at the time of booking or quote approval.
+
                     </li>
 
 
                     <li>
-                        <strong>Acceptance of Terms</strong><br>
+
+                        <strong>
+                            Acceptance of Terms
+                        </strong>
+
+                        <br>
+
                         Approval of a quote, payment of an invoice, or
                         allowing service to be performed constitutes full
                         acceptance of these Terms &amp; Conditions. No
                         physical or digital signature is required unless
                         specifically requested.
+
                     </li>
 
 
                     <li>
-                        <strong>Billing &amp; Payment Terms</strong>
+
+                        <strong>
+                            Billing &amp; Payment Terms
+                        </strong>
+
 
                         <ul>
 
@@ -3770,9 +5240,11 @@
 
 
                     <li>
+
                         <strong>
                             Scheduling, Routing &amp; Service Days
                         </strong>
+
 
                         <ul>
 
@@ -3810,29 +5282,49 @@
 
 
                     <li>
-                        <strong>Property Access Requirements</strong><br>
+
+                        <strong>
+                            Property Access Requirements
+                        </strong>
+
+                        <br>
+
                         Customers are responsible for ensuring safe,
                         unobstructed access to all service areas. Gates must
                         be unlocked or accessible at the time of service.
                         Locked gates, blocked access, or unsafe conditions
                         may result in a missed visit. Missed visits due to
                         lack of access may still be billed.
+
                     </li>
 
 
                     <li>
-                        <strong>Pet Safety &amp; Containment</strong><br>
+
+                        <strong>
+                            Pet Safety &amp; Containment
+                        </strong>
+
+                        <br>
+
                         All dogs must be secured inside the home or otherwise
                         fully contained prior to service arrival. Dogs may
                         not be present in the yard or service area during
                         service. If dogs are loose in the service area,
                         service may be skipped for safety reasons. Visits
                         missed due to unsecured pets will still be billed.
+
                     </li>
 
 
                     <li>
-                        <strong>Waste Collection &amp; Disposal</strong><br>
+
+                        <strong>
+                            Waste Collection &amp; Disposal
+                        </strong>
+
+                        <br>
+
                         All pet waste collected will be double-bagged. Waste
                         will be disposed of in the customer's designated
                         trash receptacle or dumpster on the property.
@@ -3843,13 +5335,18 @@
                         If no receptacle is available or accessible, waste
                         may be left in a designated safe area on the property
                         and the customer will be notified.
+
                     </li>
 
 
                     <li>
+
                         <strong>
                             Weather, Safety &amp; Service Interruptions
-                        </strong><br>
+                        </strong>
+
+                        <br>
+
                         Services may be delayed, rescheduled, or skipped due
                         to weather, flooding, natural disasters, unsafe
                         terrain, or conditions deemed unsafe by the
@@ -3857,11 +5354,18 @@
                         scheduled service consistency. Unsafe conditions
                         include but are not limited to aggressive animals,
                         hazardous debris, or environmental dangers.
+
                     </li>
 
 
                     <li>
-                        <strong>Holiday Closures</strong><br>
+
+                        <strong>
+                            Holiday Closures
+                        </strong>
+
+                        <br>
+
                         Cosmic Scoopers does not provide service on the
                         following holidays: New Year's Day, Memorial Day,
                         Independence Day, Labor Day, Thanksgiving Day, and
@@ -3869,11 +5373,18 @@
                         holiday, service will be rescheduled to the nearest
                         available business day. Monthly pricing remains
                         unchanged.
+
                     </li>
 
 
                     <li>
-                        <strong>Cancellation &amp; Termination</strong><br>
+
+                        <strong>
+                            Cancellation &amp; Termination
+                        </strong>
+
+                        <br>
+
                         Customers may cancel service at any time with a
                         minimum of seven (7) days' written notice. Services
                         scheduled within the 7-day notice period may still
@@ -3882,11 +5393,18 @@
                         unsafe conditions, or policy violations. No long-term
                         contracts are required unless otherwise stated in
                         writing.
+
                     </li>
 
 
                     <li>
-                        <strong>Commercial Properties</strong><br>
+
+                        <strong>
+                            Commercial Properties
+                        </strong>
+
+                        <br>
+
                         Property owners, managers, or authorized
                         representatives must approve all service areas prior
                         to service. Service is limited to areas outlined in
@@ -3894,11 +5412,16 @@
                         service requests may result in additional charges.
                         Commercial clients are responsible for communicating
                         property-specific rules, restrictions, or hazards.
+
                     </li>
 
 
                     <li>
-                        <strong>Liability Limitation</strong>
+
+                        <strong>
+                            Liability Limitation
+                        </strong>
+
 
                         <ul>
 
@@ -3937,11 +5460,18 @@
 
 
                     <li>
-                        <strong>Agreement Confirmation</strong><br>
+
+                        <strong>
+                            Agreement Confirmation
+                        </strong>
+
+                        <br>
+
                         By approving a quote, submitting payment, or allowing
                         services to begin, the customer acknowledges they
                         have read, understood, and agreed to these Terms &amp;
                         Conditions in full.
+
                     </li>
 
                 </ol>
@@ -3961,6 +5491,7 @@
                 <h3>
                     Privacy Policy
                 </h3>
+
 
                 <p>
                     At Cosmic Scoopers, we value your privacy. This policy
@@ -4019,37 +5550,77 @@
     <script>
         "use strict";
 
+
         /* =========================================================
            COSMIC STARFIELD
-        ========================================================== */
+        ========================================================= */
 
-        const canvas = document.getElementById("cosmic-stars-canvas");
-        const ctx = canvas ? canvas.getContext("2d") : null;
+        const canvas =
+            document.getElementById(
+                "cosmic-stars-canvas"
+            );
+
+        const ctx =
+            canvas
+                ? canvas.getContext("2d")
+                : null;
 
         let stars = [];
+
         let animationFrame = null;
 
-        const isReducedMotion = window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
+        const isReducedMotion =
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
 
-        const isSmallScreen = window.innerWidth < 600;
+        const isSmallScreen =
+            window.innerWidth < 600;
 
-        const numStars = isSmallScreen ? 90 : 150;
+        const numStars =
+            isSmallScreen
+                ? 90
+                : 150;
+
 
         function resizeCanvas() {
-            if (!canvas || !ctx) return;
 
-            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            if (!canvas || !ctx) {
+                return;
+            }
 
-            canvas.width = Math.floor(window.innerWidth * dpr);
-            canvas.height = Math.floor(window.innerHeight * dpr);
+            const dpr =
+                Math.min(
+                    window.devicePixelRatio || 1,
+                    2
+                );
 
-            canvas.style.width = window.innerWidth + "px";
-            canvas.style.height = window.innerHeight + "px";
+            canvas.width =
+                Math.floor(
+                    window.innerWidth * dpr
+                );
 
-            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            canvas.height =
+                Math.floor(
+                    window.innerHeight * dpr
+                );
+
+            canvas.style.width =
+                window.innerWidth + "px";
+
+            canvas.style.height =
+                window.innerHeight + "px";
+
+            ctx.setTransform(
+                dpr,
+                0,
+                0,
+                dpr,
+                0,
+                0
+            );
         }
+
 
         class CosmicStar {
 
@@ -4057,27 +5628,44 @@
                 this.reset(true);
             }
 
+
             reset(initial = false) {
 
-                this.x = Math.random() * window.innerWidth;
+                this.x =
+                    Math.random() *
+                    window.innerWidth;
 
-                this.y = initial
-                    ? Math.random() * window.innerHeight
-                    : -10;
+                this.y =
+                    initial
+                        ? Math.random() *
+                          window.innerHeight
+                        : -10;
 
-                this.size = Math.random() * 1.6 + 0.25;
+                this.size =
+                    Math.random() *
+                    1.6 +
+                    0.25;
 
                 this.alpha =
-                    Math.random() * 0.75 + 0.15;
+                    Math.random() *
+                    0.75 +
+                    0.15;
 
                 this.twinkleDirection =
-                    Math.random() > 0.5 ? 1 : -1;
+                    Math.random() > 0.5
+                        ? 1
+                        : -1;
 
                 this.twinkleSpeed =
-                    Math.random() * 0.012 + 0.004;
+                    Math.random() *
+                    0.012 +
+                    0.004;
 
                 this.speedY =
-                    Math.random() * 0.12 + 0.025;
+                    Math.random() *
+                    0.12 +
+                    0.025;
+
 
                 const palette = [
                     "#FFFFFF",
@@ -4086,13 +5674,16 @@
                     "#8AB4F8"
                 ];
 
+
                 this.color =
                     palette[
                         Math.floor(
-                            Math.random() * palette.length
+                            Math.random() *
+                            palette.length
                         )
                     ];
             }
+
 
             update() {
 
@@ -4100,37 +5691,59 @@
                     this.twinkleSpeed *
                     this.twinkleDirection;
 
+
                 if (this.alpha > 0.95) {
+
                     this.alpha = 0.95;
+
                     this.twinkleDirection = -1;
                 }
 
+
                 if (this.alpha < 0.12) {
+
                     this.alpha = 0.12;
+
                     this.twinkleDirection = 1;
                 }
 
+
                 this.y += this.speedY;
 
-                if (this.y > window.innerHeight + 10) {
+
+                if (
+                    this.y >
+                    window.innerHeight + 10
+                ) {
+
                     this.reset(false);
+
                 }
             }
+
 
             draw() {
 
                 ctx.save();
 
-                ctx.globalAlpha = this.alpha;
+                ctx.globalAlpha =
+                    this.alpha;
 
-                ctx.fillStyle = this.color;
+                ctx.fillStyle =
+                    this.color;
+
 
                 if (this.size > 1.15) {
+
                     ctx.shadowBlur = 8;
-                    ctx.shadowColor = this.color;
+
+                    ctx.shadowColor =
+                        this.color;
                 }
 
+
                 ctx.beginPath();
+
 
                 ctx.arc(
                     this.x,
@@ -4140,30 +5753,57 @@
                     Math.PI * 2
                 );
 
+
                 ctx.fill();
 
                 ctx.restore();
             }
+
         }
+
 
         function initializeStars() {
 
-            if (!canvas || !ctx || isReducedMotion) return;
+            if (
+                !canvas ||
+                !ctx ||
+                isReducedMotion
+            ) {
+                return;
+            }
+
 
             resizeCanvas();
 
             stars = [];
 
-            for (let i = 0; i < numStars; i++) {
-                stars.push(new CosmicStar());
+
+            for (
+                let i = 0;
+                i < numStars;
+                i++
+            ) {
+
+                stars.push(
+                    new CosmicStar()
+                );
+
             }
+
 
             animateStars();
         }
 
+
         function animateStars() {
 
-            if (!ctx || isReducedMotion) return;
+            if (
+                !ctx ||
+                isReducedMotion
+            ) {
+                return;
+            }
+
 
             ctx.clearRect(
                 0,
@@ -4172,132 +5812,217 @@
                 window.innerHeight
             );
 
-            stars.forEach(star => {
-                star.update();
-                star.draw();
-            });
+
+            stars.forEach(
+                star => {
+
+                    star.update();
+
+                    star.draw();
+
+                }
+            );
+
 
             animationFrame =
-                requestAnimationFrame(animateStars);
+                requestAnimationFrame(
+                    animateStars
+                );
         }
+
 
         initializeStars();
 
+
         let resizeTimer;
 
-        window.addEventListener("resize", () => {
 
-            clearTimeout(resizeTimer);
+        window.addEventListener(
+            "resize",
+            () => {
 
-            resizeTimer = setTimeout(() => {
+                clearTimeout(
+                    resizeTimer
+                );
 
-                resizeCanvas();
 
-                if (!isReducedMotion) {
-                    stars.forEach(star => star.reset(true));
-                }
+                resizeTimer =
+                    setTimeout(
+                        () => {
 
-            }, 150);
-        });
+                            resizeCanvas();
+
+
+                            if (
+                                !isReducedMotion
+                            ) {
+
+                                stars.forEach(
+                                    star =>
+                                        star.reset(true)
+                                );
+
+                            }
+
+                        },
+                        150
+                    );
+
+            }
+        );
 
 
         /* =========================================================
            MODAL MANAGEMENT
-        ========================================================== */
+        ========================================================= */
 
         const commercialModal =
-            document.getElementById("commercialModal");
+            document.getElementById(
+                "commercialModal"
+            );
 
         const legalModal =
-            document.getElementById("legalModal");
+            document.getElementById(
+                "legalModal"
+            );
+
 
         let lastFocusedElement = null;
 
+
         function lockBody() {
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow =
+                "hidden";
         }
 
+
         function unlockBody() {
-            document.body.style.overflow = "";
+            document.body.style.overflow =
+                "";
         }
+
 
         function openModal(modal) {
 
-            if (!modal) return;
+            if (!modal) {
+                return;
+            }
+
 
             lastFocusedElement =
                 document.activeElement;
 
-            modal.classList.add("active");
+
+            modal.classList.add(
+                "active"
+            );
+
 
             modal.setAttribute(
                 "aria-hidden",
                 "false"
             );
 
+
             lockBody();
 
+
             const closeButton =
-                modal.querySelector(".close-modal-btn");
+                modal.querySelector(
+                    ".close-modal-btn"
+                );
+
 
             if (closeButton) {
+
                 setTimeout(
-                    () => closeButton.focus(),
+                    () =>
+                        closeButton.focus(),
                     50
                 );
+
             }
+
         }
+
 
         function closeModal(modal) {
 
-            if (!modal) return;
+            if (!modal) {
+                return;
+            }
 
-            modal.classList.remove("active");
+
+            modal.classList.remove(
+                "active"
+            );
+
 
             modal.setAttribute(
                 "aria-hidden",
                 "true"
             );
 
+
             unlockBody();
+
 
             if (
                 lastFocusedElement &&
-                typeof lastFocusedElement.focus === "function"
+                typeof
+                    lastFocusedElement.focus ===
+                    "function"
             ) {
+
                 lastFocusedElement.focus();
+
             }
+
         }
 
 
         /* =========================================================
            COMMERCIAL MODAL
-        ========================================================== */
+        ========================================================= */
 
         function openCommercialModal() {
-            openModal(commercialModal);
+            openModal(
+                commercialModal
+            );
         }
+
 
         function closeCommercialModal() {
-            closeModal(commercialModal);
+            closeModal(
+                commercialModal
+            );
         }
 
+
         document
-            .getElementById("commercialOpenBtn")
+            .getElementById(
+                "commercialOpenBtn"
+            )
             .addEventListener(
                 "click",
                 openCommercialModal
             );
 
+
         document
-            .getElementById("commercialFooterBtn")
+            .getElementById(
+                "commercialFooterBtn"
+            )
             .addEventListener(
                 "click",
                 openCommercialModal
             );
 
+
         document
-            .getElementById("commercialCloseBtn")
+            .getElementById(
+                "commercialCloseBtn"
+            )
             .addEventListener(
                 "click",
                 closeCommercialModal
@@ -4306,21 +6031,35 @@
 
         /* =========================================================
            LEGAL MODAL
-        ========================================================== */
+        ========================================================= */
 
-        function openLegalModal(tabName = "terms") {
+        function openLegalModal(
+            tabName = "terms"
+        ) {
 
-            openModal(legalModal);
+            openModal(
+                legalModal
+            );
 
-            switchTab(tabName);
+            switchTab(
+                tabName
+            );
         }
+
 
         function closeLegalModal() {
-            closeModal(legalModal);
+
+            closeModal(
+                legalModal
+            );
+
         }
 
+
         document
-            .getElementById("legalCloseBtn")
+            .getElementById(
+                "legalCloseBtn"
+            )
             .addEventListener(
                 "click",
                 closeLegalModal
@@ -4334,133 +6073,201 @@
                 "privacy"
             ];
 
-            if (!validTabs.includes(tabName)) {
+
+            if (
+                !validTabs.includes(
+                    tabName
+                )
+            ) {
+
                 tabName = "terms";
+
             }
 
-            document
-                .querySelectorAll(".modal-tab-btn")
-                .forEach(button => {
-
-                    const active =
-                        button.dataset.tab === tabName;
-
-                    button.classList.toggle(
-                        "active",
-                        active
-                    );
-
-                    button.setAttribute(
-                        "aria-selected",
-                        String(active)
-                    );
-
-                });
-
 
             document
-                .querySelectorAll(".legal-pane")
-                .forEach(pane => {
+                .querySelectorAll(
+                    ".modal-tab-btn"
+                )
+                .forEach(
+                    button => {
 
-                    pane.classList.toggle(
-                        "active",
-                        pane.id ===
-                        "pane-" + tabName
-                    );
+                        const active =
+                            button.dataset.tab ===
+                            tabName;
 
-                });
+
+                        button.classList.toggle(
+                            "active",
+                            active
+                        );
+
+
+                        button.setAttribute(
+                            "aria-selected",
+                            String(active)
+                        );
+
+                    }
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".legal-pane"
+                )
+                .forEach(
+                    pane => {
+
+                        pane.classList.toggle(
+                            "active",
+                            pane.id ===
+                            "pane-" +
+                            tabName
+                        );
+
+                    }
+                );
 
 
             const activePane =
                 document.getElementById(
-                    "pane-" + tabName
+                    "pane-" +
+                    tabName
                 );
 
+
             if (activePane) {
-                activePane.scrollTop = 0;
+
+                activePane.scrollTop =
+                    0;
+
             }
+
         }
 
 
         document
-            .querySelectorAll(".modal-tab-btn")
-            .forEach(button => {
+            .querySelectorAll(
+                ".modal-tab-btn"
+            )
+            .forEach(
+                button => {
 
-                button.addEventListener(
-                    "click",
-                    () => {
-                        switchTab(
-                            button.dataset.tab
-                        );
-                    }
-                );
+                    button.addEventListener(
+                        "click",
+                        () => {
 
-            });
+                            switchTab(
+                                button.dataset.tab
+                            );
 
-
-        document
-            .querySelectorAll("[data-legal]")
-            .forEach(button => {
-
-                button.addEventListener(
-                    "click",
-                    () => {
-                        openLegalModal(
-                            button.dataset.legal
-                        );
-                    }
-                );
-
-            });
-
-
-        /* =========================================================
-           CLICK OUTSIDE MODALS
-        ========================================================== */
-
-        [commercialModal, legalModal].forEach(modal => {
-
-            if (!modal) return;
-
-            modal.addEventListener(
-                "click",
-                event => {
-
-                    if (event.target === modal) {
-                        closeModal(modal);
-                    }
+                        }
+                    );
 
                 }
             );
 
-        });
+
+        document
+            .querySelectorAll(
+                "[data-legal]"
+            )
+            .forEach(
+                button => {
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+                            openLegalModal(
+                                button.dataset.legal
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* =========================================================
+           CLICK OUTSIDE MODALS
+        ========================================================= */
+
+        [
+            commercialModal,
+            legalModal
+        ].forEach(
+            modal => {
+
+                if (!modal) {
+                    return;
+                }
+
+
+                modal.addEventListener(
+                    "click",
+                    event => {
+
+                        if (
+                            event.target ===
+                            modal
+                        ) {
+
+                            closeModal(
+                                modal
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
 
 
         /* =========================================================
            ESCAPE KEY
-        ========================================================== */
+        ========================================================= */
 
         document.addEventListener(
             "keydown",
             event => {
 
-                if (event.key !== "Escape") {
+                if (
+                    event.key !==
+                    "Escape"
+                ) {
+
                     return;
+
                 }
+
 
                 if (
                     commercialModal &&
-                    commercialModal.classList.contains("active")
+                    commercialModal.classList.contains(
+                        "active"
+                    )
                 ) {
+
                     closeCommercialModal();
+
                     return;
                 }
 
+
                 if (
                     legalModal &&
-                    legalModal.classList.contains("active")
+                    legalModal.classList.contains(
+                        "active"
+                    )
                 ) {
+
                     closeLegalModal();
+
                 }
 
             }
@@ -4469,17 +6276,19 @@
 
         /* =========================================================
            FOOTER CONTACT
-        ========================================================== */
+        ========================================================= */
 
         const contactButton =
             document.getElementById(
                 "contactToggleBtn"
             );
 
+
         const contactDropdown =
             document.getElementById(
                 "footerContactDropdown"
             );
+
 
         contactButton.addEventListener(
             "click",
@@ -4489,6 +6298,7 @@
                     contactDropdown.classList.toggle(
                         "active"
                     );
+
 
                 contactButton.setAttribute(
                     "aria-expanded",
@@ -4501,114 +6311,158 @@
 
         /* =========================================================
            FAQ ACCORDION
-        ========================================================== */
+        ========================================================= */
 
         document
-            .querySelectorAll(".faq-question")
-            .forEach(button => {
+            .querySelectorAll(
+                ".faq-question"
+            )
+            .forEach(
+                button => {
 
-                button.addEventListener(
-                    "click",
-                    () => {
+                    button.addEventListener(
+                        "click",
+                        () => {
 
-                        const item =
-                            button.closest(".faq-item");
+                            const item =
+                                button.closest(
+                                    ".faq-item"
+                                );
 
-                        if (!item) return;
 
-                        const currentlyOpen =
-                            item.classList.contains("open");
+                            if (!item) {
+                                return;
+                            }
 
-                        document
-                            .querySelectorAll(".faq-item.open")
-                            .forEach(openItem => {
 
-                                openItem.classList.remove(
+                            const currentlyOpen =
+                                item.classList.contains(
                                     "open"
                                 );
 
-                                const openButton =
-                                    openItem.querySelector(
-                                        ".faq-question"
-                                    );
 
-                                if (openButton) {
-                                    openButton.setAttribute(
-                                        "aria-expanded",
-                                        "false"
-                                    );
-                                }
+                            document
+                                .querySelectorAll(
+                                    ".faq-item.open"
+                                )
+                                .forEach(
+                                    openItem => {
 
-                            });
+                                        openItem.classList.remove(
+                                            "open"
+                                        );
 
 
-                        if (!currentlyOpen) {
+                                        const openButton =
+                                            openItem.querySelector(
+                                                ".faq-question"
+                                            );
 
-                            item.classList.add("open");
 
-                            button.setAttribute(
-                                "aria-expanded",
-                                "true"
-                            );
+                                        if (
+                                            openButton
+                                        ) {
+
+                                            openButton.setAttribute(
+                                                "aria-expanded",
+                                                "false"
+                                            );
+
+                                        }
+
+                                    }
+                                );
+
+
+                            if (
+                                !currentlyOpen
+                            ) {
+
+                                item.classList.add(
+                                    "open"
+                                );
+
+
+                                button.setAttribute(
+                                    "aria-expanded",
+                                    "true"
+                                );
+
+                            }
 
                         }
+                    );
 
-                    }
-                );
-
-            });
+                }
+            );
 
 
         /* =========================================================
-           CLOSE MOBILE CTA WHEN SCROLLING TO FOOTER
-        ========================================================== */
+           MOBILE CTA
+        ========================================================= */
 
-        /* No action required.
-           Sticky CTA remains available on mobile by design. */
+        /* Sticky CTA intentionally remains available. */
 
 
         /* =========================================================
            SMOOTH INTERNAL NAVIGATION
-        ========================================================== */
+        ========================================================= */
 
         document
-            .querySelectorAll('a[href^="#"]')
-            .forEach(link => {
+            .querySelectorAll(
+                'a[href^="#"]'
+            )
+            .forEach(
+                link => {
 
-                link.addEventListener(
-                    "click",
-                    event => {
+                    link.addEventListener(
+                        "click",
+                        event => {
 
-                        const targetId =
-                            link.getAttribute("href");
+                            const targetId =
+                                link.getAttribute(
+                                    "href"
+                                );
 
-                        if (
-                            !targetId ||
-                            targetId === "#"
-                        ) {
-                            return;
-                        }
 
-                        const target =
-                            document.querySelector(
-                                targetId
+                            if (
+                                !targetId ||
+                                targetId === "#"
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            const target =
+                                document.querySelector(
+                                    targetId
+                                );
+
+
+                            if (!target) {
+                                return;
+                            }
+
+
+                            event.preventDefault();
+
+
+                            target.scrollIntoView(
+                                {
+                                    behavior:
+                                        isReducedMotion
+                                            ? "auto"
+                                            : "smooth"
+                                }
                             );
 
-                        if (!target) return;
+                        }
+                    );
 
-                        event.preventDefault();
-
-                        target.scrollIntoView({
-                            behavior:
-                                isReducedMotion
-                                    ? "auto"
-                                    : "smooth"
-                        });
-
-                    }
-                );
-
-            });
+                }
+            );
 
     </script>
 
