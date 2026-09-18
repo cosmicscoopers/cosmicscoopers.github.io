@@ -1511,10 +1511,6 @@
 
         /* =========================================================
            BANNER IMAGE
-           
-           IMPORTANT:
-           The image now keeps its natural aspect ratio.
-           Nothing is cropped on desktop or mobile.
         ========================================================= */
 
         .full-width-image-container {
@@ -1541,18 +1537,10 @@
 
         .full-width-image-container img {
             width: 100%;
-
             height: auto;
-
             max-height: none;
-
             object-fit: contain;
-
             transition: none;
-        }
-
-        .full-width-image-container:hover img {
-            transform: none;
         }
 
 
@@ -1892,61 +1880,6 @@
                 var(--lavender-dark);
 
             font-weight: 800;
-        }
-
-        .signup-arrow-pointer {
-            display: flex;
-
-            justify-content: center;
-
-            margin:
-                1.5rem
-                0;
-        }
-
-        .arrow-icon-btn {
-            width: 55px;
-            height: 55px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 16px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--lavender-dark),
-                    var(--cosmic-purple)
-                );
-
-            color: #fff;
-
-            animation:
-                bounceArrow
-                2s
-                infinite
-                ease-in-out;
-
-            box-shadow:
-                0 8px 24px
-                rgba(74,29,117,0.32);
-        }
-
-        .arrow-icon-btn svg {
-            width: 30px;
-            height: 30px;
-
-            fill: none;
-
-            stroke: currentColor;
-
-            stroke-width: 2.5;
-
-            stroke-linecap: round;
-            stroke-linejoin: round;
         }
 
         .submit-btn {
@@ -3155,10 +3088,6 @@
                 font-size: 0.82rem;
             }
 
-            .signup-arrow-pointer {
-                display: none;
-            }
-
             .modal-body-container {
                 padding:
                     2.5rem
@@ -4103,8 +4032,6 @@
 
         <!-- =====================================================
              BANNER IMAGE
-             
-             FULL IMAGE — NO CROPPING
         ====================================================== -->
 
         <div class="full-width-image-container">
@@ -4244,13 +4171,6 @@
                                 Click the Sign Up Link
                             </div>
 
-                            <span
-                                class="step-arrow"
-                                aria-hidden="true"
-                            >
-                                ➔
-                            </span>
-
                         </div>
 
 
@@ -4288,13 +4208,6 @@
                             <div class="step-text">
                                 Answer a Few Questions
                             </div>
-
-                            <span
-                                class="step-arrow"
-                                aria-hidden="true"
-                            >
-                                ➔
-                            </span>
 
                         </div>
 
@@ -4335,13 +4248,6 @@
                             <div class="step-text">
                                 Pick a Plan
                             </div>
-
-                            <span
-                                class="step-arrow"
-                                aria-hidden="true"
-                            >
-                                ➔
-                            </span>
 
                         </div>
 
@@ -4390,13 +4296,6 @@
                             <div class="step-text">
                                 No Long-Term Contract
                             </div>
-
-                            <span
-                                class="step-arrow"
-                                aria-hidden="true"
-                            >
-                                ➔
-                            </span>
 
                         </div>
 
@@ -4985,34 +4884,61 @@
                     <strong>
                         Fully Insured &amp; Vendor Compliant:
                     </strong>
-                    Meeting professional standards for property managers and HOAs.
+
+                    Meeting commercial liability requirements for property
+                    management groups.
                 </li>
+
                 <li>
                     <strong>
-                        Reliable &amp; Consistent:
+                        Professional Reliability:
                     </strong>
-                    Scheduled maintenance that keeps common areas immaculate.
-                </li>
-                <li>
-                    <strong>
-                        Resident Satisfaction:
-                    </strong>
-                    Clean grounds reduce tenant complaints and elevate property appeal.
+
+                    Consistent scheduling and clear communication.
                 </li>
 
             </ul>
 
 
+            <h3 class="comm-section-title">
+                ✦ Properties We Serve
+            </h3>
+
+
+            <div class="comm-properties-grid">
+
+                <div class="comm-property-item">
+                    Apartment Complexes
+                </div>
+
+                <div class="comm-property-item">
+                    HOA Communities
+                </div>
+
+                <div class="comm-property-item">
+                    Parks &amp; Green Spaces
+                </div>
+
+                <div class="comm-property-item">
+                    Pet-Friendly Businesses
+                </div>
+
+            </div>
+
+
             <div class="comm-action-footer">
+
                 <a
-                    href="tel:8508609205"
+                    href="mailto:cosmicscoopers@gmail.com?subject=Commercial%20Service%20Inquiry"
                     class="comm-cta-btn"
                 >
-                    Contact Us for Commercial Pricing
+                    Request Commercial Quote →
                 </a>
+
                 <p class="comm-footer-note">
-                    Call (850) 860-9205 or email cosmicscoopers@gmail.com to discuss your property requirements.
+                    Or call us directly at (850) 860-9205 to discuss your property requirements.
                 </p>
+
             </div>
 
         </div>
@@ -5029,7 +4955,6 @@
         class="custom-modal"
         role="dialog"
         aria-modal="true"
-        aria-labelledby="legalHeading"
         aria-hidden="true"
     >
 
@@ -5046,41 +4971,86 @@
 
 
             <div class="modal-tabs">
-                <button type="button" class="modal-tab-btn active" data-tab="terms">Terms &amp; Conditions</button>
-                <button type="button" class="modal-tab-btn" data-tab="privacy">Privacy Policy</button>
+
+                <button
+                    type="button"
+                    class="modal-tab-btn active"
+                    data-tab="terms"
+                >
+                    Terms &amp; Conditions
+                </button>
+
+                <button
+                    type="button"
+                    class="modal-tab-btn"
+                    data-tab="privacy"
+                >
+                    Privacy Policy
+                </button>
+
             </div>
 
 
-            <div id="termsPane" class="legal-pane active">
+            <div
+                id="termsPane"
+                class="legal-pane active"
+            >
+
                 <h3>Terms &amp; Conditions</h3>
-                <p>Welcome to Cosmic Scoopers. By signing up for our pet waste removal and yard cleanup services, you agree to the following terms and conditions.</p>
-                
-                <h4>1. Service Agreement</h4>
-                <p>Cosmic Scoopers provides recurring pet waste removal services as selected during signup. We strive to provide reliable and thorough service on your scheduled service day.</p>
-                
-                <h4>2. Access &amp; Pets</h4>
-                <p>Clients must ensure that our technicians have safe, unobstructed access to the service areas and that all pets are securely locked indoors or in a safe area during the technician's visit. Technicians reserve the right to skip a yard if aggressive pets are present or gates are locked without prior notice.</p>
-                
-                <h4>3. Billing &amp; Payment</h4>
-                <p>Recurring billing is processed automatically through our billing platform. Payments are due according to the agreed service schedule.</p>
-                
-                <h4>4. Cancellation &amp; Pausing</h4>
-                <p>You may pause, modify, or cancel your recurring service at any time by providing at least seven (7) days written notice prior to your next scheduled billing date.</p>
+
+                <p>
+                    Welcome to Cosmic Scoopers. By signing up for our pet waste removal and property cleanup services, you agree to the following terms and conditions. Please read them carefully before your first service visit.
+                </p>
+
+                <h4>1. Service Scheduling &amp; Access</h4>
+                <p>
+                    Cosmic Scoopers provides recurring pet waste removal services on scheduled days (weekly, twice-weekly, or bi-weekly). Customers are responsible for ensuring that our technicians have safe, unobstructed access to all service yards and gates. Dogs must be safely secured indoors or in designated safe areas prior to technician arrival.
+                </p>
+
+                <h4>2. Gate Security &amp; Liability</h4>
+                <p>
+                    Our technicians exercise utmost care to ensure gates are securely closed and latched upon departure and send a confirmation photo. However, customers remain ultimately responsible for verifying gate security and pet containment. Cosmic Scoopers is not liable for escaped pets or gate latch malfunctions beyond our control.
+                </p>
+
+                <h4>3. Billing &amp; Payments</h4>
+                <p>
+                    Recurring services are billed automatically through our payment processing partners. Payment information must remain valid and up to date to maintain uninterrupted service scheduling.
+                </p>
+
+                <h4>4. Cancellation &amp; Pause Policy</h4>
+                <p>
+                    Services may be paused, adjusted, or canceled by providing seven (7) days' advance written notice. Cancellations made without required notice may be subject to applicable final visit charges.
+                </p>
+
             </div>
 
 
-            <div id="privacyPane" class="legal-pane">
+            <div
+                id="privacyPane"
+                class="legal-pane"
+            >
+
                 <h3>Privacy Policy</h3>
-                <p>At Cosmic Scoopers, we respect your privacy and are committed to protecting any personal information you share with us.</p>
-                
-                <h4>1. Information Collection</h4>
-                <p>We collect information necessary to provide and manage your pet waste removal services, including your name, service address, phone number, email address, and billing details.</p>
-                
-                <h4>2. Use of Information</h4>
-                <p>Your information is used strictly to schedule services, communicate updates regarding your account or gate confirmations, and process payments securely.</p>
-                
+
+                <p>
+                    Cosmic Scoopers respects your privacy and is committed to protecting your personal information. This policy outlines how we collect, use, and safeguard your data.
+                </p>
+
+                <h4>1. Information We Collect</h4>
+                <p>
+                    When you request a quote or sign up for service, we collect contact information including your name, service address, phone number, email address, and billing details necessary to fulfill your pet waste removal requests.
+                </p>
+
+                <h4>2. How We Use Your Information</h4>
+                <p>
+                    Your information is used strictly to provide, schedule, and bill for our services, communicate appointment updates, and send gate confirmation photos or service notifications. We do not sell or rent customer data to third parties.
+                </p>
+
                 <h4>3. Data Security</h4>
-                <p>We implement secure industry standards to protect your personal information from unauthorized access, alteration, or disclosure.</p>
+                <p>
+                    We implement industry-standard encryption and secure software platforms (such as ScooPilot and payment processors) to safeguard your sensitive information against unauthorized access.
+                </p>
+
             </div>
 
         </div>
@@ -5089,85 +5059,91 @@
 
 
     <!-- =========================================================
-         JAVASCRIPT
+         SCRIPTS
     ========================================================== -->
 
     <script>
-        // Stars Canvas Animation
+        // --- Starry Background Canvas Animation ---
         const canvas = document.getElementById('cosmic-stars-canvas');
         if (canvas) {
             const ctx = canvas.getContext('2d');
-            let width = canvas.width = window.innerWidth;
-            let height = canvas.height = window.innerHeight;
+            let width, height;
+            let stars = [];
 
-            window.addEventListener('resize', () => {
+            function resize() {
                 width = canvas.width = window.innerWidth;
                 height = canvas.height = window.innerHeight;
-            });
+            }
 
-            const starsCount = Math.floor((width * height) / 8000);
-            const stars = [];
-
-            for (let i = 0; i < starsCount; i++) {
-                stars.push({
-                    x: Math.random() * width,
-                    y: Math.random() * height,
-                    radius: Math.random() * 1.5 + 0.5,
-                    alpha: Math.random(),
-                    speed: Math.random() * 0.02 + 0.005
-                });
+            function initStars() {
+                stars = [];
+                const count = Math.floor((width * height) / 9000);
+                for (let i = 0; i < count; i++) {
+                    stars.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        radius: Math.random() * 1.5,
+                        alpha: Math.random(),
+                        speed: Math.random() * 0.015 + 0.005
+                    });
+                }
             }
 
             function animateStars() {
                 ctx.clearRect(0, 0, width, height);
                 ctx.fillStyle = '#ffffff';
-
                 stars.forEach(star => {
+                    ctx.globalAlpha = star.alpha;
+                    ctx.beginPath();
+                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                    ctx.fill();
                     star.alpha += star.speed;
                     if (star.alpha > 1 || star.alpha < 0) {
                         star.speed = -star.speed;
                     }
-                    ctx.globalAlpha = Math.abs(star.alpha);
-                    ctx.beginPath();
-                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                    ctx.fill();
                 });
-
                 requestAnimationFrame(animateStars);
             }
 
+            window.addEventListener('resize', () => {
+                resize();
+                initStars();
+            });
+
+            resize();
+            initStars();
             animateStars();
         }
 
-        // FAQ Accordion Toggle
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const btn = item.querySelector('.faq-question');
-            btn.addEventListener('click', () => {
-                const isOpen = item.classList.contains('open');
-                faqItems.forEach(i => {
-                    i.classList.remove('open');
-                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        // --- FAQ Accordion ---
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const wasOpen = item.classList.contains('open');
+                
+                document.querySelectorAll('.faq-item').forEach(el => {
+                    el.classList.remove('open');
+                    el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
                 });
-                if (!isOpen) {
+
+                if (!wasOpen) {
                     item.classList.add('open');
-                    btn.setAttribute('aria-expanded', 'true');
+                    button.setAttribute('aria-expanded', 'true');
                 }
             });
         });
 
-        // Footer Contact Toggle Dropdown
+        // --- Footer Contact Dropdown ---
         const contactToggleBtn = document.getElementById('contactToggleBtn');
         const footerContactDropdown = document.getElementById('footerContactDropdown');
-
         if (contactToggleBtn && footerContactDropdown) {
             contactToggleBtn.addEventListener('click', () => {
                 const isActive = footerContactDropdown.classList.toggle('active');
-                contactToggleBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+                contactToggleBtn.setAttribute('aria-expanded', isActive);
             });
         }
 
-        // Commercial Modal Toggles
+        // --- Commercial Modal ---
         const commercialModal = document.getElementById('commercialModal');
         const commercialOpenBtn = document.getElementById('commercialOpenBtn');
         const commercialFooterBtn = document.getElementById('commercialFooterBtn');
@@ -5193,17 +5169,11 @@
         if (commercialFooterBtn) commercialFooterBtn.addEventListener('click', openCommercialModal);
         if (commercialCloseBtn) commercialCloseBtn.addEventListener('click', closeCommercialModal);
 
-        if (commercialModal) {
-            commercialModal.addEventListener('click', (e) => {
-                if (e.target === commercialModal) closeCommercialModal();
-            });
-        }
-
-        // Legal Modal Toggles (Terms & Privacy)
+        // --- Legal Modal ---
         const legalModal = document.getElementById('legalModal');
         const legalCloseBtn = document.getElementById('legalCloseBtn');
         const legalLinks = document.querySelectorAll('.footer-link');
-        const modalTabBtns = document.querySelectorAll('.modal-tab-btn');
+        const legalTabBtns = document.querySelectorAll('.modal-tab-btn');
         const termsPane = document.getElementById('termsPane');
         const privacyPane = document.getElementById('privacyPane');
 
@@ -5212,9 +5182,9 @@
                 legalModal.classList.add('active');
                 legalModal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
-
-                modalTabBtns.forEach(btn => {
-                    if (btn.getAttribute('data-tab') === tabName) {
+                
+                legalTabBtns.forEach(btn => {
+                    if (btn.dataset.tab === tabName) {
                         btn.classList.add('active');
                     } else {
                         btn.classList.remove('active');
@@ -5246,10 +5216,12 @@
             });
         });
 
-        modalTabBtns.forEach(btn => {
+        if (legalCloseBtn) legalCloseBtn.addEventListener('click', closeLegalModal);
+
+        legalTabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                const tab = btn.getAttribute('data-tab');
-                modalTabBtns.forEach(b => b.classList.remove('active'));
+                const tab = btn.dataset.tab;
+                legalTabBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 if (tab === 'privacy') {
                     if (termsPane) termsPane.classList.remove('active');
@@ -5261,12 +5233,11 @@
             });
         });
 
-        if (legalCloseBtn) legalCloseBtn.addEventListener('click', closeLegalModal);
-        if (legalModal) {
-            legalModal.addEventListener('click', (e) => {
-                if (e.target === legalModal) closeLegalModal();
-            });
-        }
+        // Close modals on background click
+        window.addEventListener('click', (e) => {
+            if (e.target === commercialModal) closeCommercialModal();
+            if (e.target === legalModal) closeLegalModal();
+        });
 
         // Close modals on ESC key
         window.addEventListener('keydown', (e) => {
@@ -5276,6 +5247,5 @@
             }
         });
     </script>
-
 </body>
 </html>
