@@ -2,486 +2,2811 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmic Scoopers | Professional Pet Waste Removal in Milton, Pace & Navarre, FL</title>
-    <meta name="description" content="Reliable, recurring pet waste removal and dog poop cleanup services for residential and commercial properties in Milton, Pace, and Navarre, Florida.">
+
+    <title>Pet Waste Removal Milton FL | Cosmic Scoopers</title>
+
+    <meta
+        name="description"
+        content="Professional pet waste removal in Milton, Pace, and Navarre, Florida. Recurring weekly, twice-weekly, and bi-weekly dog poop cleanup from Cosmic Scoopers. Starting at $25/visit."
+    >
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Cosmic Scoopers">
+    <meta name="theme-color" content="#0B0414">
+
+    <link rel="canonical" href="https://cosmicscoopers.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cosmic Scoopers | Pet Waste Removal in Milton, Pace & Navarre">
+    <meta
+        property="og:description"
+        content="Never scoop your yard again. Professional recurring pet waste removal serving Milton, Pace, and Navarre, Florida."
+    >
+    <meta property="og:url" content="https://cosmicscoopers.com/">
+    <meta property="og:site_name" content="Cosmic Scoopers">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Cosmic Scoopers",
+        "description": "Professional pet waste removal and dog poop cleanup service serving Milton, Pace, and Navarre, Florida.",
+        "telephone": "+1-850-860-9205",
+        "email": "cosmicscoopers@gmail.com",
+        "url": "https://cosmicscoopers.com/",
+        "image": "https://cosmicscoopers.com/IMG_20260730_183924.png",
+        "priceRange": "$$",
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Milton",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "City",
+                "name": "Pace",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "City",
+                "name": "Navarre",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            }
+        ],
+        "serviceType": [
+            "Pet Waste Removal",
+            "Dog Poop Cleanup",
+            "Residential Pet Waste Removal",
+            "Commercial Pet Waste Management"
+        ]
+    }
+    </script>
+
     <style>
+
         /* =========================================================
-           CORE STYLES & RESET
-        ========================================================== */
-        *, *::before, *::after {
+           COSMIC SCOOPERS
+           Complete Production Styles
+        ========================================================= */
+
+        :root {
+            --lavender: #B57EDC;
+            --lavender-bright: #D5A7F4;
+            --lavender-dark: #8A4FBA;
+            --cosmic-purple: #4A1D75;
+            --deep-purple: #210C38;
+            --charcoal: #2B2B2B;
+            --charcoal-dark: #0B0414;
+            --charcoal-light: #3D3D3D;
+            --soft-white: #FAFAFC;
+            --white: #FFFFFF;
+
+            --text-light: #FFFFFF;
+            --text-muted: #DCCFEA;
+
+            --glass: rgba(21, 11, 36, 0.72);
+            --glass-border: rgba(181, 126, 220, 0.24);
+
+            --font-cosmic: "Fredoka", sans-serif;
+            --font-body: "Plus Jakarta Sans", sans-serif;
+
+            --shadow-lg: 0 25px 70px rgba(0, 0, 0, 0.48);
+            --shadow-purple: 0 18px 50px rgba(181, 126, 220, 0.24);
+
+            --max-width: 1200px;
+        }
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        :root {
-            --bg-deep: #0a0e17;
-            --bg-card: #131b2e;
-            --bg-card-hover: #1b2642;
-            --accent-primary: #00f0ff;
-            --accent-secondary: #7000ff;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
 
         body {
-            font-family: 'Inter', sans-serif, system-ui;
-            background-color: var(--bg-deep);
-            color: var(--text-main);
+            font-family: var(--font-body);
+            color: var(--charcoal);
             line-height: 1.6;
             overflow-x: hidden;
-            position: relative;
+            background:
+                radial-gradient(
+                    circle at 50% 15%,
+                    #150728 0%,
+                    #06010B 55%,
+                    #030106 100%
+                );
+            min-height: 100vh;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            letter-spacing: -0.02em;
+        img {
+            display: block;
+            max-width: 100%;
         }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
+        a {
+            color: inherit;
         }
 
-        /* =========================================================
-           CANVAS BACKGROUND
-        ========================================================== */
-        #cosmic-stars-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 0;
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
         }
 
-        /* =========================================================
-           FAQ SECTION
-        ========================================================== */
-        .faq-section {
-            position: relative;
-            z-index: 1;
-            padding: 6rem 0;
-            background: linear-gradient(180deg, transparent, rgba(19, 27, 46, 0.4));
+        button {
+            font-family: inherit;
         }
 
-        .section-header-centered {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 4rem auto;
-        }
-
-        .section-badge {
-            display: inline-block;
-            padding: 0.35rem 1rem;
-            background: rgba(0, 240, 255, 0.1);
-            color: var(--accent-primary);
-            border: 1px solid rgba(0, 240, 255, 0.3);
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1rem;
-        }
-
-        .section-header-centered h2 {
-            font-size: clamp(2rem, 4vw, 2.75rem);
-            margin-bottom: 1rem;
+        ::selection {
+            background: var(--lavender);
             color: #fff;
         }
 
-        .section-sub {
-            color: var(--text-muted);
-            font-size: 1.05rem;
+        :focus-visible {
+            outline: 3px solid #fff;
+            outline-offset: 4px;
         }
 
-        .faq-accordion {
-            max-width: 800px;
+
+        /* =========================================================
+           COSMIC BACKGROUND
+        ========================================================= */
+
+        #cosmic-stars-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -5;
+
+            background:
+                radial-gradient(
+                    circle at 50% 25%,
+                    rgba(74, 29, 117, 0.26),
+                    transparent 45%
+                );
+        }
+
+        .nebula-cloud {
+            position: fixed;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -4;
+            filter: blur(95px);
+            opacity: 0.45;
+            animation: nebulaPulse 24s ease-in-out infinite;
+        }
+
+        .nebula-1 {
+            top: -250px;
+            left: -250px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(138, 79, 186, 0.26) 0%,
+                    transparent 70%
+                );
+        }
+
+        .nebula-2 {
+            right: -250px;
+            bottom: -250px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(74, 29, 117, 0.35) 0%,
+                    transparent 70%
+                );
+
+            animation-delay: -8s;
+        }
+
+        .nebula-3 {
+            top: 40%;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(181, 126, 220, 0.13) 0%,
+                    transparent 65%
+                );
+
+            animation-delay: -14s;
+        }
+
+        .shooting-star-container {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .star-streak {
+            position: absolute;
+            width: 2px;
+            height: 120px;
+            opacity: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(255,255,255,1),
+                    rgba(181,126,220,0.55),
+                    transparent
+                );
+
+            filter:
+                drop-shadow(
+                    0 0 8px rgba(255,255,255,0.9)
+                );
+
+            animation:
+                shootingStarAction
+                14s cubic-bezier(0.25,1,0.2,1)
+                infinite;
+        }
+
+        .streak-1 {
+            top: -30px;
+            right: 10%;
+            animation-delay: 2s;
+            animation-duration: 13s;
+        }
+
+        .streak-2 {
+            top: 15%;
+            right: 40%;
+            width: 1.5px;
+            height: 95px;
+            animation-delay: 8s;
+            animation-duration: 17s;
+        }
+
+        .streak-3 {
+            top: -50px;
+            right: 65%;
+            width: 2.5px;
+            height: 140px;
+            animation-delay: 13s;
+            animation-duration: 20s;
+        }
+
+        @keyframes nebulaPulse {
+
+            0%,
+            100% {
+                transform: scale(1) translate(0, 0);
+                opacity: 0.32;
+            }
+
+            50% {
+                transform:
+                    scale(1.16)
+                    translate(20px, 18px);
+
+                opacity: 0.55;
+            }
+        }
+
+        @keyframes shootingStarAction {
+
+            0% {
+                transform:
+                    translateX(0)
+                    translateY(0)
+                    rotate(-45deg)
+                    scale(0);
+
+                opacity: 0;
+            }
+
+            2% {
+                transform:
+                    translateX(-80px)
+                    translateY(80px)
+                    rotate(-45deg)
+                    scale(1);
+
+                opacity: 1;
+            }
+
+            7% {
+                transform:
+                    translateX(-800px)
+                    translateY(800px)
+                    rotate(-45deg)
+                    scale(0);
+
+                opacity: 0;
+            }
+
+            100% {
+                transform:
+                    translateX(-800px)
+                    translateY(800px)
+                    rotate(-45deg)
+                    scale(0);
+
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                box-shadow:
+                    0 0 18px
+                    rgba(181,126,220,0.35);
+            }
+
+            50% {
+                box-shadow:
+                    0 0 34px
+                    rgba(181,126,220,0.7);
+            }
+        }
+
+        @keyframes fadeInUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceArrow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: 0.7rem 1.25rem;
+
+            background:
+                rgba(8, 3, 14, 0.86);
+
+            border-bottom:
+                1px solid rgba(181,126,220,0.25);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 8px 35px rgba(0,0,0,0.32);
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: var(--max-width);
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
+
+            display: grid;
+            grid-template-columns:
+                1fr auto 1fr;
+
+            align-items: center;
             gap: 1rem;
         }
 
-        .faq-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: var(--transition-smooth);
+        .nav-left-container {
+            display: flex;
+            justify-content: flex-start;
         }
 
-        .faq-item:hover {
-            border-color: rgba(0, 240, 255, 0.3);
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-img {
+            width: min(270px, 30vw);
+            max-height: 75px;
+            object-fit: contain;
+            mix-blend-mode: lighten;
+
+            filter:
+                drop-shadow(
+                    0 0 15px
+                    rgba(181,126,220,0.42)
+                );
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.025);
+        }
+
+        .nav-btn-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-btn,
+        .header-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 46px;
+            padding: 0.7rem 1.25rem;
+
+            border-radius: 999px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.24);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--lavender),
+                    var(--lavender-dark)
+                );
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-family: var(--font-cosmic);
+            font-weight: 600;
+            font-size: 0.96rem;
+
+            cursor: pointer;
+            white-space: nowrap;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .nav-btn:hover,
+        .header-link:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 28px
+                rgba(181,126,220,0.42);
+
+            background: #fff;
+            color: var(--cosmic-purple);
+        }
+
+        .nav-btn.primary-header {
+            animation:
+                pulseGlow
+                3.5s
+                infinite;
+        }
+
+
+        /* =========================================================
+           VETERAN BANNER
+        ========================================================= */
+
+        .vet-banner {
+            position: relative;
+            z-index: 2;
+
+            text-align: center;
+
+            padding: 0.7rem 1rem;
+
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--cosmic-purple),
+                    var(--lavender-dark),
+                    var(--cosmic-purple)
+                );
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            font-family: var(--font-cosmic);
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 1.25px;
+
+            text-shadow:
+                0 2px 5px
+                rgba(0,0,0,0.4);
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            position: relative;
+            max-width: none;
+
+            padding:
+                6.5rem
+                1.5rem
+                5rem;
+
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1080px;
+            margin: 0 auto;
+
+            position: relative;
+            z-index: 2;
+
+            animation:
+                fadeInUp
+                0.9s
+                ease
+                both;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            margin-bottom: 1.3rem;
+
+            padding:
+                0.45rem
+                1rem;
+
+            border:
+                1px solid
+                rgba(181,126,220,0.4);
+
+            border-radius: 999px;
+
+            background:
+                rgba(181,126,220,0.08);
+
+            color: #EBD8FF;
+
+            font-family: var(--font-cosmic);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+        }
+
+        .hero h1 {
+            max-width: 950px;
+            margin: 0 auto 1rem;
+
+            font-family: var(--font-cosmic);
+
+            font-size:
+                clamp(
+                    3.1rem,
+                    7vw,
+                    5.5rem
+                );
+
+            line-height: 1;
+            letter-spacing: -1.5px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff 20%,
+                    #EBD9FF 58%,
+                    #B57EDC 100%
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            filter:
+                drop-shadow(
+                    0 5px 18px
+                    rgba(0,0,0,0.65)
+                );
+        }
+
+        .hero-subheading {
+            max-width: 800px;
+            margin: 0 auto;
+
+            color: #E8DDF4;
+
+            font-size:
+                clamp(
+                    1.05rem,
+                    2vw,
+                    1.35rem
+                );
+
+            font-weight: 500;
+        }
+
+        .hero-subheading strong {
+            color: #fff;
+        }
+
+        .hero-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            gap: 0.85rem;
+
+            margin-top: 2rem;
+        }
+
+        .cta-primary,
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 58px;
+
+            padding:
+                0.95rem
+                1.7rem;
+
+            border-radius: 999px;
+
+            font-family: var(--font-cosmic);
+            font-weight: 700;
+            font-size: 1.12rem;
+
+            text-decoration: none;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .cta-primary {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--lavender),
+                    var(--lavender-dark)
+                );
+
+            color: #fff;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.28);
+
+            box-shadow:
+                0 15px 40px
+                rgba(181,126,220,0.34);
+        }
+
+        .cta-secondary {
+            background:
+                rgba(255,255,255,0.06);
+
+            color: #fff;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.22);
+        }
+
+        .cta-primary:hover,
+        .cta-secondary:hover {
+            transform: translateY(-3px);
+        }
+
+        .cta-primary:hover {
+            box-shadow:
+                0 20px 48px
+                rgba(181,126,220,0.55);
+        }
+
+        .cta-secondary:hover {
+            background:
+                rgba(255,255,255,0.12);
+        }
+
+        .hero-price-note {
+            margin-top: 1rem;
+
+            color: #CDA9EA;
+
+            font-family: var(--font-cosmic);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-trust-strip {
+            max-width: 900px;
+            margin: 2.5rem auto 0;
+
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 0.75rem;
+        }
+
+        .trust-item {
+            padding:
+                0.85rem
+                0.65rem;
+
+            border:
+                1px solid
+                rgba(181,126,220,0.2);
+
+            border-radius: 16px;
+
+            background:
+                rgba(255,255,255,0.035);
+
+            color: #EDE3F7;
+
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .trust-item strong {
+            display: block;
+            color: #fff;
+            margin-bottom: 0.15rem;
+        }
+
+
+        /* =========================================================
+           MAIN DARK SECTIONS
+        ========================================================= */
+
+        .dark-section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+
+            padding:
+                5.5rem
+                1.5rem;
+
+            color: #fff;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-kicker {
+            color: var(--lavender-bright);
+
+            font-family: var(--font-cosmic);
+
+            font-size: 0.9rem;
+            font-weight: 700;
+
+            letter-spacing: 1.6px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size:
+                clamp(
+                    2.25rem,
+                    5vw,
+                    3.25rem
+                );
+
+            line-height: 1.08;
+
+            margin-bottom: 0.75rem;
+
+            text-shadow:
+                0 4px 15px
+                rgba(0,0,0,0.5);
+        }
+
+        .section-description {
+            color: var(--text-muted);
+
+            font-size: 1rem;
+
+            max-width: 700px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =========================================================
+           WHY COSMIC
+        ========================================================= */
+
+        .reasons-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 1.2rem;
+        }
+
+        .reason-card {
+            min-height: 190px;
+
+            padding: 1.65rem;
+
+            border:
+                1px solid
+                var(--glass-border);
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(35,18,60,0.78),
+                    rgba(11,4,20,0.78)
+                );
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.24);
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(181,126,220,0.7);
+
+            box-shadow:
+                var(--shadow-purple);
+        }
+
+        .reason-icon {
+            width: 44px;
+            height: 44px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            margin-bottom: 1rem;
+
+            background:
+                rgba(181,126,220,0.13);
+
+            border:
+                1px solid
+                rgba(181,126,220,0.3);
+
+            font-size: 1.25rem;
+        }
+
+        .reason-title {
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1.2rem;
+
+            line-height: 1.2;
+
+            margin-bottom: 0.55rem;
+        }
+
+        .reason-desc {
+            color: #D9CCE8;
+
+            font-size: 0.91rem;
+
+            line-height: 1.62;
+        }
+
+
+        /* =========================================================
+           HOW IT WORKS
+        ========================================================= */
+
+        .how-works-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 1rem;
+        }
+
+        .work-step-card {
+            position: relative;
+
+            padding:
+                2rem
+                1.35rem;
+
+            text-align: center;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            border-radius: 22px;
+
+            background:
+                rgba(255,255,255,0.035);
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .work-step-card:hover {
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(181,126,220,0.55);
+        }
+
+        .work-step-num {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin:
+                0
+                auto
+                1.1rem;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--lavender),
+                    var(--cosmic-purple)
+                );
+
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1.3rem;
+            font-weight: 700;
+
+            border:
+                2px solid
+                rgba(255,255,255,0.25);
+
+            box-shadow:
+                0 8px 22px
+                rgba(181,126,220,0.3);
+        }
+
+        .work-step-title {
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1.12rem;
+
+            margin-bottom: 0.5rem;
+        }
+
+        .work-step-desc {
+            color: #CFC1DE;
+
+            font-size: 0.88rem;
+
+            line-height: 1.55;
+        }
+
+
+        /* =========================================================
+           WHO IT'S FOR
+        ========================================================= */
+
+        .best-for-box {
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            padding: 2rem;
+
+            border-radius: 25px;
+
+            border:
+                1px dashed
+                rgba(181,126,220,0.42);
+
+            background:
+                rgba(11,4,20,0.52);
+        }
+
+        .best-for-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 1rem 2rem;
+
+            list-style: none;
+        }
+
+        .best-for-list li {
+            display: flex;
+
+            gap: 0.7rem;
+
+            color: #EDE4F7;
+
+            font-size: 0.95rem;
+        }
+
+        .best-for-list li::before {
+            content: "✦";
+
+            color: var(--lavender);
+
+            font-weight: 700;
+
+            flex-shrink: 0;
+        }
+
+
+        /* =========================================================
+           PRICING
+        ========================================================= */
+
+        #pricing {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        .pricing-shell {
+            max-width: var(--max-width);
+
+            margin: 0 auto;
+
+            padding:
+                0
+                1.5rem;
+        }
+
+        .pricing-header {
+            text-align: center;
+
+            margin-bottom: 3rem;
+        }
+
+        .pricing-header .section-title {
+            color: #fff;
+        }
+
+        .pricing-header p {
+            max-width: 720px;
+
+            margin: 0 auto;
+
+            color: #D8CCE5;
+        }
+
+        .plans-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 1.25rem;
+
+            align-items: stretch;
+        }
+
+        .plan-card {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+
+            padding:
+                2.4rem
+                1.65rem
+                1.65rem;
+
+            border-radius: 28px;
+
+            background:
+                rgba(255,255,255,0.96);
+
+            color: var(--charcoal);
+
+            border:
+                2px solid
+                rgba(181,126,220,0.16);
+
+            box-shadow:
+                0 18px 50px
+                rgba(0,0,0,0.35);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 28px 65px
+                rgba(181,126,220,0.28);
+        }
+
+        .plan-card.featured {
+            border-color: var(--lavender);
+
+            box-shadow:
+                0 0 0 1px
+                rgba(181,126,220,0.15),
+
+                0 25px 65px
+                rgba(181,126,220,0.24);
+        }
+
+        .recommended-badge {
+            position: absolute;
+
+            top: -14px;
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            padding:
+                0.42rem
+                1.2rem;
+
+            border-radius: 999px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--cosmic-purple),
+                    #160822
+                );
+
+            border:
+                1px solid
+                rgba(181,126,220,0.6);
+
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 0.75rem;
+            font-weight: 700;
+
+            letter-spacing: 1.1px;
+
+            white-space: nowrap;
+        }
+
+        .plan-tier {
+            font-family: var(--font-cosmic);
+
+            font-size: 0.78rem;
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            color: var(--lavender-dark);
+
+            margin-bottom: 0.3rem;
+        }
+
+        .plan-title {
+            font-family: var(--font-cosmic);
+
+            font-size: 1.65rem;
+
+            line-height: 1.15;
+
+            margin-bottom: 0.55rem;
+        }
+
+        .plan-desc {
+            min-height: 52px;
+
+            color: #555;
+
+            font-size: 0.88rem;
+
+            margin-bottom: 1.35rem;
+        }
+
+        .plan-features {
+            list-style: none;
+
+            flex: 1;
+
+            margin-bottom: 1.4rem;
+        }
+
+        .plan-features li {
+            position: relative;
+
+            padding:
+                0.58rem
+                0
+                0.58rem
+                1.45rem;
+
+            border-bottom:
+                1px solid
+                #eee9f3;
+
+            color: #3C3C3C;
+
+            font-size: 0.89rem;
+
+            line-height: 1.5;
+        }
+
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+
+        .plan-features li::before {
+            content: "✓";
+
+            position: absolute;
+
+            left: 0;
+            top: 0.58rem;
+
+            color: var(--lavender-dark);
+
+            font-weight: 800;
+        }
+
+        .plan-btn {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 50px;
+
+            padding:
+                0.8rem
+                1rem;
+
+            border-radius: 999px;
+
+            background: var(--charcoal);
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-family: var(--font-cosmic);
+
+            font-weight: 700;
+            font-size: 0.96rem;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .plan-btn:hover {
+            transform: translateY(-2px);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--lavender),
+                    var(--lavender-dark)
+                );
+
+            box-shadow:
+                0 10px 25px
+                rgba(181,126,220,0.3);
+        }
+
+        .plan-card.featured .plan-btn {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--lavender),
+                    var(--lavender-dark)
+                );
+        }
+
+        .pricing-note {
+            margin:
+                1.5rem
+                auto
+                0;
+
+            max-width: 800px;
+
+            text-align: center;
+
+            color: #CFC1DE;
+
+            font-size: 0.85rem;
+        }
+
+
+        /* =========================================================
+           ADD-ONS
+        ========================================================= */
+
+        .addons-container {
+            max-width: 950px;
+
+            margin:
+                2rem
+                auto
+                0;
+
+            padding: 2rem;
+
+            border-radius: 25px;
+
+            background:
+                rgba(255,255,255,0.94);
+
+            box-shadow:
+                0 18px 50px
+                rgba(0,0,0,0.3);
+
+            border:
+                2px solid
+                rgba(181,126,220,0.18);
+        }
+
+        .addons-subtitle {
+            text-align: center;
+
+            color: var(--cosmic-purple);
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1.3rem;
+
+            margin-bottom: 1.4rem;
+        }
+
+        .addons-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 1rem;
+        }
+
+        .addon-item {
+            padding: 1.25rem;
+
+            border-radius: 18px;
+
+            background: #F9F7FC;
+
+            border:
+                1px solid
+                #E9E1F1;
+        }
+
+        .addon-name {
+            color: var(--charcoal);
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1.15rem;
+
+            margin-bottom: 0.35rem;
+        }
+
+        .addon-desc {
+            color: #555;
+
+            font-size: 0.88rem;
+
+            line-height: 1.55;
+        }
+
+
+        /* =========================================================
+           BANNER IMAGE
+           
+           IMPORTANT:
+           The image now keeps its natural aspect ratio.
+           Nothing is cropped on desktop or mobile.
+        ========================================================= */
+
+        .full-width-image-container {
+            width: 100%;
+
+            margin:
+                1rem
+                0
+                0;
+
+            overflow: hidden;
+
+            border-top:
+                1px solid
+                rgba(181,126,220,0.18);
+
+            border-bottom:
+                1px solid
+                rgba(181,126,220,0.18);
+
+            background:
+                rgba(8,3,14,0.35);
+        }
+
+        .full-width-image-container img {
+            width: 100%;
+
+            height: auto;
+
+            max-height: none;
+
+            object-fit: contain;
+
+            transition: none;
+        }
+
+        .full-width-image-container:hover img {
+            transform: none;
+        }
+
+
+        /* =========================================================
+           SERVICE AREAS
+        ========================================================= */
+
+        #service-areas {
+            max-width: var(--max-width);
+
+            margin: 0 auto;
+
+            padding:
+                5rem
+                1.5rem;
+        }
+
+        .service-areas-layout {
+            display: grid;
+
+            grid-template-columns:
+                0.85fr
+                1.15fr;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            border-radius: 30px;
+
+            border:
+                1px solid
+                rgba(181,126,220,0.28);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(28,12,47,0.92),
+                    rgba(8,3,14,0.94)
+                );
+
+            box-shadow:
+                var(--shadow-lg);
+        }
+
+        .service-info-side {
+            padding: 3.2rem;
+        }
+
+        .service-info-side .section-title {
+            text-align: left;
+
+            margin-bottom: 0.75rem;
+        }
+
+        .area-text {
+            color: #D8CCE5;
+
+            margin-bottom: 1.8rem;
+
+            font-size: 0.98rem;
+        }
+
+        .badge-container {
+            display: grid;
+
+            gap: 0.75rem;
+        }
+
+        .area-badge {
+            padding:
+                0.9rem
+                1.1rem;
+
+            border-radius: 16px;
+
+            border:
+                1px solid
+                rgba(181,126,220,0.34);
+
+            background:
+                rgba(255,255,255,0.045);
+
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1.08rem;
+            font-weight: 600;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .area-badge:hover {
+            transform: translateX(5px);
+
+            background:
+                rgba(181,126,220,0.16);
+        }
+
+        .map-side {
+            padding: 1.2rem;
+        }
+
+        .map-img {
+            width: 100%;
+
+            max-height: 520px;
+
+            object-fit: contain;
+
+            border-radius: 22px;
+
+            border:
+                1px solid
+                rgba(181,126,220,0.28);
+
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,0.45);
+        }
+
+
+        /* =========================================================
+           QUOTE SECTION
+        ========================================================= */
+
+        #quote-form-section {
+            max-width: var(--max-width);
+
+            margin: 0 auto;
+
+            padding:
+                2rem
+                1.5rem
+                6rem;
+        }
+
+        .form-section {
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            padding: 3.4rem;
+
+            text-align: center;
+
+            border-radius: 32px;
+
+            background:
+                rgba(255,255,255,0.96);
+
+            border:
+                2px solid
+                rgba(181,126,220,0.22);
+
+            box-shadow:
+                var(--shadow-lg);
+        }
+
+        .form-section .section-title {
+            color: var(--charcoal);
+
+            text-shadow: none;
+
+            margin-bottom: 0.75rem;
+        }
+
+        .quote-portal-desc {
+            max-width: 700px;
+
+            margin:
+                0
+                auto
+                2rem;
+
+            color: #555;
+
+            font-size: 0.98rem;
+        }
+
+        .signup-header-box {
+            display: inline-flex;
+
+            padding:
+                0.5rem
+                1rem;
+
+            border-radius: 999px;
+
+            background:
+                var(--cosmic-purple);
+
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 0.88rem;
+            font-weight: 700;
+
+            letter-spacing: 0.8px;
+
+            margin-bottom: 1.5rem;
+        }
+
+        .how-it-works-title {
+            color: var(--charcoal);
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1.4rem;
+
+            margin-bottom: 1.8rem;
+        }
+
+        .signup-steps-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 0.8rem;
+        }
+
+        .step-item {
+            position: relative;
+
+            text-align: center;
+        }
+
+        .step-circle {
+            width: 66px;
+            height: 66px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--cosmic-purple),
+                    var(--lavender-dark)
+                );
+
+            color: #fff;
+
+            box-shadow:
+                0 8px 22px
+                rgba(74,29,117,0.32);
+
+            border:
+                2px solid
+                rgba(255,255,255,0.4);
+        }
+
+        .step-circle svg {
+            width: 30px;
+            height: 30px;
+
+            fill: none;
+
+            stroke: currentColor;
+
+            stroke-width: 2;
+
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .step-badge {
+            position: absolute;
+
+            right: -2px;
+            bottom: -2px;
+
+            width: 23px;
+            height: 23px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                var(--lavender);
+
+            border:
+                2px solid #fff;
+
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        .step-text {
+            display: block;
+
+            max-width: 125px;
+
+            margin:
+                0.9rem
+                auto
+                0;
+
+            color: var(--charcoal);
+
+            font-family: var(--font-cosmic);
+
+            font-size: 0.78rem;
+            font-weight: 700;
+
+            line-height: 1.3;
+        }
+
+        .step-arrow {
+            position: absolute;
+
+            top: 24px;
+            right: -15px;
+
+            color:
+                var(--lavender-dark);
+
+            font-weight: 800;
+        }
+
+        .signup-arrow-pointer {
+            display: flex;
+
+            justify-content: center;
+
+            margin:
+                1.5rem
+                0;
+        }
+
+        .arrow-icon-btn {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--lavender-dark),
+                    var(--cosmic-purple)
+                );
+
+            color: #fff;
+
+            animation:
+                bounceArrow
+                2s
+                infinite
+                ease-in-out;
+
+            box-shadow:
+                0 8px 24px
+                rgba(74,29,117,0.32);
+        }
+
+        .arrow-icon-btn svg {
+            width: 30px;
+            height: 30px;
+
+            fill: none;
+
+            stroke: currentColor;
+
+            stroke-width: 2.5;
+
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .submit-btn {
+            width: 100%;
+            max-width: 520px;
+
+            min-height: 60px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding:
+                1rem
+                1.5rem;
+
+            border-radius: 999px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--lavender),
+                    var(--cosmic-purple)
+                );
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1.18rem;
+            font-weight: 700;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.2);
+
+            box-shadow:
+                0 12px 32px
+                rgba(138,79,186,0.3);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 18px 42px
+                rgba(138,79,186,0.45);
+        }
+
+
+        /* =========================================================
+           FAQ
+        ========================================================= */
+
+        #faq {
+            max-width: var(--max-width);
+
+            margin: 0 auto;
+
+            padding:
+                5rem
+                1.5rem;
+
+            color: #fff;
+        }
+
+        .faq-list {
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            gap: 0.8rem;
+        }
+
+        .faq-item {
+            border:
+                1px solid
+                rgba(181,126,220,0.25);
+
+            border-radius: 18px;
+
+            background:
+                rgba(21,11,36,0.7);
+
+            overflow: hidden;
         }
 
         .faq-question {
             width: 100%;
-            background: none;
-            border: none;
-            color: #fff;
-            padding: 1.25rem 1.5rem;
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-align: left;
+
             display: flex;
-            justify-content: space-between;
+
             align-items: center;
-            cursor: pointer;
+            justify-content: space-between;
+
             gap: 1rem;
+
+            padding:
+                1.15rem
+                1.3rem;
+
+            border: 0;
+
+            background: transparent;
+
+            color: #fff;
+
+            text-align: left;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1rem;
+            font-weight: 600;
+
+            cursor: pointer;
         }
 
-        .faq-icon {
-            font-size: 1.5rem;
-            color: var(--accent-primary);
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-            line-height: 1;
+        .faq-question span:last-child {
+            color: var(--lavender);
+
+            font-size: 1.4rem;
+
+            transition:
+                transform 0.2s ease;
         }
 
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s ease-out, padding 0.35s ease-out;
-            padding: 0 1.5rem;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .faq-item.open .faq-answer {
-            max-height: 300px;
-            padding: 0 1.5rem 1.5rem 1.5rem;
-        }
-
-        .faq-item.open .faq-icon {
+        .faq-item.open
+        .faq-question
+        span:last-child {
             transform: rotate(45deg);
         }
 
+        .faq-answer {
+            display: none;
+
+            padding:
+                0
+                1.3rem
+                1.25rem;
+
+            color: #D8CCE5;
+
+            font-size: 0.9rem;
+
+            line-height: 1.65;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+
         /* =========================================================
-           FOOTER STYLES
-        ========================================================== */
-        .site-footer {
+           FINAL CTA
+        ========================================================= */
+
+        .final-cta {
+            max-width: 1050px;
+
+            margin: 0 auto;
+
+            padding:
+                1rem
+                1.5rem
+                6rem;
+        }
+
+        .final-cta-card {
             position: relative;
-            z-index: 1;
-            background: #070a10;
-            border-top: 1px solid var(--border-color);
-            padding: 4rem 0 2rem 0;
-            color: var(--text-muted);
+
+            overflow: hidden;
+
+            padding:
+                4rem
+                2rem;
+
+            text-align: center;
+
+            border-radius: 32px;
+
+            border:
+                1px solid
+                rgba(181,126,220,0.4);
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(181,126,220,0.24),
+                    transparent 55%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    rgba(52,20,83,0.92),
+                    rgba(11,4,20,0.96)
+                );
+
+            box-shadow:
+                var(--shadow-lg);
+        }
+
+        .final-cta-card h2 {
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size:
+                clamp(
+                    2.2rem,
+                    5vw,
+                    3.4rem
+                );
+
+            line-height: 1.05;
+
+            margin-bottom: 0.8rem;
+        }
+
+        .final-cta-card p {
+            max-width: 650px;
+
+            margin:
+                0
+                auto
+                1.6rem;
+
+            color: #DCCFEA;
+        }
+
+        .phone-link {
+            display: block;
+
+            margin-top: 1rem;
+
+            color: #E8D5FA;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1.05rem;
+
+            text-decoration: none;
+        }
+
+        .phone-link:hover {
+            color: #fff;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            margin-top: 0;
+
+            padding:
+                4rem
+                1.5rem
+                5rem;
+
+            color: #E3D9F5;
+
+            background: #10061D;
+
+            border-top:
+                2px solid
+                var(--lavender);
+        }
+
+        .footer-container {
+            max-width: var(--max-width);
+
+            margin: 0 auto;
         }
 
         .footer-top-row {
             display: flex;
-            justify-content: space-between;
+
             align-items: center;
-            flex-wrap: wrap;
+            justify-content: space-between;
+
             gap: 2rem;
-            margin-bottom: 3rem;
+
             padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
+
+            border-bottom:
+                1px solid
+                rgba(181,126,220,0.18);
         }
 
-        .footer-brand h3 {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-bottom: 0.3rem;
+        .footer-logo-img {
+            width: 210px;
+            max-width: 100%;
+
+            mix-blend-mode: lighten;
+
+            filter:
+                drop-shadow(
+                    0 0 12px
+                    rgba(181,126,220,0.35)
+                );
         }
 
-        .footer-brand p {
-            font-size: 0.9rem;
+        .footer-nav-actions {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: flex-end;
+
+            gap: 0.7rem;
         }
 
         .footer-contact-toggle-btn {
-            background: rgba(0, 240, 255, 0.1);
-            color: var(--accent-primary);
-            border: 1px solid rgba(0, 240, 255, 0.3);
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-        }
+            min-height: 44px;
 
-        .footer-contact-toggle-btn:hover {
-            background: rgba(0, 240, 255, 0.2);
-            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+            padding:
+                0.65rem
+                1.25rem;
+
+            border-radius: 999px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.22);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--lavender),
+                    var(--lavender-dark)
+                );
+
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-weight: 600;
+
+            cursor: pointer;
         }
 
         .footer-contact-dropdown {
-            max-height: 0;
-            overflow: hidden;
-            background: var(--bg-card);
-            border-radius: 12px;
-            border: 1px solid transparent;
-            transition: max-height 0.4s ease, padding 0.4s ease, border-color 0.4s ease;
-            margin-bottom: 2rem;
-            padding: 0 2rem;
+            display: none;
+
+            max-width: 650px;
+
+            margin:
+                2rem
+                auto;
+
+            padding: 2rem;
+
+            text-align: center;
+
+            border:
+                1px solid
+                rgba(181,126,220,0.35);
+
+            border-radius: 22px;
+
+            background:
+                rgba(21,11,36,0.88);
         }
 
         .footer-contact-dropdown.active {
-            max-height: 400px;
-            padding: 2rem;
-            border-color: rgba(0, 240, 255, 0.2);
+            display: block;
+
+            animation:
+                fadeInUp
+                0.25s
+                ease
+                both;
         }
 
         .footer-contact-dropdown h3 {
             color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 1.45rem;
+
             margin-bottom: 0.5rem;
         }
 
+        .footer-contact-dropdown p {
+            color: #CFC1DE;
+
+            font-size: 0.9rem;
+
+            margin-bottom: 1.1rem;
+        }
+
         .footer-contact-details {
-            margin: 1.25rem 0;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+
             gap: 0.5rem;
+
+            margin-bottom: 1.2rem;
         }
 
         .footer-contact-details a {
-            color: var(--accent-primary);
+            color: var(--lavender-bright);
+
+            font-weight: 600;
+
             text-decoration: none;
         }
 
         .footer-contact-details a:hover {
-            text-decoration: underline;
+            color: #fff;
         }
 
         .owner-box {
-            background: rgba(112, 0, 255, 0.1);
-            border: 1px solid rgba(112, 0, 255, 0.3);
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
             display: inline-block;
-            margin-top: 0.5rem;
+
+            width: 100%;
+            max-width: 380px;
+
+            padding: 0.9rem;
+
+            border:
+                1px dashed
+                rgba(181,126,220,0.35);
+
+            border-radius: 15px;
         }
 
         .owner-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #b084ff;
-            font-weight: 700;
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 0.8rem;
+            font-weight: 600;
         }
 
         .owner-name {
-            color: #fff;
-            font-weight: 600;
-            font-size: 0.95rem;
+            color: var(--lavender-bright);
+
+            font-size: 1rem;
+            font-weight: 700;
         }
 
         .footer-bottom-row {
             display: flex;
-            justify-content: space-between;
+
+            flex-direction: column;
+
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            font-size: 0.85rem;
+
+            text-align: center;
+
+            gap: 0.7rem;
+
+            padding-top: 2rem;
+        }
+
+        .footer-bottom-row p {
+            max-width: 800px;
+
+            font-size: 0.88rem;
         }
 
         .footer-muted {
-            max-width: 600px;
+            color: #AFA3C4;
         }
 
         .footer-links-stack {
             display: flex;
-            gap: 1.5rem;
+
             flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 0.65rem;
+
+            margin-top: 0.8rem;
         }
 
         .footer-link {
-            background: none;
-            border: none;
-            color: var(--text-muted);
+            padding:
+                0.5rem
+                0.9rem;
+
+            border-radius: 999px;
+
+            border:
+                1px solid
+                rgba(181,126,220,0.24);
+
+            background:
+                rgba(255,255,255,0.035);
+
+            color: #fff;
+
+            font-family: var(--font-cosmic);
+
+            font-size: 0.83rem;
+            font-weight: 600;
+
             cursor: pointer;
-            font-size: 0.85rem;
-            text-decoration: underline;
-            padding: 0;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease;
         }
 
         .footer-link:hover {
-            color: var(--accent-primary);
+            background:
+                var(--cosmic-purple);
+
+            border-color:
+                var(--lavender);
         }
+
+
+        /* =========================================================
+           MOBILE STICKY CTA
+        ========================================================= */
+
+        .mobile-cta {
+            display: none;
+        }
+
 
         /* =========================================================
            MODALS
-        ========================================================== */
+        ========================================================= */
+
         .custom-modal {
+            display: none;
+
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(5, 8, 15, 0.85);
-            backdrop-filter: blur(8px);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-            padding: 1.5rem;
+
+            inset: 0;
+
+            z-index: 3000;
+
+            overflow-y: auto;
+
+            padding: 1rem;
+
+            background:
+                rgba(5,2,9,0.88);
+
+            backdrop-filter: blur(12px);
+
+            -webkit-backdrop-filter: blur(12px);
         }
 
         .custom-modal.active {
-            opacity: 1;
-            pointer-events: auto;
+            display: block;
         }
 
         .modal-body-container {
-            background: var(--bg-card);
-            border: 1px solid rgba(0, 240, 255, 0.2);
-            border-radius: 16px;
-            width: 100%;
-            max-width: 750px;
-            max-height: 85vh;
-            overflow-y: auto;
-            padding: 2.5rem;
             position: relative;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+            width:
+                min(
+                    850px,
+                    100%
+                );
+
+            margin:
+                2rem
+                auto;
+
+            padding: 3rem;
+
+            border-radius: 28px;
+
+            background: #fff;
+
+            color: var(--charcoal);
+
+            border:
+                2px solid
+                var(--lavender);
+
+            box-shadow:
+                0 35px 90px
+                rgba(0,0,0,0.72);
+
+            animation:
+                fadeInUp
+                0.3s
+                ease
+                both;
         }
 
         .close-modal-btn {
             position: absolute;
-            top: 1.25rem;
+
+            top: 1rem;
             right: 1.25rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            color: #fff;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            font-size: 1.25rem;
+
+            width: 42px;
+            height: 42px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
+            border: 0;
+
+            border-radius: 50%;
+
+            background: #F1EDF5;
+
+            color: #555;
+
+            font-size: 1.8rem;
+
+            line-height: 1;
+
             cursor: pointer;
-            transition: var(--transition-smooth);
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease;
         }
 
         .close-modal-btn:hover {
-            background: rgba(255, 255, 255, 0.15);
-            color: var(--accent-primary);
+            background:
+                var(--lavender);
+
+            color: #fff;
         }
 
-        /* Commercial Modal specifics */
         .commercial-heading {
-            color: #fff;
-            font-size: 1.75rem;
+            padding-right: 2.5rem;
+
+            color:
+                var(--cosmic-purple);
+
+            font-family:
+                var(--font-cosmic);
+
+            font-size:
+                clamp(
+                    2rem,
+                    5vw,
+                    2.7rem
+                );
+
+            line-height: 1.1;
+
             margin-bottom: 0.5rem;
         }
 
         .commercial-subheading {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
+            color: #555;
+
+            font-size: 1rem;
+
+            margin-bottom: 1.8rem;
         }
 
         .comm-section-title {
-            color: #fff;
-            font-size: 1.1rem;
-            margin: 1.5rem 0 0.75rem 0;
+            margin:
+                1.6rem
+                0
+                0.7rem;
+
+            color:
+                var(--lavender-dark);
+
+            font-family:
+                var(--font-cosmic);
+
+            font-size: 1.25rem;
         }
 
         .comm-list {
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            color: var(--text-muted);
-            font-size: 0.95rem;
+
+            margin-bottom: 1rem;
+        }
+
+        .comm-list li {
+            padding:
+                0.45rem
+                0;
+
+            color: #3F3F3F;
+
+            font-size: 0.92rem;
+
+            line-height: 1.55;
         }
 
         .comm-properties-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 0.75rem;
-            margin-top: 1rem;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 0.8rem;
         }
 
         .comm-property-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
-            text-align: center;
+            padding:
+                0.85rem
+                1rem;
+
+            border-radius: 14px;
+
+            background: #F5EFFA;
+
+            border:
+                1px solid
+                #E5D8EF;
+
+            color:
+                var(--cosmic-purple);
+
+            font-family:
+                var(--font-cosmic);
+
             font-size: 0.9rem;
-            color: #fff;
-            font-weight: 500;
+
+            font-weight: 600;
         }
 
         .comm-action-footer {
             margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
+
+            padding-top: 1.6rem;
+
             text-align: center;
+
+            border-top:
+                1px dashed
+                #DED1E9;
         }
 
         .comm-cta-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 52px;
+
+            padding:
+                0.8rem
+                1.5rem;
+
+            border-radius: 999px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--lavender),
+                    var(--cosmic-purple)
+                );
+
             color: #fff;
-            padding: 0.85rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
+
             text-decoration: none;
-            transition: var(--transition-smooth);
-            box-shadow: 0 4px 15px rgba(0, 240, 255, 0.2);
+
+            font-family:
+                var(--font-cosmic);
+
+            font-weight: 700;
+
+            transition:
+                transform 0.2s ease;
         }
 
         .comm-cta-btn:hover {
-            opacity: 0.9;
             transform: translateY(-2px);
         }
 
         .comm-footer-note {
-            margin-top: 0.75rem;
-            font-size: 0.85rem;
-            color: var(--text-muted);
+            margin-top: 0.7rem;
+
+            color: #666;
+
+            font-size: 0.82rem;
         }
 
-        /* Legal/Terms Modal Tabs */
+
+        /* =========================================================
+           LEGAL
+        ========================================================= */
+
         .modal-tabs {
             display: flex;
+
             gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1rem;
+
+            margin-bottom: 1.7rem;
+
             padding-right: 2.5rem;
+
+            border-bottom:
+                2px solid
+                #F0EAF8;
         }
 
         .modal-tab-btn {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            color: var(--text-muted);
-            padding: 0.5rem 0.85rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            padding:
+                0.75rem
+                1rem;
+
+            border:
+                2px solid
+                #E5DAEE;
+
+            border-bottom: none;
+
+            border-radius:
+                12px
+                12px
+                0
+                0;
+
+            background:
+                #F5F0F9;
+
+            color: #555;
+
+            font-family:
+                var(--font-cosmic);
+
+            font-weight: 700;
+
             cursor: pointer;
-            transition: var(--transition-smooth);
         }
 
-        .modal-tab-btn.active, .modal-tab-btn:hover {
-            background: rgba(0, 240, 255, 0.1);
-            color: var(--accent-primary);
-            border-color: rgba(0, 240, 255, 0.3);
+        .modal-tab-btn.active {
+            background: #fff;
+
+            color:
+                var(--cosmic-purple);
+
+            border-color:
+                var(--lavender);
         }
 
         .legal-pane {
             display: none;
+
+            max-height: 62vh;
+
+            overflow-y: auto;
+
+            padding-right: 0.7rem;
         }
 
         .legal-pane.active {
@@ -489,497 +2814,3657 @@
         }
 
         .legal-pane h3 {
-            color: #fff;
-            font-size: 1.4rem;
+            color:
+                var(--charcoal);
+
+            font-family:
+                var(--font-cosmic);
+
+            font-size: 2rem;
+
+            line-height: 1.15;
+
             margin-bottom: 1rem;
         }
 
         .legal-pane h4 {
-            color: #fff;
-            font-size: 1.05rem;
-            margin: 1.25rem 0 0.5rem 0;
+            margin:
+                1.5rem
+                0
+                0.5rem;
+
+            color:
+                var(--charcoal);
+
+            font-family:
+                var(--font-cosmic);
+
+            font-size: 1.15rem;
         }
 
-        .legal-pane p, .legal-pane li {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 0.75rem;
+        .legal-pane p,
+        .legal-pane li {
+            color: #444;
+
+            font-size: 0.9rem;
+
+            line-height: 1.65;
+        }
+
+        .legal-pane p {
+            margin-bottom: 1rem;
+        }
+
+        .legal-pane ol {
+            margin-left: 1.25rem;
+        }
+
+        .legal-pane ol > li {
+            margin-bottom: 1rem;
+
+            padding-left: 0.25rem;
         }
 
         .legal-pane ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
+            margin:
+                0.6rem
+                0
+                0.7rem
+                1.2rem;
         }
+
+        .legal-pane ul li {
+            margin-bottom: 0.3rem;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .reasons-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .plans-grid {
+                grid-template-columns: 1fr;
+
+                max-width: 620px;
+
+                margin: 0 auto;
+            }
+
+            .plan-card {
+                min-height: auto;
+            }
+
+            .service-areas-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .service-info-side {
+                text-align: center;
+            }
+
+            .service-info-side
+            .section-title {
+                text-align: center;
+            }
+
+            .badge-container {
+                max-width: 500px;
+
+                margin: 0 auto;
+            }
+
+            .map-side {
+                padding:
+                    0
+                    1.5rem
+                    1.5rem;
+            }
+        }
+
+
+        @media (max-width: 800px) {
+
+            .nav-container {
+                grid-template-columns: 1fr;
+
+                gap: 0.55rem;
+            }
+
+            .nav-left-container,
+            .nav-btn-container {
+                justify-content: center;
+            }
+
+            .logo-container {
+                grid-row: 1;
+            }
+
+            .nav-left-container {
+                grid-row: 2;
+            }
+
+            .nav-btn-container {
+                grid-row: 3;
+            }
+
+            .logo-img {
+                width:
+                    min(
+                        250px,
+                        70vw
+                    );
+
+                max-height: 65px;
+            }
+
+            .nav-btn {
+                width:
+                    min(
+                        330px,
+                        100%
+                    );
+            }
+
+            .hero {
+                padding-top: 4.5rem;
+            }
+
+            .hero-trust-strip {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .how-works-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .signup-steps-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+                gap:
+                    1.6rem
+                    0.6rem;
+            }
+
+            .step-arrow {
+                display: none;
+            }
+
+            .footer-top-row {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .footer-nav-actions {
+                justify-content: center;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            html {
+                scroll-padding-top: 170px;
+            }
+
+            body {
+                padding-bottom: 76px;
+            }
+
+            .nebula-cloud {
+                width: 480px;
+                height: 480px;
+
+                filter: blur(80px);
+            }
+
+            .vet-banner {
+                font-size: 0.76rem;
+
+                letter-spacing: 0.7px;
+            }
+
+            .hero {
+                padding:
+                    3.8rem
+                    1rem
+                    4rem;
+            }
+
+            .hero h1 {
+                font-size:
+                    clamp(
+                        2.75rem,
+                        14vw,
+                        4rem
+                    );
+
+                letter-spacing: -0.8px;
+            }
+
+            .hero-subheading {
+                font-size: 0.98rem;
+            }
+
+            .hero-cta-row {
+                flex-direction: column;
+
+                align-items: stretch;
+
+                max-width: 420px;
+
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-primary,
+            .cta-secondary {
+                width: 100%;
+            }
+
+            .hero-trust-strip {
+                gap: 0.5rem;
+            }
+
+            .trust-item {
+                font-size: 0.7rem;
+            }
+
+            .dark-section,
+            #service-areas,
+            #faq {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+
+            .reasons-grid,
+            .how-works-grid,
+            .best-for-list,
+            .addons-grid,
+            .comm-properties-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reason-card {
+                min-height: auto;
+            }
+
+            .best-for-box {
+                padding: 1.4rem;
+            }
+
+            .service-info-side {
+                padding:
+                    2.2rem
+                    1.3rem;
+            }
+
+            .form-section {
+                padding:
+                    2.4rem
+                    1rem;
+
+                border-radius: 25px;
+            }
+
+            .signup-steps-grid {
+                grid-template-columns: 1fr;
+
+                gap: 1.35rem;
+            }
+
+            .step-item {
+                display: grid;
+
+                grid-template-columns:
+                    66px
+                    1fr;
+
+                align-items: center;
+
+                text-align: left;
+
+                gap: 1rem;
+
+                max-width: 300px;
+
+                margin: 0 auto;
+
+                width: 100%;
+            }
+
+            .step-circle {
+                margin: 0;
+            }
+
+            .step-text {
+                max-width: none;
+
+                margin: 0;
+
+                font-size: 0.82rem;
+            }
+
+            .signup-arrow-pointer {
+                display: none;
+            }
+
+            .modal-body-container {
+                padding:
+                    2.5rem
+                    1rem
+                    1.5rem;
+
+                margin:
+                    0.5rem
+                    auto;
+
+                border-radius: 22px;
+            }
+
+            .modal-tabs {
+                flex-direction: column;
+
+                border-bottom: none;
+
+                padding-right: 0;
+            }
+
+            .modal-tab-btn {
+                border:
+                    2px solid
+                    #E5DAEE;
+
+                border-radius: 12px;
+            }
+
+            .modal-tab-btn.active {
+                background:
+                    var(--lavender);
+
+                color: #fff;
+
+                border-color:
+                    var(--lavender);
+            }
+
+            .legal-pane {
+                max-height: 66vh;
+            }
+
+            .mobile-cta {
+                position: fixed;
+
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                z-index: 2500;
+
+                display: flex;
+
+                gap: 0.55rem;
+
+                padding: 0.55rem;
+
+                background:
+                    rgba(8,3,14,0.94);
+
+                border-top:
+                    1px solid
+                    rgba(181,126,220,0.35);
+
+                backdrop-filter: blur(15px);
+
+                -webkit-backdrop-filter: blur(15px);
+            }
+
+            .mobile-cta a {
+                flex: 1;
+
+                min-height: 52px;
+
+                display: flex;
+
+                align-items: center;
+                justify-content: center;
+
+                border-radius: 999px;
+
+                text-decoration: none;
+
+                font-family:
+                    var(--font-cosmic);
+
+                font-size: 0.9rem;
+
+                font-weight: 700;
+            }
+
+            .mobile-quote {
+                background:
+                    linear-gradient(
+                        135deg,
+                        var(--lavender),
+                        var(--lavender-dark)
+                    );
+
+                color: #fff;
+            }
+
+            .mobile-call {
+                background:
+                    rgba(255,255,255,0.08);
+
+                color: #fff;
+
+                border:
+                    1px solid
+                    rgba(255,255,255,0.2);
+            }
+
+            /*
+             * The banner image intentionally remains
+             * width: 100% and height: auto here.
+             * This guarantees the full image remains visible.
+             */
+            .full-width-image-container {
+                margin-top: 0.5rem;
+            }
+
+            .full-width-image-container img {
+                width: 100%;
+                height: auto;
+                max-height: none;
+                object-fit: contain;
+            }
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+            }
+
+            #cosmic-stars-canvas,
+            .nebula-cloud,
+            .shooting-star-container {
+                display: none;
+            }
+        }
+
     </style>
 </head>
+
+
 <body>
 
-    <!-- Starfield Background Canvas -->
-    <canvas id="cosmic-stars-canvas"></canvas>
+    <!-- =========================================================
+         COSMIC BACKGROUND
+    ========================================================== -->
+
+    <canvas
+        id="cosmic-stars-canvas"
+        aria-hidden="true"
+    ></canvas>
+
+    <div
+        class="nebula-cloud nebula-1"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="nebula-cloud nebula-2"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="nebula-cloud nebula-3"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="shooting-star-container"
+        aria-hidden="true"
+    >
+        <div class="star-streak streak-1"></div>
+        <div class="star-streak streak-2"></div>
+        <div class="star-streak streak-3"></div>
+    </div>
+
 
     <!-- =========================================================
-         FAQ SECTION
+         HEADER
     ========================================================== -->
-    <section class="faq-section" id="faq">
-        <div class="container">
 
-            <div class="section-header-centered">
-                <span class="section-badge">Got Questions?</span>
-                <h2>Frequently Asked Questions</h2>
-                <p class="section-sub">Everything you need to know about our reliable pet waste removal services in Milton, Pace, and Navarre.</p>
-            </div>
+    <header>
 
-            <div class="faq-accordion">
+        <nav
+            class="nav-container"
+            aria-label="Main navigation"
+        >
 
-                <!-- FAQ ITEM 1 -->
-                <div class="faq-item">
-                    <button type="button" class="faq-question" aria-expanded="false">
-                        <span>Do I need to be home when you service my yard?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No, you do not need to be home! As long as we have secure access to your yard via a gate, our professional scoopers can handle the cleanup while you are at work or out enjoying your day. We make sure all gates are securely latched and photographed upon departure.</p>
-                    </div>
-                </div>
+            <div class="nav-left-container">
 
-                <!-- FAQ ITEM 2 -->
-                <div class="faq-item">
-                    <button type="button" class="faq-question" aria-expanded="false">
-                        <span>What happens to the pet waste after you scoop?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We double-bag all collected pet waste securely and place it directly into your designated outside trash receptacle before we leave your property. We never leave waste behind on your premises.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ ITEM 3 -->
-                <div class="faq-item">
-                    <button type="button" class="faq-question" aria-expanded="false">
-                        <span>Are your cleaning tools sanitized between yards?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, absolutely. To protect the health of your pets and prevent any cross-contamination between properties, all of our rakes, scoops, and footwear are thoroughly sanitized and disinfected with a professional-grade solution before entering every single yard.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ ITEM 4 -->
-                <div class="faq-item">
-                    <button type="button" class="faq-question" aria-expanded="false">
-                        <span>What areas do you currently service?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Cosmic Scoopers proudly provides recurring residential and commercial pet waste removal throughout Milton, Pace, and Navarre, Florida (including East Milton, Allentown, and surrounding Santa Rosa County communities).</p>
-                    </div>
-                </div>
-
-                <!-- FAQ ITEM 5 -->
-                <div class="faq-item">
-                    <button type="button" class="faq-question" aria-expanded="false">
-                        <span>How does billing and payment work?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>All recurring services are billed automatically and securely through our online payment portal. There are no long-term contracts required, and you can easily manage, pause, or adjust your service frequency at any time.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ ITEM 6 -->
-                <div class="faq-item">
-                    <button type="button" class="faq-question" aria-expanded="false">
-                        <span>What if my dogs are aggressive or need to stay outside?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>For the safety of our team and your pets, we prefer dogs to be safely brought inside during your scheduled service window. If your dogs are friendly outdoor pets, please let us know in advance so we can note their presence on your account profile.</p>
-                    </div>
-                </div>
+                <a
+                    href="https://app.scoopilot.com/signup/cosmic-scoopers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="nav-btn primary-header"
+                >
+                    Get Your Instant Quote
+                </a>
 
             </div>
+
+
+            <a
+                href="#top"
+                class="logo-container"
+                aria-label="Cosmic Scoopers home"
+            >
+
+                <img
+                    src="IMG_20260730_183924.png"
+                    alt="Cosmic Scoopers"
+                    class="logo-img"
+                >
+
+            </a>
+
+
+            <div class="nav-btn-container">
+
+                <button
+                    type="button"
+                    class="nav-btn"
+                    id="commercialOpenBtn"
+                >
+                    Commercial Services
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main id="top">
+
+
+        <!-- =====================================================
+             VETERAN BANNER
+        ====================================================== -->
+
+        <div class="vet-banner">
+            ✦ PROUDLY VETERAN OWNED BUSINESS ✦
+        </div>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section
+            class="hero"
+            aria-labelledby="hero-title"
+        >
+
+            <div class="hero-content">
+
+                <div class="hero-eyebrow">
+                    ✦ Professional Pet Waste Removal
+                </div>
+
+                <h1 id="hero-title">
+                    Never Scoop Your Yard Again.
+                </h1>
+
+                <p class="hero-subheading">
+                    Professional recurring pet waste removal for
+                    <strong>
+                        Milton, Pace &amp; Navarre, Florida.
+                    </strong>
+                    We handle the dirty work so you can enjoy your yard.
+                </p>
+
+
+                <div class="hero-cta-row">
+
+                    <a
+                        href="https://app.scoopilot.com/signup/cosmic-scoopers"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="cta-primary"
+                    >
+                        GET MY INSTANT QUOTE
+                    </a>
+
+                    <a
+                        href="tel:8508609205"
+                        class="cta-secondary"
+                    >
+                        📞 (850) 860-9205
+                    </a>
+
+                </div>
+
+
+                <div class="hero-price-note">
+                    Starting at just $25/visit · No long-term contracts
+                </div>
+
+
+                <div class="hero-trust-strip">
+
+                    <div class="trust-item">
+                        <strong>
+                            🔒 Gate Confirmation
+                        </strong>
+
+                        Peace of mind after every visit
+                    </div>
+
+
+                    <div class="trust-item">
+                        <strong>
+                            ✦ Veteran Owned
+                        </strong>
+
+                        Locally operated
+                    </div>
+
+
+                    <div class="trust-item">
+                        <strong>
+                            🧼 Sanitized Equipment
+                        </strong>
+
+                        Clean between yards
+                    </div>
+
+
+                    <div class="trust-item">
+                        <strong>
+                            📅 Recurring Service
+                        </strong>
+
+                        Keep your yard maintained
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHY COSMIC SCOOPERS
+        ====================================================== -->
+
+        <section
+            class="dark-section"
+            id="why-cosmic"
+        >
+
+            <div class="section-heading">
+
+                <div class="section-kicker">
+                    Why Cosmic Scoopers
+                </div>
+
+                <h2 class="section-title">
+                    Your Yard Deserves Better Than a Random Scoop.
+                </h2>
+
+                <p class="section-description">
+                    Reliable recurring service, thoughtful details, and a
+                    cleaner outdoor space without adding another chore to
+                    your week.
+                </p>
+
+            </div>
+
+
+            <div class="reasons-grid">
+
+
+                <article class="reason-card">
+
+                    <div class="reason-icon">
+                        🔒
+                    </div>
+
+                    <h3 class="reason-title">
+                        Gate Security Guarantee
+                    </h3>
+
+                    <p class="reason-desc">
+                        We send a photo of your securely closed and latched
+                        gate after every visit, giving you added peace of
+                        mind that your pets stay safe.
+                    </p>
+
+                </article>
+
+
+                <article class="reason-card">
+
+                    <div class="reason-icon">
+                        📅
+                    </div>
+
+                    <h3 class="reason-title">
+                        Consistent, Reliable Service
+                    </h3>
+
+                    <p class="reason-desc">
+                        Our team visits according to your recurring service
+                        schedule so your yard stays cleaner without you
+                        having to remember another chore.
+                    </p>
+
+                </article>
+
+
+                <article class="reason-card">
+
+                    <div class="reason-icon">
+                        ✨
+                    </div>
+
+                    <h3 class="reason-title">
+                        100% Satisfaction Guaranteed
+                    </h3>
+
+                    <p class="reason-desc">
+                        We double-check corners, fence lines, and high-traffic
+                        areas to make your scheduled cleanup as thorough as
+                        possible.
+                    </p>
+
+                </article>
+
+
+                <article class="reason-card">
+
+                    <div class="reason-icon">
+                        📝
+                    </div>
+
+                    <h3 class="reason-title">
+                        No Long-Term Contracts
+                    </h3>
+
+                    <p class="reason-desc">
+                        Need to change your service? Pause, adjust, or cancel
+                        according to our service terms without being locked
+                        into a long-term contract.
+                    </p>
+
+                </article>
+
+
+                <article class="reason-card">
+
+                    <div class="reason-icon">
+                        🧼
+                    </div>
+
+                    <h3 class="reason-title">
+                        Sanitized Equipment
+                    </h3>
+
+                    <p class="reason-desc">
+                        Tools and footwear are thoroughly disinfected between
+                        yards to help maintain a cleaner service process.
+                    </p>
+
+                </article>
+
+
+                <article class="reason-card">
+
+                    <div class="reason-icon">
+                        💳
+                    </div>
+
+                    <h3 class="reason-title">
+                        Easy Automated Billing
+                    </h3>
+
+                    <p class="reason-desc">
+                        Straightforward recurring billing and online payment
+                        processing help keep your service simple.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HOW SERVICE WORKS
+        ====================================================== -->
+
+        <section
+            class="dark-section"
+            id="how-it-works"
+        >
+
+            <div class="section-heading">
+
+                <div class="section-kicker">
+                    Simple From Start to Finish
+                </div>
+
+                <h2 class="section-title">
+                    We Scoop. You Enjoy Your Yard.
+                </h2>
+
+                <p class="section-description">
+                    Getting started takes only a few simple steps.
+                </p>
+
+            </div>
+
+
+            <div class="how-works-grid">
+
+
+                <article class="work-step-card">
+
+                    <div class="work-step-num">
+                        1
+                    </div>
+
+                    <h3 class="work-step-title">
+                        Choose Your Schedule
+                    </h3>
+
+                    <p class="work-step-desc">
+                        Select weekly, twice-weekly, or bi-weekly service
+                        based on your household and yard needs.
+                    </p>
+
+                </article>
+
+
+                <article class="work-step-card">
+
+                    <div class="work-step-num">
+                        2
+                    </div>
+
+                    <h3 class="work-step-title">
+                        We Handle the Dirty Work
+                    </h3>
+
+                    <p class="work-step-desc">
+                        Our team arrives, scoops the service area, collects
+                        the waste, and secures your gates.
+                    </p>
+
+                </article>
+
+
+                <article class="work-step-card">
+
+                    <div class="work-step-num">
+                        3
+                    </div>
+
+                    <h3 class="work-step-title">
+                        Get Gate Confirmation
+                    </h3>
+
+                    <p class="work-step-desc">
+                        You'll receive your closed-gate confirmation after
+                        service for added peace of mind.
+                    </p>
+
+                </article>
+
+
+                <article class="work-step-card">
+
+                    <div class="work-step-num">
+                        4
+                    </div>
+
+                    <h3 class="work-step-title">
+                        Reclaim Your Lawn
+                    </h3>
+
+                    <p class="work-step-desc">
+                        Step outside into a cleaner yard without worrying
+                        about where you walk.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHO IT'S FOR
+        ====================================================== -->
+
+        <section
+            class="dark-section"
+            id="who-its-for"
+        >
+
+            <div class="section-heading">
+
+                <div class="section-kicker">
+                    Built Around Real Life
+                </div>
+
+                <h2 class="section-title">
+                    Who Is Cosmic Scoopers For?
+                </h2>
+
+            </div>
+
+
+            <div class="best-for-box">
+
+                <ul class="best-for-list">
+
+                    <li>
+                        Busy families and working professionals who would
+                        rather spend weekends doing something else.
+                    </li>
+
+                    <li>
+                        Multi-dog households where waste builds up quickly.
+                    </li>
+
+                    <li>
+                        Dog owners who have difficulty handling repeated
+                        bending, lifting, or yard cleanup.
+                    </li>
+
+                    <li>
+                        Homeowners who enjoy hosting backyard gatherings
+                        and want a cleaner outdoor space.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PRICING
+        ====================================================== -->
+
+        <section id="pricing">
+
+            <div class="pricing-shell">
+
+                <div class="pricing-header">
+
+                    <div class="section-kicker">
+                        Choose Your Cleanup Schedule
+                    </div>
+
+                    <h2 class="section-title">
+                        Pick the Rhythm That Fits Your Yard.
+                    </h2>
+
+                    <p>
+                        Choose recurring service that matches your household,
+                        dog count, and yard usage. Pricing can vary based on
+                        property and service requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="plans-grid">
+
+
+                    <!-- BI-WEEKLY -->
+
+                    <article class="plan-card">
+
+                        <div>
+
+                            <div class="plan-tier">
+                                GOOD
+                            </div>
+
+                            <h3 class="plan-title">
+                                Cosmic Bi-Weekly
+                            </h3>
+
+                            <p class="plan-desc">
+                                Recurring maintenance for households that
+                                need scheduled cleanup without weekly visits.
+                            </p>
+
+                        </div>
+
+
+                        <ul class="plan-features">
+
+                            <li>
+                                Every-other-week pet waste removal
+                            </li>
+
+                            <li>
+                                Small, Medium, and Large yard pricing available
+                            </li>
+
+                            <li>
+                                Designed for lighter yard usage
+                            </li>
+
+                            <li>
+                                Scheduled recurring service
+                            </li>
+
+                            <li>
+                                <strong>Best for:</strong>
+                                Single-dog homes
+                                or lower-traffic outdoor spaces
+                            </li>
+
+                        </ul>
+
+
+                        <a
+                            href="https://app.scoopilot.com/signup/cosmic-scoopers"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="plan-btn"
+                        >
+                            Select Bi-Weekly
+                        </a>
+
+                    </article>
+
+
+                    <!-- WEEKLY -->
+
+                    <article class="plan-card featured">
+
+                        <div class="recommended-badge">
+                            RECOMMENDED
+                        </div>
+
+
+                        <div>
+
+                            <div class="plan-tier">
+                                BETTER
+                            </div>
+
+                            <h3 class="plan-title">
+                                Cosmic Weekly
+                            </h3>
+
+                            <p class="plan-desc">
+                                Our most popular rhythm for keeping your
+                                yard consistently clean and manageable.
+                            </p>
+
+                        </div>
+
+
+                        <ul class="plan-features">
+
+                            <li>
+                                1x weekly pet waste removal
+                            </li>
+
+                            <li>
+                                Small, Medium, and Large yard pricing available
+                            </li>
+
+                            <li>
+                                Designed for light to moderate waste buildup
+                            </li>
+
+                            <li>
+                                Consistent recurring yard maintenance
+                            </li>
+
+                            <li>
+                                <strong>Best for:</strong>
+                                Homeowners who
+                                want maximum convenience
+                            </li>
+
+                        </ul>
+
+
+                        <a
+                            href="https://app.scoopilot.com/signup/cosmic-scoopers"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="plan-btn"
+                        >
+                            Get Weekly Service
+                        </a>
+
+                    </article>
+
+
+                    <!-- TWICE WEEKLY -->
+
+                    <article class="plan-card">
+
+                        <div>
+
+                            <div class="plan-tier">
+                                BEST
+                            </div>
+
+                            <h3 class="plan-title">
+                                Cosmic Twice-Weekly
+                            </h3>
+
+                            <p class="plan-desc">
+                                Maximum upkeep for active dogs and
+                                multi-dog households.
+                            </p>
+
+                        </div>
+
+
+                        <ul class="plan-features">
+
+                            <li>
+                                2x weekly pet waste removal
+                            </li>
+
+                            <li>
+                                Small, Medium, and Large yard pricing available
+                            </li>
+
+                            <li>
+                                Helps prevent buildup between visits
+                            </li>
+
+                            <li>
+                                Multi-visit density savings applied automatically
+                            </li>
+
+                            <li>
+                                <strong>Best for:</strong>
+                                Multi-dog families,
+                                active dogs, and high-traffic yards
+                            </li>
+
+                        </ul>
+
+
+                        <a
+                            href="https://app.scoopilot.com/signup/cosmic-scoopers"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="plan-btn"
+                        >
+                            Choose Twice-Weekly
+                        </a>
+
+                    </article>
+
+                </div>
+
+
+                <p class="pricing-note">
+                    Starting at $25/visit. Final pricing depends on property
+                    details, yard size, dog count, service frequency, and
+                    other applicable service requirements.
+                </p>
+
+
+                <!-- ADD-ONS -->
+
+                <div class="addons-container">
+
+                    <h3 class="addons-subtitle">
+                        Optional Add-On Services
+                    </h3>
+
+
+                    <div class="addons-grid">
+
+
+                        <article class="addon-item">
+
+                            <h4 class="addon-name">
+                                Deodorizer Treatment
+                            </h4>
+
+                            <p class="addon-desc">
+                                Odor-control enhancement available monthly
+                                or as needed for additional yard freshness.
+                            </p>
+
+                        </article>
+
+
+                        <article class="addon-item">
+
+                            <h4 class="addon-name">
+                                Dog Repellent Treatment
+                            </h4>
+
+                            <p class="addon-desc">
+                                Targeted perimeter application for designated
+                                yard boundaries.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BANNER IMAGE
+             
+             FULL IMAGE — NO CROPPING
+        ====================================================== -->
+
+        <div class="full-width-image-container">
+
+            <img
+                src="1000007602.png"
+                alt="Cosmic Scoopers pet waste removal service banner"
+                loading="lazy"
+            >
 
         </div>
-    </section>
+
+
+        <!-- =====================================================
+             SERVICE AREAS
+        ====================================================== -->
+
+        <section id="service-areas">
+
+            <div class="service-areas-layout">
+
+
+                <div class="service-info-side">
+
+                    <div class="section-kicker">
+                        Local Pet Waste Removal
+                    </div>
+
+                    <h2 class="section-title">
+                        Areas We Service
+                    </h2>
+
+                    <p class="area-text">
+                        Professional pet waste removal serving communities
+                        throughout the Milton, Pace, and Navarre area.
+                    </p>
+
+
+                    <div class="badge-container">
+
+                        <div class="area-badge">
+                            ✦ Milton, FL
+                        </div>
+
+                        <div class="area-badge">
+                            ✦ Pace, FL
+                        </div>
+
+                        <div class="area-badge">
+                            ✦ Navarre, FL
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="map-side">
+
+                    <img
+                        src="1000007604.jpg"
+                        alt="Cosmic Scoopers service area map showing Milton, Pace, and Navarre, Florida"
+                        class="map-img"
+                        loading="lazy"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             QUOTE / SIGNUP
+        ====================================================== -->
+
+        <section id="quote-form-section">
+
+            <div class="form-section">
+
+                <div class="section-kicker">
+                    Get Started
+                </div>
+
+                <h2 class="section-title">
+                    Ready to Get Your Yard Back?
+                </h2>
+
+                <p class="quote-portal-desc">
+                    Open our ScooPilot setup portal to enter your property
+                    details, review your service options, and begin the
+                    process of getting your recurring cleanup scheduled.
+                </p>
+
+
+                <div class="easy-signup-container">
+
+                    <div class="signup-header-box">
+                        ✦ SIGN-UP IN LESS THAN A MINUTE! ⏱️
+                    </div>
+
+                    <h3 class="how-it-works-title">
+                        Here's How It Works
+                    </h3>
+
+
+                    <div class="signup-steps-grid">
+
+
+                        <!-- STEP 1 -->
+
+                        <div class="step-item">
+
+                            <div class="step-circle">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M15 15l-2 5L9 9l11 4-5 2z"
+                                    />
+
+                                    <path
+                                        d="M13 13l6 6"
+                                    />
+                                </svg>
+
+                                <span class="step-badge">
+                                    1
+                                </span>
+
+                            </div>
+
+                            <div class="step-text">
+                                Click the Sign Up Link
+                            </div>
+
+                            <span
+                                class="step-arrow"
+                                aria-hidden="true"
+                            >
+                                ➔
+                            </span>
+
+                        </div>
+
+
+                        <!-- STEP 2 -->
+
+                        <div class="step-item">
+
+                            <div class="step-circle">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <rect
+                                        x="5"
+                                        y="4"
+                                        width="14"
+                                        height="17"
+                                        rx="2"
+                                    />
+
+                                    <path d="M9 9h6"/>
+                                    <path d="M9 13h6"/>
+                                    <path d="M9 17h4"/>
+
+                                </svg>
+
+                                <span class="step-badge">
+                                    2
+                                </span>
+
+                            </div>
+
+                            <div class="step-text">
+                                Answer a Few Questions
+                            </div>
+
+                            <span
+                                class="step-arrow"
+                                aria-hidden="true"
+                            >
+                                ➔
+                            </span>
+
+                        </div>
+
+
+                        <!-- STEP 3 -->
+
+                        <div class="step-item">
+
+                            <div class="step-circle">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <circle
+                                        cx="12"
+                                        cy="12"
+                                        r="3"
+                                    />
+
+                                    <ellipse
+                                        cx="12"
+                                        cy="12"
+                                        rx="9"
+                                        ry="4"
+                                        transform="rotate(-30 12 12)"
+                                    />
+
+                                </svg>
+
+                                <span class="step-badge">
+                                    3
+                                </span>
+
+                            </div>
+
+                            <div class="step-text">
+                                Pick a Plan
+                            </div>
+
+                            <span
+                                class="step-arrow"
+                                aria-hidden="true"
+                            >
+                                ➔
+                            </span>
+
+                        </div>
+
+
+                        <!-- STEP 4 -->
+
+                        <div class="step-item">
+
+                            <div class="step-circle">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                                    />
+
+                                    <polyline
+                                        points="14 2 14 8 20 8"
+                                    />
+
+                                    <line
+                                        x1="16"
+                                        y1="13"
+                                        x2="8"
+                                        y2="13"
+                                    />
+
+                                    <line
+                                        x1="16"
+                                        y1="17"
+                                        x2="8"
+                                        y2="17"
+                                    />
+
+                                </svg>
+
+                                <span class="step-badge">
+                                    4
+                                </span>
+
+                            </div>
+
+                            <div class="step-text">
+                                No Long-Term Contract
+                            </div>
+
+                            <span
+                                class="step-arrow"
+                                aria-hidden="true"
+                            >
+                                ➔
+                            </span>
+
+                        </div>
+
+
+                        <!-- STEP 5 -->
+
+                        <div class="step-item">
+
+                            <div class="step-circle">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <rect
+                                        x="3"
+                                        y="4"
+                                        width="18"
+                                        height="16"
+                                        rx="2"
+                                    />
+
+                                    <line
+                                        x1="16"
+                                        y1="2"
+                                        x2="16"
+                                        y2="6"
+                                    />
+
+                                    <line
+                                        x1="8"
+                                        y1="2"
+                                        x2="8"
+                                        y2="6"
+                                    />
+
+                                    <line
+                                        x1="3"
+                                        y1="10"
+                                        x2="21"
+                                        y2="10"
+                                    />
+
+                                    <path
+                                        d="M9 15l2 2 4-4"
+                                    />
+
+                                </svg>
+
+                                <span class="step-badge">
+                                    5
+                                </span>
+
+                            </div>
+
+                            <div class="step-text">
+                                We'll Reach Out &amp; Schedule Your First Visit
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://app.scoopilot.com/signup/cosmic-scoopers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="submit-btn"
+                >
+                    Start My Quote Request →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section id="faq">
+
+            <div class="section-heading">
+
+                <div class="section-kicker">
+                    Questions?
+                </div>
+
+                <h2 class="section-title">
+                    Frequently Asked Questions
+                </h2>
+
+                <p class="section-description">
+                    A few things customers commonly want to know before
+                    getting started.
+                </p>
+
+            </div>
+
+
+            <div class="faq-list">
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            How often can my yard be serviced?
+                        </span>
+
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                    </button>
+
+
+                    <div class="faq-answer">
+                        Cosmic Scoopers offers recurring weekly,
+                        twice-weekly, and bi-weekly service options.
+                        Your best schedule depends on your household,
+                        number of dogs, and yard usage.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            Do I need to be home?
+                        </span>
+
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                    </button>
+
+
+                    <div class="faq-answer">
+                        You generally do not need to be home as long as
+                        the service area is safely accessible and all pets
+                        are properly secured before service arrival.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            What happens to the pet waste?
+                        </span>
+
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                    </button>
+
+
+                    <div class="faq-answer">
+                        Collected pet waste is double-bagged and disposed
+                        of according to the service terms, generally using
+                        the customer's designated trash receptacle or
+                        dumpster on the property.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            Do you require a long-term contract?
+                        </span>
+
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                    </button>
+
+
+                    <div class="faq-answer">
+                        No long-term contract is required unless otherwise
+                        stated in writing. Cancellation is subject to the
+                        seven-day written notice described in the service
+                        Terms &amp; Conditions.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            How much does service cost?
+                        </span>
+
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                    </button>
+
+
+                    <div class="faq-answer">
+                        Service starts at $25 per visit. Your final pricing
+                        depends on property details, yard size, dog count,
+                        service frequency, and applicable service
+                        requirements. The ScooPilot signup portal is used
+                        to begin the quote process.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button
+                        type="button"
+                        class="faq-question"
+                        aria-expanded="false"
+                    >
+
+                        <span>
+                            What areas do you serve?
+                        </span>
+
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                    </button>
+
+
+                    <div class="faq-answer">
+                        Cosmic Scoopers currently serves Milton, Pace,
+                        and Navarre, Florida. Availability can depend on
+                        routing and the specific service address.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FINAL CTA
+        ====================================================== -->
+
+        <section class="final-cta">
+
+            <div class="final-cta-card">
+
+                <div class="section-kicker">
+                    Your Weekend Is Yours Again
+                </div>
+
+                <h2>
+                    Stop Scooping.<br>
+                    Start Enjoying Your Yard.
+                </h2>
+
+                <p>
+                    Get started with professional recurring pet waste
+                    removal from Cosmic Scoopers.
+                </p>
+
+
+                <a
+                    href="https://app.scoopilot.com/signup/cosmic-scoopers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cta-primary"
+                >
+                    GET MY INSTANT QUOTE
+                </a>
+
+
+                <a
+                    href="tel:8508609205"
+                    class="phone-link"
+                >
+                    Call Cosmic Scoopers · (850) 860-9205
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         MOBILE STICKY CTA
+    ========================================================== -->
+
+    <div class="mobile-cta">
+
+        <a
+            href="https://app.scoopilot.com/signup/cosmic-scoopers"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-quote"
+        >
+            Get My Quote
+        </a>
+
+
+        <a
+            href="tel:8508609205"
+            class="mobile-call"
+        >
+            📞 Call Now
+        </a>
+
+    </div>
+
 
     <!-- =========================================================
          FOOTER
     ========================================================== -->
-    <footer class="site-footer">
-        <div class="container">
+
+    <footer>
+
+        <div class="footer-container">
+
 
             <div class="footer-top-row">
 
-                <div class="footer-brand">
-                    <h3>Cosmic Scoopers</h3>
-                    <p>Professional pet waste removal and yard deodorizing.</p>
+                <div>
+
+                    <img
+                        src="IMG_20260730_183924.png"
+                        alt="Cosmic Scoopers"
+                        class="footer-logo-img"
+                        loading="lazy"
+                    >
+
                 </div>
 
-                <div>
+
+                <div class="footer-nav-actions">
+
                     <button
                         type="button"
                         class="footer-contact-toggle-btn"
-                        id="footerContactBtn"
+                        id="contactToggleBtn"
+                        aria-expanded="false"
+                        aria-controls="footerContactDropdown"
                     >
-                        Contact &amp; Info
+                        Contact Us
                     </button>
+
+
+                    <button
+                        type="button"
+                        class="footer-contact-toggle-btn"
+                        id="commercialFooterBtn"
+                    >
+                        Commercial Services
+                    </button>
+
                 </div>
 
             </div>
 
-            <!-- FOOTER CONTACT DROPDOWN -->
+
             <div
-                class="footer-contact-dropdown"
                 id="footerContactDropdown"
+                class="footer-contact-dropdown"
             >
-                <h3>Cosmic Scoopers Support</h3>
-                <p>Professional pet waste removal serving Milton, Pace, and Navarre, Florida.</p>
 
-                <div class="footer-contact-details">
-                    <div>
-                        Phone: <a href="tel:8508609205">(850) 860-9205</a>
-                    </div>
-                    <div>
-                        Email: <a href="mailto:cosmicscoopers@gmail.com">cosmicscoopers@gmail.com</a>
-                    </div>
-                </div>
+                <h3>
+                    Get in Touch
+                </h3>
 
-                <div class="owner-box">
-                    <div class="owner-label">Veteran Owned &amp; Operated</div>
-                    <div class="owner-name">Cosmic Scoopers</div>
-                </div>
-            </div>
-
-            <!-- FOOTER BOTTOM ROW -->
-            <div class="footer-bottom-row">
-                <p class="footer-muted">
-                    &copy; 2026 Cosmic Scoopers. All rights reserved. Professional recurring pet waste removal and dog poop cleanup serving Milton, Pace, and Navarre, Florida.
+                <p>
+                    Have questions or need support? Reach out directly.
                 </p>
 
-                <div class="footer-links-stack">
-                    <button type="button" class="footer-link" id="openTermsModal">Terms &amp; Conditions</button>
-                    <button type="button" class="footer-link" id="openPrivacyModal">Privacy Policy</button>
-                    <button type="button" class="footer-link" id="openLegalModal">Legal / Fax Notice</button>
+
+                <div class="footer-contact-details">
+
+                    <a href="mailto:cosmicscoopers@gmail.com">
+                        📧 cosmicscoopers@gmail.com
+                    </a>
+
+                    <a href="tel:8508609205">
+                        📞 (850) 860-9205
+                    </a>
+
                 </div>
+
+
+                <div class="owner-box">
+
+                    <div class="owner-label">
+                        Owner &amp; Operator
+                    </div>
+
+                    <div class="owner-name">
+                        Kemberly Omste
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom-row">
+
+                <p>
+                    &copy; 2026 Cosmic Scoopers. All rights reserved.
+                </p>
+
+                <p class="footer-muted">
+                    Providing professional pet waste removal and cleanup
+                    services in Milton, Pace, and Navarre, Florida.
+                </p>
+
+
+                <div class="footer-links-stack">
+
+                    <button
+                        type="button"
+                        class="footer-link"
+                        data-legal="terms"
+                    >
+                        Terms &amp; Conditions
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="footer-link"
+                        data-legal="privacy"
+                    >
+                        Privacy Policy
+                    </button>
+
+                </div>
+
             </div>
 
         </div>
+
     </footer>
 
+
     <!-- =========================================================
-         COMMERCIAL SERVICES MODAL
+         COMMERCIAL MODAL
     ========================================================== -->
+
     <div
-        class="custom-modal"
         id="commercialModal"
-        aria-hidden="true"
+        class="custom-modal"
         role="dialog"
-        aria-labelledby="commercialModalTitle"
+        aria-modal="true"
+        aria-labelledby="commercialHeading"
+        aria-hidden="true"
     >
+
         <div class="modal-body-container">
+
             <button
                 type="button"
                 class="close-modal-btn"
                 id="commercialCloseBtn"
-                aria-label="Close modal"
+                aria-label="Close commercial services"
             >
                 &times;
             </button>
 
-            <h2 class="commercial-heading" id="commercialModalTitle">Commercial Pet Waste Management</h2>
-            <p class="commercial-subheading">Reliable pet waste solutions for multi-family communities, HOAs, parks, and local properties throughout Milton, Pace, and Navarre, Florida.</p>
 
-            <h3 class="comm-section-title">Our Commercial Solutions</h3>
+            <h2
+                id="commercialHeading"
+                class="commercial-heading"
+            >
+                Commercial Pet Waste Management
+            </h2>
+
+
+            <p class="commercial-subheading">
+                Clean, safe, and welcoming common areas for your residents
+                and guests.
+            </p>
+
+
+            <h3 class="comm-section-title">
+                ✦ Services We Offer
+            </h3>
+
+
             <ul class="comm-list">
-                <li>✦ Common area cleanups and recurring maintenance routes.</li>
-                <li>✦ Pet waste station installation, servicing, and restocking.</li>
-                <li>✦ Apartment complexes, townhomes, and neighborhood parks.</li>
+
+                <li>
+                    <strong>
+                        Routine Common Area Sweeps:
+                    </strong>
+
+                    Scheduled grounds cleanup for walking paths, green
+                    spaces, courtyards, and dog parks.
+                </li>
+
+
+                <li>
+                    <strong>
+                        Pet Waste Station Services:
+                    </strong>
+
+                    Routine bag restocking, receptacle emptying, and
+                    hardware maintenance.
+                </li>
+
+
+                <li>
+                    <strong>
+                        Flexible Service Schedules:
+                    </strong>
+
+                    Custom visit frequencies such as 1x/week, 2x/week,
+                    or daily service tailored to property needs.
+                </li>
+
+
+                <li>
+                    <strong>
+                        On-Site Disposal Integration:
+                    </strong>
+
+                    Efficient cleanup utilizing property dumpsters or
+                    custom off-site hauling options.
+                </li>
+
             </ul>
 
-            <h3 class="comm-section-title">Properties We Serve</h3>
+
+            <h3 class="comm-section-title">
+                ✦ Why Partner With Cosmic Scoopers?
+            </h3>
+
+
+            <ul class="comm-list">
+
+                <li>
+                    <strong>
+                        Fully Insured &amp; Vendor Compliant:
+                    </strong>
+
+                    Meeting commercial liability requirements for property
+                    management groups.
+                </li>
+
+
+                <li>
+                    <strong>
+                        Elevates Property Curb Appeal:
+                    </strong>
+
+                    Helps eliminate foul odors and keeps grounds cleaner
+                    for residents and guests.
+                </li>
+
+
+                <li>
+                    <strong>
+                        Reliable &amp; Uniformed Technicians:
+                    </strong>
+
+                    Professional service with clear property walkthrough
+                    reports.
+                </li>
+
+            </ul>
+
+
+            <h3 class="comm-section-title">
+                ✦ Properties We Serve
+            </h3>
+
+
             <div class="comm-properties-grid">
-                <div class="comm-property-item">HOA Neighborhoods</div>
-                <div class="comm-property-item">Apartment Communities</div>
-                <div class="comm-property-item">Public Parks &amp; Trails</div>
-                <div class="comm-property-item">Commercial Properties</div>
+
+                <div class="comm-property-item">
+                    🏢 Apartment Communities &amp; Condos
+                </div>
+
+                <div class="comm-property-item">
+                    🏡 HOAs &amp; Gated Neighborhoods
+                </div>
+
+                <div class="comm-property-item">
+                    🚐 RV Parks &amp; Campgrounds
+                </div>
+
+                <div class="comm-property-item">
+                    🐕 Dog Parks &amp; Commercial Grounds
+                </div>
+
             </div>
+
 
             <div class="comm-action-footer">
-                <a href="tel:8508609205" class="comm-cta-btn">Call for Commercial Inquiry</a>
-                <p class="comm-footer-note">Or email us directly at cosmicscoopers@gmail.com</p>
+
+                <a
+                    href="https://app.scoopilot.com/commercial-quote/cosmic-scoopers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="comm-cta-btn"
+                >
+                    Request a Commercial Quote
+                </a>
+
+
+                <p class="comm-footer-note">
+                    Contact us today to schedule an on-site property
+                    walkthrough for a custom proposal.
+                </p>
+
             </div>
+
         </div>
+
     </div>
 
+
     <!-- =========================================================
-         LEGAL / TERMS / PRIVACY MODAL
+         LEGAL MODAL
     ========================================================== -->
+
     <div
-        class="custom-modal"
         id="legalModal"
-        aria-hidden="true"
+        class="custom-modal"
         role="dialog"
+        aria-modal="true"
         aria-labelledby="legalModalTitle"
+        aria-hidden="true"
     >
+
         <div class="modal-body-container">
+
             <button
                 type="button"
                 class="close-modal-btn"
                 id="legalCloseBtn"
-                aria-label="Close modal"
+                aria-label="Close legal information"
             >
                 &times;
             </button>
 
-            <div class="modal-tabs" role="tablist">
-                <button type="button" class="modal-tab-btn active" data-target="paneTerms" role="tab" aria-selected="true">Terms</button>
-                <button type="button" class="modal-tab-btn" data-target="panePrivacy" role="tab" aria-selected="false">Privacy</button>
-                <button type="button" class="modal-tab-btn" data-target="paneLocalMilton" role="tab" aria-selected="false">Milton</button>
-                <button type="button" class="modal-tab-btn" data-target="paneLocalPace" role="tab" aria-selected="false">Pace</button>
-                <button type="button" class="modal-tab-btn" data-target="paneLocalNavarre" role="tab" aria-selected="false">Navarre</button>
-                <button type="button" class="modal-tab-btn" data-target="paneFax" role="tab" aria-selected="false">Fax &amp; Notice</button>
+
+            <div
+                class="modal-tabs"
+                role="tablist"
+            >
+
+                <button
+                    type="button"
+                    id="tab-terms"
+                    class="modal-tab-btn active"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="pane-terms"
+                    data-tab="terms"
+                >
+                    Terms &amp; Conditions
+                </button>
+
+
+                <button
+                    type="button"
+                    id="tab-privacy"
+                    class="modal-tab-btn"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="pane-privacy"
+                    data-tab="privacy"
+                >
+                    Privacy Policy
+                </button>
+
             </div>
 
-            <!-- PANE: TERMS -->
-            <div class="legal-pane active" id="paneTerms" role="tabpanel">
-                <h3 id="legalModalTitle">Terms &amp; Conditions</h3>
-                <p>Welcome to Cosmic Scoopers. By signing up for our pet waste removal services or using our website, you agree to the following terms and conditions.</p>
-                <h4>1. Service Agreement</h4>
-                <p>Cosmic Scoopers provides recurring pet waste removal and dog poop cleanup services for residential and commercial properties in Milton, Pace, and Navarre, Florida. Service frequency (weekly, twice-weekly, or bi-weekly) is selected during signup.</p>
-                <h4>2. Access &amp; Gate Policy</h4>
-                <p>Clients must ensure reliable access to the service area on scheduled service days. If pets are kept in the yard, they must be safely secured indoors or in a separate area prior to our arrival. We prioritize gate security by photographing closed and latched gates upon departure.</p>
-                <h4>3. Billing &amp; Payments</h4>
-                <p>Recurring service is billed automatically through our payment processing partner. Starting rates begin at $25 per visit and vary based on yard size, dog count, and service frequency.</p>
-                <h4>4. Cancellation Notice</h4>
-                <p>Clients may pause or cancel recurring service at any time by providing at least seven (7) days written notice prior to the next scheduled billing cycle.</p>
+
+            <!-- TERMS -->
+
+            <div
+                id="pane-terms"
+                class="legal-pane active"
+                role="tabpanel"
+                aria-labelledby="tab-terms"
+            >
+
+                <h3 id="legalModalTitle">
+                    Terms &amp; Conditions
+                </h3>
+
+
+                <p>
+                    <em>
+                        COSMIC SCOOPERS – TERMS &amp; CONDITIONS
+                    </em>
+                </p>
+
+
+                <p>
+                    These Terms &amp; Conditions apply to all services
+                    provided by Cosmic Scoopers. By approving a quote,
+                    scheduling service, or making payment, the customer
+                    agrees to be bound by the following terms.
+                </p>
+
+
+                <ol>
+
+
+                    <li>
+
+                        <strong>
+                            Service Agreement
+                        </strong>
+
+                        <br>
+
+                        Cosmic Scoopers provides pet waste removal services
+                        as outlined in the approved quote, including
+                        frequency, pricing, and designated service areas.
+                        Services are limited strictly to the areas agreed
+                        upon at the time of booking or quote approval.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Acceptance of Terms
+                        </strong>
+
+                        <br>
+
+                        Approval of a quote, payment of an invoice, or
+                        allowing service to be performed constitutes full
+                        acceptance of these Terms &amp; Conditions. No
+                        physical or digital signature is required unless
+                        specifically requested.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Billing &amp; Payment Terms
+                        </strong>
+
+
+                        <ul>
+
+                            <li>
+                                All services are billed monthly in advance
+                                before services are rendered.
+                            </li>
+
+                            <li>
+                                Payment is due upon receipt of invoice unless
+                                otherwise agreed in writing.
+                            </li>
+
+                            <li>
+                                Failure to pay on time may result in
+                                suspension or termination of service
+                                without notice.
+                            </li>
+
+                            <li>
+                                Returned payments, chargebacks, or failed
+                                transactions may incur additional processing
+                                or service fees.
+                            </li>
+
+                            <li>
+                                Services will not continue if payment is not
+                                received for the upcoming billing period.
+                            </li>
+
+                            <li>
+                                Monthly fees are non-refundable once billed,
+                                as service capacity and routing are reserved
+                                in advance.
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Scheduling, Routing &amp; Service Days
+                        </strong>
+
+
+                        <ul>
+
+                            <li>
+                                Service days are assigned solely by Cosmic
+                                Scoopers based on route efficiency and
+                                operational scheduling.
+                            </li>
+
+                            <li>
+                                Customers may request a preferred day;
+                                however, specific service days and times
+                                are not guaranteed.
+                            </li>
+
+                            <li>
+                                Routes and schedules may change at any time
+                                due to operational needs, efficiency
+                                improvements, or business adjustments.
+                            </li>
+
+                            <li>
+                                Customers will be notified when permanent
+                                schedule changes occur when possible.
+                            </li>
+
+                            <li>
+                                Customers do not select or guarantee their
+                                service day.
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Property Access Requirements
+                        </strong>
+
+                        <br>
+
+                        Customers are responsible for ensuring safe,
+                        unobstructed access to all service areas. Gates must
+                        be unlocked or accessible at the time of service.
+                        Locked gates, blocked access, or unsafe conditions
+                        may result in a missed visit. Missed visits due to
+                        lack of access may still be billed.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Pet Safety &amp; Containment
+                        </strong>
+
+                        <br>
+
+                        All dogs must be secured inside the home or otherwise
+                        fully contained prior to service arrival. Dogs may
+                        not be present in the yard or service area during
+                        service. If dogs are loose in the service area,
+                        service may be skipped for safety reasons. Visits
+                        missed due to unsecured pets will still be billed.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Waste Collection &amp; Disposal
+                        </strong>
+
+                        <br>
+
+                        All pet waste collected will be double-bagged. Waste
+                        will be disposed of in the customer's designated
+                        trash receptacle or dumpster on the property.
+                        Customers are responsible for providing an accessible
+                        disposal container. Cosmic Scoopers does not
+                        transport or remove waste off-site unless specifically
+                        agreed to in writing and subject to additional fees.
+                        If no receptacle is available or accessible, waste
+                        may be left in a designated safe area on the property
+                        and the customer will be notified.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Weather, Safety &amp; Service Interruptions
+                        </strong>
+
+                        <br>
+
+                        Services may be delayed, rescheduled, or skipped due
+                        to weather, flooding, natural disasters, unsafe
+                        terrain, or conditions deemed unsafe by the
+                        technician. Every effort will be made to maintain
+                        scheduled service consistency. Unsafe conditions
+                        include but are not limited to aggressive animals,
+                        hazardous debris, or environmental dangers.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Holiday Closures
+                        </strong>
+
+                        <br>
+
+                        Cosmic Scoopers does not provide service on the
+                        following holidays: New Year's Day, Memorial Day,
+                        Independence Day, Labor Day, Thanksgiving Day, and
+                        Christmas Day. If a scheduled service falls on a
+                        holiday, service will be rescheduled to the nearest
+                        available business day. Monthly pricing remains
+                        unchanged.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Cancellation &amp; Termination
+                        </strong>
+
+                        <br>
+
+                        Customers may cancel service at any time with a
+                        minimum of seven (7) days' written notice. Services
+                        scheduled within the 7-day notice period may still
+                        be billed. Cosmic Scoopers reserves the right to
+                        terminate service at any time for non-payment,
+                        unsafe conditions, or policy violations. No long-term
+                        contracts are required unless otherwise stated in
+                        writing.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Commercial Properties
+                        </strong>
+
+                        <br>
+
+                        Property owners, managers, or authorized
+                        representatives must approve all service areas prior
+                        to service. Service is limited to areas outlined in
+                        the approved quote. Additional areas or expanded
+                        service requests may result in additional charges.
+                        Commercial clients are responsible for communicating
+                        property-specific rules, restrictions, or hazards.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Liability Limitation
+                        </strong>
+
+
+                        <ul>
+
+                            <li>
+                                Cosmic Scoopers is not liable for
+                                pre-existing property damage or deterioration.
+                            </li>
+
+                            <li>
+                                Cosmic Scoopers is not liable for hidden or
+                                unmarked hazards on the property.
+                            </li>
+
+                            <li>
+                                Cosmic Scoopers is not liable for damage
+                                resulting from unsecured gates, fencing,
+                                landscaping, irrigation systems, or property
+                                features.
+                            </li>
+
+                            <li>
+                                Cosmic Scoopers is not liable for delays or
+                                missed services due to weather or events
+                                outside company control.
+                            </li>
+
+                            <li>
+                                Cosmic Scoopers is not liable for issues
+                                arising from customer failure to secure pets
+                                or provide access.
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Agreement Confirmation
+                        </strong>
+
+                        <br>
+
+                        By approving a quote, submitting payment, or allowing
+                        services to begin, the customer acknowledges they
+                        have read, understood, and agreed to these Terms &amp;
+                        Conditions in full.
+
+                    </li>
+
+                </ol>
+
             </div>
 
-            <!-- PANE: PRIVACY -->
-            <div class="legal-pane" id="panePrivacy" role="tabpanel">
-                <h3>Privacy Policy</h3>
-                <p>Cosmic Scoopers respects your privacy and is committed to protecting your personal information.</p>
-                <h4>Information We Collect</h4>
-                <p>We collect contact details, service address information, and billing details necessary to fulfill your pet waste removal service and schedule cleanups through our portal.</p>
-                <h4>Use of Information</h4>
-                <p>Your information is used solely for service scheduling, communication regarding your cleanups, gate confirmation updates, and billing processing. We do not sell or share your personal data with third-party marketers.</p>
+
+            <!-- PRIVACY -->
+
+            <div
+                id="pane-privacy"
+                class="legal-pane"
+                role="tabpanel"
+                aria-labelledby="tab-privacy"
+            >
+
+                <h3>
+                    Privacy Policy
+                </h3>
+
+
+                <p>
+                    At Cosmic Scoopers, we value your privacy. This policy
+                    outlines how we handle information collected for our
+                    service options.
+                </p>
+
+
+                <h4>
+                    Information Collection
+                </h4>
+
+                <p>
+                    We collect personal details such as your name, phone
+                    number, email address, and service location strictly to
+                    generate accurate service quotes and coordinate
+                    scheduling via our integrated portal tools.
+                </p>
+
+
+                <h4>
+                    Data Usage &amp; Protection
+                </h4>
+
+                <p>
+                    Your details are transmitted securely directly to our
+                    internal operational systems managed via ScooPilot.
+                    We do not sell, trade, rent, or distribute your private
+                    contact information to any third-party marketing
+                    networks or external entities.
+                </p>
+
+
+                <h4>
+                    Consent
+                </h4>
+
+                <p>
+                    By registering through our signup and quoting portal
+                    workflows, you give consent to Cosmic Scoopers to
+                    contact you via email, phone call, or text message
+                    regarding your service request setup options.
+                </p>
+
             </div>
 
-            <!-- PANE: LOCAL SERVICE - MILTON -->
-            <div class="legal-pane" id="paneLocalMilton" role="tabpanel">
-                <h3>Milton, FL Pet Waste Removal</h3>
-                <p>Cosmic Scoopers proudly provides professional, dependable dog poop cleanup and pet waste management throughout Milton, Florida, and surrounding areas.</p>
-                <p>Whether you reside near downtown Milton, Allentown, or East Milton, our recurring weekly and multi-visit cleanups keep your lawn pristine, sanitary, and safe for your family and pets.</p>
-                <ul>
-                    <li>✦ Recurring weekly, twice-weekly, and bi-weekly service</li>
-                    <li>✦ Gate security photo confirmation on every visit</li>
-                    <li>✦ Sanitized tools and equipment between yards</li>
-                </ul>
-            </div>
-
-            <!-- PANE: LOCAL SERVICE - PACE -->
-            <div class="legal-pane" id="paneLocalPace" role="tabpanel">
-                <h3>Pace, FL Pet Waste Removal</h3>
-                <p>Serving residential neighborhoods throughout Pace, Florida, Cosmic Scoopers removes the hassle of backyard maintenance.</p>
-                <p>Busy families and multi-dog households across Pace trust our dependable schedules and thorough cleanup standards so they never have to scoop their yards again.</p>
-                <ul>
-                    <li>✦ Flexible scheduling with no long-term contracts</li>
-                    <li>✦ Specialized multi-dog and heavy yard care</li>
-                    <li>✦ Transparent pricing starting at $25/visit</li>
-                </ul>
-            </div>
-
-            <!-- PANE: LOCAL SERVICE - NAVARRE -->
-            <div class="legal-pane" id="paneLocalNavarre" role="tabpanel">
-                <h3>Navarre, FL Pet Waste Removal</h3>
-                <p>Cosmic Scoopers delivers professional pet waste cleanup to homeowners throughout Navarre and Navarre Beach communities.</p>
-                <p>Enjoy your outdoor living space to the fullest without letting pet waste accumulate. Our reliable recurring service handles all the dirty work.</p>
-                <ul>
-                    <li>✦ Thorough yard sweeps covering fence lines and corners</li>
-                    <li>✦ Optional deodorizer and repellent treatments available</li>
-                    <li>✦ Automated billing and instant online signup</li>
-                </ul>
-            </div>
-
-            <!-- PANE: FAX & NOTICE -->
-            <div class="legal-pane" id="paneFax" role="tabpanel">
-                <h3>Official Notice &amp; Fax Information</h3>
-                <p>For formal legal correspondence, administrative notices, vendor inquiries, or document transmissions requiring official filing:</p>
-                <h4>Business Contact Details</h4>
-                <ul>
-                    <li><strong>Business Name:</strong> Cosmic Scoopers</li>
-                    <li><strong>Service Region:</strong> Milton, Pace, and Navarre, FL</li>
-                    <li><strong>Primary Telephone:</strong> (850) 860-9205</li>
-                    <li><strong>Support Email:</strong> cosmicscoopers@gmail.com</li>
-                </ul>
-                <h4>Digital Document Transmission</h4>
-                <p>In lieu of traditional dedicated analog fax machines, official documentation, agreements, and notices may be submitted securely via email to <strong>cosmicscoopers@gmail.com</strong> with attention notes included in the subject line. Please contact our office by phone prior to transmitting urgent compliance or legal documents.</p>
-            </div>
         </div>
+
     </div>
+
 
     <!-- =========================================================
          JAVASCRIPT
     ========================================================== -->
+
     <script>
-        /* ---------------------------------------------------------
-           CANVAS STARS
-        --------------------------------------------------------- */
-        (function() {
-            const canvas = document.getElementById('cosmic-stars-canvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            let width = canvas.width = window.innerWidth;
-            let height = canvas.height = window.innerHeight;
+        "use strict";
 
-            window.addEventListener('resize', () => {
-                width = canvas.width = window.innerWidth;
-                height = canvas.height = window.innerHeight;
-            });
 
-            const stars = Array.from({ length: 90 }, () => ({
-                x: Math.random() * width,
-                y: Math.random() * height,
-                radius: Math.random() * 1.5,
-                alpha: Math.random(),
-                speed: Math.random() * 0.015 + 0.005
-            }));
+        /* =========================================================
+           COSMIC STARFIELD
+        ========================================================= */
 
-            function animate() {
-                ctx.clearRect(0, 0, width, height);
-                ctx.fillStyle = '#ffffff';
-                stars.forEach(star => {
-                    star.alpha += star.speed;
-                    if (star.alpha > 1 || star.alpha < 0) {
-                        star.speed = -star.speed;
-                    }
-                    ctx.globalAlpha = Math.abs(star.alpha);
-                    ctx.beginPath();
-                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                    ctx.fill();
-                });
-                requestAnimationFrame(animate);
+        const canvas =
+            document.getElementById(
+                "cosmic-stars-canvas"
+            );
+
+        const ctx =
+            canvas
+                ? canvas.getContext("2d")
+                : null;
+
+        let stars = [];
+
+        let animationFrame = null;
+
+        const isReducedMotion =
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+
+        const isSmallScreen =
+            window.innerWidth < 600;
+
+        const numStars =
+            isSmallScreen
+                ? 90
+                : 150;
+
+
+        function resizeCanvas() {
+
+            if (!canvas || !ctx) {
+                return;
             }
-            animate();
-        })();
 
-        /* ---------------------------------------------------------
-           FAQ ACCORDION
-        --------------------------------------------------------- */
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                const wasOpen = item.classList.contains('open');
-                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-                document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
-                if (!wasOpen) {
-                    item.classList.add('open');
-                    button.setAttribute('aria-expanded', 'true');
-                }
-            });
-        });
+            const dpr =
+                Math.min(
+                    window.devicePixelRatio || 1,
+                    2
+                );
 
-        /* ---------------------------------------------------------
-           FOOTER CONTACT TOGGLE
-        --------------------------------------------------------- */
-        const footerContactBtn = document.getElementById('footerContactBtn');
-        const footerContactDropdown = document.getElementById('footerContactDropdown');
-        if (footerContactBtn && footerContactDropdown) {
-            footerContactBtn.addEventListener('click', () => {
-                footerContactDropdown.classList.toggle('active');
-            });
+            canvas.width =
+                Math.floor(
+                    window.innerWidth * dpr
+                );
+
+            canvas.height =
+                Math.floor(
+                    window.innerHeight * dpr
+                );
+
+            canvas.style.width =
+                window.innerWidth + "px";
+
+            canvas.style.height =
+                window.innerHeight + "px";
+
+            ctx.setTransform(
+                dpr,
+                0,
+                0,
+                dpr,
+                0,
+                0
+            );
         }
 
-        /* ---------------------------------------------------------
+
+        class CosmicStar {
+
+            constructor() {
+                this.reset(true);
+            }
+
+
+            reset(initial = false) {
+
+                this.x =
+                    Math.random() *
+                    window.innerWidth;
+
+                this.y =
+                    initial
+                        ? Math.random() *
+                          window.innerHeight
+                        : -10;
+
+                this.size =
+                    Math.random() *
+                    1.6 +
+                    0.25;
+
+                this.alpha =
+                    Math.random() *
+                    0.75 +
+                    0.15;
+
+                this.twinkleDirection =
+                    Math.random() > 0.5
+                        ? 1
+                        : -1;
+
+                this.twinkleSpeed =
+                    Math.random() *
+                    0.012 +
+                    0.004;
+
+                this.speedY =
+                    Math.random() *
+                    0.12 +
+                    0.025;
+
+
+                const palette = [
+                    "#FFFFFF",
+                    "#B57EDC",
+                    "#E2B5FF",
+                    "#8AB4F8"
+                ];
+
+
+                this.color =
+                    palette[
+                        Math.floor(
+                            Math.random() *
+                            palette.length
+                        )
+                    ];
+            }
+
+
+            update() {
+
+                this.alpha +=
+                    this.twinkleSpeed *
+                    this.twinkleDirection;
+
+
+                if (this.alpha > 0.95) {
+
+                    this.alpha = 0.95;
+
+                    this.twinkleDirection = -1;
+                }
+
+
+                if (this.alpha < 0.12) {
+
+                    this.alpha = 0.12;
+
+                    this.twinkleDirection = 1;
+                }
+
+
+                this.y += this.speedY;
+
+
+                if (
+                    this.y >
+                    window.innerHeight + 10
+                ) {
+
+                    this.reset(false);
+
+                }
+            }
+
+
+            draw() {
+
+                ctx.save();
+
+                ctx.globalAlpha =
+                    this.alpha;
+
+                ctx.fillStyle =
+                    this.color;
+
+
+                if (this.size > 1.15) {
+
+                    ctx.shadowBlur = 8;
+
+                    ctx.shadowColor =
+                        this.color;
+                }
+
+
+                ctx.beginPath();
+
+
+                ctx.arc(
+                    this.x,
+                    this.y,
+                    this.size,
+                    0,
+                    Math.PI * 2
+                );
+
+
+                ctx.fill();
+
+                ctx.restore();
+            }
+
+        }
+
+
+        function initializeStars() {
+
+            if (
+                !canvas ||
+                !ctx ||
+                isReducedMotion
+            ) {
+                return;
+            }
+
+
+            resizeCanvas();
+
+            stars = [];
+
+
+            for (
+                let i = 0;
+                i < numStars;
+                i++
+            ) {
+
+                stars.push(
+                    new CosmicStar()
+                );
+
+            }
+
+
+            animateStars();
+        }
+
+
+        function animateStars() {
+
+            if (
+                !ctx ||
+                isReducedMotion
+            ) {
+                return;
+            }
+
+
+            ctx.clearRect(
+                0,
+                0,
+                window.innerWidth,
+                window.innerHeight
+            );
+
+
+            stars.forEach(
+                star => {
+
+                    star.update();
+
+                    star.draw();
+
+                }
+            );
+
+
+            animationFrame =
+                requestAnimationFrame(
+                    animateStars
+                );
+        }
+
+
+        initializeStars();
+
+
+        let resizeTimer;
+
+
+        window.addEventListener(
+            "resize",
+            () => {
+
+                clearTimeout(
+                    resizeTimer
+                );
+
+
+                resizeTimer =
+                    setTimeout(
+                        () => {
+
+                            resizeCanvas();
+
+
+                            if (
+                                !isReducedMotion
+                            ) {
+
+                                stars.forEach(
+                                    star =>
+                                        star.reset(true)
+                                );
+
+                            }
+
+                        },
+                        150
+                    );
+
+            }
+        );
+
+
+        /* =========================================================
+           MODAL MANAGEMENT
+        ========================================================= */
+
+        const commercialModal =
+            document.getElementById(
+                "commercialModal"
+            );
+
+        const legalModal =
+            document.getElementById(
+                "legalModal"
+            );
+
+
+        let lastFocusedElement = null;
+
+
+        function lockBody() {
+            document.body.style.overflow =
+                "hidden";
+        }
+
+
+        function unlockBody() {
+            document.body.style.overflow =
+                "";
+        }
+
+
+        function openModal(modal) {
+
+            if (!modal) {
+                return;
+            }
+
+
+            lastFocusedElement =
+                document.activeElement;
+
+
+            modal.classList.add(
+                "active"
+            );
+
+
+            modal.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+
+            lockBody();
+
+
+            const closeButton =
+                modal.querySelector(
+                    ".close-modal-btn"
+                );
+
+
+            if (closeButton) {
+
+                setTimeout(
+                    () =>
+                        closeButton.focus(),
+                    50
+                );
+
+            }
+
+        }
+
+
+        function closeModal(modal) {
+
+            if (!modal) {
+                return;
+            }
+
+
+            modal.classList.remove(
+                "active"
+            );
+
+
+            modal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+
+            unlockBody();
+
+
+            if (
+                lastFocusedElement &&
+                typeof
+                    lastFocusedElement.focus ===
+                    "function"
+            ) {
+
+                lastFocusedElement.focus();
+
+            }
+
+        }
+
+
+        /* =========================================================
            COMMERCIAL MODAL
-        --------------------------------------------------------- */
-        const commercialOpenBtn = document.getElementById('commercialOpenBtn');
-        const commercialModal = document.getElementById('commercialModal');
-        const commercialCloseBtn = document.getElementById('commercialCloseBtn');
+        ========================================================= */
 
-        if (commercialOpenBtn && commercialModal && commercialCloseBtn) {
-            commercialOpenBtn.addEventListener('click', () => {
-                commercialModal.classList.add('active');
-                commercialModal.setAttribute('aria-hidden', 'false');
-            });
-            commercialCloseBtn.addEventListener('click', () => {
-                commercialModal.classList.remove('active');
-                commercialModal.setAttribute('aria-hidden', 'true');
-            });
-            commercialModal.addEventListener('click', (e) => {
-                if (e.target === commercialModal) {
-                    commercialModal.classList.remove('active');
-                    commercialModal.setAttribute('aria-hidden', 'true');
+        function openCommercialModal() {
+            openModal(
+                commercialModal
+            );
+        }
+
+
+        function closeCommercialModal() {
+            closeModal(
+                commercialModal
+            );
+        }
+
+
+        document
+            .getElementById(
+                "commercialOpenBtn"
+            )
+            .addEventListener(
+                "click",
+                openCommercialModal
+            );
+
+
+        document
+            .getElementById(
+                "commercialFooterBtn"
+            )
+            .addEventListener(
+                "click",
+                openCommercialModal
+            );
+
+
+        document
+            .getElementById(
+                "commercialCloseBtn"
+            )
+            .addEventListener(
+                "click",
+                closeCommercialModal
+            );
+
+
+        /* =========================================================
+           LEGAL MODAL
+        ========================================================= */
+
+        function openLegalModal(
+            tabName = "terms"
+        ) {
+
+            openModal(
+                legalModal
+            );
+
+            switchTab(
+                tabName
+            );
+        }
+
+
+        function closeLegalModal() {
+
+            closeModal(
+                legalModal
+            );
+
+        }
+
+
+        document
+            .getElementById(
+                "legalCloseBtn"
+            )
+            .addEventListener(
+                "click",
+                closeLegalModal
+            );
+
+
+        function switchTab(tabName) {
+
+            const validTabs = [
+                "terms",
+                "privacy"
+            ];
+
+
+            if (
+                !validTabs.includes(
+                    tabName
+                )
+            ) {
+
+                tabName = "terms";
+
+            }
+
+
+            document
+                .querySelectorAll(
+                    ".modal-tab-btn"
+                )
+                .forEach(
+                    button => {
+
+                        const active =
+                            button.dataset.tab ===
+                            tabName;
+
+
+                        button.classList.toggle(
+                            "active",
+                            active
+                        );
+
+
+                        button.setAttribute(
+                            "aria-selected",
+                            String(active)
+                        );
+
+                    }
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".legal-pane"
+                )
+                .forEach(
+                    pane => {
+
+                        pane.classList.toggle(
+                            "active",
+                            pane.id ===
+                            "pane-" +
+                            tabName
+                        );
+
+                    }
+                );
+
+
+            const activePane =
+                document.getElementById(
+                    "pane-" +
+                    tabName
+                );
+
+
+            if (activePane) {
+
+                activePane.scrollTop =
+                    0;
+
+            }
+
+        }
+
+
+        document
+            .querySelectorAll(
+                ".modal-tab-btn"
+            )
+            .forEach(
+                button => {
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+                            switchTab(
+                                button.dataset.tab
+                            );
+
+                        }
+                    );
+
                 }
-            });
-        }
+            );
 
-        /* ---------------------------------------------------------
-           LEGAL / TERMS / FAX MODAL & TABS
-        --------------------------------------------------------- */
-        const openTermsModal = document.getElementById('openTermsModal');
-        const openPrivacyModal = document.getElementById('openPrivacyModal');
-        const openLegalModal = document.getElementById('openLegalModal');
-        const legalModal = document.getElementById('legalModal');
-        const legalCloseBtn = document.getElementById('legalCloseBtn');
-        const modalTabBtns = document.querySelectorAll('.modal-tab-btn');
-        const legalPanes = document.querySelectorAll('.legal-pane');
 
-        function openModalTab(targetId) {
-            if (!legalModal) return;
-            legalModal.classList.add('active');
-            legalModal.setAttribute('aria-hidden', 'false');
+        document
+            .querySelectorAll(
+                "[data-legal]"
+            )
+            .forEach(
+                button => {
 
-            modalTabBtns.forEach(btn => {
-                if (btn.getAttribute('data-target') === targetId) {
-                    btn.classList.add('active');
-                    btn.setAttribute('aria-selected', 'true');
-                } else {
-                    btn.classList.remove('active');
-                    btn.setAttribute('aria-selected', 'false');
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+                            openLegalModal(
+                                button.dataset.legal
+                            );
+
+                        }
+                    );
+
                 }
-            });
+            );
 
-            legalPanes.forEach(pane => {
-                if (pane.id === targetId) {
-                    pane.classList.add('active');
-                } else {
-                    pane.classList.remove('active');
+
+        /* =========================================================
+           CLICK OUTSIDE MODALS
+        ========================================================= */
+
+        [
+            commercialModal,
+            legalModal
+        ].forEach(
+            modal => {
+
+                if (!modal) {
+                    return;
                 }
-            });
-        }
 
-        if (openTermsModal) {
-            openTermsModal.addEventListener('click', () => openModalTab('paneTerms'));
-        }
-        if (openPrivacyModal) {
-            openPrivacyModal.addEventListener('click', () => openModalTab('panePrivacy'));
-        }
-        if (openLegalModal) {
-            openLegalModal.addEventListener('click', () => openModalTab('paneFax'));
-        }
 
-        if (legalModal && legalCloseBtn) {
-            legalCloseBtn.addEventListener('click', () => {
-                legalModal.classList.remove('active');
-                legalModal.setAttribute('aria-hidden', 'true');
-            });
-            legalModal.addEventListener('click', (e) => {
-                if (e.target === legalModal) {
-                    legalModal.classList.remove('active');
-                    legalModal.setAttribute('aria-hidden', 'true');
+                modal.addEventListener(
+                    "click",
+                    event => {
+
+                        if (
+                            event.target ===
+                            modal
+                        ) {
+
+                            closeModal(
+                                modal
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =========================================================
+           ESCAPE KEY
+        ========================================================= */
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key !==
+                    "Escape"
+                ) {
+
+                    return;
+
                 }
-            });
-        }
 
-        modalTabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const target = btn.getAttribute('data-target');
-                openModalTab(target);
-            });
-        });
+
+                if (
+                    commercialModal &&
+                    commercialModal.classList.contains(
+                        "active"
+                    )
+                ) {
+
+                    closeCommercialModal();
+
+                    return;
+                }
+
+
+                if (
+                    legalModal &&
+                    legalModal.classList.contains(
+                        "active"
+                    )
+                ) {
+
+                    closeLegalModal();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           FOOTER CONTACT
+        ========================================================= */
+
+        const contactButton =
+            document.getElementById(
+                "contactToggleBtn"
+            );
+
+
+        const contactDropdown =
+            document.getElementById(
+                "footerContactDropdown"
+            );
+
+
+        contactButton.addEventListener(
+            "click",
+            () => {
+
+                const active =
+                    contactDropdown.classList.toggle(
+                        "active"
+                    );
+
+
+                contactButton.setAttribute(
+                    "aria-expanded",
+                    String(active)
+                );
+
+            }
+        );
+
+
+        /* =========================================================
+           FAQ ACCORDION
+        ========================================================= */
+
+        document
+            .querySelectorAll(
+                ".faq-question"
+            )
+            .forEach(
+                button => {
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+                            const item =
+                                button.closest(
+                                    ".faq-item"
+                                );
+
+
+                            if (!item) {
+                                return;
+                            }
+
+
+                            const currentlyOpen =
+                                item.classList.contains(
+                                    "open"
+                                );
+
+
+                            document
+                                .querySelectorAll(
+                                    ".faq-item.open"
+                                )
+                                .forEach(
+                                    openItem => {
+
+                                        openItem.classList.remove(
+                                            "open"
+                                        );
+
+
+                                        const openButton =
+                                            openItem.querySelector(
+                                                ".faq-question"
+                                            );
+
+
+                                        if (
+                                            openButton
+                                        ) {
+
+                                            openButton.setAttribute(
+                                                "aria-expanded",
+                                                "false"
+                                            );
+
+                                        }
+
+                                    }
+                                );
+
+
+                            if (
+                                !currentlyOpen
+                            ) {
+
+                                item.classList.add(
+                                    "open"
+                                );
+
+
+                                button.setAttribute(
+                                    "aria-expanded",
+                                    "true"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+
+        /* =========================================================
+           MOBILE CTA
+        ========================================================= */
+
+        /* Sticky CTA intentionally remains available. */
+
+
+        /* =========================================================
+           SMOOTH INTERNAL NAVIGATION
+        ========================================================= */
+
+        document
+            .querySelectorAll(
+                'a[href^="#"]'
+            )
+            .forEach(
+                link => {
+
+                    link.addEventListener(
+                        "click",
+                        event => {
+
+                            const targetId =
+                                link.getAttribute(
+                                    "href"
+                                );
+
+
+                            if (
+                                !targetId ||
+                                targetId === "#"
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            const target =
+                                document.querySelector(
+                                    targetId
+                                );
+
+
+                            if (!target) {
+                                return;
+                            }
+
+
+                            event.preventDefault();
+
+
+                            target.scrollIntoView(
+                                {
+                                    behavior:
+                                        isReducedMotion
+                                            ? "auto"
+                                            : "smooth"
+                                }
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
     </script>
+
 </body>
 </html>
